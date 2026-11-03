@@ -1,0 +1,1142 @@
+{
+  "source": "County_Producers.xlsx from uploaded ZIP",
+  "field_point_is_not_verified": "Many coordinates may represent addresses rather than field centers",
+  "farms": [
+    {
+      "county": "Aiken",
+      "farm_id": "4631",
+      "tract_ids": [
+        "7866"
+      ],
+      "field_ids": [
+        "14"
+      ],
+      "source_xlsx": "Aiken County_Producers.xlsx",
+      "coordinate_status": "reported_spreadsheet_point_unverified",
+      "longitude": -81.7951119,
+      "latitude": 33.4275064
+    },
+    {
+      "county": "Allendale",
+      "farm_id": "10333",
+      "tract_ids": [
+        "2161"
+      ],
+      "field_ids": [
+        "2161"
+      ],
+      "source_xlsx": "Allendale County_Producers .xlsx",
+      "coordinate_status": "missing_or_invalid_coordinate",
+      "longitude": null,
+      "latitude": null
+    },
+    {
+      "county": "Allendale",
+      "farm_id": "3779",
+      "tract_ids": [
+        "10394"
+      ],
+      "field_ids": [
+        "54"
+      ],
+      "source_xlsx": "Allendale County_Producers .xlsx",
+      "coordinate_status": "reported_spreadsheet_point_unverified",
+      "longitude": -81.3224192,
+      "latitude": 33.0084896
+    },
+    {
+      "county": "Bamberg",
+      "farm_id": "3523",
+      "tract_ids": [
+        "3532"
+      ],
+      "field_ids": [
+        "29"
+      ],
+      "source_xlsx": "Bamberg County_Producers.xlsx",
+      "coordinate_status": "reported_spreadsheet_point_unverified",
+      "longitude": -81.0501333,
+      "latitude": 33.2387299
+    },
+    {
+      "county": "Bamberg",
+      "farm_id": "3524",
+      "tract_ids": [
+        "3531"
+      ],
+      "field_ids": [
+        "25"
+      ],
+      "source_xlsx": "Bamberg County_Producers.xlsx",
+      "coordinate_status": "reported_spreadsheet_point_unverified",
+      "longitude": -81.6563,
+      "latitude": 33.7577
+    },
+    {
+      "county": "Barnwell",
+      "farm_id": "753",
+      "tract_ids": [
+        "629"
+      ],
+      "field_ids": [
+        "10",
+        "2",
+        "9"
+      ],
+      "source_xlsx": "Barnwell County_Producers.xlsx",
+      "coordinate_status": "reported_spreadsheet_point_unverified",
+      "longitude": -81.366072,
+      "latitude": 33.3830638
+    },
+    {
+      "county": "Berkeley",
+      "farm_id": "13739",
+      "tract_ids": [
+        "45688"
+      ],
+      "field_ids": [
+        "2"
+      ],
+      "source_xlsx": "Berkley County_Producers.xlsx",
+      "coordinate_status": "reported_spreadsheet_point_unverified",
+      "longitude": -80.0957283,
+      "latitude": 33.0552013
+    },
+    {
+      "county": "Berkeley",
+      "farm_id": "14118",
+      "tract_ids": [
+        "46082"
+      ],
+      "field_ids": [
+        "23"
+      ],
+      "source_xlsx": "Berkley County_Producers.xlsx",
+      "coordinate_status": "reported_spreadsheet_point_unverified",
+      "longitude": -80.2426989,
+      "latitude": 33.3706279
+    },
+    {
+      "county": "Berkeley",
+      "farm_id": "3756",
+      "tract_ids": [
+        "3313"
+      ],
+      "field_ids": [
+        "1"
+      ],
+      "source_xlsx": "Berkley County_Producers.xlsx",
+      "coordinate_status": "reported_spreadsheet_point_unverified",
+      "longitude": -79.9344277,
+      "latitude": 33.1877911
+    },
+    {
+      "county": "Berkeley",
+      "farm_id": "4198",
+      "tract_ids": [
+        "33763"
+      ],
+      "field_ids": [
+        "3"
+      ],
+      "source_xlsx": "Berkley County_Producers.xlsx",
+      "coordinate_status": "reported_spreadsheet_point_unverified",
+      "longitude": -79.9344277,
+      "latitude": 33.1877911
+    },
+    {
+      "county": "Berkeley",
+      "farm_id": "4236",
+      "tract_ids": [
+        "2906"
+      ],
+      "field_ids": [
+        "30",
+        "4"
+      ],
+      "source_xlsx": "Berkley County_Producers.xlsx",
+      "coordinate_status": "reported_spreadsheet_point_unverified",
+      "longitude": -79.9395655,
+      "latitude": 33.3370337
+    },
+    {
+      "county": "Berkeley",
+      "farm_id": "4273",
+      "tract_ids": [
+        "33795"
+      ],
+      "field_ids": [
+        "5"
+      ],
+      "source_xlsx": "Berkley County_Producers.xlsx",
+      "coordinate_status": "reported_spreadsheet_point_unverified",
+      "longitude": -79.9344277,
+      "latitude": 33.1877911
+    },
+    {
+      "county": "Berkeley",
+      "farm_id": "577",
+      "tract_ids": [
+        "1397"
+      ],
+      "field_ids": [
+        "1"
+      ],
+      "source_xlsx": "Berkley County_Producers.xlsx",
+      "coordinate_status": "reported_spreadsheet_point_unverified",
+      "longitude": -80.0931768,
+      "latitude": 33.0551942
+    },
+    {
+      "county": "Berkeley",
+      "farm_id": "9387",
+      "tract_ids": [
+        "8069"
+      ],
+      "field_ids": [
+        "11",
+        "7"
+      ],
+      "source_xlsx": "Berkley County_Producers.xlsx",
+      "coordinate_status": "reported_spreadsheet_point_unverified",
+      "longitude": -80.2426989,
+      "latitude": 33.3706279
+    },
+    {
+      "county": "Calhoun",
+      "farm_id": "14280",
+      "tract_ids": [
+        "46258"
+      ],
+      "field_ids": [
+        "3"
+      ],
+      "source_xlsx": "Calhoun County_Producers.xlsx",
+      "coordinate_status": "reported_spreadsheet_point_unverified",
+      "longitude": -80.4521,
+      "latitude": 33.6101
+    },
+    {
+      "county": "Calhoun",
+      "farm_id": "3549",
+      "tract_ids": [
+        "8353"
+      ],
+      "field_ids": [
+        "2"
+      ],
+      "source_xlsx": "Calhoun County_Producers.xlsx",
+      "coordinate_status": "reported_spreadsheet_point_unverified",
+      "longitude": -81.658,
+      "latitude": 33.7591
+    },
+    {
+      "county": "Charleston",
+      "farm_id": "1134",
+      "tract_ids": [
+        "1563"
+      ],
+      "field_ids": [
+        "8"
+      ],
+      "source_xlsx": "Charleston County_Producers.xlsx",
+      "coordinate_status": "reported_spreadsheet_point_unverified",
+      "longitude": -80.3267275,
+      "latitude": 32.6485761
+    },
+    {
+      "county": "Charleston",
+      "farm_id": "1436",
+      "tract_ids": [
+        "1859"
+      ],
+      "field_ids": [
+        "1"
+      ],
+      "source_xlsx": "Charleston County_Producers.xlsx",
+      "coordinate_status": "reported_spreadsheet_point_unverified",
+      "longitude": -79.736953,
+      "latitude": 32.895935
+    },
+    {
+      "county": "Clarendon",
+      "farm_id": "1118",
+      "tract_ids": [
+        "2455",
+        "4102"
+      ],
+      "field_ids": [
+        "1",
+        "2"
+      ],
+      "source_xlsx": "Clarendon County_Producers.xlsx",
+      "coordinate_status": "reported_spreadsheet_point_unverified",
+      "longitude": -80.2965507,
+      "latitude": 33.6429989
+    },
+    {
+      "county": "Clarendon",
+      "farm_id": "1375",
+      "tract_ids": [
+        "1022"
+      ],
+      "field_ids": [
+        "1"
+      ],
+      "source_xlsx": "Clarendon County_Producers.xlsx",
+      "coordinate_status": "reported_spreadsheet_point_unverified",
+      "longitude": -80.2970765,
+      "latitude": 33.6431756
+    },
+    {
+      "county": "Clarendon",
+      "farm_id": "1568",
+      "tract_ids": [
+        "1083"
+      ],
+      "field_ids": [
+        "2"
+      ],
+      "source_xlsx": "Clarendon County_Producers.xlsx",
+      "coordinate_status": "reported_spreadsheet_point_unverified",
+      "longitude": -80.4275,
+      "latitude": 33.6404
+    },
+    {
+      "county": "Clarendon",
+      "farm_id": "1694",
+      "tract_ids": [
+        "7960"
+      ],
+      "field_ids": [
+        "6"
+      ],
+      "source_xlsx": "Clarendon County_Producers.xlsx",
+      "coordinate_status": "missing_or_invalid_coordinate",
+      "longitude": null,
+      "latitude": null
+    },
+    {
+      "county": "Clarendon",
+      "farm_id": "3988",
+      "tract_ids": [
+        "4673"
+      ],
+      "field_ids": [
+        "1"
+      ],
+      "source_xlsx": "Clarendon County_Producers.xlsx",
+      "coordinate_status": "reported_spreadsheet_point_unverified",
+      "longitude": -81.7804,
+      "latitude": 35.1037
+    },
+    {
+      "county": "Clarendon",
+      "farm_id": "497",
+      "tract_ids": [
+        "2476"
+      ],
+      "field_ids": [
+        "1"
+      ],
+      "source_xlsx": "Clarendon County_Producers.xlsx",
+      "coordinate_status": "reported_spreadsheet_point_unverified",
+      "longitude": -80.1999,
+      "latitude": 33.7072
+    },
+    {
+      "county": "Clarendon",
+      "farm_id": "6749",
+      "tract_ids": [
+        "6173",
+        "6174"
+      ],
+      "field_ids": [
+        "1"
+      ],
+      "source_xlsx": "Clarendon County_Producers.xlsx",
+      "coordinate_status": "reported_spreadsheet_point_unverified",
+      "longitude": -80.2126811,
+      "latitude": 33.5971605
+    },
+    {
+      "county": "Clarendon",
+      "farm_id": "6750",
+      "tract_ids": [
+        "6175"
+      ],
+      "field_ids": [
+        "1"
+      ],
+      "source_xlsx": "Clarendon County_Producers.xlsx",
+      "coordinate_status": "reported_spreadsheet_point_unverified",
+      "longitude": -80.2126811,
+      "latitude": 33.5971605
+    },
+    {
+      "county": "Clarendon",
+      "farm_id": "9274",
+      "tract_ids": [
+        "646",
+        "662"
+      ],
+      "field_ids": [
+        "1",
+        "2"
+      ],
+      "source_xlsx": "Clarendon County_Producers.xlsx",
+      "coordinate_status": "reported_spreadsheet_point_unverified",
+      "longitude": -80.3578469,
+      "latitude": 33.6677637
+    },
+    {
+      "county": "Clarendon",
+      "farm_id": "948",
+      "tract_ids": [
+        "2427"
+      ],
+      "field_ids": [
+        "3"
+      ],
+      "source_xlsx": "Clarendon County_Producers.xlsx",
+      "coordinate_status": "reported_spreadsheet_point_unverified",
+      "longitude": -80.215,
+      "latitude": 33.6522
+    },
+    {
+      "county": "Colleton",
+      "farm_id": "1283",
+      "tract_ids": [
+        "2004"
+      ],
+      "field_ids": [
+        "5",
+        "6"
+      ],
+      "source_xlsx": "Colletton County_Producers.xlsx",
+      "coordinate_status": "missing_or_invalid_coordinate",
+      "longitude": null,
+      "latitude": null
+    },
+    {
+      "county": "Colleton",
+      "farm_id": "1867",
+      "tract_ids": [
+        "3986"
+      ],
+      "field_ids": [
+        "9"
+      ],
+      "source_xlsx": "Colletton County_Producers.xlsx",
+      "coordinate_status": "reported_spreadsheet_point_unverified",
+      "longitude": -80.5155828,
+      "latitude": 32.9315982
+    },
+    {
+      "county": "Colleton",
+      "farm_id": "4917",
+      "tract_ids": [
+        "21131"
+      ],
+      "field_ids": [
+        "1"
+      ],
+      "source_xlsx": "Colletton County_Producers.xlsx",
+      "coordinate_status": "reported_spreadsheet_point_unverified",
+      "longitude": -80.6607065,
+      "latitude": 32.7458064
+    },
+    {
+      "county": "Darlington",
+      "farm_id": "7370",
+      "tract_ids": [
+        "442"
+      ],
+      "field_ids": [
+        "1"
+      ],
+      "source_xlsx": "Darlington County_Producers.xlsx",
+      "coordinate_status": "reported_spreadsheet_point_unverified",
+      "longitude": -80.1402238,
+      "latitude": 34.1574677
+    },
+    {
+      "county": "Dorchester",
+      "farm_id": "4943",
+      "tract_ids": [
+        "4414"
+      ],
+      "field_ids": [
+        "3"
+      ],
+      "source_xlsx": "Dorchester County_Producers.xlsx",
+      "coordinate_status": "reported_spreadsheet_point_unverified",
+      "longitude": -80.289,
+      "latitude": 33.3243
+    },
+    {
+      "county": "Dorchester",
+      "farm_id": "548",
+      "tract_ids": [
+        "295"
+      ],
+      "field_ids": [
+        "1"
+      ],
+      "source_xlsx": "Dorchester County_Producers.xlsx",
+      "coordinate_status": "reported_spreadsheet_point_unverified",
+      "longitude": -80.5391,
+      "latitude": 33.2872
+    },
+    {
+      "county": "Dorchester",
+      "farm_id": "6579",
+      "tract_ids": [
+        "22687"
+      ],
+      "field_ids": [
+        "11"
+      ],
+      "source_xlsx": "Dorchester County_Producers.xlsx",
+      "coordinate_status": "reported_spreadsheet_point_unverified",
+      "longitude": -80.2869,
+      "latitude": 33.1822
+    },
+    {
+      "county": "Florence",
+      "farm_id": "1312",
+      "tract_ids": [
+        "1611"
+      ],
+      "field_ids": [
+        "1"
+      ],
+      "source_xlsx": "Florence County_Producers.xlsx",
+      "coordinate_status": "reported_spreadsheet_point_unverified",
+      "longitude": -80.6483627,
+      "latitude": 33.4213603
+    },
+    {
+      "county": "Florence",
+      "farm_id": "15803",
+      "tract_ids": [
+        "12462"
+      ],
+      "field_ids": [
+        "2",
+        "4"
+      ],
+      "source_xlsx": "Florence County_Producers.xlsx",
+      "coordinate_status": "reported_spreadsheet_point_unverified",
+      "longitude": -79.5664272,
+      "latitude": 33.8779153
+    },
+    {
+      "county": "Florence",
+      "farm_id": "20119",
+      "tract_ids": [
+        "12460"
+      ],
+      "field_ids": [
+        "2",
+        "3"
+      ],
+      "source_xlsx": "Florence County_Producers.xlsx",
+      "coordinate_status": "reported_spreadsheet_point_unverified",
+      "longitude": -79.5664272,
+      "latitude": 33.8779153
+    },
+    {
+      "county": "Florence",
+      "farm_id": "20170",
+      "tract_ids": [
+        "13243"
+      ],
+      "field_ids": [
+        "14"
+      ],
+      "source_xlsx": "Florence County_Producers.xlsx",
+      "coordinate_status": "reported_spreadsheet_point_unverified",
+      "longitude": -79.7445063,
+      "latitude": 34.0960736
+    },
+    {
+      "county": "Florence",
+      "farm_id": "8185",
+      "tract_ids": [
+        "2352"
+      ],
+      "field_ids": [
+        "2"
+      ],
+      "source_xlsx": "Florence County_Producers.xlsx",
+      "coordinate_status": "reported_spreadsheet_point_unverified",
+      "longitude": -80.0091729,
+      "latitude": 34.1257068
+    },
+    {
+      "county": "Greenwood",
+      "farm_id": "1638",
+      "tract_ids": [
+        "7136"
+      ],
+      "field_ids": [
+        "2"
+      ],
+      "source_xlsx": "Greenwood County_Producers.xlsx",
+      "coordinate_status": "reported_spreadsheet_point_unverified",
+      "longitude": -82.173076,
+      "latitude": 34.0487542
+    },
+    {
+      "county": "Hampton",
+      "farm_id": "1274",
+      "tract_ids": [
+        "1974"
+      ],
+      "field_ids": [
+        "25",
+        "26"
+      ],
+      "source_xlsx": "Hampton County_Producers.xlsx",
+      "coordinate_status": "reported_spreadsheet_point_unverified",
+      "longitude": -81.0467,
+      "latitude": 33.2902
+    },
+    {
+      "county": "Hampton",
+      "farm_id": "4706",
+      "tract_ids": [
+        "11322"
+      ],
+      "field_ids": [
+        "2"
+      ],
+      "source_xlsx": "Hampton County_Producers.xlsx",
+      "coordinate_status": "reported_spreadsheet_point_unverified",
+      "longitude": -80.663,
+      "latitude": 33.5346
+    },
+    {
+      "county": "Horry",
+      "farm_id": "22560",
+      "tract_ids": [
+        "17266"
+      ],
+      "field_ids": [
+        "1"
+      ],
+      "source_xlsx": "Horry County_Producers.xlsx",
+      "coordinate_status": "reported_spreadsheet_point_unverified",
+      "longitude": -79.0934566,
+      "latitude": 34.0470542
+    },
+    {
+      "county": "Horry",
+      "farm_id": "22564",
+      "tract_ids": [
+        "17265",
+        "17268"
+      ],
+      "field_ids": [
+        "13",
+        "2"
+      ],
+      "source_xlsx": "Horry County_Producers.xlsx",
+      "coordinate_status": "reported_spreadsheet_point_unverified",
+      "longitude": -79.0934566,
+      "latitude": 34.0470542
+    },
+    {
+      "county": "Jasper",
+      "farm_id": "1662",
+      "tract_ids": [
+        "2387"
+      ],
+      "field_ids": [
+        "1"
+      ],
+      "source_xlsx": "Jasper County_Producers.xlsx",
+      "coordinate_status": "reported_spreadsheet_point_unverified",
+      "longitude": -80.8389,
+      "latitude": 33.1313
+    },
+    {
+      "county": "Jasper",
+      "farm_id": "4083",
+      "tract_ids": [
+        "10683"
+      ],
+      "field_ids": [
+        "3",
+        "7"
+      ],
+      "source_xlsx": "Jasper County_Producers.xlsx",
+      "coordinate_status": "reported_spreadsheet_point_unverified",
+      "longitude": -80.7045,
+      "latitude": 32.1502
+    },
+    {
+      "county": "Marion",
+      "farm_id": "9419",
+      "tract_ids": [
+        "962"
+      ],
+      "field_ids": [
+        "9"
+      ],
+      "source_xlsx": "Marion County_Producers.xlsx",
+      "coordinate_status": "reported_spreadsheet_point_unverified",
+      "longitude": -79.2269803,
+      "latitude": 34.1879014
+    },
+    {
+      "county": "Marion",
+      "farm_id": "9652",
+      "tract_ids": [
+        "7769"
+      ],
+      "field_ids": [
+        "1"
+      ],
+      "source_xlsx": "Marion County_Producers.xlsx",
+      "coordinate_status": "reported_spreadsheet_point_unverified",
+      "longitude": -79.2745,
+      "latitude": 33.792
+    },
+    {
+      "county": "Marlboro",
+      "farm_id": "3776",
+      "tract_ids": [
+        "10195"
+      ],
+      "field_ids": [
+        "21"
+      ],
+      "source_xlsx": "Malboro County_Producers.xlsx",
+      "coordinate_status": "reported_spreadsheet_point_unverified",
+      "longitude": -79.8616282,
+      "latitude": 34.7554972
+    },
+    {
+      "county": "Orangeburg",
+      "farm_id": "10262",
+      "tract_ids": [
+        "10855"
+      ],
+      "field_ids": [
+        "24",
+        "26",
+        "28"
+      ],
+      "source_xlsx": "Orangeburg County_Producers.xlsx",
+      "coordinate_status": "reported_spreadsheet_point_unverified",
+      "longitude": -80.0191617,
+      "latitude": 34.2960295
+    },
+    {
+      "county": "Orangeburg",
+      "farm_id": "1033",
+      "tract_ids": [
+        "3879"
+      ],
+      "field_ids": [
+        "4"
+      ],
+      "source_xlsx": "Orangeburg County_Producers.xlsx",
+      "coordinate_status": "reported_spreadsheet_point_unverified",
+      "longitude": -80.5074459,
+      "latitude": 33.4656894
+    },
+    {
+      "county": "Orangeburg",
+      "farm_id": "10939",
+      "tract_ids": [
+        "43399"
+      ],
+      "field_ids": [
+        "3"
+      ],
+      "source_xlsx": "Orangeburg County_Producers.xlsx",
+      "coordinate_status": "reported_spreadsheet_point_unverified",
+      "longitude": -80.6509376,
+      "latitude": 33.4213648
+    },
+    {
+      "county": "Orangeburg",
+      "farm_id": "11782",
+      "tract_ids": [
+        "6230"
+      ],
+      "field_ids": [
+        "13"
+      ],
+      "source_xlsx": "Orangeburg County_Producers.xlsx",
+      "coordinate_status": "reported_spreadsheet_point_unverified",
+      "longitude": -80.6509376,
+      "latitude": 33.4213648
+    },
+    {
+      "county": "Orangeburg",
+      "farm_id": "11990",
+      "tract_ids": [
+        "44081"
+      ],
+      "field_ids": [
+        "6",
+        "7"
+      ],
+      "source_xlsx": "Orangeburg County_Producers.xlsx",
+      "coordinate_status": "reported_spreadsheet_point_unverified",
+      "longitude": -80.755914,
+      "latitude": 33.3737963
+    },
+    {
+      "county": "Orangeburg",
+      "farm_id": "1271",
+      "tract_ids": [
+        "469"
+      ],
+      "field_ids": [
+        "1"
+      ],
+      "source_xlsx": "Orangeburg County_Producers.xlsx",
+      "coordinate_status": "reported_spreadsheet_point_unverified",
+      "longitude": -80.6483627,
+      "latitude": 33.4213603
+    },
+    {
+      "county": "Orangeburg",
+      "farm_id": "13225",
+      "tract_ids": [
+        "6178"
+      ],
+      "field_ids": [
+        "24"
+      ],
+      "source_xlsx": "Orangeburg County_Producers.xlsx",
+      "coordinate_status": "reported_spreadsheet_point_unverified",
+      "longitude": -80.8244781,
+      "latitude": 33.3052023
+    },
+    {
+      "county": "Orangeburg",
+      "farm_id": "13618",
+      "tract_ids": [
+        "3260"
+      ],
+      "field_ids": [
+        "17",
+        "26"
+      ],
+      "source_xlsx": "Orangeburg County_Producers.xlsx",
+      "coordinate_status": "reported_spreadsheet_point_unverified",
+      "longitude": -80.7468099,
+      "latitude": 33.4098585
+    },
+    {
+      "county": "Orangeburg",
+      "farm_id": "13653",
+      "tract_ids": [
+        "5515"
+      ],
+      "field_ids": [
+        "1"
+      ],
+      "source_xlsx": "Orangeburg County_Producers.xlsx",
+      "coordinate_status": "reported_spreadsheet_point_unverified",
+      "longitude": -80.8324557,
+      "latitude": 33.315
+    },
+    {
+      "county": "Orangeburg",
+      "farm_id": "13709",
+      "tract_ids": [
+        "45508",
+        "45511",
+        "45512",
+        "45513",
+        "45514"
+      ],
+      "field_ids": [
+        "1",
+        "7",
+        "8",
+        "9"
+      ],
+      "source_xlsx": "Orangeburg County_Producers.xlsx",
+      "coordinate_status": "reported_spreadsheet_point_unverified",
+      "longitude": -80.8219032,
+      "latitude": 33.315
+    },
+    {
+      "county": "Orangeburg",
+      "farm_id": "14043",
+      "tract_ids": [
+        "46002"
+      ],
+      "field_ids": [
+        "4"
+      ],
+      "source_xlsx": "Orangeburg County_Producers.xlsx",
+      "coordinate_status": "reported_spreadsheet_point_unverified",
+      "longitude": -80.4504569,
+      "latitude": 33.4605764
+    },
+    {
+      "county": "Orangeburg",
+      "farm_id": "14048",
+      "tract_ids": [
+        "46008"
+      ],
+      "field_ids": [
+        "1"
+      ],
+      "source_xlsx": "Orangeburg County_Producers.xlsx",
+      "coordinate_status": "reported_spreadsheet_point_unverified",
+      "longitude": -80.8794382,
+      "latitude": 33.512217
+    },
+    {
+      "county": "Orangeburg",
+      "farm_id": "14187",
+      "tract_ids": [
+        "46145"
+      ],
+      "field_ids": [
+        "22",
+        "46",
+        "52"
+      ],
+      "source_xlsx": "Orangeburg County_Producers.xlsx",
+      "coordinate_status": "reported_spreadsheet_point_unverified",
+      "longitude": -80.6483627,
+      "latitude": 33.4213603
+    },
+    {
+      "county": "Orangeburg",
+      "farm_id": "14291",
+      "tract_ids": [
+        "46266"
+      ],
+      "field_ids": [
+        "13",
+        "18",
+        "19"
+      ],
+      "source_xlsx": "Orangeburg County_Producers.xlsx",
+      "coordinate_status": "reported_spreadsheet_point_unverified",
+      "longitude": -80.4284,
+      "latitude": 33.6413
+    },
+    {
+      "county": "Orangeburg",
+      "farm_id": "1778",
+      "tract_ids": [
+        "1334"
+      ],
+      "field_ids": [
+        "6"
+      ],
+      "source_xlsx": "Orangeburg County_Producers.xlsx",
+      "coordinate_status": "reported_spreadsheet_point_unverified",
+      "longitude": -80.5101725,
+      "latitude": 33.5039942
+    },
+    {
+      "county": "Orangeburg",
+      "farm_id": "3873",
+      "tract_ids": [
+        "3895"
+      ],
+      "field_ids": [
+        "1",
+        "4"
+      ],
+      "source_xlsx": "Orangeburg County_Producers.xlsx",
+      "coordinate_status": "reported_spreadsheet_point_unverified",
+      "longitude": -80.5074459,
+      "latitude": 33.4656894
+    },
+    {
+      "county": "Orangeburg",
+      "farm_id": "8242",
+      "tract_ids": [
+        "5134"
+      ],
+      "field_ids": [
+        "2"
+      ],
+      "source_xlsx": "Orangeburg County_Producers.xlsx",
+      "coordinate_status": "reported_spreadsheet_point_unverified",
+      "longitude": -80.8515095,
+      "latitude": 33.5068861
+    },
+    {
+      "county": "Orangeburg",
+      "farm_id": "9231",
+      "tract_ids": [
+        "7908"
+      ],
+      "field_ids": [
+        "11",
+        "12"
+      ],
+      "source_xlsx": "Orangeburg County_Producers.xlsx",
+      "coordinate_status": "reported_spreadsheet_point_unverified",
+      "longitude": -80.3479727,
+      "latitude": 33.6096189
+    },
+    {
+      "county": "Spartanburg",
+      "farm_id": "1659",
+      "tract_ids": [
+        "7406"
+      ],
+      "field_ids": [
+        "28"
+      ],
+      "source_xlsx": "Spartanburg County_Producers.xlsx",
+      "coordinate_status": "reported_spreadsheet_point_unverified",
+      "longitude": -81.955,
+      "latitude": 34.0617
+    },
+    {
+      "county": "Spartanburg",
+      "farm_id": "3107",
+      "tract_ids": [
+        "16606"
+      ],
+      "field_ids": [
+        "34"
+      ],
+      "source_xlsx": "Spartanburg County_Producers.xlsx",
+      "coordinate_status": "reported_spreadsheet_point_unverified",
+      "longitude": -82.4909,
+      "latitude": 34.6576
+    },
+    {
+      "county": "Sumter",
+      "farm_id": "3603",
+      "tract_ids": [
+        "848"
+      ],
+      "field_ids": [
+        "1"
+      ],
+      "source_xlsx": "Sumter County_Producers.xlsx",
+      "coordinate_status": "reported_spreadsheet_point_unverified",
+      "longitude": -80.4385762,
+      "latitude": 33.5946765
+    },
+    {
+      "county": "Sumter",
+      "farm_id": "4261",
+      "tract_ids": [
+        "5953"
+      ],
+      "field_ids": [
+        "2"
+      ],
+      "source_xlsx": "Sumter County_Producers.xlsx",
+      "coordinate_status": "reported_spreadsheet_point_unverified",
+      "longitude": -80.5074459,
+      "latitude": 33.4656894
+    },
+    {
+      "county": "Sumter",
+      "farm_id": "7832",
+      "tract_ids": [
+        "5341"
+      ],
+      "field_ids": [
+        "2"
+      ],
+      "source_xlsx": "Sumter County_Producers.xlsx",
+      "coordinate_status": "reported_spreadsheet_point_unverified",
+      "longitude": -80.4379171,
+      "latitude": 33.5954525
+    },
+    {
+      "county": "Sumter",
+      "farm_id": "960",
+      "tract_ids": [
+        "3812"
+      ],
+      "field_ids": [
+        "1"
+      ],
+      "source_xlsx": "Sumter County_Producers.xlsx",
+      "coordinate_status": "reported_spreadsheet_point_unverified",
+      "longitude": -80.5074459,
+      "latitude": 33.4656894
+    },
+    {
+      "county": "Williamsburg",
+      "farm_id": "10519",
+      "tract_ids": [
+        "3979"
+      ],
+      "field_ids": [
+        "5"
+      ],
+      "source_xlsx": "Williamsburg County_Producers.xlsx",
+      "coordinate_status": "missing_or_invalid_coordinate",
+      "longitude": null,
+      "latitude": null
+    },
+    {
+      "county": "Williamsburg",
+      "farm_id": "17615",
+      "tract_ids": [
+        "5419"
+      ],
+      "field_ids": [
+        "7"
+      ],
+      "source_xlsx": "Williamsburg County_Producers.xlsx",
+      "coordinate_status": "reported_spreadsheet_point_unverified",
+      "longitude": -79.4683759,
+      "latitude": 33.7096461
+    },
+    {
+      "county": "York",
+      "farm_id": "4330",
+      "tract_ids": [
+        "8916"
+      ],
+      "field_ids": [
+        "1"
+      ],
+      "source_xlsx": "York County_Producers.xlsx",
+      "coordinate_status": "reported_spreadsheet_point_unverified",
+      "longitude": -81.2212065,
+      "latitude": 35.0891533
+    }
+  ],
+  "county_counts": {
+    "Aiken": 1,
+    "Allendale": 2,
+    "Bamberg": 2,
+    "Barnwell": 1,
+    "Berkeley": 8,
+    "Calhoun": 2,
+    "Charleston": 2,
+    "Clarendon": 10,
+    "Colleton": 3,
+    "Darlington": 1,
+    "Dorchester": 3,
+    "Florence": 5,
+    "Greenwood": 1,
+    "Hampton": 2,
+    "Horry": 2,
+    "Jasper": 2,
+    "Marion": 2,
+    "Marlboro": 1,
+    "Orangeburg": 18,
+    "Spartanburg": 2,
+    "Sumter": 4,
+    "Williamsburg": 2,
+    "York": 1
+  }
+}
