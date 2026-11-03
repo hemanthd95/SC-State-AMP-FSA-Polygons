@@ -1,3 +1,7 @@
+**Latest Williamsburg GIS maps:** [Open the extracted-field atlas](field_outline_maps/Williamsburg/Williamsburg_Extracted_Field_Outline_Atlas.pdf) | [Download maps and editable GIS](field_outline_maps/Williamsburg/Williamsburg_Extracted_Field_Maps_and_GIS.zip)
+
+This version uses exactly the two county-workbook farms. Nine actual field outlines were freshly extracted from their PDFs, and newly drawn over imagery-only backgrounds extracted from those same georeferenced PDFs. Field IDs listed in Excel are flagged separately. No master-only farms are added. The USGS topographic version remains incomplete.
+
 **Williamsburg correction:** The earlier four-entry map was wrong for the county workbook. The corrected map contains only Farms 17615 and 10519, from Sheet1 rows 2 and 3. Master-only IDs 17614 and 5611 are excluded. Master records remain audit evidence, not extra county-map farms. Other county source reviews still require county-roster validation.
 
 [Corrected Williamsburg three-page PDF](corrected_county_atlases/Williamsburg/Williamsburg_County_Two_Farm_Source_Imagery_Atlas.pdf) | [Williamsburg atlas and GIS ZIP](corrected_county_atlases/Williamsburg/Williamsburg_Corrected_Atlas_and_GIS.zip)

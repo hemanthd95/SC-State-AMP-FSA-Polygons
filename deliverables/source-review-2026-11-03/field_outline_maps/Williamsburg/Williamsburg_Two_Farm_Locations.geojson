@@ -1,0 +1,33 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.4657715883023,
+          33.708075123518114
+        ]
+      },
+      "properties": {
+        "farm_id": "17615",
+        "location_status": "REGISTERED_SOURCE_FIELD_REPRESENTATIVE_POINT"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.69925184534122,
+          33.5845527909422
+        ]
+      },
+      "properties": {
+        "farm_id": "10519",
+        "location_status": "REGISTERED_SOURCE_FIELD_REPRESENTATIVE_POINT"
+      }
+    }
+  ]
+}
