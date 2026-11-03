@@ -21,6 +21,7 @@ from matplotlib.patches import Polygon as MplPolygon
 from PIL import Image
 import requests
 import shapefile
+import fitz
 from shapely.geometry import shape
 from shapely.ops import unary_union
 
@@ -83,6 +84,62 @@ def load_data():
         pr = f["properties"]
         geoms[(pr["county"], str(pr["farm_id"]))].append(shape(f["geometry"]))
     return inv, geoms
+
+def load_source_map_links():
+    p=ROOT/"data/farm_source_pdf_crosswalk.json"
+    if not p.exists():
+        return {}
+    data=json.loads(p.read_text())
+    return {(r["county"],str(r["farm_id"])): r for r in data["crosswalk"]}
+
+def source_reference_image(farm, links):
+    record=links.get((farm["county"],str(farm["farm_id"])))
+    if not record or not record.get("source_pdf"):
+        return None, None
+    path=ROOT/record["source_pdf"]
+    if not path.is_file():
+        print(f"WARNING: Original FSA map absent: {path}",flush=True)
+        return None, record
+    try:
+        if path.suffix.lower()==".pdf":
+            with fitz.open(path) as doc:
+                if not len(doc):
+                    return None,record
+                pix=doc[0].get_pixmap(matrix=fitz.Matrix(1.35,1.35),colorspace=fitz.csRGB,alpha=False)
+                im=Image.open(io.BytesIO(pix.tobytes("png"))).convert("RGB")
+        else:
+            im=Image.open(path).convert("RGB")
+        if max(im.size)>3500:
+            im.thumbnail((3500,3500))
+        return im, record
+    except Exception as exc:
+        print(f"WARNING: Cannot render original FSA source map {path}: {exc}",flush=True)
+        return None, record
+
+def make_source_map_appendices(pdf,county,variant,farms,geoms,links,starting_page):
+    count=0
+    for idx,farm in enumerate(farms):
+        if geoms.get((county,str(farm["farm_id"]))):
+            continue # Verified geometry is already shown over both basemap types.
+        im,record=source_reference_image(farm,links)
+        if im is None:
+            continue
+        fig=plt.figure(figsize=(17,11),facecolor="white")
+        add_header(fig,county,variant,f"Original FSA boundary reference  |  farm {idx+1} of {len(farms)}")
+        ax=fig.add_axes([0.055,0.19,0.89,0.66])
+        ax.imshow(im,interpolation="nearest")
+        ax.set_xticks([]);ax.set_yticks([])
+        ax.set_title(f"{idx+1:02d}  |  FARM {farm['farm_id']}   |   FSA SOURCE DOCUMENT",fontsize=16,loc="left",pad=10)
+        fig.text(0.05,0.125,"VISIBLE FSA FIELD OUTLINES — original source page, NOT spatially registered to the county basemap.",
+                 fontsize=12,color="#ac571f",fontweight="bold")
+        fig.text(0.05,0.096,"The separate farm detail panel places the reported location on the USGS background. This source page preserves the actual outline visually; do not interpret that point as the field boundary.",fontsize=9,color="#47545a")
+        fig.text(0.05,0.076,f"Original document: {Path(record['source_pdf']).name}  |  Record match: {record['match_status']}",fontsize=8,color="#62747b")
+        footer(fig,starting_page+count+1,variant,"Original FSA source map (as provided)",True)
+        pdf.savefig(fig,dpi=185)
+        plt.close(fig)
+        im.close()
+        count+=1
+    return count
 
 def adjusted_bounds(box, min_width=0.02, min_height=0.015, padding=0.17):
     x0, y0, x1, y1 = box
@@ -255,6 +312,7 @@ def main():
     styles()
     counties=load_counties()
     inventory, geoms=load_data()
+    links=load_source_map_links()
     bycounty=defaultdict(list)
     for f in inventory:bycounty[f["county"]].append(f)
     rows=[]
@@ -268,10 +326,13 @@ def main():
             with PdfPages(filename) as pdf:
                 src=make_overview(pdf,county,variant,counties[county],farms,geoms,colors)
                 total_pages=make_details(pdf,county,variant,farms,geoms,colors)
+                src_pages=make_source_map_appendices(pdf,county,variant,farms,geoms,links,total_pages)
+                total_pages+=src_pages
             count=sum(bool(geoms.get((county,str(f["farm_id"])))) for f in farms)
             row={"county":county,"variant":variant,"pdf":filename.name,"pdf_pages":total_pages,
                  "farm_count":len(farms),"farms_with_verified_fields":count,
                  "farms_without_verified_fields":len(farms)-count,
+                 "original_fsa_map_reference_pages":src_pages,
                  "source_overview":src,"file_size_bytes":filename.stat().st_size}
             rows.append(row);ALL_LOGS.append(row)
             print(f"CREATED {filename.name}  pages={total_pages}  farms={len(farms)} verified_farms={count}",flush=True)
