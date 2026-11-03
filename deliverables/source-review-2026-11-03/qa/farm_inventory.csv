@@ -1,0 +1,121 @@
+county,farm_id,record_count,scopes,amp_producer_ids,reported_longitude,reported_latitude,coordinate_conflict,reported_coordinate_in_county,coordinate_source,multi_farm_record_association_pending,location_status
+Aiken,442,1,"[""enrollment_year_1""]",[],-79.8516,33.6697,False,False,Producers by County/All_Producer list.xlsx::Producer Enrollment_Year 1::34,False,REPORTED_COORDINATE_OUTSIDE_COUNTY_REVIEW
+Aiken,4631,2,"[""county_workbook"", ""enrollment_year_2""]","[""AMPSC060""]",-81.7951119,33.4275064,False,True,Producers by County/Aiken County_Producers.xlsx::Sheet1::2,False,APPROXIMATE_REPORTED_COORDINATE
+Allendale,10333,1,"[""county_workbook""]",[],,,False,,,False,NO_USABLE_COORDINATE
+Allendale,13618,3,"[""enrollment_year_1""]",[],-80.7967,33.5098,True,False,Producers by County/All_Producer list.xlsx::Producer Enrollment_Year 1::42,False,REPORTED_COORDINATE_OUTSIDE_COUNTY_REVIEW
+Allendale,3740,1,"[""enrollment_year_2""]","[""AMPSC059""]",,,False,,,False,NO_USABLE_COORDINATE
+Allendale,3779,3,"[""county_workbook"", ""enrollment_year_1"", ""enrollment_year_2""]","[""AMPSC066""]",-81.3224192,33.0084896,True,True,Producers by County/Allendale County_Producers .xlsx::Sheet1::2,False,APPROXIMATE_REPORTED_COORDINATE
+Anderson,6083,2,"[""enrollment_year_1""]",[],-82.4909,34.6576,True,True,Producers by County/All_Producer list.xlsx::Producer Enrollment_Year 1::49,False,APPROXIMATE_REPORTED_COORDINATE
+Bamberg,3523,2,"[""county_workbook"", ""enrollment_year_2""]","[""AMPSC021""]",-81.0501333,33.2387299,False,True,Producers by County/Bamberg County_Producers.xlsx::Sheet1::2,False,APPROXIMATE_REPORTED_COORDINATE
+Bamberg,3524,3,"[""county_workbook"", ""enrollment_year_1"", ""enrollment_year_2""]","[""AMPSC036""]",-81.6563,33.7577,False,False,Producers by County/Bamberg County_Producers.xlsx::Sheet1::3,False,REPORTED_COORDINATE_OUTSIDE_COUNTY_REVIEW
+Bamberg,3525,1,"[""enrollment_year_1""]",[],-81.6563,33.7577,False,False,Producers by County/All_Producer list.xlsx::Producer Enrollment_Year 1::33,False,REPORTED_COORDINATE_OUTSIDE_COUNTY_REVIEW
+Barnwell,753,6,"[""county_workbook"", ""enrollment_year_2""]","[""AMPSC068"", ""AMPSC069"", ""AMPSC070""]",-81.366072,33.3830638,False,True,Producers by County/Barnwell County_Producers.xlsx::Sheet1::2,False,APPROXIMATE_REPORTED_COORDINATE
+Berkeley,13739,2,"[""county_workbook"", ""enrollment_year_2""]","[""AMPSC044""]",-80.0957283,33.0552013,False,True,Producers by County/Berkley County_Producers.xlsx::Sheet1::7,False,APPROXIMATE_REPORTED_COORDINATE
+Berkeley,14118,2,"[""county_workbook"", ""enrollment_year_2""]","[""AMPSC064""]",-80.2426989,33.3706279,False,False,Producers by County/Berkley County_Producers.xlsx::Sheet1::8,True,REPORTED_COORDINATE_OUTSIDE_COUNTY_REVIEW
+Berkeley,3756,2,"[""county_workbook"", ""enrollment_year_2""]","[""AMPSC038""]",-79.9344277,33.1877911,False,True,Producers by County/Berkley County_Producers.xlsx::Sheet1::2,True,APPROXIMATE_REPORTED_COORDINATE
+Berkeley,4198,2,"[""county_workbook"", ""enrollment_year_2""]","[""AMPSC038""]",-79.9344277,33.1877911,False,True,Producers by County/Berkley County_Producers.xlsx::Sheet1::4,True,APPROXIMATE_REPORTED_COORDINATE
+Berkeley,4236,3,"[""county_workbook"", ""enrollment_year_2""]","[""AMPSC041""]",-79.9395655,33.3370337,False,True,Producers by County/Berkley County_Producers.xlsx::Sheet1::5,False,APPROXIMATE_REPORTED_COORDINATE
+Berkeley,4273,2,"[""county_workbook"", ""enrollment_year_2""]","[""AMPSC038""]",-79.9344277,33.1877911,False,True,Producers by County/Berkley County_Producers.xlsx::Sheet1::3,True,APPROXIMATE_REPORTED_COORDINATE
+Berkeley,577,1,"[""county_workbook""]",[],-80.0931768,33.0551942,False,True,Producers by County/Berkley County_Producers.xlsx::Sheet1::11,False,APPROXIMATE_REPORTED_COORDINATE
+Berkeley,9387,3,"[""county_workbook"", ""enrollment_year_2""]","[""AMPSC064""]",-80.2426989,33.3706279,False,False,Producers by County/Berkley County_Producers.xlsx::Sheet1::9,True,REPORTED_COORDINATE_OUTSIDE_COUNTY_REVIEW
+Calhoun,14280,1,"[""county_workbook""]",[],-80.4521,33.6101,False,False,Producers by County/Calhoun County_Producers.xlsx::Sheet1::3,False,REPORTED_COORDINATE_OUTSIDE_COUNTY_REVIEW
+Calhoun,3549,2,"[""county_workbook"", ""enrollment_year_2""]","[""AMPSC031""]",-81.658,33.7591,False,False,Producers by County/Calhoun County_Producers.xlsx::Sheet1::2,False,REPORTED_COORDINATE_OUTSIDE_COUNTY_REVIEW
+Charleston,1134,2,"[""county_workbook"", ""enrollment_year_2""]","[""AMPSC062""]",-80.3267275,32.6485761,False,True,Producers by County/Charleston County_Producers.xlsx::Sheet1::3,False,APPROXIMATE_REPORTED_COORDINATE
+Charleston,1436,2,"[""county_workbook"", ""enrollment_year_2""]","[""AMPSC043""]",-79.736953,32.895935,False,True,Producers by County/Charleston County_Producers.xlsx::Sheet1::2,False,APPROXIMATE_REPORTED_COORDINATE
+Cherokee,3107,1,"[""enrollment_year_1""]",[],-82.4909,34.6576,False,False,Producers by County/All_Producer list.xlsx::Producer Enrollment_Year 1::12,False,REPORTED_COORDINATE_OUTSIDE_COUNTY_REVIEW
+Clarendon,1118,9,"[""county_workbook"", ""enrollment_year_1"", ""enrollment_year_2""]","[""AMPSC077""]",-80.2965507,33.6429989,True,True,Producers by County/Clarendon County_Producers.xlsx::Sheet1::13,False,APPROXIMATE_REPORTED_COORDINATE
+Clarendon,1375,3,"[""county_workbook"", ""enrollment_year_1"", ""enrollment_year_2""]","[""AMPSC018""]",-80.2970765,33.6431756,True,True,Producers by County/Clarendon County_Producers.xlsx::Sheet1::7,False,APPROXIMATE_REPORTED_COORDINATE
+Clarendon,1568,3,"[""county_workbook"", ""enrollment_year_1"", ""enrollment_year_2""]","[""AMPSC080""]",-80.4275,33.6404,False,True,Producers by County/Clarendon County_Producers.xlsx::Sheet1::17,False,APPROXIMATE_REPORTED_COORDINATE
+Clarendon,1634,1,"[""enrollment_year_1""]",[],-80.7656,33.469,False,False,Producers by County/All_Producer list.xlsx::Producer Enrollment_Year 1::52,False,REPORTED_COORDINATE_OUTSIDE_COUNTY_REVIEW
+Clarendon,1694,2,"[""county_workbook"", ""enrollment_year_2""]","[""AMPSC067""]",,,False,,,False,NO_USABLE_COORDINATE
+Clarendon,3603,1,"[""enrollment_year_2""]","[""AMPSC082""]",,,False,,,False,NO_USABLE_COORDINATE
+Clarendon,3988,3,"[""county_workbook"", ""enrollment_year_1"", ""enrollment_year_2""]","[""AMPSC029""]",-81.7804,35.1037,False,False,Producers by County/Clarendon County_Producers.xlsx::Sheet1::9,False,REPORTED_COORDINATE_OUTSIDE_COUNTY_REVIEW
+Clarendon,497,3,"[""county_workbook"", ""enrollment_year_1"", ""enrollment_year_2""]","[""AMPSC057""]",-80.1999,33.7072,False,True,Producers by County/Clarendon County_Producers.xlsx::Sheet1::11,False,APPROXIMATE_REPORTED_COORDINATE
+Clarendon,6749,3,"[""county_workbook"", ""enrollment_year_2""]","[""AMPSC011""]",-80.2126811,33.5971605,False,True,Producers by County/Clarendon County_Producers.xlsx::Sheet1::2,False,APPROXIMATE_REPORTED_COORDINATE
+Clarendon,6750,1,"[""county_workbook""]",[],-80.2126811,33.5971605,False,True,Producers by County/Clarendon County_Producers.xlsx::Sheet1::4,False,APPROXIMATE_REPORTED_COORDINATE
+Clarendon,9231,2,"[""enrollment_year_1"", ""enrollment_year_2""]","[""AMPSC054""]",-80.2232,32.8214,False,False,Producers by County/All_Producer list.xlsx::Producer Enrollment_Year 1::40,False,REPORTED_COORDINATE_OUTSIDE_COUNTY_REVIEW
+Clarendon,9274,5,"[""county_workbook"", ""enrollment_year_2""]","[""AMPSC015"", ""AMPSC027""]",-80.3578469,33.6677637,True,True,Producers by County/Clarendon County_Producers.xlsx::Sheet1::5,False,APPROXIMATE_REPORTED_COORDINATE
+Clarendon,948,3,"[""county_workbook"", ""enrollment_year_1"", ""enrollment_year_2""]","[""AMPSC033""]",-80.215,33.6522,False,True,Producers by County/Clarendon County_Producers.xlsx::Sheet1::10,False,APPROXIMATE_REPORTED_COORDINATE
+Colleton,1283,3,"[""county_workbook"", ""enrollment_year_2""]","[""AMPSC016""]",,,False,,,False,NO_USABLE_COORDINATE
+Colleton,1867,2,"[""county_workbook"", ""enrollment_year_2""]","[""AMPSC007""]",-80.5155828,32.9315982,False,True,Producers by County/Colletton County_Producers.xlsx::Sheet1::2,False,APPROXIMATE_REPORTED_COORDINATE
+Colleton,2715,1,"[""enrollment_year_2""]","[""AMPSC079""]",,,False,,,False,NO_USABLE_COORDINATE
+Colleton,4917,2,"[""county_workbook"", ""enrollment_year_2""]","[""AMPSC045""]",-80.6607065,32.7458064,False,True,Producers by County/Colletton County_Producers.xlsx::Sheet1::5,False,APPROXIMATE_REPORTED_COORDINATE
+Darlington,10262,2,"[""enrollment_year_1"", ""enrollment_year_2""]","[""AMPSC048""]",-80.2749,33.6111,False,False,Producers by County/All_Producer list.xlsx::Producer Enrollment_Year 1::38,False,REPORTED_COORDINATE_OUTSIDE_COUNTY_REVIEW
+Darlington,7370,2,"[""county_workbook"", ""enrollment_year_2""]","[""AMPSC061""]",-80.1402238,34.1574677,False,True,Producers by County/Darlington County_Producers.xlsx::Sheet1::2,False,APPROXIMATE_REPORTED_COORDINATE
+Darlington,8185,2,"[""county_workbook"", ""enrollment_year_2""]","[""AMPSC005""]",-80.0091729,34.1257068,False,True,Producers by County/Florence County_Producers.xlsx::Sheet1::2,False,APPROXIMATE_REPORTED_COORDINATE
+Dorchester,1134,1,"[""enrollment_year_1""]",[],-80.1999,33.7072,False,False,Producers by County/All_Producer list.xlsx::Producer Enrollment_Year 1::45,False,REPORTED_COORDINATE_OUTSIDE_COUNTY_REVIEW
+Dorchester,1982,1,"[""enrollment_year_1""]",[],-80.2869,33.1822,False,False,Producers by County/All_Producer list.xlsx::Producer Enrollment_Year 1::15,False,REPORTED_COORDINATE_OUTSIDE_COUNTY_REVIEW
+Dorchester,4943,3,"[""county_workbook"", ""enrollment_year_1"", ""enrollment_year_2""]","[""AMPSC012""]",-80.289,33.3243,False,False,Producers by County/Dorchester County_Producers.xlsx::Sheet1::3,False,REPORTED_COORDINATE_OUTSIDE_COUNTY_REVIEW
+Dorchester,548,3,"[""county_workbook"", ""enrollment_year_1"", ""enrollment_year_2""]","[""AMPSC008""]",-80.5391,33.2872,False,True,Producers by County/Dorchester County_Producers.xlsx::Sheet1::2,False,APPROXIMATE_REPORTED_COORDINATE
+Dorchester,577,1,"[""enrollment_year_2""]","[""AMPSC074""]",,,False,,,False,NO_USABLE_COORDINATE
+Dorchester,6579,2,"[""county_workbook"", ""enrollment_year_2""]","[""AMPSC025""]",-80.2869,33.1822,False,False,Producers by County/Dorchester County_Producers.xlsx::Sheet1::4,False,REPORTED_COORDINATE_OUTSIDE_COUNTY_REVIEW
+Florence,1312,2,"[""county_workbook"", ""enrollment_year_2""]","[""AMPSC014""]",-80.6483627,33.4213603,False,False,Producers by County/Florence County_Producers.xlsx::Sheet1::4,False,REPORTED_COORDINATE_OUTSIDE_COUNTY_REVIEW
+Florence,15803,3,"[""county_workbook"", ""enrollment_year_2""]","[""AMPSC042""]",-79.5664272,33.8779153,False,True,Producers by County/Florence County_Producers.xlsx::Sheet1::5,True,APPROXIMATE_REPORTED_COORDINATE
+Florence,20119,3,"[""county_workbook"", ""enrollment_year_2""]","[""AMPSC042""]",-79.5664272,33.8779153,False,True,Producers by County/Florence County_Producers.xlsx::Sheet1::7,True,APPROXIMATE_REPORTED_COORDINATE
+Florence,20170,2,"[""county_workbook"", ""enrollment_year_2""]","[""AMPSC010""]",-79.7445063,34.0960736,False,True,Producers by County/Florence County_Producers.xlsx::Sheet1::3,False,APPROXIMATE_REPORTED_COORDINATE
+Greenville,3955,1,"[""enrollment_year_1""]",[],-80.2782,33.5922,False,False,Producers by County/All_Producer list.xlsx::Producer Enrollment_Year 1::47,False,REPORTED_COORDINATE_OUTSIDE_COUNTY_REVIEW
+Greenville,9654,1,"[""enrollment_year_1""]",[],-80.2782,33.5922,False,False,Producers by County/All_Producer list.xlsx::Producer Enrollment_Year 1::67,False,REPORTED_COORDINATE_OUTSIDE_COUNTY_REVIEW
+Greenwood,1638,2,"[""county_workbook"", ""enrollment_year_2""]","[""AMPSC030""]",-82.173076,34.0487542,False,True,Producers by County/Greenwood County_Producers.xlsx::Sheet1::2,False,APPROXIMATE_REPORTED_COORDINATE
+Greenwood,1659,1,"[""enrollment_year_2""]","[""AMPSC023""]",,,False,,,False,NO_USABLE_COORDINATE
+Greenwood,1661,1,"[""enrollment_year_1""]",[],-81.955,34.1122,False,True,Producers by County/All_Producer list.xlsx::Producer Enrollment_Year 1::13,False,APPROXIMATE_REPORTED_COORDINATE
+Hampton,1274,3,"[""county_workbook"", ""enrollment_year_2""]","[""AMPSC037""]",-81.0467,33.2902,True,False,Producers by County/Hampton County_Producers.xlsx::Sheet1::3,False,REPORTED_COORDINATE_OUTSIDE_COUNTY_REVIEW
+Hampton,2004,1,"[""enrollment_year_1""]",[],-80.8389,33.1313,False,False,Producers by County/All_Producer list.xlsx::Producer Enrollment_Year 1::14,False,REPORTED_COORDINATE_OUTSIDE_COUNTY_REVIEW
+Hampton,4084,1,"[""enrollment_year_1""]",[],-80.7045,32.1502,False,False,Producers by County/All_Producer list.xlsx::Producer Enrollment_Year 1::19,False,REPORTED_COORDINATE_OUTSIDE_COUNTY_REVIEW
+Hampton,4706,4,"[""county_workbook"", ""enrollment_year_1"", ""enrollment_year_2""]","[""AMPSC004"", ""AMPSC084""]",-80.663,33.5346,False,False,Producers by County/Hampton County_Producers.xlsx::Sheet1::2,False,REPORTED_COORDINATE_OUTSIDE_COUNTY_REVIEW
+Horry,22560,2,"[""county_workbook"", ""enrollment_year_2""]","[""AMPSC002""]",-79.0934566,34.0470542,False,True,Producers by County/Horry County_Producers.xlsx::Sheet1::2,True,APPROXIMATE_REPORTED_COORDINATE
+Horry,22564,3,"[""county_workbook"", ""enrollment_year_2""]","[""AMPSC002""]",-79.0934566,34.0470542,False,True,Producers by County/Horry County_Producers.xlsx::Sheet1::3,True,APPROXIMATE_REPORTED_COORDINATE
+Jasper,1274,3,"[""enrollment_year_1""]",[],-81.0467,33.2902,False,False,Producers by County/All_Producer list.xlsx::Producer Enrollment_Year 1::29,False,REPORTED_COORDINATE_OUTSIDE_COUNTY_REVIEW
+Jasper,1662,2,"[""county_workbook"", ""enrollment_year_2""]","[""AMPSC024""]",-80.8389,33.1313,False,False,Producers by County/Jasper County_Producers.xlsx::Sheet1::2,False,REPORTED_COORDINATE_OUTSIDE_COUNTY_REVIEW
+Jasper,4083,3,"[""county_workbook"", ""enrollment_year_2""]","[""AMPSC028""]",-80.7045,32.1502,False,False,Producers by County/Jasper County_Producers.xlsx::Sheet1::3,False,REPORTED_COORDINATE_OUTSIDE_COUNTY_REVIEW
+Lexington,702,1,"[""enrollment_year_1""]",[],-80.4375,33.6731,False,False,Producers by County/All_Producer list.xlsx::Producer Enrollment_Year 1::46,False,REPORTED_COORDINATE_OUTSIDE_COUNTY_REVIEW
+Marion,9247,1,"[""enrollment_year_1""]",[],-80.2782,33.5922,False,False,Producers by County/All_Producer list.xlsx::Producer Enrollment_Year 1::68,False,REPORTED_COORDINATE_OUTSIDE_COUNTY_REVIEW
+Marion,9419,3,"[""county_workbook"", ""enrollment_year_1"", ""enrollment_year_2""]","[""AMPSC078""]",-79.2269803,34.1879014,True,True,Producers by County/Marion County_Producers.xlsx::Sheet1::3,False,APPROXIMATE_REPORTED_COORDINATE
+Marion,9652,3,"[""county_workbook"", ""enrollment_year_1"", ""enrollment_year_2""]","[""AMPSC001""]",-79.2745,33.792,False,True,Producers by County/Marion County_Producers.xlsx::Sheet1::2,False,APPROXIMATE_REPORTED_COORDINATE
+Marlboro,3776,2,"[""county_workbook"", ""enrollment_year_2""]","[""AMPSC039""]",-79.8616282,34.7554972,False,True,Producers by County/Malboro County_Producers.xlsx::Sheet1::2,False,APPROXIMATE_REPORTED_COORDINATE
+Orangeburg,10262,3,"[""county_workbook""]",[],-80.0191617,34.2960295,False,False,Producers by County/Orangeburg County_Producers.xlsx::Sheet1::13,False,REPORTED_COORDINATE_OUTSIDE_COUNTY_REVIEW
+Orangeburg,1033,2,"[""county_workbook"", ""enrollment_year_2""]","[""AMPSC050""]",-80.5074459,33.4656894,False,True,Producers by County/Orangeburg County_Producers.xlsx::Sheet1::17,False,APPROXIMATE_REPORTED_COORDINATE
+Orangeburg,1064,1,"[""enrollment_year_2""]","[""AMPSC072""]",,,False,,,True,NO_USABLE_COORDINATE
+Orangeburg,10939,2,"[""county_workbook"", ""enrollment_year_2""]","[""AMPSC047""]",-80.6509376,33.4213648,False,True,Producers by County/Orangeburg County_Producers.xlsx::Sheet1::12,True,APPROXIMATE_REPORTED_COORDINATE
+Orangeburg,11782,3,"[""county_workbook"", ""enrollment_year_1"", ""enrollment_year_2""]","[""AMPSC047""]",-80.6509376,33.4213648,True,True,Producers by County/Orangeburg County_Producers.xlsx::Sheet1::11,True,APPROXIMATE_REPORTED_COORDINATE
+Orangeburg,11990,3,"[""county_workbook"", ""enrollment_year_2""]","[""AMPSC006""]",-80.755914,33.3737963,False,True,Producers by County/Orangeburg County_Producers.xlsx::Sheet1::2,False,APPROXIMATE_REPORTED_COORDINATE
+Orangeburg,1271,2,"[""county_workbook"", ""enrollment_year_2""]","[""AMPSC019""]",-80.6483627,33.4213603,False,True,Producers by County/Orangeburg County_Producers.xlsx::Sheet1::8,False,APPROXIMATE_REPORTED_COORDINATE
+Orangeburg,13225,2,"[""county_workbook"", ""enrollment_year_2""]","[""AMPSC051""]",-80.8244781,33.3052023,False,True,Producers by County/Orangeburg County_Producers.xlsx::Sheet1::18,False,APPROXIMATE_REPORTED_COORDINATE
+Orangeburg,13526,1,"[""enrollment_year_1""]",[],,,False,,,False,NO_USABLE_COORDINATE
+Orangeburg,13527,2,"[""enrollment_year_1""]",[],,,False,,,False,NO_USABLE_COORDINATE
+Orangeburg,13618,5,"[""county_workbook"", ""enrollment_year_2""]","[""AMPSC009"", ""AMPSC058""]",-80.744235,33.409854,True,True,Producers by County/Orangeburg County_Producers.xlsx::Sheet1::4,False,APPROXIMATE_REPORTED_COORDINATE
+Orangeburg,13653,2,"[""county_workbook""]",[],-80.8324557,33.315,False,True,Producers by County/Orangeburg County_Producers.xlsx::Sheet1::27,False,APPROXIMATE_REPORTED_COORDINATE
+Orangeburg,13709,12,"[""county_workbook"", ""enrollment_year_1"", ""enrollment_year_2""]","[""AMPSC081"", ""AMPSC083""]",-80.8324557,33.315,True,True,Producers by County/Orangeburg County_Producers.xlsx::Sheet1::29,False,APPROXIMATE_REPORTED_COORDINATE
+Orangeburg,13859,2,"[""enrollment_year_1"", ""enrollment_year_2""]","[""AMPSC035""]",-80.3423,33.4391,False,False,Producers by County/All_Producer list.xlsx::Producer Enrollment_Year 1::28,False,REPORTED_COORDINATE_OUTSIDE_COUNTY_REVIEW
+Orangeburg,14043,2,"[""county_workbook"", ""enrollment_year_2""]","[""AMPSC049""]",-80.4504569,33.4605764,False,True,Producers by County/Orangeburg County_Producers.xlsx::Sheet1::16,False,APPROXIMATE_REPORTED_COORDINATE
+Orangeburg,14048,3,"[""county_workbook"", ""enrollment_year_1"", ""enrollment_year_2""]","[""AMPSC065""]",-80.8794382,33.512217,True,True,Producers by County/Orangeburg County_Producers.xlsx::Sheet1::24,False,APPROXIMATE_REPORTED_COORDINATE
+Orangeburg,14112,1,"[""enrollment_year_1""]",[],-80.8881,33.4999,False,True,Producers by County/All_Producer list.xlsx::Producer Enrollment_Year 1::6,False,APPROXIMATE_REPORTED_COORDINATE
+Orangeburg,14187,4,"[""county_workbook"", ""enrollment_year_2""]","[""AMPSC013""]",-80.6483627,33.4213603,False,True,Producers by County/Orangeburg County_Producers.xlsx::Sheet1::5,False,APPROXIMATE_REPORTED_COORDINATE
+Orangeburg,14280,2,"[""enrollment_year_1"", ""enrollment_year_2""]","[""AMPSC032""]",-80.4284,33.6413,False,False,Producers by County/All_Producer list.xlsx::Producer Enrollment_Year 1::17,True,REPORTED_COORDINATE_OUTSIDE_COUNTY_REVIEW
+Orangeburg,14291,6,"[""county_workbook"", ""enrollment_year_1"", ""enrollment_year_2""]","[""AMPSC026"", ""AMPSC032""]",-80.4521,33.6101,True,False,Producers by County/Orangeburg County_Producers.xlsx::Sheet1::9,True,REPORTED_COORDINATE_OUTSIDE_COUNTY_REVIEW
+Orangeburg,1778,2,"[""county_workbook"", ""enrollment_year_2""]","[""AMPSC056""]",-80.5101725,33.5039942,False,True,Producers by County/Orangeburg County_Producers.xlsx::Sheet1::21,False,APPROXIMATE_REPORTED_COORDINATE
+Orangeburg,3549,1,"[""enrollment_year_1""]",[],-81.658,33.7591,False,False,Producers by County/All_Producer list.xlsx::Producer Enrollment_Year 1::21,False,REPORTED_COORDINATE_OUTSIDE_COUNTY_REVIEW
+Orangeburg,3573,1,"[""enrollment_year_2""]","[""AMPSC075""]",,,False,,,False,NO_USABLE_COORDINATE
+Orangeburg,3575,1,"[""enrollment_year_2""]","[""AMPSC053""]",,,False,,,False,NO_USABLE_COORDINATE
+Orangeburg,3635,1,"[""enrollment_year_2""]","[""AMPSC073""]",,,False,,,False,NO_USABLE_COORDINATE
+Orangeburg,3826,1,"[""enrollment_year_2""]","[""AMPSC072""]",,,False,,,True,NO_USABLE_COORDINATE
+Orangeburg,3873,2,"[""county_workbook""]",[],-80.5074459,33.4656894,False,True,Producers by County/Orangeburg County_Producers.xlsx::Sheet1::25,False,APPROXIMATE_REPORTED_COORDINATE
+Orangeburg,4261,3,"[""enrollment_year_1"", ""enrollment_year_2""]","[""AMPSC072""]",-79.8487,33.6749,False,False,Producers by County/All_Producer list.xlsx::Producer Enrollment_Year 1::54,True,REPORTED_COORDINATE_OUTSIDE_COUNTY_REVIEW
+Orangeburg,5661,1,"[""enrollment_year_2""]","[""AMPSC003""]",,,False,,,False,NO_USABLE_COORDINATE
+Orangeburg,7545,1,"[""enrollment_year_1""]",[],-80.396,33.6491,False,False,Producers by County/All_Producer list.xlsx::Producer Enrollment_Year 1::39,False,REPORTED_COORDINATE_OUTSIDE_COUNTY_REVIEW
+Orangeburg,8242,3,"[""county_workbook"", ""enrollment_year_1"", ""enrollment_year_2""]","[""AMPSC046""]",-80.8515095,33.5068861,True,True,Producers by County/Orangeburg County_Producers.xlsx::Sheet1::10,False,APPROXIMATE_REPORTED_COORDINATE
+Orangeburg,9231,2,"[""county_workbook""]",[],-80.3479727,33.6096189,False,False,Producers by County/Orangeburg County_Producers.xlsx::Sheet1::19,False,REPORTED_COORDINATE_OUTSIDE_COUNTY_REVIEW
+Orangeburg,9433,1,"[""enrollment_year_1""]",[],-80.4284,33.6413,False,False,Producers by County/All_Producer list.xlsx::Producer Enrollment_Year 1::16,False,REPORTED_COORDINATE_OUTSIDE_COUNTY_REVIEW
+Orangeburg,960,1,"[""enrollment_year_1""]",[],-79.8487,33.6749,False,False,Producers by County/All_Producer list.xlsx::Producer Enrollment_Year 1::53,False,REPORTED_COORDINATE_OUTSIDE_COUNTY_REVIEW
+Richland,3237,1,"[""enrollment_year_1""]",[],,,False,,,False,NO_USABLE_COORDINATE
+Spartanburg,1659,1,"[""county_workbook""]",[],-81.955,34.0617,False,False,Producers by County/Spartanburg County_Producers.xlsx::Sheet1::3,False,REPORTED_COORDINATE_OUTSIDE_COUNTY_REVIEW
+Spartanburg,3107,2,"[""county_workbook"", ""enrollment_year_2""]","[""AMPSC022""]",-82.4909,34.6576,False,False,Producers by County/Spartanburg County_Producers.xlsx::Sheet1::2,False,REPORTED_COORDINATE_OUTSIDE_COUNTY_REVIEW
+Sumter,3603,2,"[""county_workbook"", ""enrollment_year_2""]","[""AMPSC071""]",-80.4385762,33.5946765,False,False,Producers by County/Sumter County_Producers.xlsx::Sheet1::3,False,REPORTED_COORDINATE_OUTSIDE_COUNTY_REVIEW
+Sumter,4261,1,"[""county_workbook""]",[],-80.5074459,33.4656894,False,False,Producers by County/Sumter County_Producers.xlsx::Sheet1::4,False,REPORTED_COORDINATE_OUTSIDE_COUNTY_REVIEW
+Sumter,7832,2,"[""county_workbook"", ""enrollment_year_2""]","[""AMPSC020""]",-80.4379171,33.5954525,False,False,Producers by County/Sumter County_Producers.xlsx::Sheet1::2,False,REPORTED_COORDINATE_OUTSIDE_COUNTY_REVIEW
+Sumter,8417,1,"[""enrollment_year_1""]",[],-80.4275,33.6404,False,False,Producers by County/All_Producer list.xlsx::Producer Enrollment_Year 1::11,False,REPORTED_COORDINATE_OUTSIDE_COUNTY_REVIEW
+Sumter,960,1,"[""county_workbook""]",[],-80.5074459,33.4656894,False,False,Producers by County/Sumter County_Producers.xlsx::Sheet1::5,False,REPORTED_COORDINATE_OUTSIDE_COUNTY_REVIEW
+Williamsburg,10519,2,"[""county_workbook"", ""enrollment_year_2""]","[""AMPSC076""]",,,False,,,False,NO_USABLE_COORDINATE
+Williamsburg,17614,3,"[""enrollment_year_1""]",[],-79.679,33.3665,False,True,Producers by County/All_Producer list.xlsx::Producer Enrollment_Year 1::7,False,APPROXIMATE_REPORTED_COORDINATE
+Williamsburg,17615,2,"[""county_workbook"", ""enrollment_year_2""]","[""AMPSC017""]",-79.4683759,33.7096461,False,True,Producers by County/Williamsburg County_Producers.xlsx::Sheet1::2,False,APPROXIMATE_REPORTED_COORDINATE
+Williamsburg,5611,3,"[""enrollment_year_1""]",[],-79.8487,33.6749,True,True,Producers by County/All_Producer list.xlsx::Producer Enrollment_Year 1::63,False,APPROXIMATE_REPORTED_COORDINATE
+York,4330,2,"[""county_workbook"", ""enrollment_year_2""]","[""AMPSC055""]",-81.2212065,35.0891533,False,True,Producers by County/York County_Producers.xlsx::Sheet1::2,False,APPROXIMATE_REPORTED_COORDINATE
