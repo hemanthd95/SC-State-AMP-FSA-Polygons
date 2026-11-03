@@ -1,0 +1,22 @@
+{
+  "farm_roster_source": "Williamsburg County_Producers.xlsx",
+  "excel_rows": [
+    2,
+    3
+  ],
+  "farm_ids": [
+    "17615",
+    "10519"
+  ],
+  "farm_count": 2,
+  "source_pdf_field_count": 9,
+  "overview_markers": 2,
+  "pdf_pages": 3,
+  "field_geometries_freshly_extracted_from_source_paths": true,
+  "imagery_only_pdf_rendering": true,
+  "max_area_difference_percent": 0.7945738545237989,
+  "crs_geojson": "EPSG:4326",
+  "crs_processing": "EPSG:32617",
+  "county_overview_background": "Census county boundary; no county-wide aerial mosaic available",
+  "topographic_version": "NOT_GENERATED; authoritative USGS service access remains blocked"
+}

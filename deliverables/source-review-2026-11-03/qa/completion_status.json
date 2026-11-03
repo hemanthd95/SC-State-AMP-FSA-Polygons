@@ -1,0 +1,52 @@
+{
+  "status": "PARTIAL_DELIVERY_SOURCE_REVIEW_AND_GIS; production basemap atlases incomplete",
+  "source_files": 144,
+  "source_pdf_files": 110,
+  "source_xlsx_files": 25,
+  "source_csv_files": 3,
+  "source_image_files": 6,
+  "source_pdf_image_pages": 217,
+  "county_workbook_rows": 110,
+  "county_workbook_counties": 23,
+  "county_workbook_county_farm_ids": 77,
+  "union_enrollment_county_farm_id_combinations": 120,
+  "counties_with_farm_ids": 28,
+  "enrollment_records_without_farm_id": 4,
+  "additional_county_without_farm_id": "Saluda",
+  "one_enrollment_record_without_county": true,
+  "registered_source_fields": 22,
+  "registered_source_farms": 6,
+  "registered_farms_matched_to_enrollment": 6,
+  "source_supported_county_corrections": 6,
+  "source_only_registered_farm_count": 0,
+  "farm_extraction_status": {
+    "NO_CONFIRMED_SOURCE_MAP_MATCH": 17,
+    "SOURCE_BOUNDARY_REGISTRATION_PENDING": 70,
+    "SOURCE_IDENTITY_REVIEW_REQUIRED": 27,
+    "GEOREFERENCED_VECTOR_SOURCE_AND_GDAL_CHECKED": 6
+  },
+  "review_pdfs": 30,
+  "review_pages": 163,
+  "rendered_review_pages": 163,
+  "satellite_pdfs": 0,
+  "topographic_pdfs": 0,
+  "final_production_atlas_archive_created": false,
+  "basemap_access": "USGS topography and NAIP HTTPS requests denied by environment proxy (CONNECT 403)",
+  "coordinate_correction": "All 22 legacy polygons had north-south reference reversal relative to source GeoPDF/GDAL; original source layers preserved",
+  "scope_caution": "120 combinations are listed identifiers across current/historical sources, not independently confirmed distinct current farms. Missing-ID rows may overlap other records.",
+  "county_map_roster_corrections": {
+    "Williamsburg": {
+      "authority": "Williamsburg County_Producers.xlsx / Sheet1 / rows 2 and 3",
+      "included_farm_ids": [
+        "17615",
+        "10519"
+      ],
+      "excluded_master_only_ids": [
+        "17614",
+        "5611"
+      ],
+      "overview_markers": 2,
+      "detail_farms": 2
+    }
+  }
+}
