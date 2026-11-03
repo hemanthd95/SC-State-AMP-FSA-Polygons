@@ -1,0 +1,47 @@
+county,variant,pdf,pdf_pages,farm_count,farms_with_verified_fields,farms_without_verified_fields,original_fsa_map_reference_pages,source_overview,file_size_bytes
+Aiken,Satellite,Aiken_County_Satellite.pdf,3,1,0,1,1,USGS NAIP imagery,1291046
+Aiken,Topography,Aiken_County_Topography.pdf,3,1,0,1,1,USGS Topo,1501730
+Allendale,Satellite,Allendale_County_Satellite.pdf,4,2,0,2,2,USGS NAIP imagery,2614102
+Allendale,Topography,Allendale_County_Topography.pdf,4,2,0,2,2,USGS Topo,2496291
+Bamberg,Satellite,Bamberg_County_Satellite.pdf,3,2,0,2,1,USGS NAIP imagery,1511766
+Bamberg,Topography,Bamberg_County_Topography.pdf,3,2,0,2,1,USGS Topo,1473752
+Barnwell,Satellite,Barnwell_County_Satellite.pdf,2,1,1,0,0,USGS NAIP imagery,209757
+Barnwell,Topography,Barnwell_County_Topography.pdf,2,1,1,0,0,USGS Topo,238041
+Berkeley,Satellite,Berkeley_County_Satellite.pdf,12,8,0,8,7,USGS NAIP imagery,6946379
+Berkeley,Topography,Berkeley_County_Topography.pdf,12,8,0,8,7,USGS Topo,7284962
+Calhoun,Satellite,Calhoun_County_Satellite.pdf,4,2,0,2,2,USGS NAIP imagery,1764615
+Calhoun,Topography,Calhoun_County_Topography.pdf,4,2,0,2,2,USGS Topo,1711886
+Charleston,Satellite,Charleston_County_Satellite.pdf,4,2,0,2,2,USGS NAIP imagery,2029995
+Charleston,Topography,Charleston_County_Topography.pdf,4,2,0,2,2,USGS Topo,2162105
+Clarendon,Satellite,Clarendon_County_Satellite.pdf,15,10,0,10,9,USGS NAIP imagery,10724689
+Clarendon,Topography,Clarendon_County_Topography.pdf,15,10,0,10,9,USGS Topo,10665089
+Colleton,Satellite,Colleton_County_Satellite.pdf,6,3,0,3,3,USGS NAIP imagery,4302477
+Colleton,Topography,Colleton_County_Topography.pdf,6,3,0,3,3,USGS Topo,4112095
+Darlington,Satellite,Darlington_County_Satellite.pdf,3,1,0,1,1,USGS NAIP imagery,524409
+Darlington,Topography,Darlington_County_Topography.pdf,3,1,0,1,1,USGS Topo,447085
+Dorchester,Satellite,Dorchester_County_Satellite.pdf,6,3,0,3,3,USGS NAIP imagery,4495731
+Dorchester,Topography,Dorchester_County_Topography.pdf,6,3,0,3,3,USGS Topo,4621207
+Florence,Satellite,Florence_County_Satellite.pdf,8,5,1,4,4,USGS NAIP imagery,4076257
+Florence,Topography,Florence_County_Topography.pdf,8,5,1,4,4,USGS Topo,3966362
+Greenwood,Satellite,Greenwood_County_Satellite.pdf,2,1,0,1,0,USGS NAIP imagery,296851
+Greenwood,Topography,Greenwood_County_Topography.pdf,2,1,0,1,0,USGS Topo,159177
+Hampton,Satellite,Hampton_County_Satellite.pdf,4,2,0,2,2,USGS NAIP imagery,3116970
+Hampton,Topography,Hampton_County_Topography.pdf,4,2,0,2,2,USGS Topo,3132358
+Horry,Satellite,Horry_County_Satellite.pdf,4,2,0,2,2,USGS NAIP imagery,2381360
+Horry,Topography,Horry_County_Topography.pdf,4,2,0,2,2,USGS Topo,2638657
+Jasper,Satellite,Jasper_County_Satellite.pdf,4,2,0,2,2,USGS NAIP imagery,2588270
+Jasper,Topography,Jasper_County_Topography.pdf,4,2,0,2,2,USGS Topo,2288342
+Marion,Satellite,Marion_County_Satellite.pdf,3,2,1,1,1,USGS NAIP imagery,2587090
+Marion,Topography,Marion_County_Topography.pdf,3,2,1,1,1,USGS Topo,2608294
+Marlboro,Satellite,Marlboro_County_Satellite.pdf,3,1,0,1,1,USGS NAIP imagery,1787821
+Marlboro,Topography,Marlboro_County_Topography.pdf,3,1,0,1,1,USGS Topo,1595137
+Orangeburg,Satellite,Orangeburg_County_Satellite.pdf,27,18,0,18,17,USGS NAIP imagery,19520422
+Orangeburg,Topography,Orangeburg_County_Topography.pdf,27,18,0,18,17,USGS Topo,19726782
+Spartanburg,Satellite,Spartanburg_County_Satellite.pdf,4,2,0,2,2,USGS NAIP imagery,5136162
+Spartanburg,Topography,Spartanburg_County_Topography.pdf,4,2,0,2,2,USGS Topo,5040578
+Sumter,Satellite,Sumter_County_Satellite.pdf,7,4,0,4,4,USGS NAIP imagery,3679957
+Sumter,Topography,Sumter_County_Topography.pdf,7,4,0,4,4,USGS Topo,3960160
+Williamsburg,Satellite,Williamsburg_County_Satellite.pdf,2,2,2,0,0,USGS NAIP imagery,509242
+Williamsburg,Topography,Williamsburg_County_Topography.pdf,2,2,2,0,0,USGS Topo,538847
+York,Satellite,York_County_Satellite.pdf,3,1,0,1,1,USGS NAIP imagery,1715786
+York,Topography,York_County_Topography.pdf,3,1,0,1,1,USGS Topo,1715704
