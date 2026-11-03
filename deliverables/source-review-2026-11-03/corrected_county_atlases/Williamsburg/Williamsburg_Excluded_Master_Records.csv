@@ -1,0 +1,3 @@
+farm_id,source_workbook,sheet,rows,map_status,reason
+17614,All_Producer list.xlsx,Producer Enrollment_Year 1,7;8;9,EXCLUDED,"Not in Williamsburg County_Producers.xlsx; identity must be reconciled, not treated as an additional farm"
+5611,All_Producer list.xlsx,Producer Enrollment_Year 1,63;64;65,EXCLUDED,Not in Williamsburg County_Producers.xlsx; historical/master-only entry

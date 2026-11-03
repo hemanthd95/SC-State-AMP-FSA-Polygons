@@ -26,12 +26,27 @@
     "GEOREFERENCED_VECTOR_SOURCE_AND_GDAL_CHECKED": 6
   },
   "review_pdfs": 30,
-  "review_pages": 165,
-  "rendered_review_pages": 165,
+  "review_pages": 163,
+  "rendered_review_pages": 163,
   "satellite_pdfs": 0,
   "topographic_pdfs": 0,
   "final_production_atlas_archive_created": false,
   "basemap_access": "USGS topography and NAIP HTTPS requests denied by environment proxy (CONNECT 403)",
   "coordinate_correction": "All 22 legacy polygons had north-south reference reversal relative to source GeoPDF/GDAL; original source layers preserved",
-  "scope_caution": "120 combinations are listed identifiers across current/historical sources, not independently confirmed distinct current farms. Missing-ID rows may overlap other records."
+  "scope_caution": "120 combinations are listed identifiers across current/historical sources, not independently confirmed distinct current farms. Missing-ID rows may overlap other records.",
+  "county_map_roster_corrections": {
+    "Williamsburg": {
+      "authority": "Williamsburg County_Producers.xlsx / Sheet1 / rows 2 and 3",
+      "included_farm_ids": [
+        "17615",
+        "10519"
+      ],
+      "excluded_master_only_ids": [
+        "17614",
+        "5611"
+      ],
+      "overview_markers": 2,
+      "detail_farms": 2
+    }
+  }
 }

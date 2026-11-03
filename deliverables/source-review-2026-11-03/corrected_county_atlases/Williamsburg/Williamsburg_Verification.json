@@ -1,0 +1,39 @@
+{
+  "map_roster_source": "source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/Producers by County/Williamsburg County_Producers.xlsx",
+  "workbook_sha256": "31ad51910123d69928ff4b03ea0b43d5b04d594c0232e9fa228db8ab1d98b334",
+  "sheet": "Sheet1",
+  "spreadsheet_rows": [
+    2,
+    3
+  ],
+  "farms_in_county_workbook": 2,
+  "overview_marker_count": 2,
+  "farm_detail_pages": 2,
+  "pdf_page_count": 3,
+  "included_farm_ids": [
+    "17615",
+    "10519"
+  ],
+  "excluded_master_only_farm_ids": [
+    "17614",
+    "5611"
+  ],
+  "selected_fields": [
+    {
+      "farm_id": "17615",
+      "tract_id": "5419",
+      "field_id": "7",
+      "source_pdf": "Chris Berlin_FSA_mAP.pdf"
+    },
+    {
+      "farm_id": "10519",
+      "tract_id": "3979",
+      "field_id": "5",
+      "source_pdf": "Christopher_Edward_FSA_Map.pdf"
+    }
+  ],
+  "all_source_context_field_count": 9,
+  "scope_error_corrected": "Historical/master-only records had been incorrectly added to the county map roster.",
+  "topographic_atlas_status": "NOT_GENERATED; USGS service request still blocked by environment proxy",
+  "satellite_scope": "Detail pages use actual supplied FSA aerial imagery; overview uses Census boundary, not county-wide satellite imagery."
+}

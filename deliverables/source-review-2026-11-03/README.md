@@ -1,8 +1,12 @@
+**Williamsburg correction:** The earlier four-entry map was wrong for the county workbook. The corrected map contains only Farms 17615 and 10519, from Sheet1 rows 2 and 3. Master-only IDs 17614 and 5611 are excluded. Master records remain audit evidence, not extra county-map farms. Other county source reviews still require county-roster validation.
+
+[Corrected Williamsburg three-page PDF](corrected_county_atlases/Williamsburg/Williamsburg_County_Two_Farm_Source_Imagery_Atlas.pdf) | [Williamsburg atlas and GIS ZIP](corrected_county_atlases/Williamsburg/Williamsburg_Corrected_Atlas_and_GIS.zip)
+
 # AMP/FSA source-review delivery — November 3, 2026
 
 **Private source-review and GIS outputs. The requested final satellite/topographic atlases are not complete.**
 
-The package contains 30 source-review PDFs (165 pages), corrected GIS exports, source reconciliation, exception reports and reproducible scripts. The PDF insets show supplied FSA source maps. Scanned maps are not falsely overlaid at invented coordinates. No source contact/tax forms are included.
+The package contains 30 source-review PDFs (163 pages), corrected GIS exports, source reconciliation, exception reports and reproducible scripts. The PDF insets show supplied FSA source maps. Scanned maps are not falsely overlaid at invented coordinates. No source contact/tax forms are included.
 
 ## Downloads
 
@@ -44,7 +48,7 @@ For a ZIP, open its GitHub file page and select **Download raw file**. For a PDF
 - [Spartanburg — 3 pages](source_review_pdfs/Spartanburg_County_Source_Review.pdf)
 - [Sumter — 6 pages](source_review_pdfs/Sumter_County_Source_Review.pdf)
 - [Unassigned — 2 pages](source_review_pdfs/Unassigned_County_Source_Review.pdf)
-- [Williamsburg — 5 pages](source_review_pdfs/Williamsburg_County_Source_Review.pdf)
+- [Williamsburg — 3 pages](source_review_pdfs/Williamsburg_County_Source_Review.pdf)
 - [York — 2 pages](source_review_pdfs/York_County_Source_Review.pdf)
 
 ## Scope and limitations

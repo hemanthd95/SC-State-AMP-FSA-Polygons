@@ -1,3 +1,5 @@
+**Williamsburg correction:** The earlier four-entry map was wrong for the county workbook. The corrected map contains only Farms 17615 and 10519, from Sheet1 rows 2 and 3. Master-only IDs 17614 and 5611 are excluded. Master records remain audit evidence, not extra county-map farms. Other county source reviews still require county-roster validation.
+
 # SC AMP/FSA verification report
 
 **Status: partial source-review and GIS delivery. Final satellite and topographic atlases are not complete.**
@@ -19,7 +21,7 @@ There are six source-map farm groups, 6 matched to the supplied enrollment ident
 
 ## What the PDFs contain
 
-30 source-review PDFs (165 pages) cover the 28 counties with Farm IDs, Saluda's unresolved record, and a separate unassigned-county record. Each overview lists every inventory entry and each entry has corresponding detail pages. Overviews use actual 2022 Census 1:500,000 county boundaries from the Census Bureau CitySDK data repository. Usable reported points are marked approximate; missing or outside-county coordinates are listed without invented map positions. FSA source-map insets retain visible field boundaries. Unregistered insets are not geographic overlays. Source identity conflicts and missing maps are explicitly labeled. Source image acquisition dates are not independently established. Some source photographs are blurred or oblique; page rendering does not fix source quality.
+30 source-review PDFs (163 pages) cover the 28 counties with Farm IDs, Saluda's unresolved record, and a separate unassigned-county record. Each overview lists every inventory entry and each entry has corresponding detail pages. Overviews use actual 2022 Census 1:500,000 county boundaries from the Census Bureau CitySDK data repository. Usable reported points are marked approximate; missing or outside-county coordinates are listed without invented map positions. FSA source-map insets retain visible field boundaries. Unregistered insets are not geographic overlays. Source identity conflicts and missing maps are explicitly labeled. Source image acquisition dates are not independently established. Some source photographs are blurred or oblique; page rendering does not fix source quality.
 
 ## Remaining production requirements
 
@@ -62,7 +64,7 @@ The requested Orangeburg Satellite/Topography PDFs and final `SC_AMP_County_Farm
 | Spartanburg | 2 | 0 | 0 | 2 | 3 | Pending | Pending |
 | Sumter | 5 | 0 | 0 | 5 | 6 | Pending | Pending |
 | Unassigned | 0 | 1 | 0 | 0 | 2 | Pending | Pending |
-| Williamsburg | 4 | 0 | 2 | 2 | 5 | Pending | Pending |
+| Williamsburg | 2 | 0 | 2 | 0 | 3 | Pending | Pending |
 | York | 1 | 0 | 0 | 1 | 2 | Pending | Pending |
 
 ## Validation

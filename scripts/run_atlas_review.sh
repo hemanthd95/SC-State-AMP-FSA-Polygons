@@ -19,3 +19,5 @@ echo "7380c3f50bcfbe395a355837582e515320bb89ee0550efbf0bb42fee2da56c49  ${atlas_
 "$atlas_python" scripts/atlas_export_gis.py
 "$atlas_python" scripts/atlas_review_pdfs.py
 "$atlas_python" scripts/atlas_delivery.py
+"$atlas_python" scripts/williamsburg_county_workbook_atlas.py
+"$atlas_python" scripts/publish_williamsburg_correction.py
