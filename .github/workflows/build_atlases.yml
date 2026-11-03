@@ -6,6 +6,7 @@ on:
       - "scripts/build_amp_county_atlases.py"
       - "data/farm_overview_points_reported.geojson"
       - "data/farm_inventory_county_spreadsheets.json"
+      - "data/farm_source_pdf_crosswalk.json"
       - "geojson/**"
       - ".github/workflows/build_atlases.yml"
   workflow_dispatch:
@@ -29,7 +30,7 @@ jobs:
           python-version: "3.11"
 
       - name: Install geospatial and PDF packages
-        run: python -m pip install --upgrade numpy matplotlib pillow requests pyshp shapely
+        run: python -m pip install --upgrade numpy matplotlib pillow requests pyshp shapely pymupdf
 
       - name: Generate satellite and topographic PDF atlases
         run: python scripts/build_amp_county_atlases.py
