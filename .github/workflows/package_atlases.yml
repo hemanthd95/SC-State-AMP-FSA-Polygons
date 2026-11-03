@@ -1,0 +1,49 @@
+name: Package two downloadable AMP atlas collections
+
+on:
+  push:
+    paths:
+      - ".github/workflows/package_atlases.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out the completed county PDF atlases
+        uses: actions/checkout@v4
+
+      - name: Make two variant-specific ZIP downloads
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from zipfile import ZipFile, ZIP_DEFLATED
+          files=Path("outputs/county_pdfs")
+          for variant in ("Satellite", "Topography"):
+              matches=sorted(files.glob(f"*_County_{variant}.pdf"))
+              if len(matches)!=23:
+                  raise RuntimeError(f"Expected 23 {variant} county PDFs; found {len(matches)}")
+              dest=Path("outputs")/f"SC_AMP_{variant}_Atlases_23_Counties.zip"
+              with ZipFile(dest,"w",compression=ZIP_DEFLATED,compresslevel=4) as z:
+                  for p in matches:
+                      z.write(p,arcname=p.name)
+                  for q in sorted(Path("outputs/qa").glob("*")):
+                      z.write(q,arcname=f"qa/{q.name}")
+              print(f"{variant}: {len(matches)} PDF files, {dest.stat().st_size:,} bytes",flush=True)
+              if dest.stat().st_size > 95_000_000:
+                  raise RuntimeError("File exceeds GitHub single-file limit; download files individually")
+          PY
+
+      - name: Store the two ZIP packages in the private repository
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add outputs/SC_AMP_Satellite_Atlases_23_Counties.zip outputs/SC_AMP_Topography_Atlases_23_Counties.zip
+          if ! git diff --cached --quiet; then
+            git commit -m "Package final AMP county satellite and topo PDF collections"
+            git push
+          fi
