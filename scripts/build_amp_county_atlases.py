@@ -43,7 +43,7 @@ SOURCES = {
         ("USGS Topo", "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export", "map"),
     ],
 }
-COLORS = plt.cm.get_cmap("tab20", 20)
+COLORS = matplotlib.colormaps["tab20"]
 BASEMAP_FAILURES = []
 ALL_LOGS = []
 
