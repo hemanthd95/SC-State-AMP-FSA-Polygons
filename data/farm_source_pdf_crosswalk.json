@@ -1,0 +1,621 @@
+{
+  "source": "Producer first/last names matched to FSA map filenames, not yet Farm ID validated",
+  "crosswalk": [
+    {
+      "county": "Aiken",
+      "farm_id": "4631",
+      "source_pdf": "source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/Shannon_Lowe_FSA Map.pdf",
+      "match_status": "name_matched_filename_unverified_farm_id",
+      "similarity": 1,
+      "producer_name": "Shannon Lowe"
+    },
+    {
+      "county": "Allendale",
+      "farm_id": "10333",
+      "source_pdf": "source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/Samuel Lance JR.pdf",
+      "match_status": "name_matched_filename_unverified_farm_id",
+      "similarity": 1,
+      "producer_name": "Samuel  lance Jr"
+    },
+    {
+      "county": "Allendale",
+      "farm_id": "3779",
+      "source_pdf": "source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/Tifanny Loadholt_FSA_Map.pdf",
+      "match_status": "name_matched_filename_unverified_farm_id",
+      "similarity": 0.933,
+      "producer_name": "Tiffany Loadholt"
+    },
+    {
+      "county": "Bamberg",
+      "farm_id": "3523",
+      "source_pdf": null,
+      "match_status": "no_reliable_source_map",
+      "similarity": 0.741,
+      "producer_name": "Corey Cosby"
+    },
+    {
+      "county": "Bamberg",
+      "farm_id": "3524",
+      "source_pdf": "source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/John_Henry_Brabham_FSA_Map.pdf",
+      "match_status": "name_matched_filename_unverified_farm_id",
+      "similarity": 0.815,
+      "producer_name": "John Brabham"
+    },
+    {
+      "county": "Barnwell",
+      "farm_id": "753",
+      "source_pdf": "source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/Vemour Green_FSA_Map.pdf",
+      "match_status": "name_verified_manual_alias",
+      "similarity": 1,
+      "producer_name": "Vemour Green"
+    },
+    {
+      "county": "Berkeley",
+      "farm_id": "13739",
+      "source_pdf": "source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/Latonya Flood_FSAmap.pdf",
+      "match_status": "name_matched_filename_unverified_farm_id",
+      "similarity": 1,
+      "producer_name": "Latonya Flood"
+    },
+    {
+      "county": "Berkeley",
+      "farm_id": "14118",
+      "source_pdf": "source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/Shane Middleton_FSA Map.pdf",
+      "match_status": "name_matched_filename_unverified_farm_id",
+      "similarity": 1,
+      "producer_name": "Shane Middleton"
+    },
+    {
+      "county": "Berkeley",
+      "farm_id": "3756",
+      "source_pdf": "source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/John_Lloyd_FSA_Map.pdf",
+      "match_status": "name_matched_filename_unverified_farm_id",
+      "similarity": 0.941,
+      "producer_name": "John Loyd"
+    },
+    {
+      "county": "Berkeley",
+      "farm_id": "4198",
+      "source_pdf": "source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/John_Lloyd_FSA_Map.pdf",
+      "match_status": "name_matched_filename_unverified_farm_id",
+      "similarity": 0.941,
+      "producer_name": "John Loyd"
+    },
+    {
+      "county": "Berkeley",
+      "farm_id": "4236",
+      "source_pdf": null,
+      "match_status": "no_reliable_source_map",
+      "similarity": 0.609,
+      "producer_name": "Julian Ramsue"
+    },
+    {
+      "county": "Berkeley",
+      "farm_id": "4273",
+      "source_pdf": "source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/John_Lloyd_FSA_Map.pdf",
+      "match_status": "name_matched_filename_unverified_farm_id",
+      "similarity": 0.941,
+      "producer_name": "John Loyd"
+    },
+    {
+      "county": "Berkeley",
+      "farm_id": "577",
+      "source_pdf": "source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/Iven Flood_FSA_Map.pdf",
+      "match_status": "name_matched_filename_unverified_farm_id",
+      "similarity": 0.889,
+      "producer_name": "Ivan Flood"
+    },
+    {
+      "county": "Berkeley",
+      "farm_id": "9387",
+      "source_pdf": "source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/Shane Middleton_FSA Map.pdf",
+      "match_status": "name_matched_filename_unverified_farm_id",
+      "similarity": 1,
+      "producer_name": "Shane Middleton"
+    },
+    {
+      "county": "Calhoun",
+      "farm_id": "14280",
+      "source_pdf": "source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/Jaylon carson_FSA Map.pdf",
+      "match_status": "name_matched_filename_unverified_farm_id",
+      "similarity": 1,
+      "producer_name": "Jaylon Carson"
+    },
+    {
+      "county": "Calhoun",
+      "farm_id": "3549",
+      "source_pdf": "source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/Jan Davis-Boneparte_FSA_Map.pdf",
+      "match_status": "name_matched_filename_unverified_farm_id",
+      "similarity": 0.828,
+      "producer_name": "Jan Boneparte"
+    },
+    {
+      "county": "Charleston",
+      "farm_id": "1134",
+      "source_pdf": "source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/Sharon Taylor_Farm_FSA_Map.pdf",
+      "match_status": "name_matched_filename_unverified_farm_id",
+      "similarity": 1,
+      "producer_name": "Sharon Taylor"
+    },
+    {
+      "county": "Charleston",
+      "farm_id": "1436",
+      "source_pdf": "source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/Keesha Jenkins_FSA_Map.pdf",
+      "match_status": "name_matched_filename_unverified_farm_id",
+      "similarity": 0.96,
+      "producer_name": "Kesha Jenkins"
+    },
+    {
+      "county": "Clarendon",
+      "farm_id": "1118",
+      "source_pdf": "source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/Willie Richburg _FSA Map.pdf",
+      "match_status": "name_matched_filename_unverified_farm_id",
+      "similarity": 1,
+      "producer_name": "Willie Richburg"
+    },
+    {
+      "county": "Clarendon",
+      "farm_id": "1375",
+      "source_pdf": "source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/Christian Richburg_FSA Map.pdf",
+      "match_status": "name_matched_filename_unverified_farm_id",
+      "similarity": 1,
+      "producer_name": "Christian Richburg"
+    },
+    {
+      "county": "Clarendon",
+      "farm_id": "1568",
+      "source_pdf": "source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/Everett Rendell FSAmap.pdf",
+      "match_status": "name_matched_filename_unverified_farm_id",
+      "similarity": 1,
+      "producer_name": "Everett Rendell"
+    },
+    {
+      "county": "Clarendon",
+      "farm_id": "1694",
+      "source_pdf": "source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/Timothy J Hilliard_FSA_Map.pdf",
+      "match_status": "name_matched_filename_unverified_farm_id",
+      "similarity": 0.933,
+      "producer_name": "Timothy Hillard"
+    },
+    {
+      "county": "Clarendon",
+      "farm_id": "3988",
+      "source_pdf": null,
+      "match_status": "no_reliable_source_map",
+      "similarity": 0.519,
+      "producer_name": "Jaivean Spann"
+    },
+    {
+      "county": "Clarendon",
+      "farm_id": "497",
+      "source_pdf": "source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/Rodrick Andrews_FSAmap.pdf",
+      "match_status": "name_matched_filename_unverified_farm_id",
+      "similarity": 1,
+      "producer_name": "Rodrick Andrews"
+    },
+    {
+      "county": "Clarendon",
+      "farm_id": "6749",
+      "source_pdf": "source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/Brandon dingle FSAmap.pdf",
+      "match_status": "name_matched_filename_unverified_farm_id",
+      "similarity": 1,
+      "producer_name": "Brandon Dingle"
+    },
+    {
+      "county": "Clarendon",
+      "farm_id": "6750",
+      "source_pdf": "source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/Brandon dingle FSAmap.pdf",
+      "match_status": "name_matched_filename_unverified_farm_id",
+      "similarity": 1,
+      "producer_name": "Brandon Dingle"
+    },
+    {
+      "county": "Clarendon",
+      "farm_id": "9274",
+      "source_pdf": "source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/Bryan Green_FSAmap.pdf",
+      "match_status": "name_matched_filename_unverified_farm_id",
+      "similarity": 1,
+      "producer_name": "Bryan Green"
+    },
+    {
+      "county": "Clarendon",
+      "farm_id": "948",
+      "source_pdf": "source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/Jeremiah Conyers_FSAmap.pdf",
+      "match_status": "name_matched_filename_unverified_farm_id",
+      "similarity": 1,
+      "producer_name": "Jeremiah Conyers"
+    },
+    {
+      "county": "Colleton",
+      "farm_id": "1283",
+      "source_pdf": "source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/Manigault Charles_FSAmap.pdf",
+      "match_status": "name_verified_manual_alias",
+      "similarity": 0.562,
+      "producer_name": "Charles Manigault"
+    },
+    {
+      "county": "Colleton",
+      "farm_id": "1867",
+      "source_pdf": "source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/Aretha_Bennette_FSAmap.pdf",
+      "match_status": "name_matched_filename_unverified_farm_id",
+      "similarity": 0.923,
+      "producer_name": "Aretha Bennet"
+    },
+    {
+      "county": "Colleton",
+      "farm_id": "4917",
+      "source_pdf": "source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/Loyd Fields_FSA_Map.pdf",
+      "match_status": "name_matched_filename_unverified_farm_id",
+      "similarity": 1,
+      "producer_name": "Loyd Fields"
+    },
+    {
+      "county": "Darlington",
+      "farm_id": "7370",
+      "source_pdf": "source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/Garrett Patterson_FSA_MAP.pdf",
+      "match_status": "name_matched_filename_unverified_farm_id",
+      "similarity": 1,
+      "producer_name": "Garrett Patterson"
+    },
+    {
+      "county": "Dorchester",
+      "farm_id": "4943",
+      "source_pdf": "source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/Brenda Harris_FSAmap.pdf",
+      "match_status": "name_matched_filename_unverified_farm_id",
+      "similarity": 0.957,
+      "producer_name": "Brenda Haris"
+    },
+    {
+      "county": "Dorchester",
+      "farm_id": "548",
+      "source_pdf": "source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/Arthur Cobbs_FSA Map.pdf",
+      "match_status": "name_matched_filename_unverified_farm_id",
+      "similarity": 1,
+      "producer_name": "Arthur Cobbs"
+    },
+    {
+      "county": "Dorchester",
+      "farm_id": "6579",
+      "source_pdf": "source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/Eartha_Pinckney_FSA_Map.pdf",
+      "match_status": "name_matched_filename_unverified_farm_id",
+      "similarity": 0.963,
+      "producer_name": "Eartha Pickney"
+    },
+    {
+      "county": "Florence",
+      "farm_id": "1312",
+      "source_pdf": "source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/Bruce S. Turner Jr. FSA_Map.pdf",
+      "match_status": "name_matched_filename_unverified_farm_id",
+      "similarity": 1,
+      "producer_name": "Bruce S. Turner Jr."
+    },
+    {
+      "county": "Florence",
+      "farm_id": "15803",
+      "source_pdf": "source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/June_Bazen_FSA_Map.pdf",
+      "match_status": "name_matched_filename_unverified_farm_id",
+      "similarity": 1,
+      "producer_name": "June  Bazen"
+    },
+    {
+      "county": "Florence",
+      "farm_id": "20119",
+      "source_pdf": "source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/June_Bazen_FSA_Map.pdf",
+      "match_status": "name_matched_filename_unverified_farm_id",
+      "similarity": 1,
+      "producer_name": "June  Bazen"
+    },
+    {
+      "county": "Florence",
+      "farm_id": "20170",
+      "source_pdf": "source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/Juan_McAllister_FSA_Map.pdf",
+      "match_status": "name_matched_filename_unverified_farm_id",
+      "similarity": 0.733,
+      "producer_name": "Shelia McAllister"
+    },
+    {
+      "county": "Florence",
+      "farm_id": "8185",
+      "source_pdf": "source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/Anthony Jackson_FSA_Map.pdf",
+      "match_status": "name_matched_filename_unverified_farm_id",
+      "similarity": 1,
+      "producer_name": "Anthony Jackson"
+    },
+    {
+      "county": "Greenwood",
+      "farm_id": "1638",
+      "source_pdf": null,
+      "match_status": "no_reliable_source_map",
+      "similarity": 0.571,
+      "producer_name": "Myra Louden"
+    },
+    {
+      "county": "Hampton",
+      "farm_id": "1274",
+      "source_pdf": "source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/John H. Lee, Jr_FSA_Map.pdf",
+      "match_status": "name_matched_filename_unverified_farm_id",
+      "similarity": 0.933,
+      "producer_name": "John Lee"
+    },
+    {
+      "county": "Hampton",
+      "farm_id": "4706",
+      "source_pdf": "source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/Annette Weekley_FSA_Map.pdf",
+      "match_status": "name_matched_filename_unverified_farm_id",
+      "similarity": 1,
+      "producer_name": "Annette Weekley"
+    },
+    {
+      "county": "Horry",
+      "farm_id": "22560",
+      "source_pdf": "source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/Johnson Angale_FSAmap.pdf",
+      "match_status": "name_verified_manual_alias",
+      "similarity": 0.72,
+      "producer_name": "Angale Johnson"
+    },
+    {
+      "county": "Horry",
+      "farm_id": "22564",
+      "source_pdf": "source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/Johnson Angale_FSAmap.pdf",
+      "match_status": "name_verified_manual_alias",
+      "similarity": 0.72,
+      "producer_name": "Angale Johnson"
+    },
+    {
+      "county": "Jasper",
+      "farm_id": "1662",
+      "source_pdf": "source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/Derick Muhammed_FSA Map.pdf",
+      "match_status": "name_matched_filename_unverified_farm_id",
+      "similarity": 1,
+      "producer_name": "Derick Muhammed"
+    },
+    {
+      "county": "Jasper",
+      "farm_id": "4083",
+      "source_pdf": "source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/Francenia Ellis 2026 FSA Map.pdf",
+      "match_status": "name_matched_filename_unverified_farm_id",
+      "similarity": 0.963,
+      "producer_name": "Francena Ellis"
+    },
+    {
+      "county": "Marion",
+      "farm_id": "9419",
+      "source_pdf": "source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/Yvette Moses_D&Y Farms_FSA_Maps.pdf",
+      "match_status": "name_verified_manual_alias",
+      "similarity": 0.846,
+      "producer_name": "Yvette Moses"
+    },
+    {
+      "county": "Marion",
+      "farm_id": "9652",
+      "source_pdf": "source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/Albert vareen_FSA_Map.pdf",
+      "match_status": "name_matched_filename_unverified_farm_id",
+      "similarity": 1,
+      "producer_name": "Albert Vareen"
+    },
+    {
+      "county": "Marlboro",
+      "farm_id": "3776",
+      "source_pdf": "source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/Johnie Thomas_FSA_Map.pdf",
+      "match_status": "name_matched_filename_unverified_farm_id",
+      "similarity": 1,
+      "producer_name": "Johnie Thomas"
+    },
+    {
+      "county": "Orangeburg",
+      "farm_id": "10262",
+      "source_pdf": "source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/Mava Jackson_FSA map, (dragged).pdf",
+      "match_status": "name_verified_manual_alias",
+      "similarity": 0.733,
+      "producer_name": "Marva Jackson"
+    },
+    {
+      "county": "Orangeburg",
+      "farm_id": "1033",
+      "source_pdf": "source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/Montez Hillard_FSA_Map.pdf",
+      "match_status": "name_matched_filename_unverified_farm_id",
+      "similarity": 1,
+      "producer_name": "Montez Hillard"
+    },
+    {
+      "county": "Orangeburg",
+      "farm_id": "10939",
+      "source_pdf": "source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/Margaret_Berry_FSA_Map.pdf",
+      "match_status": "name_matched_filename_unverified_farm_id",
+      "similarity": 0.88,
+      "producer_name": "Mageret Berry"
+    },
+    {
+      "county": "Orangeburg",
+      "farm_id": "11782",
+      "source_pdf": "source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/Margaret_Berry_FSA_Map.pdf",
+      "match_status": "name_matched_filename_unverified_farm_id",
+      "similarity": 0.88,
+      "producer_name": "Mageret Berry"
+    },
+    {
+      "county": "Orangeburg",
+      "farm_id": "11990",
+      "source_pdf": "source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/Antron Williams_FSA Map.pdf",
+      "match_status": "name_matched_filename_unverified_farm_id",
+      "similarity": 0.966,
+      "producer_name": "Anthron Williams"
+    },
+    {
+      "county": "Orangeburg",
+      "farm_id": "1271",
+      "source_pdf": "source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/Christine Berry Zeigler_FSA Map.pdf",
+      "match_status": "name_matched_filename_unverified_farm_id",
+      "similarity": 0.811,
+      "producer_name": "Christine Ziegler"
+    },
+    {
+      "county": "Orangeburg",
+      "farm_id": "13225",
+      "source_pdf": "source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/Morgan summers_FSA_Map.pdf",
+      "match_status": "name_matched_filename_unverified_farm_id",
+      "similarity": 1,
+      "producer_name": "Morgan Summers"
+    },
+    {
+      "county": "Orangeburg",
+      "farm_id": "13618",
+      "source_pdf": "source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/Rosa_Berry_FSA_Map.jpeg",
+      "match_status": "name_verified_manual_alias",
+      "similarity": 1,
+      "producer_name": "Rosa Berry"
+    },
+    {
+      "county": "Orangeburg",
+      "farm_id": "13653",
+      "source_pdf": "source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/Jasper_Summers_FSA_Map.pdf",
+      "match_status": "name_matched_filename_unverified_farm_id",
+      "similarity": 1,
+      "producer_name": "Jasper Summers"
+    },
+    {
+      "county": "Orangeburg",
+      "farm_id": "13709",
+      "source_pdf": "source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/Jasper_Summers_FSA_Map.pdf",
+      "match_status": "name_matched_filename_unverified_farm_id",
+      "similarity": 1,
+      "producer_name": "Jasper Summers"
+    },
+    {
+      "county": "Orangeburg",
+      "farm_id": "14043",
+      "source_pdf": null,
+      "match_status": "no_reliable_source_map",
+      "similarity": 0.526,
+      "producer_name": "Mary Koon"
+    },
+    {
+      "county": "Orangeburg",
+      "farm_id": "14048",
+      "source_pdf": "source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/Tarsha Mosley_FSA_Map.pdf",
+      "match_status": "name_matched_filename_unverified_farm_id",
+      "similarity": 1,
+      "producer_name": "Tarsha Mosley"
+    },
+    {
+      "county": "Orangeburg",
+      "farm_id": "14187",
+      "source_pdf": "source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/Bruce Jenkins_FSA Map.pdf",
+      "match_status": "name_matched_filename_unverified_farm_id",
+      "similarity": 1,
+      "producer_name": "Bruce Jenkins"
+    },
+    {
+      "county": "Orangeburg",
+      "farm_id": "14291",
+      "source_pdf": "source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/Jaylon carson_FSA Map.pdf",
+      "match_status": "name_matched_filename_unverified_farm_id",
+      "similarity": 1,
+      "producer_name": "Jaylon Carson"
+    },
+    {
+      "county": "Orangeburg",
+      "farm_id": "1778",
+      "source_pdf": "source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/Robert Seaberry Jr. FSA.pdf",
+      "match_status": "name_matched_filename_unverified_farm_id",
+      "similarity": 1,
+      "producer_name": "Robert Seaberry"
+    },
+    {
+      "county": "Orangeburg",
+      "farm_id": "3873",
+      "source_pdf": "source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/Tywone Hillard_FSA_Map.pdf",
+      "match_status": "name_matched_filename_unverified_farm_id",
+      "similarity": 1,
+      "producer_name": "Tywone Hillard"
+    },
+    {
+      "county": "Orangeburg",
+      "farm_id": "8242",
+      "source_pdf": "source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/Louie Johnson FSA_Map.pdf",
+      "match_status": "name_matched_filename_unverified_farm_id",
+      "similarity": 1,
+      "producer_name": "Louie Johnson"
+    },
+    {
+      "county": "Orangeburg",
+      "farm_id": "9231",
+      "source_pdf": "source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/PashonnaRendell_FSA_Map.pdf",
+      "match_status": "name_matched_filename_unverified_farm_id",
+      "similarity": 0.966,
+      "producer_name": "Pashona Rendell"
+    },
+    {
+      "county": "Spartanburg",
+      "farm_id": "1659",
+      "source_pdf": "source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/Deone Jones_FSA Map.pdf",
+      "match_status": "name_matched_filename_unverified_farm_id",
+      "similarity": 1,
+      "producer_name": "Deone Jones"
+    },
+    {
+      "county": "Spartanburg",
+      "farm_id": "3107",
+      "source_pdf": "source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/David Gates_FSAmap.jpg",
+      "match_status": "name_matched_filename_unverified_farm_id",
+      "similarity": 1,
+      "producer_name": "David Gates"
+    },
+    {
+      "county": "Sumter",
+      "farm_id": "3603",
+      "source_pdf": "source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/Tyreese Riley_FSA Map.pdf",
+      "match_status": "name_matched_filename_unverified_farm_id",
+      "similarity": 0.917,
+      "producer_name": "Tyrease Riley"
+    },
+    {
+      "county": "Sumter",
+      "farm_id": "4261",
+      "source_pdf": "source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/Tywone Hillard_FSA_Map.pdf",
+      "match_status": "name_matched_filename_unverified_farm_id",
+      "similarity": 1,
+      "producer_name": "Tywone Hillard"
+    },
+    {
+      "county": "Sumter",
+      "farm_id": "7832",
+      "source_pdf": "source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/Christopher Riley FSAmap1.pdf",
+      "match_status": "name_matched_filename_unverified_farm_id",
+      "similarity": 1,
+      "producer_name": "Christopher Riley"
+    },
+    {
+      "county": "Sumter",
+      "farm_id": "960",
+      "source_pdf": "source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/Tywone Hillard_FSA_Map.pdf",
+      "match_status": "name_matched_filename_unverified_farm_id",
+      "similarity": 1,
+      "producer_name": "Tywone Hillard"
+    },
+    {
+      "county": "Williamsburg",
+      "farm_id": "10519",
+      "source_pdf": "source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/Christopher_Edward_FSA_Map.pdf",
+      "match_status": "name_matched_filename_unverified_farm_id",
+      "similarity": 1,
+      "producer_name": "Christopher Edward"
+    },
+    {
+      "county": "Williamsburg",
+      "farm_id": "17615",
+      "source_pdf": "source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/Chris Berlin_FSA_mAP.pdf",
+      "match_status": "name_matched_filename_unverified_farm_id",
+      "similarity": 0.952,
+      "producer_name": "Chris Belin"
+    },
+    {
+      "county": "York",
+      "farm_id": "4330",
+      "source_pdf": "source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/Rick Boswell.pdf",
+      "match_status": "name_matched_filename_unverified_farm_id",
+      "similarity": 1,
+      "producer_name": "Rick Boswell"
+    }
+  ]
+}
