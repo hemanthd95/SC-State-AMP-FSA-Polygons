@@ -20,6 +20,8 @@ jobs:
     steps:
       - name: Check out private FSA geometry repository
         uses: actions/checkout@v4
+        with:
+          lfs: true
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -49,7 +51,12 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add outputs/county_pdfs outputs/qa outputs/SC_AMP_County_Atlas_PDFs.zip
+          git add outputs/county_pdfs outputs/qa
+          if [ -f outputs/SC_AMP_County_Atlas_PDFs.zip ] && [ $(stat -c%s outputs/SC_AMP_County_Atlas_PDFs.zip) -lt 95000000 ]; then
+            git add outputs/SC_AMP_County_Atlas_PDFs.zip
+          else
+            echo "Atlas ZIP too large for Git; PDFs remain individually available and ZIP is in Actions artifacts."
+          fi
           if ! git diff --cached --quiet; then
             git commit -m "Build county satellite and topo atlases [skip atlas]"
             git push
