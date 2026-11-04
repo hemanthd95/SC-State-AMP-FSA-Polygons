@@ -33,7 +33,7 @@ PALE = colors.HexColor('#EEF4F6')
 GRAY = colors.HexColor('#637781')
 GOLD = colors.HexColor('#F2B044')
 PALETTE = ['#F25F4C', '#0795B5', '#B25AC4', '#72A251', '#EA9A31']
-COUNTIES = {'Allendale':'45005', 'Barnwell': '45011', 'Florence': '45041', 'Marion': '45067', 'Williamsburg': '45089'}
+COUNTIES = {'Allendale':'45005', 'Barnwell': '45011', 'Darlington': '45031', 'Florence': '45041', 'Marion': '45067', 'Williamsburg': '45089'}
 GEOD = Geod(ellps='WGS84')
 TO_UTM = Transformer.from_crs(4326, 32617, always_xy=True)
 FROM_UTM = Transformer.from_crs(32617, 4326, always_xy=True)
@@ -253,6 +253,19 @@ def get_roster():
             record=result[county].setdefault(fid,{'name':(first+' '+last).strip(),'tracts':set(),'fields':set()})
             if row[3] is not None: record['tracts'].add(str(row[3]))
             if row[4] is not None: record['fields'].add(str(row[4]))
+    # The Florence AMP workbook identifies Anthony Jackson's Farm 8185,
+    # Tract 2352, Field 2. Anthony's scanned FSA source map identifies the
+    # physical county as Darlington and its four field acreages exactly match
+    # the separately supplied registered Dread Marley GeoPDF. Place the
+    # georeferenced fields in *their physical county*, retaining the original
+    # workbook county and source provenance instead of changing enrollment.
+    amp = result['Florence'].get('8185')
+    if not amp or amp['tracts'] != {'2352'} or '2' not in amp['fields']:
+        raise ValueError('Anthony Jackson workbook cross-reference changed')
+    if '8185' in result['Darlington']:
+        raise ValueError('Farm 8185 conflicts with Darlington roster')
+    result['Darlington']['8185'] = dict(amp, amp_roster_county='Florence',
+        source_registration_note='Darlington source FSA map and Florence AMP roster show Farm 8185 / Tract 2352 / Field 2; four source field acreages match.')
     return result
 
 
@@ -275,6 +288,8 @@ def field_features():
             raise ValueError(f'FSA printed area mismatch for {fid} field {p["field_id"]}: {error:.1f}%')
         selected = str(p['field_id']) in roster[county][fid]['fields']
         out={'type':'Feature','properties':dict(p,producer=roster[county][fid]['name'],
+            amp_roster_county=roster[county][fid].get('amp_roster_county', county),
+            source_registration_note=roster[county][fid].get('source_registration_note', ''),
             calculated_acres=round(acres,3),area_error_percent=round(error,2),
             county_workbook_selected=selected,
             status='NATIVE_GEOPDF_REFERENCED_FIELD__NOT_SURVEY'), 'geometry':mapping(geom)}
@@ -282,7 +297,8 @@ def field_features():
         qa.append({'county':county,'farm_id':fid,'field_id':p['field_id'],'source_pdf':p['source_pdf'],
                    'fsa_acres':p['fsa_reported_acres'],'geo_acres':round(acres,3),'area_error_pct':round(error,2),
                    'recorded_in_county_sheet':True,
-                   'field_listed_in_county_sheet':selected})
+                   'field_listed_in_county_sheet':selected,
+                   'amp_roster_county':roster[county][fid].get('amp_roster_county', county)})
         print('REGISTERED',county,fid,p['field_id'],round(acres,2),flush=True)
     return eligible,qa,roster
 
@@ -324,6 +340,8 @@ def draw_county(c,county,farms,boundary,basetype,source_tracker):
         c.setFillColor(color);c.roundRect(923,yy-8,17,17,3,fill=1,stroke=0)
         font(c,950,yy-3,f'{ix+1:02d}  FARM {fid}',12,NAVY,True)
         yy=wrap(c,p['producer'],923,yy-30,260,11,14)
+        if p['amp_roster_county'] != county:
+            yy=wrap(c,f'AMP roster: {p["amp_roster_county"]}; FSA physical map: {county}',923,yy-3,260,9,13,GRAY)
         selected=sum(bool(f['properties']['county_workbook_selected']) for f in fields)
         yy=wrap(c,f'{selected} county-sheet field(s); {len(fields)-selected} additional FSA context fields',923,yy-4,260,10,14,GRAY)-28
     yy=wrap(c,'Markers represent locations computed from georeferenced FSA field polygons, not reported residential addresses.',923,yy-5,260,10,14,GRAY)
@@ -357,7 +375,8 @@ def draw_detail(c,county,farms,fid,fields,basetype,number,source_tracker):
     bar_and_north(c,bounds,frame)
     font(c,923,623,f'FARM {fid}',17,NAVY,True)
     wrap(c,p['producer'],923,600,250,12,17)
-    font(c,923,562,'AMP COUNTY-SHEET FIELDS',10,GRAY,True)
+    origin=p['amp_roster_county']
+    font(c,923,562,'AMP REGISTERED FIELD' if origin==county else f'AMP SELECTED FIELD ({origin.upper()} ROSTER)',10,GRAY,True)
     c.setFillColor(color);c.roundRect(923,536,18,18,3,stroke=0,fill=1)
     font(c,951,540,'Farm ID color',10,NAVY)
     yy=512
@@ -374,6 +393,8 @@ def draw_detail(c,county,farms,fid,fields,basetype,number,source_tracker):
     context=[f for f in fields if not f['properties']['county_workbook_selected']]
     if context:
         yy=wrap(c,f'{len(context)} other FSA fields are outlined in white/gray for context only; they are not identified as AMP-selected in this county workbook.',923,yy,250,10,15,GRAY)-15
+    if origin != county:
+        yy=wrap(c,f'Important: the AMP spreadsheet lists {origin} County, but both source FSA maps identify Darlington County and exactly match Farm 8185, Tract 2352, field acreages.',923,yy,250,9,13,GRAY)-12
     yy=wrap(c,'Boundaries were reproduced from native FSA GeoPDF vector paths and mapped using the PDF geographic reference.',923,yy,250,10,15,GRAY)-18
     yy=wrap(c,'Source-image date and current land cover can differ from the displayed basemap date.',923,yy,250,10,15,GRAY)
     font(c,923,137,'EPSG:4326  |  Acreage checked to printed FSA label',8,GRAY)
