@@ -37,6 +37,8 @@ COUNTIES = {'Allendale':'45005', 'Barnwell': '45011', 'Darlington': '45031', 'Fl
 GEOD = Geod(ellps='WGS84')
 TO_UTM = Transformer.from_crs(4326, 32617, always_xy=True)
 FROM_UTM = Transformer.from_crs(32617, 4326, always_xy=True)
+TO_MERC = Transformer.from_crs(4326, 3857, always_xy=True)
+FROM_MERC = Transformer.from_crs(3857, 4326, always_xy=True)
 cache = {}
 
 
@@ -90,7 +92,10 @@ def fetch_image(bounds, width, height, kind):
     ])
     for label, url, fmt, is_imgserver in services:
         for attempt in range(4):
-            params = {'bbox': bbox, 'bboxSR': 4326, 'imageSR': 4326,
+            # Native USGS ImageServer expands angular EPSG:4326 extents to
+            # match raster aspect ratio, shifting mapped FSA polygons by up
+            # to 20%. Use conformal Web Mercator at an *exact* pixel ratio.
+            params = {'bbox': bbox, 'bboxSR': 3857, 'imageSR': 3857,
                       'size': f'{width},{height}', 'format': fmt, 'f': 'image',
                       'transparent': 'false'}
             if is_imgserver:
@@ -143,7 +148,7 @@ def common(c, county, base, title, page_num, source_label):
     c.line(40, 674, 1184, 674)
     c.setFillColor(PALE)
     c.rect(0, 0, W, 65, fill=1, stroke=0)
-    font(c, 40, 45, f'PRIVATE  |  Source: USDA FSA geospatial PDF field boundaries  |  Basemap: {source_label}', 9, GRAY)
+    font(c, 40, 45, f'PRIVATE  |  Source: USDA FSA registered field maps  |  Basemap: {source_label}', 9, GRAY)
     font(c, 40, 28, 'Boundary illustrations are not legal surveys. Only georeferenced, matched FSA fields are depicted.', 9, GRAY)
     c.setFont('Helvetica', 9)
     c.setFillColor(GRAY)
@@ -153,8 +158,11 @@ def common(c, county, base, title, page_num, source_label):
 def coord_box(bounds, frame):
     minx, miny, maxx, maxy = bounds
     x0, y0, width, height = frame
-    return lambda lon, lat: (x0 + (lon-minx)/(maxx-minx)*width,
-                              y0 + (lat-miny)/(maxy-miny)*height)
+    def project(lon,lat):
+        xx,yy=TO_MERC.transform(lon,lat)
+        return (x0 + (xx-minx)/(maxx-minx)*width,
+                y0 + (yy-miny)/(maxy-miny)*height)
+    return project
 
 
 def rings(geometry):
@@ -189,19 +197,19 @@ def draw_shape(c, geometry, cvt, outline, width=2, fillalpha=0, fillcolor=None):
 
 
 def fixed_bbox(points, ratio, pad_fraction=.08, min_m=0):
-    # Construct a WGS84 bbox with the physical aspect ratio of the PDF map frame.
-    midlat = (min(y for _, y in points)+max(y for _, y in points))/2
-    lon0 = (min(x for x, _ in points)+max(x for x, _ in points))/2
-    lat0 = midlat
-    east_span = (max(x for x, _ in points)-min(x for x, _ in points))*111300*math.cos(math.radians(midlat))
-    north_span = (max(y for _, y in points)-min(y for _, y in points))*111300
-    east_span = max(east_span*(1+2*pad_fraction), min_m)
-    north_span = max(north_span*(1+2*pad_fraction), min_m)
+    # A Web Mercator extent of the same exact aspect ratio as the raster and
+    # PDF map frame; source geometry remains geographic WGS84 in GeoJSON.
+    projected=[TO_MERC.transform(lon,lat) for lon,lat in points]
+    minx=min(x for x,_ in projected);maxx=max(x for x,_ in projected)
+    miny=min(y for _,y in projected);maxy=max(y for _,y in projected)
+    midx=(minx+maxx)/2;midy=(miny+maxy)/2
+    midlat=FROM_MERC.transform(midx,midy)[1]
+    merc_min_m=min_m/math.cos(math.radians(midlat))
+    east_span = max((maxx-minx)*(1+2*pad_fraction), merc_min_m)
+    north_span = max((maxy-miny)*(1+2*pad_fraction), merc_min_m)
     east_span = max(east_span, north_span*ratio)
     north_span = east_span/ratio
-    half_lon = east_span/(2*111300*math.cos(math.radians(midlat)))
-    half_lat = north_span/(2*111300)
-    return (lon0-half_lon, lat0-half_lat, lon0+half_lon, lat0+half_lat)
+    return (midx-east_span/2,midy-north_span/2,midx+east_span/2,midy+north_span/2)
 
 
 def frame_img(c, image, box):
@@ -215,7 +223,8 @@ def bar_and_north(c, bounds, frame):
     # Horizontal distance at map mid-latitude, approximate map scale for overview.
     minx, miny, maxx, maxy = bounds
     x, y, w, h = frame
-    km_per_px = (maxx-minx)*111.32*math.cos(math.radians((miny+maxy)/2))/w
+    midlat=FROM_MERC.transform((minx+maxx)/2,(miny+maxy)/2)[1]
+    km_per_px=(maxx-minx)*math.cos(math.radians(midlat))/(1000*w)
     target_px = 125
     target_km = target_px*km_per_px
     decade = 10**math.floor(math.log10(target_km))
@@ -298,8 +307,34 @@ def field_features():
                    'fsa_acres':p['fsa_reported_acres'],'geo_acres':round(acres,3),'area_error_pct':round(error,2),
                    'recorded_in_county_sheet':True,
                    'field_listed_in_county_sheet':selected,
-                   'amp_roster_county':roster[county][fid].get('amp_roster_county', county)})
+                   'amp_roster_county':roster[county][fid].get('amp_roster_county', county),
+                   'boundary_method':'native_geopdf_vector'})
         print('REGISTERED',county,fid,p['field_id'],round(acres,2),flush=True)
+    registered=ROOT/'geojson/registered_scanned_fields.geojson'
+    if registered.exists():
+        for f in json.loads(registered.read_text())['features']:
+            p=f['properties'];county=p['county'];fid=str(p['farm_id'])
+            if fid not in roster[county] or p['tract_id'] not in roster[county][fid]['tracts']:
+                raise ValueError('Scanned field does not match producer workbook farm/tract: '+fid)
+            if p['county_workbook_selected'] != (str(p['field_id']) in roster[county][fid]['fields']):
+                raise ValueError('Scanned source field selection does not match producer workbook')
+            if hashlib.sha256((SOURCE/p['source_pdf']).read_bytes()).hexdigest()!=p['source_sha256']:
+                raise ValueError('Scanned PDF source SHA mismatch: '+fid)
+            geom=shape(f['geometry'])
+            if not geom.is_valid or geom.area<=0:
+                raise ValueError('Scanned FSA geometry is not valid')
+            acres=abs(GEOD.geometry_area_perimeter(geom)[0])/4046.8564224
+            error=100*(acres/float(p['fsa_reported_acres'])-1)
+            if abs(error)>2 or p['image_registration_inliers']<100 or p['independent_tile_rmse_m']>1:
+                raise ValueError('Scanned FSA registration fails acreage/independent tile QA: '+fid)
+            p['calculated_acres']=round(acres,3);p['area_error_percent']=round(error,2)
+            eligible.append(f)
+            qa.append({'county':county,'farm_id':fid,'field_id':p['field_id'],'source_pdf':p['source_pdf'],
+                       'fsa_acres':p['fsa_reported_acres'],'geo_acres':round(acres,3),
+                       'area_error_pct':round(error,2),'recorded_in_county_sheet':True,
+                       'field_listed_in_county_sheet':p['county_workbook_selected'],
+                       'amp_roster_county':county,'boundary_method':'raster_georeg_manually_traced'})
+            print('RASTER_REGISTERED',county,fid,p['field_id'],round(acres,2),flush=True)
     return eligible,qa,roster
 
 
@@ -316,7 +351,7 @@ def draw_county(c,county,farms,boundary,basetype,source_tracker):
     pts=[]
     for r in rings(boundary):pts.extend(r)
     bounds=fixed_bbox(pts,frame[2]/frame[3],pad_fraction=.1)
-    im,attribution=fetch_image(bounds,1150,715,basetype)
+    im,attribution=fetch_image(bounds,1706,1064,basetype)
     source_tracker.add(attribution)
     common(c,county,basetype,'01  /  County overview  /  Actual FSA-derived field locations',1,attribution)
     frame_img(c,im,frame)
@@ -357,7 +392,7 @@ def draw_detail(c,county,farms,fid,fields,basetype,number,source_tracker):
     for f in fields:
         for ring in rings(shape(f['geometry'])):points.extend(ring)
     bounds=fixed_bbox(points,frame[2]/frame[3],pad_fraction=.19,min_m=420)
-    im,attribution=fetch_image(bounds,1150,715,basetype)
+    im,attribution=fetch_image(bounds,1706,1064,basetype)
     source_tracker.add(attribution)
     common(c,county,basetype,f'{number:02d}  /  Farm {fid}  /  Source field boundaries over {basetype.lower()} imagery',number,attribution)
     frame_img(c,im,frame)
@@ -395,9 +430,13 @@ def draw_detail(c,county,farms,fid,fields,basetype,number,source_tracker):
         yy=wrap(c,f'{len(context)} other FSA fields are outlined in white/gray for context only; they are not identified as AMP-selected in this county workbook.',923,yy,250,10,15,GRAY)-15
     if origin != county:
         yy=wrap(c,f'Important: the AMP spreadsheet lists {origin} County, but both source FSA maps identify Darlington County and exactly match Farm 8185, Tract 2352, field acreages.',923,yy,250,9,13,GRAY)-12
-    yy=wrap(c,'Boundaries were reproduced from native FSA GeoPDF vector paths and mapped using the PDF geographic reference.',923,yy,250,10,15,GRAY)-18
+    method=p.get('method','')
+    if 'raster' in method.lower():
+        yy=wrap(c,'FSA source aerial photograph was matched to USGS NAIP using 170 image features. Field outlines were traced from source lines and verified against printed acreage; approximate, not surveyed.',923,yy,250,9,13,GRAY)-12
+    else:
+        yy=wrap(c,'Boundaries were reproduced from native FSA GeoPDF vector paths and mapped using the PDF geographic reference.',923,yy,250,10,15,GRAY)-18
     yy=wrap(c,'Source-image date and current land cover can differ from the displayed basemap date.',923,yy,250,10,15,GRAY)
-    font(c,923,137,'EPSG:4326  |  Acreage checked to printed FSA label',8,GRAY)
+    font(c,923,137,'GeoJSON WGS84  |  Map EPSG:3857  |  Area checked to FSA label',8,GRAY)
     c.showPage()
 
 
@@ -448,7 +487,7 @@ def make_allendale_reference(outlines):
         frame=(39,118,853,531)
         pts=[v for ring in rings(boundary) for v in ring]
         bounds=fixed_bbox(pts,frame[2]/frame[3],pad_fraction=.09)
-        im,provider=fetch_image(bounds,1150,715,basetype);sources.add(provider)
+        im,provider=fetch_image(bounds,1706,1064,basetype);sources.add(provider)
         common(c,'Allendale',basetype,'01 / County overview / User-supplied QGIS example site only',1,provider)
         frame_img(c,im,frame);cvt=coord_box(bounds,frame)
         draw_shape(c,boundary,cvt,colors.white,width=3.5)
@@ -464,7 +503,7 @@ def make_allendale_reference(outlines):
         c.showPage()
         pts=list(geom.exterior.coords)
         bounds=fixed_bbox(pts,frame[2]/frame[3],pad_fraction=.38,min_m=500)
-        im,provider=fetch_image(bounds,1150,715,basetype);sources.add(provider)
+        im,provider=fetch_image(bounds,1706,1064,basetype);sources.add(provider)
         common(c,'Allendale',basetype,'02 / Zoom / Combined QGIS example polygon over new geographic basemap',2,provider)
         frame_img(c,im,frame);cvt=coord_box(bounds,frame)
         color=colors.HexColor(PALETTE[0]);draw_shape(c,geom,cvt,color,width=3.3,fillalpha=.25)
