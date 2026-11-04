@@ -1,0 +1,32 @@
+name: Search Marion Farm 9652 scan across wider area
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/albert_wide.yml'
+      - 'scripts/wide_register_albert.py'
+
+permissions:
+  contents: read
+
+jobs:
+  search:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install 'numpy<2.5' opencv-python-headless pymupdf pillow requests
+      - name: Search 49 aerial imagery regions and inspect independent keypoints
+        run: python scripts/wide_register_albert.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: Marion-Farm9652-Wide-Search-QA
+          path: registration_trials/albert_wide_search/
+          retention-days: 30
