@@ -1,0 +1,191 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -79.7463239,
+              34.09877555
+            ],
+            [
+              -79.74468668,
+              34.09818099
+            ],
+            [
+              -79.74481243,
+              34.09798286
+            ],
+            [
+              -79.74497788,
+              34.0977912
+            ],
+            [
+              -79.74531817,
+              34.09765173
+            ],
+            [
+              -79.74529333,
+              34.09747382
+            ],
+            [
+              -79.74529076,
+              34.09703209
+            ],
+            [
+              -79.74488501,
+              34.09684208
+            ],
+            [
+              -79.74437601,
+              34.09664575
+            ],
+            [
+              -79.74393098,
+              34.09654153
+            ],
+            [
+              -79.74378906,
+              34.09669365
+            ],
+            [
+              -79.74367543,
+              34.0949918
+            ],
+            [
+              -79.74447754,
+              34.09504894
+            ],
+            [
+              -79.74448434,
+              34.09618373
+            ],
+            [
+              -79.74513531,
+              34.096228
+            ],
+            [
+              -79.74514472,
+              34.09512624
+            ],
+            [
+              -79.74684381,
+              34.09528637
+            ],
+            [
+              -79.7463239,
+              34.09877555
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "county": "Florence",
+        "amp_roster_county": "Florence",
+        "farm_id": "20170",
+        "tract_id": "13243",
+        "field_id": "14",
+        "producer": "Shelia McAllister",
+        "fsa_reported_acres": 16.7,
+        "calculated_acres": 16.671,
+        "area_error_percent": -0.17,
+        "county_workbook_selected": true,
+        "source_pdf": "Juan_McAllister_FSA_Map.pdf",
+        "source_sha256": "9ce341e7c7101a676a65b49fc8eb4062ea59d39d484bc2d1a63ea6a21ba4af40",
+        "page_number": 1,
+        "method": "FSA raster aerial with hand-traced yellow field border; USGS NAIP SIFT/MAGSAC registration",
+        "image_registration_inliers": 170,
+        "image_registration_rmse_px": 0.58,
+        "independent_tile_rmse_m": 0.21,
+        "status": "REGISTERED_FSA_RASTER_MANUAL_TRACE__NOT_SURVEY",
+        "source_registration_note": "FSA map screenshot, manually traced; 2025 Program Year. Confirmed against recent USGS NAIP imagery and FSA printed acres."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -79.74468668,
+              34.09818099
+            ],
+            [
+              -79.74393157,
+              34.09793942
+            ],
+            [
+              -79.74384273,
+              34.09768259
+            ],
+            [
+              -79.74378906,
+              34.09669365
+            ],
+            [
+              -79.74393098,
+              34.09654153
+            ],
+            [
+              -79.74437601,
+              34.09664575
+            ],
+            [
+              -79.74488501,
+              34.09684208
+            ],
+            [
+              -79.74529076,
+              34.09703209
+            ],
+            [
+              -79.74529333,
+              34.09747382
+            ],
+            [
+              -79.74531817,
+              34.09765173
+            ],
+            [
+              -79.74497788,
+              34.0977912
+            ],
+            [
+              -79.74481243,
+              34.09798286
+            ],
+            [
+              -79.74468668,
+              34.09818099
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "county": "Florence",
+        "amp_roster_county": "Florence",
+        "farm_id": "20170",
+        "tract_id": "13243",
+        "field_id": "2",
+        "producer": "Shelia McAllister",
+        "fsa_reported_acres": 4.49,
+        "calculated_acres": 4.532,
+        "area_error_percent": 0.94,
+        "county_workbook_selected": false,
+        "source_pdf": "Juan_McAllister_FSA_Map.pdf",
+        "source_sha256": "9ce341e7c7101a676a65b49fc8eb4062ea59d39d484bc2d1a63ea6a21ba4af40",
+        "page_number": 1,
+        "method": "FSA raster aerial with hand-traced yellow field border; USGS NAIP SIFT/MAGSAC registration",
+        "image_registration_inliers": 170,
+        "image_registration_rmse_px": 0.58,
+        "independent_tile_rmse_m": 0.2,
+        "status": "REGISTERED_FSA_RASTER_MANUAL_TRACE__NOT_SURVEY",
+        "source_registration_note": "FSA map screenshot, manually traced; 2025 Program Year. Confirmed against recent USGS NAIP imagery and FSA printed acres."
+      }
+    }
+  ]
+}
