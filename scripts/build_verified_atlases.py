@@ -33,7 +33,7 @@ PALE = colors.HexColor('#EEF4F6')
 GRAY = colors.HexColor('#637781')
 GOLD = colors.HexColor('#F2B044')
 PALETTE = ['#F25F4C', '#0795B5', '#B25AC4', '#72A251', '#EA9A31']
-COUNTIES = {'Allendale':'45005', 'Barnwell': '45011', 'Darlington': '45031', 'Florence': '45041', 'Marion': '45067', 'Williamsburg': '45089'}
+COUNTIES = {'Aiken':'45003', 'Allendale':'45005', 'Barnwell': '45011', 'Darlington': '45031', 'Florence': '45041', 'Marion': '45067', 'Williamsburg': '45089'}
 GEOD = Geod(ellps='WGS84')
 TO_UTM = Transformer.from_crs(4326, 32617, always_xy=True)
 FROM_UTM = Transformer.from_crs(32617, 4326, always_xy=True)
