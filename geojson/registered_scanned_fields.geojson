@@ -288,6 +288,57 @@
         "status": "REGISTERED_FSA_RASTER_MANUAL_TRACE__NOT_SURVEY",
         "source_registration_note": "FSA map scan, manually traced; 2025 Program Year. Confirmed against USGS NAIP imagery, multiple image-registration extents, and FSA printed acres."
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "county": "Aiken",
+        "amp_roster_county": "Aiken",
+        "farm_id": "4631",
+        "tract_id": "7866",
+        "field_id": "14",
+        "producer": "Shannon Lowe",
+        "fsa_reported_acres": 5.48,
+        "calculated_acres": 5.471,
+        "area_error_percent": -0.16,
+        "county_workbook_selected": true,
+        "source_pdf": "Shannon_Lowe_FSA Map.pdf",
+        "source_sha256": "c71699f032be75f8f32f7a70b75dcc61f7f3de1d4f06e3ec67d70d87d9e6fa12",
+        "page_number": 1,
+        "method": "FSA raster aerial with hand-traced source field border; USGS NAIP SIFT/MAGSAC registration",
+        "image_registration_inliers": 69,
+        "image_registration_rmse_px": 0.4,
+        "independent_tile_rmse_m": 0.74,
+        "status": "REGISTERED_FSA_RASTER_MANUAL_TRACE__NOT_SURVEY",
+        "source_registration_note": "2026 FSA map PDF raster; yellow outline manually traced. Validated to USGS NAIP at six independent tile extents, 5.48 FSA acres."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -81.79428642,
+              33.42733112
+            ],
+            [
+              -81.79115962,
+              33.42826007
+            ],
+            [
+              -81.79113034,
+              33.42751181
+            ],
+            [
+              -81.79362905,
+              33.42676198
+            ],
+            [
+              -81.79428642,
+              33.42733112
+            ]
+          ]
+        ]
+      }
     }
   ]
 }
