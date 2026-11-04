@@ -339,9 +339,10 @@ def field_features():
 
 
 def county_geom():
-    url='https://raw.githubusercontent.com/plotly/datasets/master/geojson-counties-fips.json'
-    r=requests.get(url,timeout=55);r.raise_for_status()
-    all_counties=r.json()['features']
+    # Pin the exact Census-derived six county boundaries in the private repo.
+    # A transient raw.githubusercontent.com timeout must never prevent producing
+    # a county atlas, or silently substitute a guessed boundary.
+    all_counties=json.loads((ROOT/'geojson/sc_counties_for_verified_atlases.geojson').read_text())['features']
     return {county:shape(next(f['geometry'] for f in all_counties if str(f['id']).zfill(5)==fips))
             for county,fips in COUNTIES.items()}
 
