@@ -1,0 +1,43 @@
+{
+  "coordinate_system": "image_pixels_not_geographic",
+  "warning": "Digitized from printed FSA raster boundaries. Not GeoJSON or map coordinates; must georegister and validate before overlay on NAIP.",
+  "source_reference_rendering": "PDF page raster at 130 dpi, top-left origin, x right, y down",
+  "features": [
+    {
+      "producer": "Tiffany Loadholt",
+      "fsa_county_header": "Hampton County",
+      "fsa_farm_id": "3779",
+      "fsa_tract_id": "10394",
+      "fsa_field_id": "54",
+      "fsa_acres": 15.18,
+      "source_pdf": "Tifanny Loadholt_FSA_Map.pdf",
+      "reference_image_dimensions_px": [1105, 1430],
+      "geometry_status": "manual_first_pass_requires_pixel_edge_QA",
+      "polygon_pixels": [[322,381],[446,342],[522,318],[590,294],[672,267],[739,594],[623,624],[565,581],[480,639],[452,651],[438,633],[427,656],[399,666],[394,701],[322,381]]
+    },
+    {
+      "producer": "Samuel Lance Jr.",
+      "fsa_county_header": "Hampton County",
+      "fsa_farm_id": "3740",
+      "fsa_tract_id": "10333",
+      "fsa_field_id": "2161",
+      "fsa_acres": 2.34,
+      "source_pdf": "Samuel Lance JR.pdf",
+      "reference_image_dimensions_px": [1105, 1430],
+      "geometry_status": "manual_first_pass_requires_pixel_edge_QA",
+      "polygon_pixels": [[277,722],[720,373],[805,480],[342,796],[277,722]]
+    },
+    {
+      "producer": "Samuel Lance Jr.",
+      "fsa_county_header": "Hampton County",
+      "fsa_farm_id": "3740",
+      "fsa_tract_id": "10333",
+      "fsa_field_id": "2162",
+      "fsa_acres": 0.58,
+      "source_pdf": "Samuel Lance JR.pdf",
+      "reference_image_dimensions_px": [1105, 1430],
+      "geometry_status": "manual_first_pass_requires_pixel_edge_QA",
+      "polygon_pixels": [[342,796],[805,480],[819,492],[362,830],[342,796]]
+    }
+  ]
+}
