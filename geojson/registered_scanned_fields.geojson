@@ -96,12 +96,12 @@
         "source_pdf": "Juan_McAllister_FSA_Map.pdf",
         "source_sha256": "9ce341e7c7101a676a65b49fc8eb4062ea59d39d484bc2d1a63ea6a21ba4af40",
         "page_number": 1,
-        "method": "FSA raster aerial with hand-traced yellow field border; USGS NAIP SIFT/MAGSAC registration",
+        "method": "FSA raster aerial with hand-traced source field border; USGS NAIP SIFT/MAGSAC registration",
         "image_registration_inliers": 170,
         "image_registration_rmse_px": 0.58,
         "independent_tile_rmse_m": 0.21,
         "status": "REGISTERED_FSA_RASTER_MANUAL_TRACE__NOT_SURVEY",
-        "source_registration_note": "FSA map screenshot, manually traced; 2025 Program Year. Confirmed against recent USGS NAIP imagery and FSA printed acres."
+        "source_registration_note": "FSA map scan, manually traced; 2025 Program Year. Confirmed against USGS NAIP imagery, multiple image-registration extents, and FSA printed acres."
       }
     },
     {
@@ -179,12 +179,114 @@
         "source_pdf": "Juan_McAllister_FSA_Map.pdf",
         "source_sha256": "9ce341e7c7101a676a65b49fc8eb4062ea59d39d484bc2d1a63ea6a21ba4af40",
         "page_number": 1,
-        "method": "FSA raster aerial with hand-traced yellow field border; USGS NAIP SIFT/MAGSAC registration",
+        "method": "FSA raster aerial with hand-traced source field border; USGS NAIP SIFT/MAGSAC registration",
         "image_registration_inliers": 170,
         "image_registration_rmse_px": 0.58,
         "independent_tile_rmse_m": 0.2,
         "status": "REGISTERED_FSA_RASTER_MANUAL_TRACE__NOT_SURVEY",
-        "source_registration_note": "FSA map screenshot, manually traced; 2025 Program Year. Confirmed against recent USGS NAIP imagery and FSA printed acres."
+        "source_registration_note": "FSA map scan, manually traced; 2025 Program Year. Confirmed against USGS NAIP imagery, multiple image-registration extents, and FSA printed acres."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -79.56485766,
+              33.87820271
+            ],
+            [
+              -79.56337457,
+              33.87872686
+            ],
+            [
+              -79.56297711,
+              33.87838751
+            ],
+            [
+              -79.56461538,
+              33.87753763
+            ],
+            [
+              -79.56485766,
+              33.87820271
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "county": "Florence",
+        "amp_roster_county": "Florence",
+        "farm_id": "20119",
+        "tract_id": "12460",
+        "field_id": "2",
+        "producer": "June Bazen",
+        "fsa_reported_acres": 2.56,
+        "calculated_acres": 2.551,
+        "area_error_percent": -0.35,
+        "county_workbook_selected": true,
+        "source_pdf": "June_Bazen_FSA_Map.pdf",
+        "source_sha256": "b0d003d5babcdf3f7d3fc0ab879e993a1b9e8ebefcabe241e7729236f126fb7a",
+        "page_number": 2,
+        "method": "FSA raster aerial with hand-traced source field border; USGS NAIP SIFT/MAGSAC registration",
+        "image_registration_inliers": 172,
+        "image_registration_rmse_px": 0.85,
+        "independent_tile_rmse_m": 0.29,
+        "status": "REGISTERED_FSA_RASTER_MANUAL_TRACE__NOT_SURVEY",
+        "source_registration_note": "FSA map scan, manually traced; 2025 Program Year. Confirmed against USGS NAIP imagery, multiple image-registration extents, and FSA printed acres."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -79.56337457,
+              33.87872686
+            ],
+            [
+              -79.56294979,
+              33.87901193
+            ],
+            [
+              -79.56252465,
+              33.87863963
+            ],
+            [
+              -79.56297711,
+              33.87838751
+            ],
+            [
+              -79.56337457,
+              33.87872686
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "county": "Florence",
+        "amp_roster_county": "Florence",
+        "farm_id": "20119",
+        "tract_id": "12460",
+        "field_id": "3",
+        "producer": "June Bazen",
+        "fsa_reported_acres": 0.68,
+        "calculated_acres": 0.678,
+        "area_error_percent": -0.29,
+        "county_workbook_selected": true,
+        "source_pdf": "June_Bazen_FSA_Map.pdf",
+        "source_sha256": "b0d003d5babcdf3f7d3fc0ab879e993a1b9e8ebefcabe241e7729236f126fb7a",
+        "page_number": 2,
+        "method": "FSA raster aerial with hand-traced source field border; USGS NAIP SIFT/MAGSAC registration",
+        "image_registration_inliers": 172,
+        "image_registration_rmse_px": 0.85,
+        "independent_tile_rmse_m": 0.34,
+        "status": "REGISTERED_FSA_RASTER_MANUAL_TRACE__NOT_SURVEY",
+        "source_registration_note": "FSA map scan, manually traced; 2025 Program Year. Confirmed against USGS NAIP imagery, multiple image-registration extents, and FSA printed acres."
       }
     }
   ]
