@@ -1,0 +1,31 @@
+name: Register Aiken Shannon Lowe FSA field using NAIP
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/aiken_trial.yml'
+      - 'scripts/trial_register_aiken.py'
+
+permissions:
+  contents: read
+
+jobs:
+  georeg:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install 'numpy<2.5' opencv-python-headless pymupdf pillow requests
+      - run: python scripts/trial_register_aiken.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: Aiken-Shannon-NAIP-Registration-QA
+          path: registration_trials/aiken_shannon/
+          retention-days: 30
