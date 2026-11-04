@@ -1,0 +1,109 @@
+[
+  {
+    "farm": "Tiffany_3779",
+    "span_m": 1500,
+    "bounds": [
+      -81.33045332269056,
+      33.001714532249316,
+      -81.31438507730944,
+      33.01526466775068
+    ],
+    "keypoints_source": 5500,
+    "keypoints_target": 5500,
+    "good_matches": 5,
+    "inliers": 0
+  },
+  {
+    "farm": "Samuel_3740",
+    "span_m": 1500,
+    "bounds": [
+      -81.33045332269056,
+      33.001714532249316,
+      -81.31438507730944,
+      33.01526466775068
+    ],
+    "keypoints_source": 5500,
+    "keypoints_target": 5500,
+    "good_matches": 3,
+    "inliers": 0
+  },
+  {
+    "farm": "Tiffany_3779",
+    "span_m": 3000,
+    "bounds": [
+      -81.33848744538112,
+      32.99493946449864,
+      -81.30635095461888,
+      33.02203973550135
+    ],
+    "keypoints_source": 5500,
+    "keypoints_target": 5500,
+    "good_matches": 3,
+    "inliers": 0
+  },
+  {
+    "farm": "Samuel_3740",
+    "span_m": 3000,
+    "bounds": [
+      -81.33848744538112,
+      32.99493946449864,
+      -81.30635095461888,
+      33.02203973550135
+    ],
+    "keypoints_source": 5500,
+    "keypoints_target": 5500,
+    "good_matches": 3,
+    "inliers": 0
+  },
+  {
+    "farm": "Tiffany_3779",
+    "span_m": 6000,
+    "bounds": [
+      -81.35455569076224,
+      32.98138932899729,
+      -81.29028270923776,
+      33.035589871002706
+    ],
+    "keypoints_source": 5500,
+    "keypoints_target": 5501,
+    "good_matches": 2,
+    "inliers": 0
+  },
+  {
+    "farm": "Samuel_3740",
+    "span_m": 6000,
+    "bounds": [
+      -81.35455569076224,
+      32.98138932899729,
+      -81.29028270923776,
+      33.035589871002706
+    ],
+    "keypoints_source": 5500,
+    "keypoints_target": 5501,
+    "good_matches": 8,
+    "inliers": 4,
+    "inlier_fraction": 0.5,
+    "inlier_rmse_px": 0.0,
+    "homography": [
+      [
+        -3.1848751,
+        0.9059845,
+        1113.0753495
+      ],
+      [
+        -3.5495714,
+        0.8766608,
+        1321.3808438
+      ],
+      [
+        -0.0026767,
+        0.0006415,
+        1.0
+      ]
+    ]
+  },
+  {
+    "span_m": 12000,
+    "error": "502 Server Error: Bad Gateway for url: https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/exportImage?bbox=-81.386692182%2C32.954289058%2C-81.258146218%2C33.062690142&bboxSR=4326&imageSR=4326&size=1900%2C1900&format=jpg&f=image"
+  }
+]
