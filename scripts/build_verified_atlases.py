@@ -325,7 +325,13 @@ def field_features():
                 raise ValueError('Scanned FSA geometry is not valid')
             acres=abs(GEOD.geometry_area_perimeter(geom)[0])/4046.8564224
             error=100*(acres/float(p['fsa_reported_acres'])-1)
-            if abs(error)>2 or p['image_registration_inliers']<100 or p['independent_tile_rmse_m']>1:
+            # Small source-map crops can have fewer than 100 features even when
+            # six independently fetched NAIP extents agree at sub-meter scale.
+            # Admit 60+ inliers only if sub-half-pixel source-image residuals
+            # also support the cross-tile and FSA printed-acreage checks.
+            inliers=p['image_registration_inliers']
+            high_precision_small_map=(inliers>=60 and p['image_registration_rmse_px']<=0.5)
+            if abs(error)>2 or (inliers<100 and not high_precision_small_map) or p['independent_tile_rmse_m']>1:
                 raise ValueError('Scanned FSA registration fails acreage/independent tile QA: '+fid)
             p['calculated_acres']=round(acres,3);p['area_error_percent']=round(error,2)
             eligible.append(f)
