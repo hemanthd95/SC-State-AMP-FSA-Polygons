@@ -384,7 +384,8 @@ def example_qgis_polygon():
     """A distinct user QGIS example site, never label it a verified FSA farm."""
     source=SOURCE/'Producers by County/Satelite Maps/Allendale County.pdf'
     d=fitz.open(source);p=d[0]
-    vp=d.xref_get_key(p.xref,'VP')[1]
+    vp_refs=d.xref_get_key(p.xref,'VP')[1]
+    vp=d.xref_object(int(nums(vp_refs)[0]))
     bbox=nums(re.search(r'/BBox\s*\[([^]]+)\]',vp).group(1))
     m=int(re.search(r'/Measure\s+(\d+)\s+0\s+R',vp).group(1))
     ref=nums(d.xref_get_key(m,'GPTS')[1])
