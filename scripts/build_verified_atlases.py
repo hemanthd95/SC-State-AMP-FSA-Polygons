@@ -1,0 +1,413 @@
+"""Build GIS-registered county atlases for FSA GeoPDF fields only.
+
+Source PDF coordinates are reproduced from PDF viewport reference points and
+vector path vertices. No unverified spreadsheet/address location is used.
+"""
+from collections import defaultdict
+from io import BytesIO
+from pathlib import Path
+import csv
+import hashlib
+import json
+import math
+import re
+import time
+import zipfile
+
+import fitz
+from PIL import Image, ImageStat
+from pyproj import Geod, Transformer
+from shapely.geometry import shape, Polygon, mapping
+from reportlab.lib import colors
+from reportlab.lib.utils import ImageReader, simpleSplit
+from reportlab.pdfgen import canvas
+import requests
+
+ROOT = Path(__file__).resolve().parents[1]
+SOURCE = ROOT / 'source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP'
+OUTPUT = ROOT / 'verified_atlas_deliverables'
+W, H = 1224, 792
+NAVY = colors.HexColor('#133047')
+INK = colors.HexColor('#233745')
+PALE = colors.HexColor('#EEF4F6')
+GRAY = colors.HexColor('#637781')
+GOLD = colors.HexColor('#F2B044')
+PALETTE = ['#F25F4C', '#0795B5', '#B25AC4', '#72A251', '#EA9A31']
+COUNTIES = {'Barnwell': '45011', 'Florence': '45041', 'Marion': '45067', 'Williamsburg': '45089'}
+GEOD = Geod(ellps='WGS84')
+TO_UTM = Transformer.from_crs(4326, 32617, always_xy=True)
+FROM_UTM = Transformer.from_crs(32617, 4326, always_xy=True)
+cache = {}
+
+
+def nums(v):
+    return list(map(float, re.findall(r'[-+]?(?:\d*\.\d+|\d+)', v)))
+
+
+def registered_vector(doc, page, index):
+    vp = doc.xref_get_key(page.xref, 'VP')[1]
+    bbox = nums(re.search(r'/BBox\s*\[([^]]+)\]', vp).group(1))
+    measure = int(re.search(r'/Measure\s+(\d+)\s+0\s+R', vp).group(1))
+    import numpy as np
+    lpts = np.array(nums(doc.xref_get_key(measure, 'LPTS')[1])).reshape(-1, 2)
+    gpts = np.array(nums(doc.xref_get_key(measure, 'GPTS')[1])).reshape(-1, 2)
+    east, north = TO_UTM.transform(gpts[:, 1], gpts[:, 0])
+    affine, *_ = np.linalg.lstsq(np.column_stack([lpts, np.ones(len(lpts))]),
+                                  np.column_stack([east, north]), rcond=None)
+    drawing = page.get_drawings()[index]
+    vertices = []
+    for item in drawing['items']:
+        if item[0] != 'l':
+            raise ValueError('Cannot reproduce non-straight FSA boundary segment')
+        if not vertices:
+            vertices.append(tuple(item[1]))
+        vertices.append(tuple(item[2]))
+    if vertices[-1] != vertices[0]:
+        vertices.append(vertices[0])
+    xy = np.array(vertices)
+    loc = np.column_stack([(xy[:, 0] - bbox[0])/(bbox[2]-bbox[0]),
+                           (page.rect.height - xy[:, 1] - bbox[1])/(bbox[3]-bbox[1]),
+                           np.ones(len(xy))])
+    e_n = loc @ affine
+    lon, lat = FROM_UTM.transform(e_n[:, 0], e_n[:, 1])
+    geom = Polygon(np.column_stack([lon, lat]))
+    if not geom.is_valid or geom.area <= 0:
+        raise ValueError('Invalid registered polygon')
+    return geom
+
+
+def fetch_image(bounds, width, height, kind):
+    key = (tuple(round(x, 7) for x in bounds), width, height, kind)
+    if key in cache:
+        return cache[key]
+    bbox = ','.join(f'{v:.9f}' for v in bounds)
+    services = ([
+        ('USGS NAIP', 'https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/exportImage', 'jpg', True),
+        ('Esri World Imagery', 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export', 'jpg', False),
+    ] if kind == 'Satellite' else [
+        ('USGS US Topo', 'https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export', 'png', False),
+        ('Esri World Topographic Map', 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/export', 'png', False),
+    ])
+    for label, url, fmt, is_imgserver in services:
+        for attempt in range(4):
+            params = {'bbox': bbox, 'bboxSR': 4326, 'imageSR': 4326,
+                      'size': f'{width},{height}', 'format': fmt, 'f': 'image',
+                      'transparent': 'false'}
+            if is_imgserver:
+                params['interpolation'] = '+RSP_BilinearInterpolation'
+            try:
+                r = requests.get(url, params=params, timeout=55)
+                r.raise_for_status()
+                img = Image.open(BytesIO(r.content)).convert('RGB')
+                if img.size != (width, height):
+                    raise ValueError(f'Wrong imagery size: {img.size}')
+                std = ImageStat.Stat(img.resize((64, 64))).stddev
+                if max(std) < 8:
+                    raise ValueError('Basemap appears blank')
+                cache[key] = (img, label)
+                return img, label
+            except Exception as e:
+                if attempt == 3:
+                    print('IMAGE_PROVIDER_FAILED', label, kind, str(e)[:110], flush=True)
+                time.sleep(1.5 * (attempt + 1))
+    raise RuntimeError(f'No real {kind} basemap available for {bounds}')
+
+
+def font(c, x, y, s, size=10, color=INK, bold=False):
+    c.setFillColor(color)
+    c.setFont('Helvetica-Bold' if bold else 'Helvetica', size)
+    c.drawString(x, y, str(s))
+
+
+def wrap(c, content, x, y, maxwidth, size=10, leading=14, color=INK):
+    for logical in str(content).split('\n'):
+        for line in simpleSplit(logical, 'Helvetica', size, maxwidth) or ['']:
+            font(c, x, y, line, size, color)
+            y -= leading
+    return y
+
+
+def common(c, county, base, title, page_num, source_label):
+    c.setFillColor(NAVY)
+    c.rect(0, H-15, W, 15, stroke=0, fill=1)
+    font(c, 40, 753, 'SOUTH CAROLINA STATE UNIVERSITY   /   AMP PROGRAM', 11, NAVY, True)
+    font(c, 40, 719, f'{county} County', 26, NAVY, True)
+    font(c, 40, 691, title, 12, GRAY)
+    c.setStrokeColor(colors.HexColor('#D6E0E4'))
+    c.line(40, 674, 1184, 674)
+    c.setFillColor(PALE)
+    c.rect(0, 0, W, 65, fill=1, stroke=0)
+    font(c, 40, 45, f'PRIVATE  |  Source: USDA FSA geospatial PDF field boundaries  |  Basemap: {source_label}', 9, GRAY)
+    font(c, 40, 28, 'Boundary illustrations are not legal surveys. Only georeferenced, matched FSA fields are depicted.', 9, GRAY)
+    c.setFont('Helvetica', 9)
+    c.setFillColor(GRAY)
+    c.drawRightString(1185, 45, f'{base.upper()}  |  {page_num}')
+
+
+def coord_box(bounds, frame):
+    minx, miny, maxx, maxy = bounds
+    x0, y0, width, height = frame
+    return lambda lon, lat: (x0 + (lon-minx)/(maxx-minx)*width,
+                              y0 + (lat-miny)/(maxy-miny)*height)
+
+
+def rings(geometry):
+    if geometry.geom_type == 'Polygon':
+        polygons = [geometry]
+    else:
+        polygons = list(geometry.geoms)
+    for geom in polygons:
+        yield list(geom.exterior.coords)
+        for hole in geom.interiors:
+            yield list(hole.coords)
+
+
+def draw_shape(c, geometry, cvt, outline, width=2, fillalpha=0, fillcolor=None):
+    p = c.beginPath()
+    for ring in rings(geometry):
+        for i, (lon, lat) in enumerate(ring):
+            x, y = cvt(lon, lat)
+            if i == 0:
+                p.moveTo(x, y)
+            else:
+                p.lineTo(x, y)
+        p.close()
+    c.saveState()
+    c.setStrokeColor(outline)
+    c.setLineWidth(width)
+    if fillalpha:
+        c.setFillColor(fillcolor or outline)
+        c.setFillAlpha(fillalpha)
+    c.drawPath(p, stroke=1, fill=int(bool(fillalpha)), fillMode=0)
+    c.restoreState()
+
+
+def fixed_bbox(points, ratio, pad_fraction=.08, min_m=0):
+    # Construct a WGS84 bbox with the physical aspect ratio of the PDF map frame.
+    midlat = (min(y for _, y in points)+max(y for _, y in points))/2
+    lon0 = (min(x for x, _ in points)+max(x for x, _ in points))/2
+    lat0 = midlat
+    east_span = (max(x for x, _ in points)-min(x for x, _ in points))*111300*math.cos(math.radians(midlat))
+    north_span = (max(y for _, y in points)-min(y for _, y in points))*111300
+    east_span = max(east_span*(1+2*pad_fraction), min_m)
+    north_span = max(north_span*(1+2*pad_fraction), min_m)
+    east_span = max(east_span, north_span*ratio)
+    north_span = east_span/ratio
+    half_lon = east_span/(2*111300*math.cos(math.radians(midlat)))
+    half_lat = north_span/(2*111300)
+    return (lon0-half_lon, lat0-half_lat, lon0+half_lon, lat0+half_lat)
+
+
+def frame_img(c, image, box):
+    x, y, w, h = box
+    c.drawImage(ImageReader(image), x, y, width=w, height=h, mask='auto')
+    c.setStrokeColor(colors.HexColor('#CAD5DB'))
+    c.rect(x, y, w, h, stroke=1, fill=0)
+
+
+def bar_and_north(c, bounds, frame):
+    # Horizontal distance at map mid-latitude, approximate map scale for overview.
+    minx, miny, maxx, maxy = bounds
+    x, y, w, h = frame
+    km_per_px = (maxx-minx)*111.32*math.cos(math.radians((miny+maxy)/2))/w
+    target_px = 125
+    target_km = target_px*km_per_px
+    decade = 10**math.floor(math.log10(target_km))
+    distance = min((1, 2, 5, 10), key=lambda v: abs(v*decade-target_km))*decade
+    actual_px = distance/km_per_px
+    barx, bary = x+20, y+22
+    c.setFillColor(colors.white)
+    c.roundRect(barx-9, bary-12, actual_px+60, 45, 4, fill=1, stroke=0)
+    c.setStrokeColor(NAVY);c.setLineWidth(3)
+    c.line(barx, bary, barx+actual_px, bary)
+    for x1 in [barx,barx+actual_px]: c.line(x1,bary-5,x1,bary+5)
+    units = f'{distance:g} km' if distance>=.5 else f'{distance*1000:g} m'
+    font(c,barx,bary+12,units,9,NAVY,True)
+    c.setFillColor(colors.white)
+    c.circle(x+w-32, y+h-32, 19, fill=1, stroke=0)
+    font(c,x+w-36,y+h-27,'N',12,NAVY,True)
+    p=c.beginPath();p.moveTo(x+w-32,y+h-17);p.lineTo(x+w-39,y+h-29);p.lineTo(x+w-25,y+h-29);p.close()
+    c.setFillColor(NAVY);c.drawPath(p,fill=1,stroke=0)
+
+
+def get_roster():
+    result = defaultdict(dict)
+    for county in COUNTIES:
+        path=SOURCE/'Producers by County'/f'{county} County_Producers.xlsx'
+        if not path.exists():
+            matches=list((SOURCE/'Producers by County').glob(f'{county} County_Producers*'))
+            path=next(p for p in matches if p.suffix=='.xlsx')
+        from openpyxl import load_workbook
+        ws=load_workbook(path,read_only=True,data_only=True).active
+        for row in ws.iter_rows(max_col=6,values_only=True,min_row=2):
+            fid=row[2]
+            if fid is None: continue
+            fid=str(int(fid)) if isinstance(fid,(int,float)) else str(fid).strip()
+            first=str(row[0] or '').strip();last=str(row[1] or '').strip()
+            record=result[county].setdefault(fid,{'name':(first+' '+last).strip(),'tracts':set(),'fields':set()})
+            if row[3] is not None: record['tracts'].add(str(row[3]))
+            if row[4] is not None: record['fields'].add(str(row[4]))
+    return result
+
+
+def field_features():
+    old=json.loads((ROOT/'geojson/master_fsa_fields_geopdf_verified.geojson').read_text())['features']
+    roster=get_roster();eligible=[];qa=[]
+    for f in old:
+        p=f['properties'];county=p['county'];fid=str(p['farm_id'])
+        if county not in roster or fid not in roster[county]:
+            continue
+        source=SOURCE/p['source_pdf']
+        digest=hashlib.sha256(source.read_bytes()).hexdigest()
+        if digest!=p['source_sha256']:
+            raise ValueError('Source SHA changed: '+str(source))
+        d=fitz.open(source);page=d[p['page_number']-1]
+        geom=registered_vector(d,page,p['source_draw_index'])
+        acres=abs(GEOD.geometry_area_perimeter(geom)[0])/4046.8564224
+        error=100*(acres/float(p['fsa_reported_acres'])-1)
+        if abs(error)>2:
+            raise ValueError(f'FSA printed area mismatch for {fid} field {p["field_id"]}: {error:.1f}%')
+        out={'type':'Feature','properties':dict(p,producer=roster[county][fid]['name'],
+            calculated_acres=round(acres,3),area_error_percent=round(error,2),
+            status='NATIVE_GEOPDF_REFERENCED_FIELD__NOT_SURVEY'), 'geometry':mapping(geom)}
+        eligible.append(out)
+        qa.append({'county':county,'farm_id':fid,'field_id':p['field_id'],'source_pdf':p['source_pdf'],
+                   'fsa_acres':p['fsa_reported_acres'],'geo_acres':round(acres,3),'area_error_pct':round(error,2),
+                   'recorded_in_county_sheet':True,
+                   'field_listed_in_county_sheet':str(p['field_id']) in roster[county][fid]['fields']})
+        print('REGISTERED',county,fid,p['field_id'],round(acres,2),flush=True)
+    return eligible,qa,roster
+
+
+def county_geom():
+    url='https://raw.githubusercontent.com/plotly/datasets/master/geojson-counties-fips.json'
+    r=requests.get(url,timeout=55);r.raise_for_status()
+    all_counties=r.json()['features']
+    return {county:shape(next(f['geometry'] for f in all_counties if str(f['id']).zfill(5)==fips))
+            for county,fips in COUNTIES.items()}
+
+
+def draw_county(c,county,farms,boundary,basetype,source_tracker):
+    frame=(39,117,853,532)
+    pts=[]
+    for r in rings(boundary):pts.extend(r)
+    bounds=fixed_bbox(pts,frame[2]/frame[3],pad_fraction=.1)
+    im,attribution=fetch_image(bounds,1150,715,basetype)
+    source_tracker.add(attribution)
+    common(c,county,basetype,'01  /  County overview  /  Actual FSA-derived field locations',1,attribution)
+    frame_img(c,im,frame)
+    cvt=coord_box(bounds,frame)
+    draw_shape(c,boundary,cvt,colors.white,width=3.7)
+    draw_shape(c,boundary,cvt,NAVY,width=1.5)
+    for ix,(fid,fields) in enumerate(sorted(farms.items())):
+        color=colors.HexColor(PALETTE[ix])
+        points=[shape(f['geometry']).representative_point() for f in fields]
+        lon=sum(p.x for p in points)/len(points);lat=sum(p.y for p in points)/len(points)
+        x,y=cvt(lon,lat)
+        c.setFillColor(colors.white);c.circle(x,y,12,stroke=0,fill=1)
+        c.setFillColor(color);c.circle(x,y,9,stroke=0,fill=1)
+        font(c,x+15,y+2,str(ix+1),12,NAVY,True)
+    bar_and_north(c,bounds,frame)
+    font(c,919,621,'FARM INDEX',12,NAVY,True)
+    yy=588
+    for ix,(fid,fields) in enumerate(sorted(farms.items())):
+        color=colors.HexColor(PALETTE[ix]);p=fields[0]['properties']
+        c.setFillColor(color);c.roundRect(923,yy-8,17,17,3,fill=1,stroke=0)
+        font(c,950,yy-3,f'{ix+1:02d}  FARM {fid}',12,NAVY,True)
+        yy=wrap(c,p['producer'],923,yy-30,260,11,14)
+        yy=wrap(c,f'{len(fields)} verified source fields',923,yy-4,260,10,14,GRAY)-28
+    yy=wrap(c,'Markers represent locations computed from georeferenced FSA field polygons, not reported residential addresses.',923,yy-5,260,10,14,GRAY)
+    font(c,922,137,'County boundary: U.S. Census cartographic GeoJSON',8,GRAY)
+    c.showPage()
+
+
+def draw_detail(c,county,farms,fid,fields,basetype,number,source_tracker):
+    idx=list(sorted(farms)).index(fid)
+    color=colors.HexColor(PALETTE[idx]);p=fields[0]['properties']
+    frame=(39,119,853,532)
+    points=[]
+    for f in fields:
+        for ring in rings(shape(f['geometry'])):points.extend(ring)
+    bounds=fixed_bbox(points,frame[2]/frame[3],pad_fraction=.19,min_m=420)
+    im,attribution=fetch_image(bounds,1150,715,basetype)
+    source_tracker.add(attribution)
+    common(c,county,basetype,f'{number:02d}  /  Farm {fid}  /  Source field boundaries over {basetype.lower()} imagery',number,attribution)
+    frame_img(c,im,frame)
+    cvt=coord_box(bounds,frame)
+    for f in fields:
+        geom=shape(f['geometry']);draw_shape(c,geom,cvt,color,width=3,fillalpha=.24)
+        point=geom.representative_point();x,y=cvt(point.x,point.y)
+        text=f"{f['properties']['field_id']}"
+        c.setFillColor(colors.white);c.roundRect(x-11,y-8,22,16,4,stroke=0,fill=1)
+        c.setFillColor(NAVY);c.setFont('Helvetica-Bold',9)
+        c.drawCentredString(x,y-3,text)
+    bar_and_north(c,bounds,frame)
+    font(c,923,623,f'FARM {fid}',17,NAVY,True)
+    wrap(c,p['producer'],923,600,250,12,17)
+    font(c,923,562,'FSA FIELD INVENTORY',10,GRAY,True)
+    c.setFillColor(color);c.roundRect(923,536,18,18,3,stroke=0,fill=1)
+    font(c,951,540,'Farm ID color',10,NAVY)
+    yy=512
+    for f in sorted(fields,key=lambda f:str(f['properties']['field_id'])):
+        prop=f['properties']
+        font(c,923,yy,f"Field {prop['field_id']}",11,NAVY,True)
+        font(c,1028,yy,f"{float(prop['fsa_reported_acres']):g} ac",10,GRAY)
+        yy-=21
+    yy-=16
+    total=sum(float(f['properties']['fsa_reported_acres']) for f in fields)
+    font(c,923,yy,f'Total source fields: {total:.2f} ac',11,NAVY,True)
+    yy-=30
+    yy=wrap(c,'Boundaries were reproduced from native FSA GeoPDF vector paths and mapped using the PDF geographic reference.',923,yy,250,10,15,GRAY)-18
+    yy=wrap(c,'Source-image date and current land cover can differ from the displayed basemap date.',923,yy,250,10,15,GRAY)
+    font(c,923,137,'EPSG:4326  |  Acreage checked to printed FSA label',8,GRAY)
+    c.showPage()
+
+
+def main():
+    OUTPUT.mkdir(exist_ok=True,parents=True)
+    features,qa,roster=field_features()
+    outlines=county_geom()
+    grouped=defaultdict(lambda:defaultdict(list))
+    for f in features:
+        p=f['properties'];county=p['county'];fid=str(p['farm_id'])
+        if not outlines[county].covers(shape(f['geometry']).representative_point()):
+            raise ValueError(f'Farm {fid} verified polygon outside workbook county {county}')
+        grouped[county][fid].append(f)
+    with (OUTPUT/'source_area_validation.csv').open('w',newline='') as stream:
+        writer=csv.DictWriter(stream,fieldnames=list(qa[0]));writer.writeheader();writer.writerows(qa)
+    (OUTPUT/'verified_fsa_fields.geojson').write_text(json.dumps({'type':'FeatureCollection','features':features},indent=2))
+    manifest=[]
+    for county,farms in sorted(grouped.items()):
+        county_dir=OUTPUT/county;county_dir.mkdir(exist_ok=True)
+        county_features=[f for fs in farms.values() for f in fs]
+        (county_dir/f'{county}_Registered_Fields.geojson').write_text(json.dumps({'type':'FeatureCollection','features':county_features},indent=2))
+        for basetype in ('Satellite','Topography'):
+            filename=f'{county}_County_{basetype}.pdf'
+            pdf=county_dir/filename
+            c=canvas.Canvas(str(pdf),pagesize=(W,H),pageCompression=1)
+            c.setTitle(f'{county} County AMP / FSA Registered Field Atlas - {basetype}')
+            c.setAuthor('SCSU AMP / FSA geospatial boundary reconstruction')
+            sources=set()
+            draw_county(c,county,farms,outlines[county],basetype,sources)
+            for n,(fid,fields) in enumerate(sorted(farms.items()),2):
+                draw_detail(c,county,farms,fid,fields,basetype,n,sources)
+            c.save()
+            d=fitz.open(pdf)
+            if len(d)!=1+len(farms):raise ValueError('Missing detail atlas pages')
+            if pdf.stat().st_size<55000:raise ValueError('Atlas suspiciously empty')
+            manifest.append({'county':county,'basemap':basetype,'file':str(pdf.relative_to(OUTPUT)),
+                             'farms':len(farms),'fields':len(county_features),'pages':len(d),
+                             'size_bytes':pdf.stat().st_size,'providers':sorted(sources)})
+            print('BUILT',pdf,'pages',len(d),'KB',round(pdf.stat().st_size/1024),flush=True)
+    (OUTPUT/'manifest.json').write_text(json.dumps({'status':'VERIFIED_SUBSET_ONLY__NOT_ALL_AMP_FARMS',
+      'warning':'Most supplied photographed FSA maps lack native spatial references; unregistered shapes excluded.',
+      'atlas_files':manifest,'verified_farm_count':sum(len(x) for x in grouped.values()),
+      'verified_field_count':len(features)},indent=2))
+    with zipfile.ZipFile(OUTPUT/'SCSU_AMP_Verified_Registered_Atlases.zip','w',compression=zipfile.ZIP_DEFLATED,compresslevel=6) as z:
+        for path in OUTPUT.rglob('*'):
+            if path.is_file() and path.suffix.lower() in ('.pdf','.geojson','.csv','.json'):
+                z.write(path,path.relative_to(OUTPUT))
+    print('COMPLETE',len(manifest),'PDFs',len(features),'registered fields',flush=True)
+
+
+if __name__=='__main__':main()
