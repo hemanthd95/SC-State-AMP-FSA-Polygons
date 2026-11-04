@@ -104,6 +104,12 @@ def fetch_image(bounds, width, height, kind):
                 std = ImageStat.Stat(img.resize((64, 64))).stddev
                 if max(std) < 8:
                     raise ValueError('Basemap appears blank')
+                if label == 'USGS NAIP':
+                    sample = img.resize((100, 100))
+                    black = sum(1 for red, green, blue in sample.getdata()
+                                if red < 4 and green < 4 and blue < 4)
+                    if black > 100:
+                        raise ValueError(f'USGS NAIP has {black/100:.1f}% black missing-image area')
                 cache[key] = (img, label)
                 return img, label
             except Exception as e:
@@ -267,14 +273,16 @@ def field_features():
         error=100*(acres/float(p['fsa_reported_acres'])-1)
         if abs(error)>2:
             raise ValueError(f'FSA printed area mismatch for {fid} field {p["field_id"]}: {error:.1f}%')
+        selected = str(p['field_id']) in roster[county][fid]['fields']
         out={'type':'Feature','properties':dict(p,producer=roster[county][fid]['name'],
             calculated_acres=round(acres,3),area_error_percent=round(error,2),
+            county_workbook_selected=selected,
             status='NATIVE_GEOPDF_REFERENCED_FIELD__NOT_SURVEY'), 'geometry':mapping(geom)}
         eligible.append(out)
         qa.append({'county':county,'farm_id':fid,'field_id':p['field_id'],'source_pdf':p['source_pdf'],
                    'fsa_acres':p['fsa_reported_acres'],'geo_acres':round(acres,3),'area_error_pct':round(error,2),
                    'recorded_in_county_sheet':True,
-                   'field_listed_in_county_sheet':str(p['field_id']) in roster[county][fid]['fields']})
+                   'field_listed_in_county_sheet':selected})
         print('REGISTERED',county,fid,p['field_id'],round(acres,2),flush=True)
     return eligible,qa,roster
 
@@ -301,7 +309,8 @@ def draw_county(c,county,farms,boundary,basetype,source_tracker):
     draw_shape(c,boundary,cvt,NAVY,width=1.5)
     for ix,(fid,fields) in enumerate(sorted(farms.items())):
         color=colors.HexColor(PALETTE[ix])
-        points=[shape(f['geometry']).representative_point() for f in fields]
+        chosen=[f for f in fields if f['properties']['county_workbook_selected']]
+        points=[shape(f['geometry']).representative_point() for f in (chosen or fields)]
         lon=sum(p.x for p in points)/len(points);lat=sum(p.y for p in points)/len(points)
         x,y=cvt(lon,lat)
         c.setFillColor(colors.white);c.circle(x,y,12,stroke=0,fill=1)
@@ -315,7 +324,8 @@ def draw_county(c,county,farms,boundary,basetype,source_tracker):
         c.setFillColor(color);c.roundRect(923,yy-8,17,17,3,fill=1,stroke=0)
         font(c,950,yy-3,f'{ix+1:02d}  FARM {fid}',12,NAVY,True)
         yy=wrap(c,p['producer'],923,yy-30,260,11,14)
-        yy=wrap(c,f'{len(fields)} verified source fields',923,yy-4,260,10,14,GRAY)-28
+        selected=sum(bool(f['properties']['county_workbook_selected']) for f in fields)
+        yy=wrap(c,f'{selected} county-sheet field(s); {len(fields)-selected} additional FSA context fields',923,yy-4,260,10,14,GRAY)-28
     yy=wrap(c,'Markers represent locations computed from georeferenced FSA field polygons, not reported residential addresses.',923,yy-5,260,10,14,GRAY)
     font(c,922,137,'County boundary: U.S. Census cartographic GeoJSON',8,GRAY)
     c.showPage()
@@ -335,28 +345,35 @@ def draw_detail(c,county,farms,fid,fields,basetype,number,source_tracker):
     frame_img(c,im,frame)
     cvt=coord_box(bounds,frame)
     for f in fields:
-        geom=shape(f['geometry']);draw_shape(c,geom,cvt,color,width=3,fillalpha=.24)
+        geom=shape(f['geometry'])
+        selected=f['properties']['county_workbook_selected']
+        draw_shape(c,geom,cvt,color if selected else colors.HexColor('#D9E2E7'),
+                   width=3.2 if selected else 1.5,fillalpha=.26 if selected else 0)
         point=geom.representative_point();x,y=cvt(point.x,point.y)
         text=f"{f['properties']['field_id']}"
         c.setFillColor(colors.white);c.roundRect(x-11,y-8,22,16,4,stroke=0,fill=1)
-        c.setFillColor(NAVY);c.setFont('Helvetica-Bold',9)
+        c.setFillColor(NAVY if selected else GRAY);c.setFont('Helvetica-Bold',9)
         c.drawCentredString(x,y-3,text)
     bar_and_north(c,bounds,frame)
     font(c,923,623,f'FARM {fid}',17,NAVY,True)
     wrap(c,p['producer'],923,600,250,12,17)
-    font(c,923,562,'FSA FIELD INVENTORY',10,GRAY,True)
+    font(c,923,562,'AMP COUNTY-SHEET FIELDS',10,GRAY,True)
     c.setFillColor(color);c.roundRect(923,536,18,18,3,stroke=0,fill=1)
     font(c,951,540,'Farm ID color',10,NAVY)
     yy=512
-    for f in sorted(fields,key=lambda f:str(f['properties']['field_id'])):
+    chosen=[f for f in fields if f['properties']['county_workbook_selected']]
+    for f in sorted(chosen,key=lambda f:str(f['properties']['field_id'])):
         prop=f['properties']
         font(c,923,yy,f"Field {prop['field_id']}",11,NAVY,True)
         font(c,1028,yy,f"{float(prop['fsa_reported_acres']):g} ac",10,GRAY)
         yy-=21
     yy-=16
-    total=sum(float(f['properties']['fsa_reported_acres']) for f in fields)
-    font(c,923,yy,f'Total source fields: {total:.2f} ac',11,NAVY,True)
+    total=sum(float(f['properties']['fsa_reported_acres']) for f in chosen)
+    font(c,923,yy,f'Selected source area: {total:.2f} ac',11,NAVY,True)
     yy-=30
+    context=[f for f in fields if not f['properties']['county_workbook_selected']]
+    if context:
+        yy=wrap(c,f'{len(context)} other FSA fields are outlined in white/gray for context only; they are not identified as AMP-selected in this county workbook.',923,yy,250,10,15,GRAY)-15
     yy=wrap(c,'Boundaries were reproduced from native FSA GeoPDF vector paths and mapped using the PDF geographic reference.',923,yy,250,10,15,GRAY)-18
     yy=wrap(c,'Source-image date and current land cover can differ from the displayed basemap date.',923,yy,250,10,15,GRAY)
     font(c,923,137,'EPSG:4326  |  Acreage checked to printed FSA label',8,GRAY)
