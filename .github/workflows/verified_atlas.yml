@@ -2,6 +2,10 @@ name: Publish truly registered AMP FSA satellite and topography atlas subset
 
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/verified_atlas.yml'
+      - 'scripts/build_verified_atlases.py'
 
 permissions:
   contents: read
