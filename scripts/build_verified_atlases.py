@@ -33,7 +33,7 @@ PALE = colors.HexColor('#EEF4F6')
 GRAY = colors.HexColor('#637781')
 GOLD = colors.HexColor('#F2B044')
 PALETTE = ['#F25F4C', '#0795B5', '#B25AC4', '#72A251', '#EA9A31']
-COUNTIES = {'Barnwell': '45011', 'Florence': '45041', 'Marion': '45067', 'Williamsburg': '45089'}
+COUNTIES = {'Allendale':'45005', 'Barnwell': '45011', 'Florence': '45041', 'Marion': '45067', 'Williamsburg': '45089'}
 GEOD = Geod(ellps='WGS84')
 TO_UTM = Transformer.from_crs(4326, 32617, always_xy=True)
 FROM_UTM = Transformer.from_crs(32617, 4326, always_xy=True)
@@ -380,6 +380,83 @@ def draw_detail(c,county,farms,fid,fields,basetype,number,source_tracker):
     c.showPage()
 
 
+def example_qgis_polygon():
+    """A distinct user QGIS example site, never label it a verified FSA farm."""
+    source=SOURCE/'Producers by County/Satelite Maps/Allendale County.pdf'
+    d=fitz.open(source);p=d[0]
+    vp=d.xref_get_key(p.xref,'VP')[1]
+    bbox=nums(re.search(r'/BBox\s*\[([^]]+)\]',vp).group(1))
+    m=int(re.search(r'/Measure\s+(\d+)\s+0\s+R',vp).group(1))
+    ref=nums(d.xref_get_key(m,'GPTS')[1])
+    north,west,south,_,__,east,___,____=ref
+    assert 32.9<south<north<33.1 and -81.5<west<east<-81.2
+    drawing=next(a for a in p.get_drawings() if a['fill'] is not None and
+                 .60<a['fill'][0]<.70 and .40<a['fill'][1]<.50)
+    vertices=[(segment[1].x,segment[1].y) for segment in drawing['items'] if segment[0]=='l']
+    coords=[]
+    for x,y in vertices:
+        lon=west+(x-bbox[0])/(bbox[2]-bbox[0])*(east-west)
+        lat=north-y/p.rect.height*(north-south)
+        coords.append((lon,lat))
+    geom=Polygon(coords)
+    if not geom.is_valid or geom.area<=0:raise ValueError('Allendale example polygon is invalid')
+    acres=abs(GEOD.geometry_area_perimeter(geom)[0])/4046.8564224
+    return geom,acres
+
+
+def make_allendale_reference(outlines):
+    """Produce real background atlas for supplied SINGLE combined QGIS site only."""
+    geom,acres=example_qgis_polygon()
+    place=OUTPUT/'Allendale_QGIS_Example_Only'
+    place.mkdir(exist_ok=True)
+    feature={'type':'Feature','geometry':mapping(geom),'properties':{
+        'county':'Allendale', 'producer_names':'Tiffany Loadholt and Samuel Lance Jr.',
+        'polygon_source':'Supplied QGIS Allendale County.pdf, native georeferenced vector path',
+        'estimated_digital_area_acres':round(acres,2),
+        'status':'EXAMPLE_COMBINED_AREA__NOT_SPLIT_BY_FARM__NOT_FSA_FIELD_VERIFIED'}}
+    (place/'Allendale_QGIS_Example_Combined_Site.geojson').write_text(json.dumps({'type':'FeatureCollection','features':[feature]},indent=2))
+    results=[]
+    boundary=outlines['Allendale']
+    for basetype in ('Satellite','Topography'):
+        name=f'Allendale_QGIS_Example_{basetype}.pdf'
+        pdf=place/name
+        c=canvas.Canvas(str(pdf),pagesize=(W,H),pageCompression=1)
+        c.setTitle(f'Allendale example combined site, {basetype}; farm-level registration unresolved')
+        sources=set()
+        frame=(39,118,853,531)
+        pts=[v for ring in rings(boundary) for v in ring]
+        bounds=fixed_bbox(pts,frame[2]/frame[3],pad_fraction=.09)
+        im,provider=fetch_image(bounds,1150,715,basetype);sources.add(provider)
+        common(c,'Allendale',basetype,'01 / County overview / User-supplied QGIS example site only',1,provider)
+        frame_img(c,im,frame);cvt=coord_box(bounds,frame)
+        draw_shape(c,boundary,cvt,colors.white,width=3.5)
+        draw_shape(c,boundary,cvt,NAVY,width=1.4)
+        pt=geom.representative_point();x,y=cvt(pt.x,pt.y)
+        c.setFillColor(colors.white);c.circle(x,y,12,fill=1,stroke=0)
+        c.setFillColor(colors.HexColor(PALETTE[0]));c.circle(x,y,9,fill=1,stroke=0)
+        bar_and_north(c,bounds,frame)
+        font(c,920,620,'COMBINED EXAMPLE AREA',12,NAVY,True)
+        y=wrap(c,'Tiffany Loadholt and Samuel Lance Jr.',920,586,260,11,16)-24
+        y=wrap(c,f'One combined {acres:.1f}-acre polygon extracted from the user-provided geospatial QGIS PDF.',920,y,260,10,16)-25
+        wrap(c,'Important: this is NOT two independently verified Farm ID boundaries. The two photographed FSA maps cannot be placed independently using the supplied coordinates.',920,y,260,10,16,GRAY)
+        c.showPage()
+        pts=list(geom.exterior.coords)
+        bounds=fixed_bbox(pts,frame[2]/frame[3],pad_fraction=.38,min_m=500)
+        im,provider=fetch_image(bounds,1150,715,basetype);sources.add(provider)
+        common(c,'Allendale',basetype,'02 / Zoom / Combined QGIS example polygon over new geographic basemap',2,provider)
+        frame_img(c,im,frame);cvt=coord_box(bounds,frame)
+        color=colors.HexColor(PALETTE[0]);draw_shape(c,geom,cvt,color,width=3.3,fillalpha=.25)
+        bar_and_north(c,bounds,frame)
+        font(c,920,618,'USER EXAMPLE FOOTPRINT',12,NAVY,True)
+        y=wrap(c,f'{acres:.1f} acres, calculated from the QGIS example PDF polygon.',920,585,255,11,16)-23
+        y=wrap(c,'Map overlay is georeferenced. The source outlines for Tiffany Farm 3779 and Samuel Farm 3740 still require separate field-site registration.',920,y,255,10,16,GRAY)-25
+        wrap(c,'This page is an illustration of the requested style, not a substitute for independently verified FSA farm polygons.',920,y,255,10,16,GRAY)
+        c.showPage();c.save()
+        results.append({'file':str(pdf.relative_to(OUTPUT)),'pages':2,'status':'QGIS_EXAMPLE_NOT_FARM_REGISTERED','providers':sorted(sources)})
+        print('BUILT EXAMPLE',pdf,flush=True)
+    return results
+
+
 def main():
     OUTPUT.mkdir(exist_ok=True,parents=True)
     features,qa,roster=field_features()
@@ -416,10 +493,11 @@ def main():
                              'farms':len(farms),'fields':len(county_features),'pages':len(d),
                              'size_bytes':pdf.stat().st_size,'providers':sorted(sources)})
             print('BUILT',pdf,'pages',len(d),'KB',round(pdf.stat().st_size/1024),flush=True)
+    example_files=make_allendale_reference(outlines)
     (OUTPUT/'manifest.json').write_text(json.dumps({'status':'VERIFIED_SUBSET_ONLY__NOT_ALL_AMP_FARMS',
       'warning':'Most supplied photographed FSA maps lack native spatial references; unregistered shapes excluded.',
       'atlas_files':manifest,'verified_farm_count':sum(len(x) for x in grouped.values()),
-      'verified_field_count':len(features)},indent=2))
+      'verified_field_count':len(features),'separate_allendale_qgis_examples':example_files},indent=2))
     with zipfile.ZipFile(OUTPUT/'SCSU_AMP_Verified_Registered_Atlases.zip','w',compression=zipfile.ZIP_DEFLATED,compresslevel=6) as z:
         for path in OUTPUT.rglob('*'):
             if path.is_file() and path.suffix.lower() in ('.pdf','.geojson','.csv','.json'):
