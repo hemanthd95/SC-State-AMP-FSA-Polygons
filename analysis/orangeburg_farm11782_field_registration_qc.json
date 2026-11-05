@@ -1,0 +1,56 @@
+{
+  "farm_id": "11782",
+  "tract_id": "6230",
+  "field_id": "13",
+  "printed_target_field_acres": 7.53,
+  "source_pdf": "Margaret_Berry_FSA_Map.pdf",
+  "source_view": "p1_c1",
+  "source_view_size_wh": [
+    619,
+    620
+  ],
+  "target_tile_size_wh": [
+    850,
+    850
+  ],
+  "tile_bbox_epsg3857": [
+    -8977996.305632083,
+    3951392.58231306,
+    -8976346.305632083,
+    3953042.58231306
+  ],
+  "homography_source_view_to_tile_px": [
+    [
+      0.7109544748582391,
+      0.003747244362260114,
+      161.14319175967825
+    ],
+    [
+      0.0006041904813848829,
+      0.70567987413258,
+      418.6148590137685
+    ],
+    [
+      -3.3177271341655123e-06,
+      -3.8396918998073857e-07,
+      1.0
+    ]
+  ],
+  "registration_metrics": {
+    "inliers": 201,
+    "matches": 220,
+    "rmse_px": 0.57,
+    "source_spread_px": [
+      594.5999755859375,
+      555.4000244140625
+    ],
+    "image_spread_px": [
+      426.0,
+      391.8999938964844
+    ],
+    "projected_bbox_area_px": 94763.5,
+    "nondegenerate_geographic_match_candidate": true,
+    "score": 759.1
+  },
+  "status": "GEOREGISTRATION_CONFIRMED_FIELD_OUTLINE_UNDER_REVIEW"
+}

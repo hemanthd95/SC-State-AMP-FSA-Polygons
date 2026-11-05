@@ -1,0 +1,56 @@
+{
+  "farm_id": "14048",
+  "tract_id": "46008",
+  "field_id": "1",
+  "printed_target_field_acres": 0.89,
+  "source_pdf": "Tarsha Mosley_FSA_Map.pdf",
+  "source_view": "p1_c1",
+  "source_view_size_wh": [
+    619,
+    620
+  ],
+  "target_tile_size_wh": [
+    850,
+    850
+  ],
+  "tile_bbox_epsg3857": [
+    -9004282.876070037,
+    3962666.239548884,
+    -9002632.876070037,
+    3964316.239548884
+  ],
+  "homography_source_view_to_tile_px": [
+    [
+      0.3555959286475745,
+      0.0007571551877068155,
+      314.0134132761473
+    ],
+    [
+      -0.0017006034074360532,
+      0.3572130194865615,
+      319.1236111468565
+    ],
+    [
+      -3.406964955412307e-06,
+      2.958804305837249e-06,
+      1.0
+    ]
+  ],
+  "registration_metrics": {
+    "inliers": 68,
+    "matches": 82,
+    "rmse_px": 0.42,
+    "source_spread_px": [
+      571.5999755859375,
+      557.9000244140625
+    ],
+    "image_spread_px": [
+      203.39999389648438,
+      198.3000030517578
+    ],
+    "projected_bbox_area_px": 23905.4,
+    "nondegenerate_geographic_match_candidate": true,
+    "score": 257.7
+  },
+  "status": "GEOREGISTRATION_CONFIRMED_FIELD_OUTLINE_UNDER_REVIEW"
+}
