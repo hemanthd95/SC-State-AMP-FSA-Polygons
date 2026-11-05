@@ -14,14 +14,14 @@ SOURCE=ROOT/'source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP'
 INVENTORY=ROOT/'analysis/orangeburg_source_inventory.json'
 OUT=ROOT/'analysis'
 FARMS=os.getenv('ORANGEBURG_PILOT_FARMS','1271,1778,8242,13653').split(',')
-DETECT=cv2.SIFT_create(nfeatures=6400,contrastThreshold=.008,edgeThreshold=18)
+DETECT=cv2.SIFT_create(nfeatures=2600,contrastThreshold=.008,edgeThreshold=18)
 R=6378137.
 SERVICES=[
  ('USGS_NAIP','https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/exportImage'),
  ('Esri_World_Imagery','https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export')
 ]
 CROP_FRACS=[(.06,.08,.94,.76),(.03,.16,.97,.80)]
-SIZE=1050;SPAN=1650.;STEP=850.
+SIZE=850;SPAN=1650.;STEP=850.
 
 def prepare(image):
     gray=cv2.cvtColor(image,cv2.COLOR_BGR2GRAY)
@@ -65,8 +65,8 @@ def register(view,img):
     key_src,desc_src=view[2],view[3]
     key_dst,desc_dst=DETECT.detectAndCompute(prepare(img),None)
     if desc_dst is None:return {'inliers':0,'reason':'no descriptors'}
-    knn=cv2.BFMatcher(cv2.NORM_L2).knnMatch(desc_src,desc_dst,k=2)
-    good=[a for a,b in knn if a.distance<.77*b.distance]
+    knn=cv2.FlannBasedMatcher(dict(algorithm=1,trees=5),dict(checks=48)).knnMatch(desc_src,desc_dst,k=2)
+    good=[a for pair in knn if len(pair)==2 for a,b in [pair] if a.distance<.77*b.distance]
     if len(good)<8:return {'inliers':0,'matches':len(good)}
     src=np.float32([key_src[m.queryIdx].pt for m in good])
     dst=np.float32([key_dst[m.trainIdx].pt for m in good])
