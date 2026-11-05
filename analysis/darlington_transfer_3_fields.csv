@@ -1,0 +1,4 @@
+producer,farm_id,tract_id,field_id,source_fsa_pdf,source_page,verified_county,review_status
+Marva Jackson,10262,10855,24,"Mava Jackson_FSA map, (dragged).pdf",2,Darlington,PRINTED_FSA_FIELD_FOUND_GEOALIGNMENT_PENDING
+Marva Jackson,10262,10855,26,"Mava Jackson_FSA map, (dragged).pdf",2,Darlington,PRINTED_FSA_FIELD_FOUND_GEOALIGNMENT_PENDING
+Marva Jackson,10262,10855,28,"Mava Jackson_FSA map, (dragged).pdf",2,Darlington,PRINTED_FSA_FIELD_FOUND_GEOALIGNMENT_PENDING
