@@ -1,29 +1,30 @@
 {
   "status": "INCOMPLETE_VERIFIED_ONLY_QA_PREVIEW",
-  "warning": "29 of 32 Orangeburg field geometries still unverified. This is not the completed Orangeburg atlas.",
+  "warning": "27 of 32 Orangeburg field geometries still unverified. This is not the completed Orangeburg atlas.",
   "mary_koon_farm14043": "EXCLUDED_AS_USER_REQUESTED",
   "atlases": [
     {
       "kind": "Satellite",
-      "filename": "Orangeburg_County_Satellite_DRAFT_3of32.pdf",
-      "farms": 3,
-      "verified_fields": 3,
-      "unverified_fields": 29,
-      "pages": 4,
-      "bytes": 21400627,
+      "filename": "Orangeburg_County_Satellite_DRAFT_5of32.pdf",
+      "farms": 4,
+      "verified_fields": 5,
+      "unverified_fields": 27,
+      "pages": 5,
+      "bytes": 26191697,
       "imagery_services": [
+        "Esri World Imagery",
         "USGS NAIP"
       ],
       "is_final": false
     },
     {
       "kind": "Topography",
-      "filename": "Orangeburg_County_Topography_DRAFT_3of32.pdf",
-      "farms": 3,
-      "verified_fields": 3,
-      "unverified_fields": 29,
-      "pages": 4,
-      "bytes": 5448915,
+      "filename": "Orangeburg_County_Topography_DRAFT_5of32.pdf",
+      "farms": 4,
+      "verified_fields": 5,
+      "unverified_fields": 27,
+      "pages": 5,
+      "bytes": 6319984,
       "imagery_services": [
         "USGS US Topo"
       ],
