@@ -9,6 +9,8 @@ from difflib import SequenceMatcher
 from pathlib import Path
 import json
 import re
+import shutil
+import subprocess
 
 import fitz
 from openpyxl import load_workbook
@@ -31,7 +33,7 @@ def numeric(x):
 if not ROSTER.is_file():
     raise FileNotFoundError('Source FSA Orangeburg workbook not present or Git LFS not pulled: '+str(ROSTER))
 ws=load_workbook(ROSTER,read_only=True,data_only=True).active
-headers=[str(c.value or '') for c in ws[1]]
+headers=[str(c.value or '') for c in list(ws[1])[:26]]
 farms=defaultdict(lambda:{'producer':'','tracts':set(),'field_records':[]})
 row_count=0
 for row in ws.iter_rows(min_row=2,values_only=True):
@@ -70,6 +72,46 @@ for pdf in sorted(SOURCE.rglob('*.pdf')):
         entry['error']=str(exc)[:160]
     pdfs.append(entry)
 
+
+# OCR the first two name-based candidates for each farm to verify that the
+# scanned map's *printed Farm/Tract identifiers* actually match the workbook.
+# Keep the entire OCR text out of the saved inventory.
+names=set()
+for f in farms.values():
+    parts=norm(f['producer']).split()
+    first=parts[0] if parts else ''
+    last=parts[-1] if parts else ''
+    scores=[]
+    for p in pdfs:
+        words=norm(Path(p['filename']).stem).split()
+        score=(15 if last and last in words else 0)+(8 if first and first in words else 0)
+        if last and len(last)>4 and any(SequenceMatcher(None,last,w).ratio()>.79 for w in words):score+=5
+        if first and len(first)>4 and any(SequenceMatcher(None,first,w).ratio()>.79 for w in words):score+=3
+        if score>=8:scores.append((score,p['path']))
+    scores.sort(key=lambda pair:(-pair[0],pair[1]))
+    names.update(p for _,p in scores[:2])
+if shutil.which('tesseract'):
+    for i,p in enumerate(pdfs):
+        if p['path'] not in names:continue
+        try:
+            with fitz.open(SOURCE/p['path']) as doc:
+                page=doc[0]
+                zoom=min(1.2,2800/max(page.rect.width,page.rect.height))
+                png=page.get_pixmap(matrix=fitz.Matrix(zoom,zoom),colorspace=fitz.csGRAY,alpha=False).tobytes('png')
+            proc=subprocess.run(['tesseract','stdin','stdout','-l','eng','--psm','11'],
+                                input=png,stdout=subprocess.PIPE,stderr=subprocess.DEVNULL,
+                                timeout=80,check=True)
+            ocr=proc.stdout.decode('utf-8','replace')
+            p['ocr_farm_ids']=list(dict.fromkeys(re.findall(r'\\bFarm\\s*(?:Number|No\\.?|#)?\\s*[:\\-]?\\s*(\\d{2,6})\\b',ocr,re.I)))
+            p['ocr_tract_ids']=list(dict.fromkeys(re.findall(r'\\bTract\\s*(?:Number|No\\.?|#)?\\s*[:\\-]?\\s*(\\d{2,7})\\b',ocr,re.I)))
+            p['ocr_status']='EXTRACTED'
+        except Exception as exc:
+            p['ocr_status']='FAILED: '+str(exc)[:110]
+        print('OCR',i+1,len(pdfs),p['filename'][:60],
+              p.get('ocr_farm_ids',[]),p.get('ocr_tract_ids',[]),flush=True)
+else:
+    print('OCR_SKIPPED tesseract unavailable',flush=True)
+
 for fid,record in sorted(farms.items(),key=lambda pair:int(pair[0]) if pair[0].isdigit() else 999999):
     producer=norm(record['producer'])
     tokens=producer.split()
@@ -81,7 +123,9 @@ for fid,record in sorted(farms.items(),key=lambda pair:int(pair[0]) if pair[0].i
         fntokens=fn.split()
         score=0
         if fid in p.get('native_text_farm_ids',[]):score+=100
+        if fid in p.get('ocr_farm_ids',[]):score+=95
         if set(record['tracts']) & set(p.get('native_text_tract_ids',[])):score+=45
+        if set(record['tracts']) & set(p.get('ocr_tract_ids',[])):score+=42
         if last and len(last)>2 and last in fntokens:score+=15
         if first and len(first)>2 and first in fntokens:score+=8
         if last and len(last)>4 and any(SequenceMatcher(None,last,t).ratio()>.79 for t in fntokens):score+=5
@@ -103,6 +147,7 @@ output={
   'roster_field_rows':row_count,'distinct_farm_ids':len(farms),
   'roster_warning':'County column in source spreadsheet cannot be used alone to confirm physical location',
   'fsa_source_pdf_count':len(pdfs),
+  'ocr_candidate_pdf_count':len(names),
   'fsa_source_pdf_native_geopdf_count':sum(bool(p.get('has_pdf_geographic_viewport')) for p in pdfs),
   'farms':dict(sorted(farms.items(),key=lambda x:x[0])),
   'pdf_source_inventory':pdfs,
