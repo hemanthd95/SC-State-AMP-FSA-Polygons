@@ -27,8 +27,10 @@ for atlas in MANIFEST['atlases']:
         nimg=len(page.get_images(full=True))
         if nimg==0 or std<10:raise RuntimeError(f'Blank or imageless map on {path.name} p{idx+1}')
         if 'INCOMPLETE QA PREVIEW' not in txt:raise RuntimeError('Missing incompleteness disclaimer')
+        if idx==0 and atlas['verified_fields']>=6 and 'FARM 13709' not in txt:
+            raise RuntimeError('County overview missing newly verified Veronica farm index')
         checks.append({'page':idx+1,'images':nimg,'grayscale_std':round(std,2)})
-        if idx in (0,1,len(doc)-1):
+        if idx in (0,1,2,len(doc)-1):
             pix=page.get_pixmap(matrix=fitz.Matrix(1.1,1.1),alpha=False)
             image=Image.open(io.BytesIO(pix.tobytes('png'))).convert('RGB')
             image.thumbnail((1560,1040))
