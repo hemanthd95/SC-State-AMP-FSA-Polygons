@@ -1,0 +1,40 @@
+name: Render Orangeburg verified-only working satellite and topographic atlases
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'scripts/build_orangeburg_verified_atlas_preview.py'
+      - '.github/workflows/build_orangeburg_atlas_preview.yml'
+permissions:
+  contents: write
+jobs:
+  atlases:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install publishing and geospatial libraries
+        run: python -m pip install pymupdf pillow pyproj shapely reportlab requests
+      - name: Build only truly georeferenced fields over USGS/Esri maps
+        run: python scripts/build_orangeburg_verified_atlas_preview.py
+      - name: Preserve explicitly incomplete atlas previews in private repository
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add orangeburg_working_atlas/
+          if ! git diff --cached --quiet; then
+            git commit -m "Render honest Orangeburg satellite/topographic verified-field atlas previews"
+            git pull --rebase origin main
+            git push
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: Orangeburg-Verified-Field-Atlas-Previews
+          path: orangeburg_working_atlas/
+          retention-days: 30
