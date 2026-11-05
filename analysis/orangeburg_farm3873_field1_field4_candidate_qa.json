@@ -1,0 +1,20 @@
+[
+  {
+    "field_id": "1",
+    "source_acres": 0.43,
+    "traced_acres": 0.458,
+    "difference_percent": 6.62,
+    "spatial_registration": "PASS",
+    "county": "PASS",
+    "visual_boundary_check": "PENDING"
+  },
+  {
+    "field_id": "4",
+    "source_acres": 1.93,
+    "traced_acres": 1.942,
+    "difference_percent": 0.63,
+    "spatial_registration": "PASS",
+    "county": "PASS",
+    "visual_boundary_check": "PENDING"
+  }
+]
