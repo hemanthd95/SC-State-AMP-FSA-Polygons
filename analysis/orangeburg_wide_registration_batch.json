@@ -1,0 +1,81 @@
+{
+  "status": "DIAGNOSTICS_ONLY",
+  "results": [
+    {
+      "farm_id": "14187",
+      "source_pdf": "Bruce Jenkins_FSA Map.pdf",
+      "status": "HIGH_CONFIDENCE_GEOMETRIC_CANDIDATE_NEEDS_FIELD_TRACE",
+      "source_view": "p2_c1",
+      "source_view_size_wh": [
+        619,
+        620
+      ],
+      "offset_xy": [
+        4,
+        -6
+      ],
+      "tile_bbox_epsg3857": [
+        -8975159.669075238,
+        3945441.982130742,
+        -8973509.669075238,
+        3947091.982130742
+      ],
+      "tile_size_wh": [
+        850,
+        850
+      ],
+      "homography_source_to_satellite": [
+        [
+          1.4756128732347706,
+          0.005199827761657154,
+          27.98755531642513
+        ],
+        [
+          0.002221675999704423,
+          1.4826941282827706,
+          594.1535335687787
+        ],
+        [
+          9.674484556829965e-07,
+          -5.5723684220788895e-06,
+          0.9999999999999999
+        ]
+      ],
+      "registration": {
+        "inliers": 113,
+        "matches": 146,
+        "rmse_px": 1.09,
+        "source_spread_px": [
+          532.5999755859375,
+          147.89999389648438
+        ],
+        "image_spread_px": [
+          786.2999877929688,
+          218.60000610351562
+        ],
+        "projected_bbox_area_px": 414118.4,
+        "nondegenerate_geographic_match_candidate": true,
+        "score": 196.5
+      }
+    },
+    {
+      "farm_id": "14291",
+      "source_pdf": "Edward Carson_FSA Map.pdf",
+      "status": "NO_HIGH_CONFIDENCE_MATCH_WITHIN_BOUNDED_RADIUS",
+      "searched_offsets": 49
+    },
+    {
+      "farm_id": "13225",
+      "source_pdf": "Morgan summers_FSA_Map.pdf",
+      "status": "NO_HIGH_CONFIDENCE_MATCH_WITHIN_BOUNDED_RADIUS",
+      "searched_offsets": 49
+    },
+    {
+      "farm_id": "8242",
+      "source_pdf": "Louie Johnson FSA_Map.pdf",
+      "status": "NO_HIGH_CONFIDENCE_MATCH_WITHIN_BOUNDED_RADIUS",
+      "searched_offsets": 49
+    }
+  ],
+  "caution": "Never infer field boundaries from source-to-satellite matching alone."
+}

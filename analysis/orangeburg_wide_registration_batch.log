@@ -1,0 +1,11 @@
+/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/fitz/__init__.py:17: FutureWarning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+  warnings.warn(
+START 14187 Bruce Jenkins_FSA Map.pdf
+FOUND 14187 p2_c1 inliers 113 rmse 1.09
+START 14291 Edward Carson_FSA Map.pdf
+NO_CONFIDENT_MATCH 14291
+START 13225 Morgan summers_FSA_Map.pdf
+NO_CONFIDENT_MATCH 13225
+START 8242 Louie Johnson FSA_Map.pdf
+NO_CONFIDENT_MATCH 8242
+COMPLETE 4 farm searches
