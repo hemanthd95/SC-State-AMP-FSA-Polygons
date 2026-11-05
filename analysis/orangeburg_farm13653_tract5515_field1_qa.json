@@ -1,0 +1,37 @@
+{
+  "farm_id": "13653",
+  "tract_id": "5515",
+  "field_id": "1",
+  "computed_acres": 2.559,
+  "fsa_acres": 2.58,
+  "acreage_difference_pct": 0.83,
+  "county_check": "PASS",
+  "registration_inliers": 187,
+  "visual_review": "PENDING",
+  "source_pixel_vertices": [
+    [
+      295.0,
+      81.0
+    ],
+    [
+      306.0,
+      82.0
+    ],
+    [
+      322.0,
+      87.0
+    ],
+    [
+      335.0,
+      90.0
+    ],
+    [
+      297.0,
+      242.0
+    ],
+    [
+      259.0,
+      238.0
+    ]
+  ]
+}
