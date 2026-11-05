@@ -507,6 +507,298 @@
         "qa_reviewed_date": "2026-11-05",
         "boundary_notice": "Approximate FSA-photo-derived field boundary for AMP atlas, not a survey. Acreage agreement not an acceptance requirement."
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "county": "Orangeburg",
+        "farm_id": "13618",
+        "tract_id": "3260",
+        "field_id": "17",
+        "producer": "Rosa Berry",
+        "source_pdf": "Rosa_Berry_FSA_Map.jpeg",
+        "source_page": 1,
+        "fsa_printed_acres": 1.9,
+        "traced_geodesic_acres": 1.59,
+        "area_difference_percent": 16.3,
+        "registration_inliers": 69,
+        "registration_rmse_pixels": 1.92,
+        "image_provider": "USGS NAIP Imagery",
+        "qa_evidence_file": "analysis/orangeburg_rosa13618_registration_overlay.jpg",
+        "registration_method": "FSA photo aerial matched by SIFT RANSAC to independent NAIP; approximate manual trace of visually identified numbered field",
+        "status": "IMAGE_REGISTERED_AND_VISUALLY_QA_PASSED",
+        "qa_reviewed_date": "2026-11-05",
+        "boundary_notice": "Approximate FSA-photo-derived field boundary for AMP atlas, not a survey. Acreage values are contextual."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.74086682005273,
+              33.41245399088656
+            ],
+            [
+              -80.74035921976167,
+              33.41273581498025
+            ],
+            [
+              -80.73976749865771,
+              33.41223326380099
+            ],
+            [
+              -80.74007258562347,
+              33.41193710248056
+            ],
+            [
+              -80.74093199910352,
+              33.411616050240966
+            ],
+            [
+              -80.74095661262997,
+              33.41200613483288
+            ],
+            [
+              -80.7408964986662,
+              33.41208113239498
+            ],
+            [
+              -80.74086682005273,
+              33.41245399088656
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "county": "Orangeburg",
+        "farm_id": "13618",
+        "tract_id": "3260",
+        "field_id": "26",
+        "producer": "Rosa Berry",
+        "source_pdf": "Rosa_Berry_FSA_Map.jpeg",
+        "source_page": 1,
+        "fsa_printed_acres": 7.39,
+        "traced_geodesic_acres": 6.16,
+        "area_difference_percent": 16.6,
+        "registration_inliers": 69,
+        "registration_rmse_pixels": 1.92,
+        "image_provider": "USGS NAIP Imagery",
+        "qa_evidence_file": "analysis/orangeburg_rosa13618_registration_overlay.jpg",
+        "registration_method": "FSA photo aerial matched by SIFT RANSAC to independent NAIP; approximate manual trace of visually identified numbered field",
+        "status": "IMAGE_REGISTERED_AND_VISUALLY_QA_PASSED",
+        "qa_reviewed_date": "2026-11-05",
+        "boundary_notice": "Approximate FSA-photo-derived field boundary for AMP atlas, not a survey. Acreage values are contextual."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.74550879634988,
+              33.41016525646352
+            ],
+            [
+              -80.74441852580256,
+              33.410780550037686
+            ],
+            [
+              -80.74393311639881,
+              33.410242609041745
+            ],
+            [
+              -80.74289845240598,
+              33.41073014061267
+            ],
+            [
+              -80.74235424552724,
+              33.40995936164469
+            ],
+            [
+              -80.7442404226871,
+              33.40898790394516
+            ],
+            [
+              -80.74550879634988,
+              33.41016525646352
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "county": "Orangeburg",
+        "farm_id": "14187",
+        "tract_id": "46145",
+        "field_id": "46",
+        "producer": "Bruce Jenkins",
+        "source_pdf": "Bruce Jenkins_FSA Map.pdf",
+        "source_page": 2,
+        "fsa_printed_acres": 2.72,
+        "traced_geodesic_acres": 2.67,
+        "area_difference_percent": 2,
+        "registration_inliers": 113,
+        "registration_rmse_pixels": 1.09,
+        "image_provider": "USGS NAIP Imagery",
+        "qa_evidence_file": "analysis/orangeburg_wide_14187_overlay.jpg",
+        "registration_method": "FSA photo aerial matched by SIFT RANSAC to independent NAIP; approximate manual trace of visually identified numbered field",
+        "status": "IMAGE_REGISTERED_AND_VISUALLY_QA_PASSED",
+        "qa_reviewed_date": "2026-11-05",
+        "boundary_notice": "Approximate FSA-photo-derived field boundary for AMP atlas, not a survey. Acreage values are contextual."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.61857766055391,
+              33.37338380399713
+            ],
+            [
+              -80.61819193735161,
+              33.37351383828815
+            ],
+            [
+              -80.61780506086964,
+              33.37344843928445
+            ],
+            [
+              -80.61746931046319,
+              33.37331792782128
+            ],
+            [
+              -80.6175172271177,
+              33.37273154543515
+            ],
+            [
+              -80.61767011584436,
+              33.37244922889086
+            ],
+            [
+              -80.61795203015117,
+              33.37218867533777
+            ],
+            [
+              -80.61841622813431,
+              33.372232418519935
+            ],
+            [
+              -80.61867627083926,
+              33.372623661067244
+            ],
+            [
+              -80.61870471616871,
+              33.373079840705664
+            ],
+            [
+              -80.61857766055391,
+              33.37338380399713
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "county": "Orangeburg",
+        "farm_id": "14187",
+        "tract_id": "46145",
+        "field_id": "52",
+        "producer": "Bruce Jenkins",
+        "source_pdf": "Bruce Jenkins_FSA Map.pdf",
+        "source_page": 2,
+        "fsa_printed_acres": 4.94,
+        "traced_geodesic_acres": 6.14,
+        "area_difference_percent": 24.3,
+        "registration_inliers": 113,
+        "registration_rmse_pixels": 1.09,
+        "image_provider": "USGS NAIP Imagery",
+        "qa_evidence_file": "analysis/orangeburg_wide_14187_overlay.jpg",
+        "registration_method": "FSA photo aerial matched by SIFT RANSAC to independent NAIP; approximate manual trace of visually identified numbered field",
+        "status": "IMAGE_REGISTERED_AND_VISUALLY_QA_PASSED",
+        "qa_reviewed_date": "2026-11-05",
+        "boundary_notice": "Approximate FSA-photo-derived field boundary for AMP atlas, not a survey. Acreage values are contextual."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.62016599454807,
+              33.37637945038995
+            ],
+            [
+              -80.61972836426678,
+              33.376400795164216
+            ],
+            [
+              -80.61929199205598,
+              33.376638944593346
+            ],
+            [
+              -80.61880369214236,
+              33.376790308811394
+            ],
+            [
+              -80.61826266603636,
+              33.376724851920685
+            ],
+            [
+              -80.61774619542385,
+              33.376464305156766
+            ],
+            [
+              -80.61746165977286,
+              33.376247275176716
+            ],
+            [
+              -80.61756277549803,
+              33.37594377664148
+            ],
+            [
+              -80.61797357445305,
+              33.37574890222532
+            ],
+            [
+              -80.6180744856824,
+              33.37540193189422
+            ],
+            [
+              -80.61830445238817,
+              33.375098381178276
+            ],
+            [
+              -80.61874217445929,
+              33.37507700136355
+            ],
+            [
+              -80.61905238209651,
+              33.37527248720364
+            ],
+            [
+              -80.61943970795724,
+              33.37544632155776
+            ],
+            [
+              -80.61977513716644,
+              33.37555503167943
+            ],
+            [
+              -80.6200602420868,
+              33.37588059840869
+            ],
+            [
+              -80.62016599454807,
+              33.37637945038995
+            ]
+          ]
+        ]
+      }
     }
   ],
   "description": "Orangeburg AMP FSA fields on registered imagery. Includes individually QA-passed approximate source-image traces; not cadastral survey polygons. Mary Koon excluded.",
