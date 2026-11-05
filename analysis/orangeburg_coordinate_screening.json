@@ -1,0 +1,266 @@
+{
+  "county": "Orangeburg",
+  "county_geoid": "45075",
+  "source_url": "https://www2.census.gov/geo/tiger/GENZ2024/shp/cb_2024_us_county_500k.zip",
+  "generated_utc": "2026-11-05T16:42:42.089067+00:00",
+  "excluded_farm_id": "14043",
+  "warning": "Coordinate hints may be residential or incorrect. Outside-county hints do not prove farm is outside county. All field polygons require independent FSA identification and geometric QA.",
+  "farm_hints": [
+    {
+      "farm_id": "10262",
+      "producer": "Marva Jackson",
+      "source_pdf_match": "STRONG_FARM_ID_OR_TRACT_TEXT",
+      "roster_location_hints": [
+        {
+          "latitude": 34.2960295,
+          "longitude": -80.0191617,
+          "within_official_county": false,
+          "distance_to_county_boundary_degrees": 0.8659671
+        }
+      ],
+      "status": "COORDINATES_ONLY_NOT_FIELD_LOCATION"
+    },
+    {
+      "farm_id": "1033",
+      "producer": "Montez Hillard",
+      "source_pdf_match": "FILENAME_CANDIDATE_UNVERIFIED",
+      "roster_location_hints": [
+        {
+          "latitude": 33.4656894,
+          "longitude": -80.5074459,
+          "within_official_county": true,
+          "distance_to_county_boundary_degrees": 0.0
+        }
+      ],
+      "status": "COORDINATES_ONLY_NOT_FIELD_LOCATION"
+    },
+    {
+      "farm_id": "10939",
+      "producer": "Mageret Berry",
+      "source_pdf_match": "FILENAME_CANDIDATE_UNVERIFIED",
+      "roster_location_hints": [
+        {
+          "latitude": 33.4213648,
+          "longitude": -80.6509376,
+          "within_official_county": true,
+          "distance_to_county_boundary_degrees": 0.0
+        }
+      ],
+      "status": "COORDINATES_ONLY_NOT_FIELD_LOCATION"
+    },
+    {
+      "farm_id": "11782",
+      "producer": "Mageret Berry",
+      "source_pdf_match": "STRONG_FARM_ID_OR_TRACT_TEXT",
+      "roster_location_hints": [
+        {
+          "latitude": 33.4213648,
+          "longitude": -80.6509376,
+          "within_official_county": true,
+          "distance_to_county_boundary_degrees": 0.0
+        }
+      ],
+      "status": "COORDINATES_ONLY_NOT_FIELD_LOCATION"
+    },
+    {
+      "farm_id": "11990",
+      "producer": "Anthron Williams",
+      "source_pdf_match": "FILENAME_CANDIDATE_UNVERIFIED",
+      "roster_location_hints": [
+        {
+          "latitude": 33.3737963,
+          "longitude": -80.755914,
+          "within_official_county": true,
+          "distance_to_county_boundary_degrees": 0.0
+        }
+      ],
+      "status": "COORDINATES_ONLY_NOT_FIELD_LOCATION"
+    },
+    {
+      "farm_id": "1271",
+      "producer": "Christine Ziegler",
+      "source_pdf_match": "STRONG_FARM_ID_OR_TRACT_TEXT",
+      "roster_location_hints": [
+        {
+          "latitude": 33.4213603,
+          "longitude": -80.6483627,
+          "within_official_county": true,
+          "distance_to_county_boundary_degrees": 0.0
+        }
+      ],
+      "status": "COORDINATES_ONLY_NOT_FIELD_LOCATION"
+    },
+    {
+      "farm_id": "13225",
+      "producer": "Morgan Summers",
+      "source_pdf_match": "STRONG_FARM_ID_OR_TRACT_TEXT",
+      "roster_location_hints": [
+        {
+          "latitude": 33.3052023,
+          "longitude": -80.8244781,
+          "within_official_county": true,
+          "distance_to_county_boundary_degrees": 0.0
+        }
+      ],
+      "status": "COORDINATES_ONLY_NOT_FIELD_LOCATION"
+    },
+    {
+      "farm_id": "13618",
+      "producer": "Rosa Berry",
+      "source_pdf_match": "FILENAME_CANDIDATE_UNVERIFIED",
+      "roster_location_hints": [
+        {
+          "latitude": 33.409854,
+          "longitude": -80.744235,
+          "within_official_county": true,
+          "distance_to_county_boundary_degrees": 0.0
+        },
+        {
+          "latitude": 33.4098585,
+          "longitude": -80.7468099,
+          "within_official_county": true,
+          "distance_to_county_boundary_degrees": 0.0
+        }
+      ],
+      "status": "COORDINATES_ONLY_NOT_FIELD_LOCATION"
+    },
+    {
+      "farm_id": "13653",
+      "producer": "Jasper Summers",
+      "source_pdf_match": "STRONG_FARM_ID_OR_TRACT_TEXT",
+      "roster_location_hints": [
+        {
+          "latitude": 33.315,
+          "longitude": -80.8324557,
+          "within_official_county": true,
+          "distance_to_county_boundary_degrees": 0.0
+        }
+      ],
+      "status": "COORDINATES_ONLY_NOT_FIELD_LOCATION"
+    },
+    {
+      "farm_id": "13709",
+      "producer": "Veronica Hodges",
+      "source_pdf_match": "STRONG_FARM_ID_OR_TRACT_TEXT",
+      "roster_location_hints": [
+        {
+          "latitude": 33.315,
+          "longitude": -80.8324557,
+          "within_official_county": true,
+          "distance_to_county_boundary_degrees": 0.0
+        },
+        {
+          "latitude": 33.3051978,
+          "longitude": -80.8219032,
+          "within_official_county": true,
+          "distance_to_county_boundary_degrees": 0.0
+        }
+      ],
+      "status": "COORDINATES_ONLY_NOT_FIELD_LOCATION"
+    },
+    {
+      "farm_id": "14048",
+      "producer": "Tarsha Mosley",
+      "source_pdf_match": "STRONG_FARM_ID_OR_TRACT_TEXT",
+      "roster_location_hints": [
+        {
+          "latitude": 33.512217,
+          "longitude": -80.8794382,
+          "within_official_county": true,
+          "distance_to_county_boundary_degrees": 0.0
+        }
+      ],
+      "status": "COORDINATES_ONLY_NOT_FIELD_LOCATION"
+    },
+    {
+      "farm_id": "14187",
+      "producer": "Bruce Jenkins",
+      "source_pdf_match": "STRONG_FARM_ID_OR_TRACT_TEXT",
+      "roster_location_hints": [
+        {
+          "latitude": 33.4213603,
+          "longitude": -80.6483627,
+          "within_official_county": true,
+          "distance_to_county_boundary_degrees": 0.0
+        }
+      ],
+      "status": "COORDINATES_ONLY_NOT_FIELD_LOCATION"
+    },
+    {
+      "farm_id": "14291",
+      "producer": "Edward Carson",
+      "source_pdf_match": "STRONG_FARM_ID_OR_TRACT_TEXT",
+      "roster_location_hints": [
+        {
+          "latitude": 33.6101,
+          "longitude": -80.4521,
+          "within_official_county": false,
+          "distance_to_county_boundary_degrees": 0.059908
+        },
+        {
+          "latitude": 33.6413,
+          "longitude": -80.4284,
+          "within_official_county": false,
+          "distance_to_county_boundary_degrees": 0.0980285
+        }
+      ],
+      "status": "COORDINATES_ONLY_NOT_FIELD_LOCATION"
+    },
+    {
+      "farm_id": "1778",
+      "producer": "Robert Seaberry",
+      "source_pdf_match": "STRONG_FARM_ID_OR_TRACT_TEXT",
+      "roster_location_hints": [
+        {
+          "latitude": 33.5039942,
+          "longitude": -80.5101725,
+          "within_official_county": true,
+          "distance_to_county_boundary_degrees": 0.0
+        }
+      ],
+      "status": "COORDINATES_ONLY_NOT_FIELD_LOCATION"
+    },
+    {
+      "farm_id": "3873",
+      "producer": "Tywone Hillard",
+      "source_pdf_match": "FILENAME_CANDIDATE_UNVERIFIED",
+      "roster_location_hints": [
+        {
+          "latitude": 33.4656894,
+          "longitude": -80.5074459,
+          "within_official_county": true,
+          "distance_to_county_boundary_degrees": 0.0
+        }
+      ],
+      "status": "COORDINATES_ONLY_NOT_FIELD_LOCATION"
+    },
+    {
+      "farm_id": "8242",
+      "producer": "Louie Johnson",
+      "source_pdf_match": "STRONG_FARM_ID_OR_TRACT_TEXT",
+      "roster_location_hints": [
+        {
+          "latitude": 33.5068861,
+          "longitude": -80.8515095,
+          "within_official_county": true,
+          "distance_to_county_boundary_degrees": 0.0
+        }
+      ],
+      "status": "COORDINATES_ONLY_NOT_FIELD_LOCATION"
+    },
+    {
+      "farm_id": "9231",
+      "producer": "Pashona Rendell",
+      "source_pdf_match": "FILENAME_CANDIDATE_UNVERIFIED",
+      "roster_location_hints": [
+        {
+          "latitude": 33.6096189,
+          "longitude": -80.3479727,
+          "within_official_county": false,
+          "distance_to_county_boundary_degrees": 0.1211595
+        }
+      ],
+      "status": "COORDINATES_ONLY_NOT_FIELD_LOCATION"
+    }
+  ]
+}
