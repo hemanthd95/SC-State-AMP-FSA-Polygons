@@ -1,0 +1,125 @@
+{
+  "status": "UNREGISTERED_MAP_PREVIEWS_FOR_MANUAL_QA_ONLY",
+  "excluded_farm_id": "14043",
+  "farms": [
+    {
+      "farm_id": "1033",
+      "status": "FILENAME_CANDIDATE_UNVERIFIED",
+      "source_pdf": "Montez Hillard_FSA _Map.pdf",
+      "preview": "analysis/orangeburg_fsa_review_previews/orangeburg_fsa_farm_1033.jpg",
+      "pages_shown": 2
+    },
+    {
+      "farm_id": "1271",
+      "status": "STRONG_FARM_ID_OR_TRACT_TEXT",
+      "source_pdf": "Christine Berry Zeigler_FSA Map.pdf",
+      "preview": "analysis/orangeburg_fsa_review_previews/orangeburg_fsa_farm_1271.jpg",
+      "pages_shown": 1
+    },
+    {
+      "farm_id": "1778",
+      "status": "STRONG_FARM_ID_OR_TRACT_TEXT",
+      "source_pdf": "Robert Seaberry Jr. FSA.pdf",
+      "preview": "analysis/orangeburg_fsa_review_previews/orangeburg_fsa_farm_1778.jpg",
+      "pages_shown": 1
+    },
+    {
+      "farm_id": "3873",
+      "status": "FILENAME_CANDIDATE_UNVERIFIED",
+      "source_pdf": "Tywone Hillard_FSA_Map.pdf",
+      "preview": "analysis/orangeburg_fsa_review_previews/orangeburg_fsa_farm_3873.jpg",
+      "pages_shown": 2
+    },
+    {
+      "farm_id": "8242",
+      "status": "STRONG_FARM_ID_OR_TRACT_TEXT",
+      "source_pdf": "Louie Johnson FSA_Map.pdf",
+      "preview": "analysis/orangeburg_fsa_review_previews/orangeburg_fsa_farm_8242.jpg",
+      "pages_shown": 1
+    },
+    {
+      "farm_id": "9231",
+      "status": "FILENAME_CANDIDATE_UNVERIFIED",
+      "source_pdf": "Everett Rendell FSAmap.pdf",
+      "preview": "analysis/orangeburg_fsa_review_previews/orangeburg_fsa_farm_9231.jpg",
+      "pages_shown": 2
+    },
+    {
+      "farm_id": "10262",
+      "status": "STRONG_FARM_ID_OR_TRACT_TEXT",
+      "source_pdf": "Mava Jackson_FSA map, (dragged).pdf",
+      "preview": "analysis/orangeburg_fsa_review_previews/orangeburg_fsa_farm_10262.jpg",
+      "pages_shown": 2
+    },
+    {
+      "farm_id": "10939",
+      "status": "FILENAME_CANDIDATE_UNVERIFIED",
+      "source_pdf": "Margaret_Berry_FSA_Map.pdf",
+      "preview": "analysis/orangeburg_fsa_review_previews/orangeburg_fsa_farm_10939.jpg",
+      "pages_shown": 2
+    },
+    {
+      "farm_id": "11782",
+      "status": "STRONG_FARM_ID_OR_TRACT_TEXT",
+      "source_pdf": "Margaret_Berry_FSA_Map.pdf",
+      "preview": "analysis/orangeburg_fsa_review_previews/orangeburg_fsa_farm_11782.jpg",
+      "pages_shown": 2
+    },
+    {
+      "farm_id": "11990",
+      "status": "FILENAME_CANDIDATE_UNVERIFIED",
+      "source_pdf": "Antron Williams_FSA Map.pdf",
+      "preview": "analysis/orangeburg_fsa_review_previews/orangeburg_fsa_farm_11990.jpg",
+      "pages_shown": 2
+    },
+    {
+      "farm_id": "13225",
+      "status": "STRONG_FARM_ID_OR_TRACT_TEXT",
+      "source_pdf": "Morgan summers_FSA_Map.pdf",
+      "preview": "analysis/orangeburg_fsa_review_previews/orangeburg_fsa_farm_13225.jpg",
+      "pages_shown": 1
+    },
+    {
+      "farm_id": "13618",
+      "status": "FILENAME_CANDIDATE_UNVERIFIED",
+      "source_pdf": "Christine Berry Zeigler_FSA Map.pdf",
+      "preview": "analysis/orangeburg_fsa_review_previews/orangeburg_fsa_farm_13618.jpg",
+      "pages_shown": 1
+    },
+    {
+      "farm_id": "13653",
+      "status": "STRONG_FARM_ID_OR_TRACT_TEXT",
+      "source_pdf": "Jasper Summers_FSA_Map.pdf",
+      "preview": "analysis/orangeburg_fsa_review_previews/orangeburg_fsa_farm_13653.jpg",
+      "pages_shown": 2
+    },
+    {
+      "farm_id": "13709",
+      "status": "STRONG_FARM_ID_OR_TRACT_TEXT",
+      "source_pdf": "Veronica Hodges FSA.pdf",
+      "preview": "analysis/orangeburg_fsa_review_previews/orangeburg_fsa_farm_13709.jpg",
+      "pages_shown": 2
+    },
+    {
+      "farm_id": "14048",
+      "status": "STRONG_FARM_ID_OR_TRACT_TEXT",
+      "source_pdf": "Tarsha Mosley_FSA_Map.pdf",
+      "preview": "analysis/orangeburg_fsa_review_previews/orangeburg_fsa_farm_14048.jpg",
+      "pages_shown": 1
+    },
+    {
+      "farm_id": "14187",
+      "status": "STRONG_FARM_ID_OR_TRACT_TEXT",
+      "source_pdf": "Bruce Jenkins_FSA Map.pdf",
+      "preview": "analysis/orangeburg_fsa_review_previews/orangeburg_fsa_farm_14187.jpg",
+      "pages_shown": 2
+    },
+    {
+      "farm_id": "14291",
+      "status": "STRONG_FARM_ID_OR_TRACT_TEXT",
+      "source_pdf": "Edward Carson_FSA Map.pdf",
+      "preview": "analysis/orangeburg_fsa_review_previews/orangeburg_fsa_farm_14291.jpg",
+      "pages_shown": 1
+    }
+  ]
+}
