@@ -1,0 +1,11 @@
+/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/fitz/__init__.py:17: FutureWarning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+  warnings.warn(
+START 13225 Morgan summers_FSA_Map.pdf views 2 queries 14
+BEST 13225 USGS_NAIP inliers 31 area 0.0 plausible False
+START 14048 Tarsha Mosley_FSA_Map.pdf views 2 queries 14
+BEST 14048 USGS_NAIP inliers 71 area 23888.1 plausible True
+START 14187 Bruce Jenkins_FSA Map.pdf views 4 queries 14
+BEST 14187 USGS_NAIP inliers 35 area 0.0 plausible False
+START 11782 Margaret_Berry_FSA_Map.pdf views 4 queries 14
+BEST 11782 USGS_NAIP inliers 199 area 94754.2 plausible True
+FINISHED 4 diagnostic farms
