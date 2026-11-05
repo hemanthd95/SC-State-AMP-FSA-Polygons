@@ -25,6 +25,12 @@ jobs:
           python-version: '3.11'
       - name: Install workbook and PDF inspection dependencies
         run: python -m pip install --upgrade openpyxl pymupdf
+      - name: Ensure scanned-map OCR is available
+        run: |
+          if ! command -v tesseract >/dev/null; then
+            sudo apt-get update
+            sudo apt-get install -y tesseract-ocr
+          fi
       - name: Audit source farm IDs, tracts, selected fields and PDF spatial references
         run: python scripts/orangeburg_source_inventory.py
       - name: Preserve inventory privately for review and polygon registration
