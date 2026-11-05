@@ -34,6 +34,7 @@ jobs:
           git add analysis/orangeburg_pilot_match_farm_*.jpg || true
           if ! git diff --cached --quiet; then
             git commit -m "Evaluate Orangeburg farm FSA aerial registration against public satellite imagery"
+            git pull --rebase origin main
             git push
           fi
       - name: Keep pilot diagnostics available
