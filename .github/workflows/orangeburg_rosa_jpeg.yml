@@ -1,0 +1,43 @@
+name: Register Rosa Berry Farm13618 from FSA JPEG satellite imagery
+on:
+  push:
+    paths:
+      - 'scripts/orangeburg_rosa_jpeg_search.py'
+      - '.github/workflows/orangeburg_rosa_jpeg.yml'
+permissions:
+  contents: write
+jobs:
+  rosa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 9
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch only Rosa JPEG from LFS
+        run: |
+          git lfs pull --include="*Rosa_Berry_FSA_Map.jpeg"
+          python -c "from pathlib import Path; p=Path('source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/Rosa_Berry_FSA_Map.jpeg'); assert p.read_bytes()[:2]==bytes([255,216]), 'Rosa map still an LFS pointer'"
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install pymupdf numpy opencv-python-headless requests
+      - name: Search nearby real aerial imagery for Rosa map
+        run: |
+          python scripts/orangeburg_rosa_jpeg_search.py > analysis/orangeburg_rosa13618_registration.log 2>&1
+          tail -25 analysis/orangeburg_rosa13618_registration.log
+      - name: Save georegistration candidates, not unverified polygons
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add analysis/orangeburg_rosa13618_* || true
+          if ! git diff --cached --quiet; then
+            git commit -m "Save Rosa JPEG field-to-satellite matching evidence"
+            git pull --rebase origin main
+            git push
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: orangeburg-rosa13618-registration-evidence
+          path: analysis/orangeburg_rosa13618_*
+          retention-days: 10
