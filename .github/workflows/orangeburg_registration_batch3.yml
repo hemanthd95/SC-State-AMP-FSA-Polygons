@@ -1,0 +1,52 @@
+name: Evaluate Orangeburg next FSA photo-map registration batch
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/orangeburg_registration_batch3.yml'
+permissions:
+  contents: write
+jobs:
+  register:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      ORANGEBURG_PILOT_FARMS: '1033,3873,11990,13709,14291'
+      ORANGEBURG_PILOT_REPORT: 'orangeburg_registration_batch3.json'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install 'numpy<2.5' opencv-python-headless pymupdf requests
+      - name: Compare map photographs with USGS NAIP and Esri imagery
+        id: audit
+        continue-on-error: true
+        run: python scripts/orangeburg_registration_pilot.py > analysis/orangeburg_registration_batch3_run.log 2>&1
+      - name: Preserve diagnostics; these are not accepted field polygons
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add analysis/orangeburg_registration_batch3_run.log
+          git add analysis/orangeburg_registration_batch3.json || true
+          git add analysis/orangeburg_pilot_match_farm_*.jpg || true
+          git add analysis/orangeburg_unregistered_fsa_source_farm_*.jpg || true
+          if ! git diff --cached --quiet; then
+            git commit -m "Audit next five Orangeburg FSA image registrations"
+            git pull --rebase origin main
+            git push
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: Orangeburg-Registration-Batch3
+          path: |
+            analysis/orangeburg_registration_batch3.json
+            analysis/orangeburg_registration_batch3_run.log
+            analysis/orangeburg_pilot_match_farm_*.jpg
+          retention-days: 30
+      - name: Require successful audit
+        if: steps.audit.outcome == 'failure'
+        run: exit 1
