@@ -36,7 +36,12 @@
 5. Louie Johnson Farm8242 candidate correspondences were geometrically degenerate and rejected.
 6. Source spreadsheet coordinates for Farms **9231**, **10262**, and **14291** are outside the 2024 Census Orangeburg County polygon. They may be residential coordinates; confirm the actual FSA field county independently rather than omitting these farms.
 7. Six farm-PDF matches rely on names; they must be checked against printed Farm/Tract numbers.
-8. Final deliverables require **two professional PDF atlases (satellite and topography)** with county overview and zoomed field polygons plus legend, not merely screenshots of FSA source PDFs. These atlases are **not yet complete**; do not represent this QA ledger as a finished atlas.
+8. **Anthron Williams Farm11990**: the only filename-matched PDF, `Antron Williams_FSA Map.pdf`, actually contains a producer-eligibility/subsidiary report, not a field map. A real **Farm11990 / Tract44081 / Fields6 and7** FSA aerial boundary map is needed to digitize these fields.
+9. **Tywone Hillard Farm3873 / Tract3895**: source PDF page 1 shows the requested Fields1 and4; page 2 depicts a DIFFERENT **Farm4261 / Tract5953**. The high-inlier (110) registration to page 2 was rejected despite visual plausibility. An independent target-page registration was obtained with **134 inliers, 0.86px RMSE** (subject to full-field imagery coverage and subsequent outline tracing); **no geometry accepted yet**.
+10. **Veronica Hodges Farm13709**: strong 250-inlier match to PDF page2 was confirmed, but page2 is **Tract45511 Fields17/19**, whereas the workbook requests **Tract45511 Field1**. This match is not a substitute for the requested field boundary; the remaining 2024 map pages need exact field-ID reconciliation.
+11. **Montez Hillard Farm1033 / Tract3879 / Field4**: requested identifiers are visible on the source photo-map, but source page1 did not pass stable georegistration in the current GPS-hint tile search. Address/GPS remains a search hint, not a replacement boundary.
+12. **Edward Carson Farm14291 / Tract46266**: the source photo does label requested Fields13, 18 and19, but no nondegenerate satellite registration was found near the initial provided coordinates. Both coordinates are outside the county boundary; FSA page says Orangeburg County, so actual field location requires separate confirmation.
+13. Final deliverables require **two professional PDF atlases (satellite and topography)** with county overview and zoomed field polygons plus legend, not merely screenshots of FSA source PDFs. These atlases are **not yet complete**; do not represent this QA ledger as a finished atlas.
 
 ## Acceptance gates for each of the 29 outstanding features
 1. Farm/Tract/Field ID matches workbook and printed source map.
