@@ -25,13 +25,17 @@ jobs:
       - name: Install image matching and map dependencies
         run: python -m pip install --upgrade 'numpy<2.5' opencv-python-headless pymupdf requests
       - name: Compare four FSA map photographs to USGS NAIP and Esri imagery near roster hints
-        run: python scripts/orangeburg_registration_pilot.py
+        id: classify
+        continue-on-error: true
+        run: python scripts/orangeburg_registration_pilot.py > analysis/orangeburg_registration_pilot_run.log 2>&1
       - name: Save georegistration QC report in private repository
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add analysis/orangeburg_registration_pilot.json
+          git add analysis/orangeburg_registration_pilot_run.log
+          git add analysis/orangeburg_registration_pilot.json || true
           git add analysis/orangeburg_pilot_match_farm_*.jpg || true
+          git add analysis/orangeburg_unregistered_fsa_source_farm_*.jpg || true
           if ! git diff --cached --quiet; then
             git commit -m "Evaluate Orangeburg farm FSA aerial registration against public satellite imagery"
             git pull --rebase origin main
@@ -44,6 +48,12 @@ jobs:
           name: Orangeburg-FSA-Registration-Pilot
           path: |
             analysis/orangeburg_registration_pilot.json
+            analysis/orangeburg_registration_pilot_run.log
             analysis/orangeburg_pilot_match_farm_*.jpg
+            analysis/orangeburg_unregistered_fsa_source_farm_*.jpg
           if-no-files-found: warn
           retention-days: 30
+
+      - name: Require successful image registration audit
+        if: steps.classify.outcome == 'failure'
+        run: exit 1
