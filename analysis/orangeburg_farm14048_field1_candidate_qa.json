@@ -1,0 +1,10 @@
+{
+  "farm_id": "14048",
+  "tract_id": "46008",
+  "field_id": "1",
+  "fsa_acres": 0.89,
+  "measured_acres": 0.868,
+  "difference_percent": 2.44,
+  "county_check": "PASS",
+  "status": "PENDING_VISUAL_REVIEW"
+}

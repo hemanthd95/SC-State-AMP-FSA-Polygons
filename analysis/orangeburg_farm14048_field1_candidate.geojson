@@ -1,0 +1,52 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.87957637161004,
+              33.512510248191404
+            ],
+            [
+              -80.87897919163586,
+              33.512080924287815
+            ],
+            [
+              -80.87937832272647,
+              33.51178575918011
+            ],
+            [
+              -80.87996276327415,
+              33.51223564914094
+            ],
+            [
+              -80.87957637161004,
+              33.512510248191404
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "county": "Orangeburg",
+        "farm_id": "14048",
+        "tract_id": "46008",
+        "field_id": "1",
+        "producer": "Tarsha Mosley",
+        "source_pdf": "Tarsha Mosley_FSA_Map.pdf",
+        "source_page": 1,
+        "fsa_printed_acres": 0.89,
+        "traced_geodesic_acres": 0.868,
+        "area_difference_percent": 2.44,
+        "image_provider": "USGS NAIP Imagery",
+        "registration_inliers": 68,
+        "registration_rmse_pixels": 0.42,
+        "registration_method": "SIFT homography and manually digitized FSA yellow field boundary",
+        "status": "CANDIDATE_UNDER_VISUAL_OVERLAY_QA"
+      }
+    }
+  ]
+}
