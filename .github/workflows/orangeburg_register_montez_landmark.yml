@@ -1,0 +1,39 @@
+name: Georegister Montez source FSA page near verified Tywone road landmark
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'scripts/orangeburg_register_montez_near_tywone.py'
+      - '.github/workflows/orangeburg_register_montez_landmark.yml'
+permissions:
+  contents: write
+jobs:
+  match:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install 'numpy<2.5' opencv-python-headless pymupdf requests
+      - name: Test source-photo highway-loop matching and reject weak transforms
+        id: run
+        continue-on-error: true
+        run: python scripts/orangeburg_register_montez_near_tywone.py > analysis/orangeburg_register_montez_landmark_run.log 2>&1
+      - name: Preserve source-specific diagnostics and QA images
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add analysis/orangeburg_register_montez_landmark_run.log
+          git add analysis/orangeburg_montez_farm1033*.jpg || true
+          git add analysis/orangeburg_montez_farm1033_georegistration.json || true
+          if ! git diff --cached --quiet; then
+            git commit -m "Evaluate Montez Tract3879 location near verified interstate junction"
+            git pull --rebase origin main
+            git push
+          fi
+      - if: steps.run.outcome == 'failure'
+        run: exit 1
