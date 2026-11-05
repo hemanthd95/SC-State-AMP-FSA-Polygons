@@ -415,7 +415,7 @@ def draw_county(c,county,farms,boundary,basetype,source_tracker):
         if p['amp_roster_county'] != county:
             yy=wrap(c,f'AMP roster: {p["amp_roster_county"]}; FSA physical map: {county}',923,yy-3,260,9,13,GRAY)
         selected=sum(bool(f['properties']['county_workbook_selected']) for f in fields)
-        yy=wrap(c,f'{selected} county-sheet field(s); {len(fields)-selected} additional FSA context fields',923,yy-4,260,10,14,GRAY)-28
+        yy=wrap(c,f'{selected} county-sheet field(s); {len(fields)-selected} additional FSA context fields',923,yy-4,260,10,14,GRAY)-(12 if len(farms)>=5 else 28)
     yy=wrap(c,'Markers represent locations computed from georeferenced FSA field polygons, not reported residential addresses.',923,yy-5,260,10,14,GRAY)
     font(c,922,137,'County boundary: U.S. Census cartographic GeoJSON',8,GRAY)
     c.showPage()
