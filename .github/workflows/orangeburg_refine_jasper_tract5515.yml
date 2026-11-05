@@ -1,0 +1,38 @@
+name: Refine Jasper FSA target field aerial registration
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'scripts/orangeburg_refine_jasper_tract5515.py'
+      - '.github/workflows/orangeburg_refine_jasper_tract5515.yml'
+permissions:
+  contents: write
+jobs:
+  refine:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install 'numpy<2.5' opencv-python-headless pymupdf requests
+      - run: python scripts/orangeburg_refine_jasper_tract5515.py
+      - name: Preserve exact source target tract QA
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add analysis/orangeburg_farm13653_tract5515_refin*
+          if ! git diff --cached --quiet; then
+            git commit -m "Verify exact Jasper Tract5515 around its own field with independent satellite tile"
+            git pull --rebase origin main
+            git push
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: Orangeburg-Jasper-Field1-Refinement
+          path: analysis/orangeburg_farm13653_tract5515_refin*
+          retention-days: 30
