@@ -1,0 +1,48 @@
+name: Register Orangeburg scanned FSA pilot sites against public satellite imagery
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'scripts/orangeburg_registration_pilot.py'
+      - '.github/workflows/orangeburg_registration_pilot.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  pilot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Read private source FSA scans and inventory
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install image matching and map dependencies
+        run: python -m pip install --upgrade 'numpy<2.5' opencv-python-headless pymupdf requests
+      - name: Compare four FSA map photographs to USGS NAIP and Esri imagery near roster hints
+        run: python scripts/orangeburg_registration_pilot.py
+      - name: Save georegistration QC report in private repository
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add analysis/orangeburg_registration_pilot.json
+          git add analysis/orangeburg_pilot_match_farm_*.jpg || true
+          if ! git diff --cached --quiet; then
+            git commit -m "Evaluate Orangeburg farm FSA aerial registration against public satellite imagery"
+            git push
+          fi
+      - name: Keep pilot diagnostics available
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Orangeburg-FSA-Registration-Pilot
+          path: |
+            analysis/orangeburg_registration_pilot.json
+            analysis/orangeburg_pilot_match_farm_*.jpg
+          if-no-files-found: warn
+          retention-days: 30
