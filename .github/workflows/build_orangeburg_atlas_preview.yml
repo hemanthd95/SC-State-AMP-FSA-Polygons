@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'scripts/build_orangeburg_verified_atlas_preview.py'
+      - 'scripts/build_verified_atlases.py'
       - '.github/workflows/build_orangeburg_atlas_preview.yml'
 permissions:
   contents: write
