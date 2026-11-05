@@ -171,6 +171,126 @@
         "qa_evidence_file": "analysis/orangeburg_farm14048_field1_candidate_source.jpg",
         "boundary_notice": "Digitized from USDA FSA field map aerial imagery; NOT a legal parcel survey"
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "county": "Orangeburg",
+        "farm_id": "3873",
+        "tract_id": "3895",
+        "field_id": "1",
+        "producer": "Tywone Hillard",
+        "source_pdf": "Tywone Hillard_FSA_Map.pdf",
+        "source_page": 1,
+        "fsa_printed_acres": 0.43,
+        "traced_geodesic_acres": 0.458,
+        "area_difference_percent": 6.62,
+        "image_provider": "USGS NAIP Imagery",
+        "registration_inliers": 156,
+        "registration_rmse_pixels": 0.95,
+        "registration_method": "Verified FSA aerial photograph homography; source field line hand-traced",
+        "status": "IMAGE_REGISTERED_AND_VISUALLY_QA_PASSED",
+        "visual_QA": "FSA source white field boundary and independent USGS aerial overlay inspected, 2026-11-05"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.48350664049383,
+              33.46343294140392
+            ],
+            [
+              -80.4833906110809,
+              33.46365594072707
+            ],
+            [
+              -80.48325776747696,
+              33.46382357333056
+            ],
+            [
+              -80.48307506188864,
+              33.46392152334866
+            ],
+            [
+              -80.48297543104823,
+              33.46394953341732
+            ],
+            [
+              -80.48294211238444,
+              33.46399152813726
+            ],
+            [
+              -80.48289389957016,
+              33.463558791514984
+            ],
+            [
+              -80.48350664049383,
+              33.46343294140392
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "county": "Orangeburg",
+        "farm_id": "3873",
+        "tract_id": "3895",
+        "field_id": "4",
+        "producer": "Tywone Hillard",
+        "source_pdf": "Tywone Hillard_FSA_Map.pdf",
+        "source_page": 1,
+        "fsa_printed_acres": 1.93,
+        "traced_geodesic_acres": 1.942,
+        "area_difference_percent": 0.63,
+        "image_provider": "USGS NAIP Imagery",
+        "registration_inliers": 156,
+        "registration_rmse_pixels": 0.95,
+        "registration_method": "Verified FSA aerial photograph homography; source field line hand-traced",
+        "status": "IMAGE_REGISTERED_AND_VISUALLY_QA_PASSED",
+        "visual_QA": "FSA source white field boundary and independent USGS aerial overlay inspected, 2026-11-05"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.48290887780223,
+              33.4640055341048
+            ],
+            [
+              -80.48274196412173,
+              33.46422983582329
+            ],
+            [
+              -80.48237621449003,
+              33.46431398712224
+            ],
+            [
+              -80.48202772180817,
+              33.46432791401543
+            ],
+            [
+              -80.48174688288336,
+              33.464243669168475
+            ],
+            [
+              -80.48175295591626,
+              33.46368495764561
+            ],
+            [
+              -80.4828444308535,
+              33.46351708581835
+            ],
+            [
+              -80.48290887780223,
+              33.4640055341048
+            ]
+          ]
+        ]
+      }
     }
   ],
   "description": "Orangeburg AMP field boundaries accepted only after FSA Farm/Tract/Field ID checks, georegistration, visual overlay QA, printed-acreage comparison and official county containment. Mary Koon Farm14043 excluded by user.",
