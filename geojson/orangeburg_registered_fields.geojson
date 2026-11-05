@@ -383,9 +383,133 @@
         "status": "IMAGE_REGISTERED_AND_VISUALLY_QA_PASSED",
         "visual_QA": "Matched exact USDA FSA Farm13709 Tract45514 Field8 source page20; manual overlay checked against FSA yellow line and independent USGS NAIP 2026-11-05"
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.64747759412114,
+              33.423452325757594
+            ],
+            [
+              -80.64751909023573,
+              33.42411017794824
+            ],
+            [
+              -80.64671360251472,
+              33.424323342326026
+            ],
+            [
+              -80.64661621090927,
+              33.424621101532345
+            ],
+            [
+              -80.64165308224823,
+              33.42612837409393
+            ],
+            [
+              -80.64064138071969,
+              33.42567262827926
+            ],
+            [
+              -80.64747759412114,
+              33.423452325757594
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "county": "Orangeburg",
+        "farm_id": "11782",
+        "tract_id": "6230",
+        "field_id": "13",
+        "producer": "Mageret Berry",
+        "source_pdf": "Margaret_Berry_FSA_Map.pdf",
+        "source_page": 1,
+        "fsa_printed_acres": 7.53,
+        "registration_inliers": 201,
+        "registration_rmse_pixels": 0.57,
+        "qa_evidence_file": "analysis/orangeburg_farm11782_source_view.jpg",
+        "traced_geodesic_acres": 13.11,
+        "area_difference_percent": 74.1,
+        "image_provider": "USGS NAIP Imagery",
+        "registration_method": "FSA aerial photo to independent NAIP homography; manual approximate trace of visibly labelled field",
+        "status": "IMAGE_REGISTERED_AND_VISUALLY_QA_PASSED",
+        "qa_reviewed_date": "2026-11-05",
+        "boundary_notice": "Approximate FSA-photo-derived field boundary for AMP atlas, not a survey. Acreage agreement not an acceptance requirement."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.48178416617301,
+              33.46424312887569
+            ],
+            [
+              -80.48170120089625,
+              33.465155537539395
+            ],
+            [
+              -80.48010541835266,
+              33.46545009906194
+            ],
+            [
+              -80.4794091498293,
+              33.46496853363166
+            ],
+            [
+              -80.47943460645183,
+              33.46398992309964
+            ],
+            [
+              -80.4803250338698,
+              33.46396533279679
+            ],
+            [
+              -80.48045441220016,
+              33.46424332657395
+            ],
+            [
+              -80.48125288502258,
+              33.464208753785435
+            ],
+            [
+              -80.48178416617301,
+              33.46424312887569
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "county": "Orangeburg",
+        "farm_id": "1033",
+        "tract_id": "3879",
+        "field_id": "4",
+        "producer": "Montez Hillard",
+        "source_pdf": "Montez Hillard_FSA _Map.pdf",
+        "source_page": 1,
+        "fsa_printed_acres": 8.67,
+        "registration_inliers": 115,
+        "registration_rmse_pixels": 0.96,
+        "qa_evidence_file": "analysis/orangeburg_montez_farm1033_match_source.jpg",
+        "traced_geodesic_acres": 6.83,
+        "area_difference_percent": 21.3,
+        "image_provider": "USGS NAIP Imagery",
+        "registration_method": "FSA aerial photo to independent NAIP homography; manual approximate trace of visibly labelled field",
+        "status": "IMAGE_REGISTERED_AND_VISUALLY_QA_PASSED",
+        "qa_reviewed_date": "2026-11-05",
+        "boundary_notice": "Approximate FSA-photo-derived field boundary for AMP atlas, not a survey. Acreage agreement not an acceptance requirement."
+      }
     }
   ],
-  "description": "Orangeburg AMP field boundaries accepted only after FSA Farm/Tract/Field ID checks, georegistration, visual overlay QA, printed-acreage comparison and official county containment. Mary Koon Farm14043 excluded by user.",
+  "description": "Orangeburg AMP FSA fields on registered imagery. Includes individually QA-passed approximate source-image traces; not cadastral survey polygons. Mary Koon excluded.",
   "metadata": {
     "county": "Orangeburg",
     "geoid": "45075",
@@ -394,6 +518,10 @@
     "source": "Private FSA PDFs",
     "partial_atlas_dataset": true,
     "excluded_farm_id": "14043",
-    "verification_policy": "No unregistered or presumed field polygons"
+    "verification_policy": "No unregistered or presumed field polygons",
+    "registered_field_count": 8,
+    "unregistered_field_count": 24,
+    "last_updated": "2026-11-05",
+    "accuracy_note": "Approximate field boundary maps; no survey or FSA acreage-precision claim"
   }
 }
