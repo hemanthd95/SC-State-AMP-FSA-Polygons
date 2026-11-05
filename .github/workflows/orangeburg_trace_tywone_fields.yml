@@ -1,0 +1,38 @@
+name: Inspect Tywone Hillard target FSA field polygon candidates
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'scripts/orangeburg_trace_tywone_3873_fields.py'
+      - '.github/workflows/orangeburg_trace_tywone_fields.yml'
+permissions:
+  contents: write
+jobs:
+  trace:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install 'numpy<2.5' opencv-python-headless pyproj shapely
+      - name: Verify geometric acreage and emit marked FSA and USGS source photographs
+        id: qa
+        continue-on-error: true
+        run: python scripts/orangeburg_trace_tywone_3873_fields.py > analysis/orangeburg_trace_tywone_fields_run.log 2>&1
+      - name: Preserve review-only polygons and annotated source images
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add analysis/orangeburg_trace_tywone_fields_run.log
+          git add analysis/orangeburg_farm3873_field1_field4_candidate.geojson || true
+          git add analysis/orangeburg_farm3873_field1_field4_candidate_qa.json || true
+          git add analysis/orangeburg_farm3873_fields_candidate_*.jpg || true
+          if ! git diff --cached --quiet; then
+            git commit -m "Check Tywone Field1 and Field4 shapes on independent source imagery"
+            git pull --rebase origin main
+            git push
+          fi
+      - if: steps.qa.outcome == 'failure'
+        run: exit 1
