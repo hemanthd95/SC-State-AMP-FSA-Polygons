@@ -411,11 +411,11 @@ def draw_county(c,county,farms,boundary,basetype,source_tracker):
         color=colors.HexColor(PALETTE[ix]);p=fields[0]['properties']
         c.setFillColor(color);c.roundRect(923,yy-8,17,17,3,fill=1,stroke=0)
         font(c,950,yy-3,f'{ix+1:02d}  FARM {fid}',12,NAVY,True)
-        yy=wrap(c,p['producer'],923,yy-30,260,11,14)
+        yy=wrap(c,p['producer'],923,yy-(21 if len(farms)>=7 else 30),260,11,14)
         if p['amp_roster_county'] != county:
             yy=wrap(c,f'AMP roster: {p["amp_roster_county"]}; FSA physical map: {county}',923,yy-3,260,9,13,GRAY)
         selected=sum(bool(f['properties']['county_workbook_selected']) for f in fields)
-        yy=wrap(c,f'{selected} county-sheet field(s); {len(fields)-selected} additional FSA context fields',923,yy-4,260,10,14,GRAY)-(0 if len(farms)>=7 else 12 if len(farms)>=5 else 28)
+        yy=wrap(c,f'{selected} mapped field(s)' + (f'; {len(fields)-selected} FSA context' if len(fields)>selected else ''),923,yy-(1 if len(farms)>=7 else 4),260,10,(12 if len(farms)>=7 else 14),GRAY)-(6 if len(farms)>=7 else 12 if len(farms)>=5 else 28)
     yy=wrap(c,'Markers represent locations computed from georeferenced FSA field polygons, not reported residential addresses.',923,yy-5,260,10,14,GRAY)
     font(c,922,137,'County boundary: U.S. Census cartographic GeoJSON',8,GRAY)
     c.showPage()
