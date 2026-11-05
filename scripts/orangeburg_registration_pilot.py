@@ -112,6 +112,8 @@ def main():
         lat=points[0]['latitude'];lon=points[0]['longitude']
         views=source_views(SOURCE/source)
         if not views:print('SKIP no keypoints',fid,flush=True);continue
+        cv2.imwrite(str(OUT/f'orangeburg_unregistered_fsa_source_farm_{fid}.jpg'),
+                    views[0][1],[cv2.IMWRITE_JPEG_QUALITY,80])
         best=None
         tasks=[(name,url,dx,dy) for name,url in SERVICES
                 for dx,dy in [(0,0),(1,0),(-1,0),(0,1),(0,-1),(1,1),(-1,-1)]]
