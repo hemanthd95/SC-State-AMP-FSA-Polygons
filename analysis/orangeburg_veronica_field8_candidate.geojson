@@ -1,0 +1,96 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.83302376166517,
+              33.311156944705836
+            ],
+            [
+              -80.83290421466134,
+              33.31103258176061
+            ],
+            [
+              -80.83268905942978,
+              33.310823699128186
+            ],
+            [
+              -80.83244400254674,
+              33.31071443608106
+            ],
+            [
+              -80.83210331668165,
+              33.310655057896696
+            ],
+            [
+              -80.83182842626383,
+              33.310595620967426
+            ],
+            [
+              -80.83200189405174,
+              33.310386433980966
+            ],
+            [
+              -80.83208567923596,
+              33.31021716394097
+            ],
+            [
+              -80.83216345311806,
+              33.31009268980609
+            ],
+            [
+              -80.83216954477663,
+              33.30991358033789
+            ],
+            [
+              -80.83222340755505,
+              33.30978915068786
+            ],
+            [
+              -80.83247451512021,
+              33.309589874933025
+            ],
+            [
+              -80.8327315360697,
+              33.309509971843745
+            ],
+            [
+              -80.83317386434761,
+              33.30941490938009
+            ],
+            [
+              -80.83382546161302,
+              33.30946383976643
+            ],
+            [
+              -80.83302376166517,
+              33.311156944705836
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "county": "Orangeburg",
+        "farm_id": "13709",
+        "tract_id": "45514",
+        "field_id": "8",
+        "producer": "Veronica Hodges",
+        "source_pdf": "Vronica Hodges_FSA_Map.pdf",
+        "source_page": 20,
+        "fsa_printed_acres": 4.79,
+        "traced_geodesic_acres": 4.735,
+        "area_difference_percent": 1.15,
+        "image_provider": "USGS NAIP Imagery",
+        "registration_inliers": 87,
+        "registration_rmse_pixels": 0.44,
+        "registration_method": "SIFT aerial homography; exact bright-yellow FSA Field8 boundary hand-traced",
+        "status": "CANDIDATE_UNDER_VISUAL_OVERLAY_QA"
+      }
+    }
+  ]
+}
