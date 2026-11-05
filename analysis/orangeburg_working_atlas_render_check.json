@@ -1,0 +1,64 @@
+{
+  "generated_utc": "2026-11-05T17:07:14.059837+00:00",
+  "status": "PREVIEW_PDF_PAGES_RENDERED_QA_PASS__DRAFT_NOT_FINAL",
+  "registered_fields": 3,
+  "fields_remaining": 29,
+  "atlases": [
+    {
+      "filename": "Orangeburg_County_Satellite_DRAFT_3of32.pdf",
+      "pages": 4,
+      "size_bytes": 21400627,
+      "rendered_page_checks": [
+        {
+          "page": 1,
+          "images": 1,
+          "grayscale_std": 70.32
+        },
+        {
+          "page": 2,
+          "images": 1,
+          "grayscale_std": 80.22
+        },
+        {
+          "page": 3,
+          "images": 1,
+          "grayscale_std": 78.78
+        },
+        {
+          "page": 4,
+          "images": 1,
+          "grayscale_std": 72.49
+        }
+      ],
+      "status": "QA_PASS"
+    },
+    {
+      "filename": "Orangeburg_County_Topography_DRAFT_3of32.pdf",
+      "pages": 4,
+      "size_bytes": 5448915,
+      "rendered_page_checks": [
+        {
+          "page": 1,
+          "images": 1,
+          "grayscale_std": 30.17
+        },
+        {
+          "page": 2,
+          "images": 1,
+          "grayscale_std": 29.64
+        },
+        {
+          "page": 3,
+          "images": 1,
+          "grayscale_std": 31.63
+        },
+        {
+          "page": 4,
+          "images": 1,
+          "grayscale_std": 29.91
+        }
+      ],
+      "status": "QA_PASS"
+    }
+  ]
+}
