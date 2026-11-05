@@ -1,0 +1,52 @@
+name: Find Orangeburg FSA aerial registrations - second farm batch
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/orangeburg_registration_batch2.yml'
+permissions:
+  contents: write
+jobs:
+  batch2:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      ORANGEBURG_PILOT_FARMS: '13225,14048,14187,11782'
+      ORANGEBURG_PILOT_REPORT: 'orangeburg_registration_batch2.json'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install 'numpy<2.5' opencv-python-headless pymupdf requests
+      - name: Match source-traced farms to USGS and Esri imagery
+        id: classify
+        continue-on-error: true
+        run: python scripts/orangeburg_registration_pilot.py > analysis/orangeburg_registration_batch2_run.log 2>&1
+      - name: Persist farm-by-farm registration diagnostics
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add analysis/orangeburg_registration_batch2_run.log
+          git add analysis/orangeburg_registration_batch2.json || true
+          git add analysis/orangeburg_pilot_match_farm_*.jpg || true
+          git add analysis/orangeburg_unregistered_fsa_source_farm_*.jpg || true
+          if ! git diff --cached --quiet; then
+            git commit -m "Evaluate Orangeburg farms 13225, 14048, 14187 and 11782"
+            git pull --rebase origin main
+            git push
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: Orangeburg-Registration-Batch2
+          path: |
+            analysis/orangeburg_registration_batch2.json
+            analysis/orangeburg_registration_batch2_run.log
+            analysis/orangeburg_pilot_match_farm_*.jpg
+          retention-days: 30
+      - name: Raise failed match-audit job after saving log
+        if: steps.classify.outcome == 'failure'
+        run: exit 1
