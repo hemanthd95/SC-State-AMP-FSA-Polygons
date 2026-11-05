@@ -1,18 +1,18 @@
 {
-  "generated_utc": "2026-11-05T17:33:05.405746+00:00",
+  "generated_utc": "2026-11-05T18:04:37.080825+00:00",
   "status": "PREVIEW_PDF_PAGES_RENDERED_QA_PASS__DRAFT_NOT_FINAL",
-  "registered_fields": 5,
-  "fields_remaining": 27,
+  "registered_fields": 6,
+  "fields_remaining": 26,
   "atlases": [
     {
-      "filename": "Orangeburg_County_Satellite_DRAFT_5of32.pdf",
-      "pages": 5,
-      "size_bytes": 26191697,
+      "filename": "Orangeburg_County_Satellite_DRAFT_6of32.pdf",
+      "pages": 6,
+      "size_bytes": 31080768,
       "rendered_page_checks": [
         {
           "page": 1,
           "images": 1,
-          "grayscale_std": 70.14
+          "grayscale_std": 69.91
         },
         {
           "page": 2,
@@ -22,30 +22,35 @@
         {
           "page": 3,
           "images": 1,
-          "grayscale_std": 78.78
+          "grayscale_std": 78.26
         },
         {
           "page": 4,
           "images": 1,
-          "grayscale_std": 72.49
+          "grayscale_std": 78.74
         },
         {
           "page": 5,
           "images": 1,
-          "grayscale_std": 79.27
+          "grayscale_std": 72.3
+        },
+        {
+          "page": 6,
+          "images": 1,
+          "grayscale_std": 62.67
         }
       ],
       "status": "QA_PASS"
     },
     {
-      "filename": "Orangeburg_County_Topography_DRAFT_5of32.pdf",
-      "pages": 5,
-      "size_bytes": 6319984,
+      "filename": "Orangeburg_County_Topography_DRAFT_6of32.pdf",
+      "pages": 6,
+      "size_bytes": 7107365,
       "rendered_page_checks": [
         {
           "page": 1,
           "images": 1,
-          "grayscale_std": 30.19
+          "grayscale_std": 30.16
         },
         {
           "page": 2,
@@ -55,17 +60,22 @@
         {
           "page": 3,
           "images": 1,
-          "grayscale_std": 31.62
+          "grayscale_std": 30.19
         },
         {
           "page": 4,
           "images": 1,
-          "grayscale_std": 29.91
+          "grayscale_std": 31.56
         },
         {
           "page": 5,
           "images": 1,
-          "grayscale_std": 30.57
+          "grayscale_std": 29.7
+        },
+        {
+          "page": 6,
+          "images": 1,
+          "grayscale_std": 30.42
         }
       ],
       "status": "QA_PASS"
