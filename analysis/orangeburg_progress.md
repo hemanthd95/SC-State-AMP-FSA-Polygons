@@ -15,8 +15,10 @@
 | 1778 | Robert Seaberry | 1334 | 6 | 14.31 | 14.318 | 0.06% | 180 inliers, 1.15 px RMSE; USGS NAIP | **Registered & visually QA passed** |
 | 13653 | Jasper Summers | 5515 | 1 | 2.58 | 2.559 | 0.83% | 187 inliers, 0.53 px RMSE; USGS NAIP | **Registered & visually QA passed** |
 | 14048 | Tarsha Mosley | 46008 | 1 | 0.89 | 0.868 | 2.44% | 68 inliers, 0.42 px RMSE; USGS NAIP | **Registered & visually QA passed** |
+| 3873 | Tywone Hillard | 3895 | 1 | 0.43 | 0.458 | 6.62% | 156 inliers, 0.95 px RMSE; USGS NAIP | **Registered & visually QA passed** |
+| 3873 | Tywone Hillard | 3895 | 4 | 1.93 | 1.942 | 0.63% | 156 inliers, 0.95 px RMSE; USGS NAIP | **Registered & visually QA passed** |
 
-**Verified field polygons: 3 of 32. Awaiting independent geometry verification: 29.**
+**Verified field polygons: 5 of 32. Awaiting independent geometry verification: 27.**
 
 ### Data and review images
 - [Digitized, QA-passed GeoJSON](../geojson/orangeburg_registered_fields.geojson)
@@ -24,6 +26,8 @@
 - [Farm1778 field polygon laid over independent USGS aerial imagery](orangeburg_farm1778_field6_candidate_satellite.jpg)
 - [Jasper Summers Tract5515 Field1 overlay](orangeburg_farm13653_tract5515_field1_candidate_satellite.jpg)
 - [Tarsha Mosley Tract46008 Field1 overlay](orangeburg_farm14048_field1_candidate_satellite.jpg)
+- [Tywone Tract3895 Fields1 and4 original source geometry](orangeburg_farm3873_fields_candidate_source_zoom.jpg)
+- [Tywone two field polygons on independent USGS satellite image](orangeburg_farm3873_fields_candidate_satellite.jpg)
 - [17 FSA scanned-map source preview sheets](orangeburg_fsa_review_previews/review_manifest.json)
 - [Official U.S. Census Orangeburg County boundary](../geojson/orangeburg_county_boundary.geojson)
 - [Farm/Tract/Field source inventory](orangeburg_source_inventory.json)
@@ -37,13 +41,13 @@
 6. Source spreadsheet coordinates for Farms **9231**, **10262**, and **14291** are outside the 2024 Census Orangeburg County polygon. They may be residential coordinates; confirm the actual FSA field county independently rather than omitting these farms.
 7. Six farm-PDF matches rely on names; they must be checked against printed Farm/Tract numbers.
 8. **Anthron Williams Farm11990**: the only filename-matched PDF, `Antron Williams_FSA Map.pdf`, actually contains a producer-eligibility/subsidiary report, not a field map. A real **Farm11990 / Tract44081 / Fields6 and7** FSA aerial boundary map is needed to digitize these fields.
-9. **Tywone Hillard Farm3873 / Tract3895**: source PDF page 1 shows the requested Fields1 and4; page 2 depicts a DIFFERENT **Farm4261 / Tract5953**. The high-inlier (110) registration to page 2 was rejected despite visual plausibility. An independent target-page registration was obtained with **134 inliers, 0.86px RMSE** (subject to full-field imagery coverage and subsequent outline tracing); **no geometry accepted yet**.
+9. **Tywone Hillard Farm3873 / Tract3895 — resolved for Fields1 and4**: PDF page2 belongs to DIFFERENT **Farm4261 / Tract5953** and was rejected. Page1 matched independent imagery with **156 inliers / 0.95px RMSE**; boundaries traced, checked against USGS NAIP and accepted (Field1 0.458 vs 0.43 FSA acres; Field4 1.942 vs 1.93 FSA acres).
 10. **Veronica Hodges Farm13709**: strong 250-inlier match to PDF page2 was confirmed, but page2 is **Tract45511 Fields17/19**, whereas the workbook requests **Tract45511 Field1**. This match is not a substitute for the requested field boundary; the remaining 2024 map pages need exact field-ID reconciliation.
 11. **Montez Hillard Farm1033 / Tract3879 / Field4**: requested identifiers are visible on the source photo-map, but source page1 did not pass stable georegistration in the current GPS-hint tile search. Address/GPS remains a search hint, not a replacement boundary.
 12. **Edward Carson Farm14291 / Tract46266**: the source photo does label requested Fields13, 18 and19, but no nondegenerate satellite registration was found near the initial provided coordinates. Both coordinates are outside the county boundary; FSA page says Orangeburg County, so actual field location requires separate confirmation.
 13. Final deliverables require **two professional PDF atlases (satellite and topography)** with county overview and zoomed field polygons plus legend, not merely screenshots of FSA source PDFs. These atlases are **not yet complete**; do not represent this QA ledger as a finished atlas.
 
-## Acceptance gates for each of the 29 outstanding features
+## Acceptance gates for each of the 27 outstanding features
 1. Farm/Tract/Field ID matches workbook and printed source map.
 2. Aerial georegistration is nondegenerate and visually aligned with distinctive permanent features.
 3. Individual **field** boundary, not whole-farm tract, traced from source.
