@@ -2,9 +2,10 @@
 
 Private SCSU mapping inventory. **None of these field polygons is registered by this audit.**
 
-- 18 farms; 35 spreadsheet rows; 33 unique Farm–Tract–Field groups.
-- 11 document-ID-confirmed source matches, 6 filename-only matches, 1 missing FSA map.
-- Spreadsheet coordinates are unverified hints, not surveyed field locations.
+- 18 farms originally in roster; **17 in the current batch**, after excluding Mary Koon (Farm 14043) at the user's direction. **32 unique Farm–Tract–Field groups in scope**.
+- Among the 17 farms in scope, 11 document-ID-confirmed source matches and 6 filename-only matches. The one missing FSA map belongs to excluded Farm 14043.
+- Spreadsheet coordinates and addresses are approximate candidate search hints, not surveyed field locations. Use a mixture of near-farm aerial context, road landmarks, source FSA boundaries, Farm/Tract IDs and acreage for verification.
+- Official Orangeburg County outline is from 2024 U.S. Census (GEOID 45075); never treat an out-of-county residential hint as proof that a farm should be removed from this county.
 
 | Farm ID | Producer | Tract | Distinct fields | Best map file | Evidence |
 |---|---|---|---|---|---|
@@ -22,15 +23,22 @@ Private SCSU mapping inventory. **None of these field polygons is registered by 
 | 13618 | Rosa Berry | 3260 | 3260/17, 3260/26 | Christine Berry Zeigler_FSA Map.pdf | Filename only |
 | 13653 | Jasper Summers | 5515 | 5515/1 | Jasper Summers_FSA_Map.pdf | Farm/Tract text |
 | 13709 | Veronica Hodges | 45508, 45511, 45512, 45513, 45514 | 45508/1, 45511/1, 45512/8, 45513/9, 45514/7, 45514/8 | Veronica Hodges FSA.pdf | Farm/Tract text |
-| 14043 | Mary Koon | 46002 | 46002/4 | Not found | Missing |
+| 14043 | Mary Koon | 46002 | 46002/4 | Not found | **EXCLUDED from this batch by user; user handling separately** |
 | 14048 | Tarsha Mosley | 46008 | 46008/1 | Tarsha Mosley_FSA_Map.pdf | Farm/Tract text |
 | 14187 | Bruce Jenkins | 46145 | 46145/22, 46145/46, 46145/52 | Bruce Jenkins_FSA Map.pdf | Farm/Tract text |
 | 14291 | Edward Carson | 46266 | 46266/13, 46266/18, 46266/19 | Edward Carson_FSA Map.pdf | Farm/Tract text |
 
-## Review priorities
+## Current review priorities (excluding Mary Koon)
 
-1. Mary Koon, Farm 14043: no FSA source PDF candidate found.
-2. Confirm filenames for Farms 1033, 3873, 9231, 10939, 11990, and 13618.
-3. Farm 9231 and Farm 10262 have spreadsheet coordinates outside a broad Orangeburg screening box; verify actual field location. The box is not the county boundary.
-4. Farm 13618 Field 26 and Farm 13653 Field 1 are duplicated in the spreadsheet; do not digitize each twice.
-5. Match scanned FSA aerials to dated satellite imagery, check Farm/Tract labels and FSA acreage, and only then export GeoJSON and satellite/topography atlas PDFs.
+1. Georeference and inspect printed FSA field boundaries on 11 OCR-confirmed sources. The four-farm aerial matching pilot starts with Farms 1271, 1778, 8242 and 13653.
+2. Independently verify sources for Farms 1033, 3873, 9231, 10939, 11990, and 13618, whose best matches rely on filenames alone.
+3. The official Census Orangeburg boundary check flags spreadsheet GPS hints for Farms **9231 Pashona Rendell**, **10262 Marva Jackson**, and **14291 Edward Carson** as outside the county. Do not discard these farms; their addresses may be residences, or the fields may be elsewhere. The FSA actual field image and tract data control final county assignment.
+4. Farm 13618 Field 26 and Farm 13653 Field 1 are each duplicated in the spreadsheet; digitize each geometry only once.
+5. Keep low-confidence or nongeoregistered features out of the deliverable polygon GeoJSON and printed county atlases. Maintain a field-level unresolved list and verify field area vs the original FSA document.
+
+## Supporting audit artifacts
+
+- Official county boundary: [orangeburg_county_boundary.geojson](../geojson/orangeburg_county_boundary.geojson)
+- County coordinate screening: [orangeburg_coordinate_screening.json](orangeburg_coordinate_screening.json)
+- Private source PDF previews (not geometrically registered): [orangeburg_fsa_review_previews](orangeburg_fsa_review_previews)
+- Automated aerial matching pilot diagnostics: [orangeburg_registration_pilot.json](orangeburg_registration_pilot.json)
