@@ -375,15 +375,35 @@ def draw_county(c,county,farms,boundary,basetype,source_tracker):
     cvt=coord_box(bounds,frame)
     draw_shape(c,boundary,cvt,colors.white,width=3.7)
     draw_shape(c,boundary,cvt,NAVY,width=1.5)
+    placed=[]
     for ix,(fid,fields) in enumerate(sorted(farms.items())):
         color=colors.HexColor(PALETTE[ix])
         chosen=[f for f in fields if f['properties']['county_workbook_selected']]
         points=[shape(f['geometry']).representative_point() for f in (chosen or fields)]
         lon=sum(p.x for p in points)/len(points);lat=sum(p.y for p in points)/len(points)
-        x,y=cvt(lon,lat)
-        c.setFillColor(colors.white);c.circle(x,y,12,stroke=0,fill=1)
-        c.setFillColor(color);c.circle(x,y,9,stroke=0,fill=1)
-        font(c,x+15,y+2,str(ix+1),12,NAVY,True)
+        anchor_x,anchor_y=cvt(lon,lat)
+        x,y=anchor_x,anchor_y
+        # Farm IDs that overlap at county scale need distinct index bubbles.
+        offsets=[(0,0),(28,25),(-28,25),(28,-25),(-28,-25),
+                 (45,0),(-45,0),(0,45),(0,-45)]
+        for off_x,off_y in offsets:
+            test_x,test_y=anchor_x+off_x,anchor_y+off_y
+            if not (frame[0]+14<test_x<frame[0]+frame[2]-14 and
+                    frame[1]+14<test_y<frame[1]+frame[3]-14):
+                continue
+            if all(math.hypot(test_x-px,test_y-py)>=27 for px,py in placed):
+                x,y=test_x,test_y
+                break
+        if math.hypot(x-anchor_x,y-anchor_y)>2:
+            c.setStrokeColor(colors.white);c.setLineWidth(3.2)
+            c.line(anchor_x,anchor_y,x,y)
+            c.setStrokeColor(color);c.setLineWidth(1.7)
+            c.line(anchor_x,anchor_y,x,y)
+        c.setFillColor(colors.white);c.circle(x,y,13,stroke=0,fill=1)
+        c.setFillColor(color);c.circle(x,y,10.5,stroke=0,fill=1)
+        c.setFillColor(colors.white);c.setFont('Helvetica-Bold',10)
+        c.drawCentredString(x,y-3.5,str(ix+1))
+        placed.append((x,y))
     bar_and_north(c,bounds,frame)
     font(c,919,621,'FARM INDEX',12,NAVY,True)
     yy=588
