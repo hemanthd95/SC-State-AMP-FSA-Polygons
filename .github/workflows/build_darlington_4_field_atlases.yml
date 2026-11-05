@@ -1,0 +1,40 @@
+name: Render corrected four-field Darlington AMP satellite and terrain atlases
+on:
+  push:
+    paths:
+      - 'scripts/build_darlington_4_field_atlases.py'
+      - 'geojson/darlington_registered_fields.geojson'
+      - '.github/workflows/build_darlington_4_field_atlases.yml'
+permissions:
+  contents: write
+jobs:
+  maps:
+    runs-on: ubuntu-latest
+    timeout-minutes: 28
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install map-generation packages
+        run: python -m pip install pymupdf pillow pyproj shapely reportlab requests
+      - name: Render the four traced fields over real satellite and topographic layers
+        run: python scripts/build_darlington_4_field_atlases.py
+      - name: Save the two completed Darlington PDFs in private repository
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add darlington_working_atlas/
+          if ! git diff --cached --quiet; then
+            git commit -m "Publish four traced Darlington field polygons in satellite and topographic atlases"
+            git pull --rebase origin main
+            git push
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: Darlington-4-Field-Satellite-and-Topography-PDFs
+          path: darlington_working_atlas/
+          retention-days: 30
