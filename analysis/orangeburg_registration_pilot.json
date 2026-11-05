@@ -1,0 +1,92 @@
+{
+  "status": "REGISTRATION_DIAGNOSTICS_ONLY__NO_POLYGONS_ACCEPTED",
+  "warning": "A high inlier count alone never verifies exact field geometry. Human review, source-field tracing and acreage checks are still required.",
+  "farm_candidates": [
+    {
+      "farm_id": "1271",
+      "source_pdf": "Christine Berry Zeigler_FSA Map.pdf",
+      "registration": {
+        "nondegenerate_geographic_match_candidate": false,
+        "reason": "no nonzero geometric registration"
+      }
+    },
+    {
+      "farm_id": "1778",
+      "source_pdf": "Robert Seaberry Jr. FSA.pdf",
+      "source_view": "p1_c2",
+      "imagery_provider": "USGS_NAIP",
+      "tile_offset_dx_dy": [
+        0,
+        0
+      ],
+      "registration": {
+        "inliers": 179,
+        "matches": 217,
+        "rmse_px": 1.15,
+        "source_spread_px": [
+          528.2000122070312,
+          521.7999877929688
+        ],
+        "image_spread_px": [
+          758.7999877929688,
+          742.0
+        ],
+        "projected_bbox_area_px": 383542.8,
+        "nondegenerate_geographic_match_candidate": true,
+        "score": 646.0
+      }
+    },
+    {
+      "farm_id": "8242",
+      "source_pdf": "Louie Johnson FSA_Map.pdf",
+      "source_view": "p1_c1",
+      "imagery_provider": "USGS_NAIP",
+      "tile_offset_dx_dy": [
+        0,
+        1
+      ],
+      "registration": {
+        "inliers": 20,
+        "matches": 46,
+        "rmse_px": 0.0,
+        "source_spread_px": [
+          600.5,
+          588.7000122070312
+        ],
+        "image_spread_px": [
+          0.0,
+          0.0
+        ],
+        "projected_bbox_area_px": 0.0,
+        "nondegenerate_geographic_match_candidate": false,
+        "score": 78.9
+      }
+    },
+    {
+      "farm_id": "13653",
+      "source_pdf": "Jasper Summers_FSA_Map.pdf",
+      "source_view": "p2_c1",
+      "imagery_provider": "USGS_NAIP",
+      "tile_offset_dx_dy": [
+        -1,
+        -1
+      ],
+      "registration": {
+        "inliers": 289,
+        "matches": 300,
+        "rmse_px": 0.53,
+        "source_spread_px": [
+          547.9000244140625,
+          535.2999877929688
+        ],
+        "image_spread_px": [
+          433.70001220703125,
+          423.5
+        ],
+        "projected_bbox_area_px": 117709.3,
+        "nondegenerate_geographic_match_candidate": true,
+        "score": 1062.5
+      }
+    }
+  ]
+}
