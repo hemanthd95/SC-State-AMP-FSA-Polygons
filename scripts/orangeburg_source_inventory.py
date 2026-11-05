@@ -46,6 +46,18 @@ for row in ws.iter_rows(min_row=2,values_only=True):
     field=numeric(row[4] if len(row)>4 else None)
     if tract:e['tracts'].add(tract)
     e['field_records'].append({'tract_id':tract,'field_id':field})
+    # The source workbook labels its first numeric GPS field X, but values may
+    # actually be latitude. These are *hints* and may be residential locations,
+    # wrong or outside the farm county: never generate a field polygon from one.
+    try:
+        candidate_lat=float(row[6]);candidate_lon=float(row[7])
+        candidate={'latitude':round(candidate_lat,7),'longitude':round(candidate_lon,7),
+                   'plausible_sc':32< candidate_lat <36 and -84< candidate_lon <-78,
+                   'plausible_orangeburg_bbox':33.1< candidate_lat <34.0 and -81.45< candidate_lon <-80.35}
+        if candidate not in e.setdefault('spreadsheet_coordinate_hints',[]):
+            e['spreadsheet_coordinate_hints'].append(candidate)
+    except (ValueError,TypeError,IndexError):
+        pass
 
 pdfs=[]
 for pdf in sorted(SOURCE.rglob('*.pdf')):
@@ -102,8 +114,8 @@ if shutil.which('tesseract'):
                                 input=png,stdout=subprocess.PIPE,stderr=subprocess.DEVNULL,
                                 timeout=80,check=True)
             ocr=proc.stdout.decode('utf-8','replace')
-            p['ocr_farm_ids']=list(dict.fromkeys(re.findall(r'\\bFarm\\s*(?:Number|No\\.?|#)?\\s*[:\\-]?\\s*(\\d{2,6})\\b',ocr,re.I)))
-            p['ocr_tract_ids']=list(dict.fromkeys(re.findall(r'\\bTract\\s*(?:Number|No\\.?|#)?\\s*[:\\-]?\\s*(\\d{2,7})\\b',ocr,re.I)))
+            p['ocr_farm_ids']=list(dict.fromkeys(re.findall(r'\bFarm\s*(?:Number|No\.?|#)?\s*[:\-]?\s*(\d{2,6})\b',ocr,re.I)))
+            p['ocr_tract_ids']=list(dict.fromkeys(re.findall(r'\bTract\s*(?:Number|No\.?|#)?\s*[:\-]?\s*(\d{2,7})\b',ocr,re.I)))
             p['ocr_status']='EXTRACTED'
         except Exception as exc:
             p['ocr_status']='FAILED: '+str(exc)[:110]
