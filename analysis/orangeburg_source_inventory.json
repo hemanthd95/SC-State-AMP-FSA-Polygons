@@ -1,6 +1,6 @@
 {
   "county": "Orangeburg",
-  "date_utc": "2026-11-05T16:20:13.336959+00:00",
+  "date_utc": "2026-11-05T16:22:46.054399+00:00",
   "workbook_path": "source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/Producers by County/Orangeburg County_Producers.xlsx",
   "workbook_headers": [
     "Producer First Name",
@@ -56,10 +56,18 @@
           "field_id": "28"
         }
       ],
+      "spreadsheet_coordinate_hints": [
+        {
+          "latitude": 34.2960295,
+          "longitude": -80.0191617,
+          "plausible_sc": true,
+          "plausible_orangeburg_bbox": false
+        }
+      ],
       "candidate_fsa_pdf_sources": [
         {
           "path": "Mava Jackson_FSA map, (dragged).pdf",
-          "match_score": 23,
+          "match_score": 160,
           "native_geopdf": false,
           "pages": 2,
           "native_text_farm_ids": []
@@ -72,7 +80,7 @@
           "native_text_farm_ids": []
         }
       ],
-      "match_status": "FILENAME_CANDIDATE_UNVERIFIED"
+      "match_status": "STRONG_FARM_ID_OR_TRACT_TEXT"
     },
     "1033": {
       "producer": "Montez Hillard",
@@ -83,6 +91,14 @@
         {
           "tract_id": "3879",
           "field_id": "4"
+        }
+      ],
+      "spreadsheet_coordinate_hints": [
+        {
+          "latitude": 33.4656894,
+          "longitude": -80.5074459,
+          "plausible_sc": true,
+          "plausible_orangeburg_bbox": true
         }
       ],
       "candidate_fsa_pdf_sources": [
@@ -139,6 +155,14 @@
           "field_id": "3"
         }
       ],
+      "spreadsheet_coordinate_hints": [
+        {
+          "latitude": 33.4213648,
+          "longitude": -80.6509376,
+          "plausible_sc": true,
+          "plausible_orangeburg_bbox": true
+        }
+      ],
       "candidate_fsa_pdf_sources": [
         {
           "path": "Margaret_Berry_FSA_Map.pdf",
@@ -168,10 +192,18 @@
           "field_id": "13"
         }
       ],
+      "spreadsheet_coordinate_hints": [
+        {
+          "latitude": 33.4213648,
+          "longitude": -80.6509376,
+          "plausible_sc": true,
+          "plausible_orangeburg_bbox": true
+        }
+      ],
       "candidate_fsa_pdf_sources": [
         {
           "path": "Margaret_Berry_FSA_Map.pdf",
-          "match_score": 23,
+          "match_score": 160,
           "native_geopdf": false,
           "pages": 3,
           "native_text_farm_ids": []
@@ -184,7 +216,7 @@
           "native_text_farm_ids": []
         }
       ],
-      "match_status": "FILENAME_CANDIDATE_UNVERIFIED"
+      "match_status": "STRONG_FARM_ID_OR_TRACT_TEXT"
     },
     "11990": {
       "producer": "Anthron Williams",
@@ -199,6 +231,14 @@
         {
           "tract_id": "44081",
           "field_id": "7"
+        }
+      ],
+      "spreadsheet_coordinate_hints": [
+        {
+          "latitude": 33.3737963,
+          "longitude": -80.755914,
+          "plausible_sc": true,
+          "plausible_orangeburg_bbox": true
         }
       ],
       "candidate_fsa_pdf_sources": [
@@ -223,16 +263,24 @@
           "field_id": "1"
         }
       ],
+      "spreadsheet_coordinate_hints": [
+        {
+          "latitude": 33.4213603,
+          "longitude": -80.6483627,
+          "plausible_sc": true,
+          "plausible_orangeburg_bbox": true
+        }
+      ],
       "candidate_fsa_pdf_sources": [
         {
           "path": "Christine Berry Zeigler_FSA Map.pdf",
-          "match_score": 16,
+          "match_score": 153,
           "native_geopdf": false,
           "pages": 1,
           "native_text_farm_ids": []
         }
       ],
-      "match_status": "FILENAME_CANDIDATE_UNVERIFIED"
+      "match_status": "STRONG_FARM_ID_OR_TRACT_TEXT"
     },
     "13225": {
       "producer": "Morgan Summers",
@@ -245,10 +293,18 @@
           "field_id": "24"
         }
       ],
+      "spreadsheet_coordinate_hints": [
+        {
+          "latitude": 33.3052023,
+          "longitude": -80.8244781,
+          "plausible_sc": true,
+          "plausible_orangeburg_bbox": true
+        }
+      ],
       "candidate_fsa_pdf_sources": [
         {
           "path": "Morgan summers_FSA_Map.pdf",
-          "match_score": 31,
+          "match_score": 168,
           "native_geopdf": false,
           "pages": 1,
           "native_text_farm_ids": []
@@ -279,7 +335,7 @@
           ]
         }
       ],
-      "match_status": "FILENAME_CANDIDATE_UNVERIFIED"
+      "match_status": "STRONG_FARM_ID_OR_TRACT_TEXT"
     },
     "13618": {
       "producer": "Rosa Berry",
@@ -298,6 +354,20 @@
         {
           "tract_id": "3260",
           "field_id": "26"
+        }
+      ],
+      "spreadsheet_coordinate_hints": [
+        {
+          "latitude": 33.409854,
+          "longitude": -80.744235,
+          "plausible_sc": true,
+          "plausible_orangeburg_bbox": true
+        },
+        {
+          "latitude": 33.4098585,
+          "longitude": -80.7468099,
+          "plausible_sc": true,
+          "plausible_orangeburg_bbox": true
         }
       ],
       "candidate_fsa_pdf_sources": [
@@ -333,10 +403,18 @@
           "field_id": "1"
         }
       ],
+      "spreadsheet_coordinate_hints": [
+        {
+          "latitude": 33.315,
+          "longitude": -80.8324557,
+          "plausible_sc": true,
+          "plausible_orangeburg_bbox": true
+        }
+      ],
       "candidate_fsa_pdf_sources": [
         {
           "path": "Jasper Summers_FSA_Map.pdf",
-          "match_score": 176,
+          "match_score": 313,
           "native_geopdf": false,
           "pages": 4,
           "native_text_farm_ids": [
@@ -404,10 +482,31 @@
           "field_id": "8"
         }
       ],
+      "spreadsheet_coordinate_hints": [
+        {
+          "latitude": 33.315,
+          "longitude": -80.8324557,
+          "plausible_sc": true,
+          "plausible_orangeburg_bbox": true
+        },
+        {
+          "latitude": 33.3051978,
+          "longitude": -80.8219032,
+          "plausible_sc": true,
+          "plausible_orangeburg_bbox": true
+        }
+      ],
       "candidate_fsa_pdf_sources": [
         {
           "path": "Veronica Hodges FSA.pdf",
-          "match_score": 31,
+          "match_score": 168,
+          "native_geopdf": false,
+          "pages": 3,
+          "native_text_farm_ids": []
+        },
+        {
+          "path": "Jasper Summers FSA Map.pdf",
+          "match_score": 137,
           "native_geopdf": false,
           "pages": 3,
           "native_text_farm_ids": []
@@ -424,7 +523,7 @@
           ]
         }
       ],
-      "match_status": "FILENAME_CANDIDATE_UNVERIFIED"
+      "match_status": "STRONG_FARM_ID_OR_TRACT_TEXT"
     },
     "14043": {
       "producer": "Mary Koon",
@@ -435,6 +534,14 @@
         {
           "tract_id": "46002",
           "field_id": "4"
+        }
+      ],
+      "spreadsheet_coordinate_hints": [
+        {
+          "latitude": 33.4605764,
+          "longitude": -80.4504569,
+          "plausible_sc": true,
+          "plausible_orangeburg_bbox": true
         }
       ],
       "candidate_fsa_pdf_sources": [],
@@ -451,16 +558,24 @@
           "field_id": "1"
         }
       ],
+      "spreadsheet_coordinate_hints": [
+        {
+          "latitude": 33.512217,
+          "longitude": -80.8794382,
+          "plausible_sc": true,
+          "plausible_orangeburg_bbox": true
+        }
+      ],
       "candidate_fsa_pdf_sources": [
         {
           "path": "Tarsha Mosley_FSA_Map.pdf",
-          "match_score": 31,
+          "match_score": 168,
           "native_geopdf": false,
           "pages": 1,
           "native_text_farm_ids": []
         }
       ],
-      "match_status": "FILENAME_CANDIDATE_UNVERIFIED"
+      "match_status": "STRONG_FARM_ID_OR_TRACT_TEXT"
     },
     "14187": {
       "producer": "Bruce Jenkins",
@@ -481,10 +596,18 @@
           "field_id": "52"
         }
       ],
+      "spreadsheet_coordinate_hints": [
+        {
+          "latitude": 33.4213603,
+          "longitude": -80.6483627,
+          "plausible_sc": true,
+          "plausible_orangeburg_bbox": true
+        }
+      ],
       "candidate_fsa_pdf_sources": [
         {
           "path": "Bruce Jenkins_FSA Map.pdf",
-          "match_score": 31,
+          "match_score": 126,
           "native_geopdf": false,
           "pages": 2,
           "native_text_farm_ids": []
@@ -506,7 +629,7 @@
           ]
         }
       ],
-      "match_status": "FILENAME_CANDIDATE_UNVERIFIED"
+      "match_status": "STRONG_FARM_ID_OR_TRACT_TEXT"
     },
     "14291": {
       "producer": "Edward Carson",
@@ -527,17 +650,31 @@
           "field_id": "19"
         }
       ],
+      "spreadsheet_coordinate_hints": [
+        {
+          "latitude": 33.6101,
+          "longitude": -80.4521,
+          "plausible_sc": true,
+          "plausible_orangeburg_bbox": true
+        },
+        {
+          "latitude": 33.6413,
+          "longitude": -80.4284,
+          "plausible_sc": true,
+          "plausible_orangeburg_bbox": true
+        }
+      ],
       "candidate_fsa_pdf_sources": [
         {
           "path": "Edward Carson_FSA Map.pdf",
-          "match_score": 31,
+          "match_score": 168,
           "native_geopdf": false,
           "pages": 1,
           "native_text_farm_ids": []
         },
         {
           "path": "Jaylon carson_FSA Map.pdf",
-          "match_score": 20,
+          "match_score": 157,
           "native_geopdf": false,
           "pages": 2,
           "native_text_farm_ids": []
@@ -552,7 +689,7 @@
           ]
         }
       ],
-      "match_status": "FILENAME_CANDIDATE_UNVERIFIED"
+      "match_status": "STRONG_FARM_ID_OR_TRACT_TEXT"
     },
     "1778": {
       "producer": "Robert Seaberry",
@@ -565,16 +702,24 @@
           "field_id": "6"
         }
       ],
+      "spreadsheet_coordinate_hints": [
+        {
+          "latitude": 33.5039942,
+          "longitude": -80.5101725,
+          "plausible_sc": true,
+          "plausible_orangeburg_bbox": true
+        }
+      ],
       "candidate_fsa_pdf_sources": [
         {
           "path": "Robert Seaberry Jr. FSA.pdf",
-          "match_score": 31,
+          "match_score": 168,
           "native_geopdf": false,
           "pages": 1,
           "native_text_farm_ids": []
         }
       ],
-      "match_status": "FILENAME_CANDIDATE_UNVERIFIED"
+      "match_status": "STRONG_FARM_ID_OR_TRACT_TEXT"
     },
     "3873": {
       "producer": "Tywone Hillard",
@@ -589,6 +734,14 @@
         {
           "tract_id": "3895",
           "field_id": "4"
+        }
+      ],
+      "spreadsheet_coordinate_hints": [
+        {
+          "latitude": 33.4656894,
+          "longitude": -80.5074459,
+          "plausible_sc": true,
+          "plausible_orangeburg_bbox": true
         }
       ],
       "candidate_fsa_pdf_sources": [
@@ -645,10 +798,18 @@
           "field_id": "2"
         }
       ],
+      "spreadsheet_coordinate_hints": [
+        {
+          "latitude": 33.5068861,
+          "longitude": -80.8515095,
+          "plausible_sc": true,
+          "plausible_orangeburg_bbox": true
+        }
+      ],
       "candidate_fsa_pdf_sources": [
         {
           "path": "Louie Johnson FSA_Map.pdf",
-          "match_score": 31,
+          "match_score": 168,
           "native_geopdf": false,
           "pages": 1,
           "native_text_farm_ids": []
@@ -661,7 +822,7 @@
           "native_text_farm_ids": []
         }
       ],
-      "match_status": "FILENAME_CANDIDATE_UNVERIFIED"
+      "match_status": "STRONG_FARM_ID_OR_TRACT_TEXT"
     },
     "9231": {
       "producer": "Pashona Rendell",
@@ -676,6 +837,14 @@
         {
           "tract_id": "7908",
           "field_id": "12"
+        }
+      ],
+      "spreadsheet_coordinate_hints": [
+        {
+          "latitude": 33.6096189,
+          "longitude": -80.3479727,
+          "plausible_sc": true,
+          "plausible_orangeburg_bbox": false
         }
       ],
       "candidate_fsa_pdf_sources": [
@@ -830,8 +999,12 @@
       "native_text_farm_ids": [],
       "native_text_tract_ids": [],
       "pdf_has_extractable_text": false,
-      "ocr_farm_ids": [],
-      "ocr_tract_ids": [],
+      "ocr_farm_ids": [
+        "14187"
+      ],
+      "ocr_tract_ids": [
+        "46154"
+      ],
       "ocr_status": "EXTRACTED"
     },
     {
@@ -915,8 +1088,12 @@
       "native_text_farm_ids": [],
       "native_text_tract_ids": [],
       "pdf_has_extractable_text": false,
-      "ocr_farm_ids": [],
-      "ocr_tract_ids": [],
+      "ocr_farm_ids": [
+        "1271"
+      ],
+      "ocr_tract_ids": [
+        "469"
+      ],
       "ocr_status": "EXTRACTED"
     },
     {
@@ -1038,8 +1215,12 @@
       "native_text_farm_ids": [],
       "native_text_tract_ids": [],
       "pdf_has_extractable_text": false,
-      "ocr_farm_ids": [],
-      "ocr_tract_ids": [],
+      "ocr_farm_ids": [
+        "14291"
+      ],
+      "ocr_tract_ids": [
+        "46266"
+      ],
       "ocr_status": "EXTRACTED"
     },
     {
@@ -1124,8 +1305,12 @@
       "native_text_farm_ids": [],
       "native_text_tract_ids": [],
       "pdf_has_extractable_text": false,
-      "ocr_farm_ids": [],
-      "ocr_tract_ids": [],
+      "ocr_farm_ids": [
+        "13709"
+      ],
+      "ocr_tract_ids": [
+        "45514"
+      ],
       "ocr_status": "EXTRACTED"
     },
     {
@@ -1143,8 +1328,12 @@
         "5518"
       ],
       "pdf_has_extractable_text": true,
-      "ocr_farm_ids": [],
-      "ocr_tract_ids": [],
+      "ocr_farm_ids": [
+        "13653"
+      ],
+      "ocr_tract_ids": [
+        "5515"
+      ],
       "ocr_status": "EXTRACTED"
     },
     {
@@ -1172,8 +1361,12 @@
       "native_text_farm_ids": [],
       "native_text_tract_ids": [],
       "pdf_has_extractable_text": false,
-      "ocr_farm_ids": [],
-      "ocr_tract_ids": [],
+      "ocr_farm_ids": [
+        "14291"
+      ],
+      "ocr_tract_ids": [
+        "46266"
+      ],
       "ocr_status": "EXTRACTED"
     },
     {
@@ -1247,8 +1440,12 @@
         "41114"
       ],
       "pdf_has_extractable_text": true,
-      "ocr_farm_ids": [],
-      "ocr_tract_ids": [],
+      "ocr_farm_ids": [
+        "6528"
+      ],
+      "ocr_tract_ids": [
+        "41114"
+      ],
       "ocr_status": "EXTRACTED"
     },
     {
@@ -1344,8 +1541,12 @@
       "native_text_farm_ids": [],
       "native_text_tract_ids": [],
       "pdf_has_extractable_text": false,
-      "ocr_farm_ids": [],
-      "ocr_tract_ids": [],
+      "ocr_farm_ids": [
+        "22564"
+      ],
+      "ocr_tract_ids": [
+        "17265"
+      ],
       "ocr_status": "EXTRACTED"
     },
     {
@@ -1445,8 +1646,12 @@
       "native_text_farm_ids": [],
       "native_text_tract_ids": [],
       "pdf_has_extractable_text": true,
-      "ocr_farm_ids": [],
-      "ocr_tract_ids": [],
+      "ocr_farm_ids": [
+        "1436"
+      ],
+      "ocr_tract_ids": [
+        "1859"
+      ],
       "ocr_status": "EXTRACTED"
     },
     {
@@ -1498,8 +1703,12 @@
       "native_text_farm_ids": [],
       "native_text_tract_ids": [],
       "pdf_has_extractable_text": false,
-      "ocr_farm_ids": [],
-      "ocr_tract_ids": [],
+      "ocr_farm_ids": [
+        "8242"
+      ],
+      "ocr_tract_ids": [
+        "5134"
+      ],
       "ocr_status": "EXTRACTED"
     },
     {
@@ -1545,8 +1754,12 @@
       "native_text_farm_ids": [],
       "native_text_tract_ids": [],
       "pdf_has_extractable_text": false,
-      "ocr_farm_ids": [],
-      "ocr_tract_ids": [],
+      "ocr_farm_ids": [
+        "11782"
+      ],
+      "ocr_tract_ids": [
+        "6230"
+      ],
       "ocr_status": "EXTRACTED"
     },
     {
@@ -1558,8 +1771,12 @@
       "native_text_farm_ids": [],
       "native_text_tract_ids": [],
       "pdf_has_extractable_text": false,
-      "ocr_farm_ids": [],
-      "ocr_tract_ids": [],
+      "ocr_farm_ids": [
+        "10262"
+      ],
+      "ocr_tract_ids": [
+        "10855"
+      ],
       "ocr_status": "EXTRACTED"
     },
     {
@@ -1571,8 +1788,12 @@
       "native_text_farm_ids": [],
       "native_text_tract_ids": [],
       "pdf_has_extractable_text": false,
-      "ocr_farm_ids": [],
-      "ocr_tract_ids": [],
+      "ocr_farm_ids": [
+        "10"
+      ],
+      "ocr_tract_ids": [
+        "387"
+      ],
       "ocr_status": "EXTRACTED"
     },
     {
@@ -1588,8 +1809,12 @@
         "41636"
       ],
       "pdf_has_extractable_text": true,
-      "ocr_farm_ids": [],
-      "ocr_tract_ids": [],
+      "ocr_farm_ids": [
+        "9452"
+      ],
+      "ocr_tract_ids": [
+        "41636"
+      ],
       "ocr_status": "EXTRACTED"
     },
     {
@@ -1601,8 +1826,12 @@
       "native_text_farm_ids": [],
       "native_text_tract_ids": [],
       "pdf_has_extractable_text": false,
-      "ocr_farm_ids": [],
-      "ocr_tract_ids": [],
+      "ocr_farm_ids": [
+        "13225"
+      ],
+      "ocr_tract_ids": [
+        "6178"
+      ],
       "ocr_status": "EXTRACTED"
     },
     {
@@ -1648,8 +1877,12 @@
       "native_text_farm_ids": [],
       "native_text_tract_ids": [],
       "pdf_has_extractable_text": false,
-      "ocr_farm_ids": [],
-      "ocr_tract_ids": [],
+      "ocr_farm_ids": [
+        "1778"
+      ],
+      "ocr_tract_ids": [
+        "1334"
+      ],
       "ocr_status": "EXTRACTED"
     },
     {
@@ -1737,8 +1970,12 @@
       "native_text_farm_ids": [],
       "native_text_tract_ids": [],
       "pdf_has_extractable_text": false,
-      "ocr_farm_ids": [],
-      "ocr_tract_ids": [],
+      "ocr_farm_ids": [
+        "14048"
+      ],
+      "ocr_tract_ids": [
+        "46008"
+      ],
       "ocr_status": "EXTRACTED"
     },
     {
@@ -1863,8 +2100,12 @@
       "native_text_farm_ids": [],
       "native_text_tract_ids": [],
       "pdf_has_extractable_text": false,
-      "ocr_farm_ids": [],
-      "ocr_tract_ids": [],
+      "ocr_farm_ids": [
+        "13709"
+      ],
+      "ocr_tract_ids": [
+        "45508"
+      ],
       "ocr_status": "EXTRACTED"
     },
     {
@@ -1884,8 +2125,12 @@
         "45506"
       ],
       "pdf_has_extractable_text": true,
-      "ocr_farm_ids": [],
-      "ocr_tract_ids": [],
+      "ocr_farm_ids": [
+        "1372"
+      ],
+      "ocr_tract_ids": [
+        "281"
+      ],
       "ocr_status": "EXTRACTED"
     },
     {
