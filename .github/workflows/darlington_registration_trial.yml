@@ -16,7 +16,8 @@ jobs:
           lfs: false
       - name: Retrieve exact FSA source pages
         run: |
-          git lfs pull --include="*Mava Jackson_FSA map, (dragged).pdf,*Garrett Patterson_FSA_MAP.pdf"
+          git lfs pull --include="*Mava Jackson_FSA map*"
+          git lfs pull --include="*Garrett Patterson_FSA_MAP.pdf"
           python -c "from pathlib import Path; p=Path('source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/Mava Jackson_FSA map, (dragged).pdf'); assert p.read_bytes()[:4]==b'%PDF'"
       - uses: actions/setup-python@v5
         with:
