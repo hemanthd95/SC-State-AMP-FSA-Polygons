@@ -1,0 +1,38 @@
+name: Confirm and trace Orangeburg Farm 1778 field six
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'scripts/orangeburg_farm1778_registration_qc.py'
+      - '.github/workflows/orangeburg_farm1778_registration_qc.yml'
+permissions:
+  contents: write
+jobs:
+  field:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install 'numpy<2.5' opencv-python-headless pymupdf requests
+      - run: python scripts/orangeburg_farm1778_registration_qc.py
+      - name: Preserve control-point QC imagery without publishing an unverified polygon
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add analysis/orangeburg_farm1778_*
+          if ! git diff --cached --quiet; then
+            git commit -m "Preserve aerial registration and printed acreage QC for Orangeburg Farm 1778"
+            git pull --rebase origin main
+            git push
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: Orangeburg-Farm-1778-Registration-QC
+          path: analysis/orangeburg_farm1778_*
+          retention-days: 30
