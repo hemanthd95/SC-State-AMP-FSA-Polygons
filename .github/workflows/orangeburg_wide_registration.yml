@@ -12,6 +12,9 @@ jobs:
     timeout-minutes: 12
     steps:
       - uses: actions/checkout@v4
+      - name: Fetch only four FSA image PDFs from LFS
+        run: |
+          git lfs pull --include="source-data/**/Bruce Jenkins_FSA Map.pdf,source-data/**/Edward Carson_FSA Map.pdf,source-data/**/Morgan summers_FSA_Map.pdf,source-data/**/Louie Johnson FSA_Map.pdf" --exclude="*"
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
