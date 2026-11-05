@@ -14,7 +14,8 @@ jobs:
       - uses: actions/checkout@v4
       - name: Fetch only four FSA image PDFs from LFS
         run: |
-          git lfs pull --include="source-data/**/Bruce Jenkins_FSA Map.pdf,source-data/**/Edward Carson_FSA Map.pdf,source-data/**/Morgan summers_FSA_Map.pdf,source-data/**/Louie Johnson FSA_Map.pdf" --exclude="*"
+          git lfs pull --include="*Bruce Jenkins_FSA Map.pdf,*Edward Carson_FSA Map.pdf,*Morgan summers_FSA_Map.pdf,*Louie Johnson FSA_Map.pdf"
+          python -c "from pathlib import Path; p=Path('source-data/OneDrive_2026-11-03/SC State_AMP_FSA MAP/Bruce Jenkins_FSA Map.pdf'); assert p.read_bytes()[:4]==b'%PDF', 'FSA file remains an LFS pointer'"
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
