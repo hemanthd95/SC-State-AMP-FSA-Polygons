@@ -1,0 +1,4 @@
+/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/fitz/__init__.py:17: FutureWarning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+  warnings.warn(
+SOURCE Rosa_Berry_FSA_Map.jpeg shape 3024 4032
+MATCH right 69 1.92 px

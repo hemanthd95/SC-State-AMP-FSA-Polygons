@@ -1,0 +1,59 @@
+{
+  "farm_id": "13618",
+  "tract_id": "3260",
+  "field_ids": [
+    "17",
+    "26"
+  ],
+  "source_file": "Rosa_Berry_FSA_Map.jpeg",
+  "status": "CANDIDATE_GEOMETRIC_JPEG_REGISTRATION_NEEDS_SOURCE_TRACING",
+  "search_tiles": 49,
+  "source_crop": "right",
+  "source_size_wh": [
+    745,
+    1100
+  ],
+  "tile_bbox_epsg3857": [
+    -8987532.124692418,
+    3949007.4443221167,
+    -8985882.124692418,
+    3950657.4443221167
+  ],
+  "tile_size_wh": [
+    850,
+    850
+  ],
+  "homography_source_to_satellite": [
+    [
+      0.6566306127346155,
+      -0.026398476257667985,
+      -138.29597464915594
+    ],
+    [
+      0.04794592578115474,
+      0.7002510725646574,
+      -249.15425466003342
+    ],
+    [
+      6.467067544544243e-05,
+      8.728462299014642e-05,
+      1.0
+    ]
+  ],
+  "registration": {
+    "inliers": 69,
+    "matches": 116,
+    "rmse_px": 1.92,
+    "source_spread_px": [
+      362.8999938964844,
+      726.9000244140625
+    ],
+    "image_spread_px": [
+      216.89999389648438,
+      460.70001220703125
+    ],
+    "projected_bbox_area_px": 157280.3,
+    "nondegenerate_geographic_match_candidate": true,
+    "score": 194.2
+  }
+}
