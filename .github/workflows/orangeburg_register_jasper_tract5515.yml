@@ -1,0 +1,38 @@
+name: Register Jasper Summers FSA tract 5515 correctly
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'scripts/orangeburg_register_jasper_target_5515.py'
+      - '.github/workflows/orangeburg_register_jasper_tract5515.yml'
+permissions:
+  contents: write
+jobs:
+  register:
+    runs-on: ubuntu-latest
+    timeout-minutes: 22
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install 'numpy<2.5' opencv-python-headless pymupdf requests
+      - run: python scripts/orangeburg_register_jasper_target_5515.py
+      - name: Commit only tract5515 registration QC outputs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add analysis/orangeburg_farm13653_tract5515_*
+          if ! git diff --cached --quiet; then
+            git commit -m "Separate exact Jasper Tract5515 matching from adjacent Tract5516"
+            git pull --rebase origin main
+            git push
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: Orangeburg-Jasper-Tract5515-Registration
+          path: analysis/orangeburg_farm13653_tract5515_*
+          retention-days: 30
