@@ -2,7 +2,7 @@
 
 Unlike an unregistered PDF source collage, every featured field is a QA-passed
 GeoJSON polygon drawn over fresh satellite or topographic map imagery.
-Never call this 3-of-32 preview the final county atlas.
+Never call a verified-subset preview the final county atlas. The filename and\nfooter reflect the current exact number of QA-passed fields.
 """
 from pathlib import Path
 from collections import defaultdict
