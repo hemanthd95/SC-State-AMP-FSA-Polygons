@@ -5,9 +5,27 @@
     {
       "farm_id": "1271",
       "source_pdf": "Christine Berry Zeigler_FSA Map.pdf",
+      "source_view": "p1_c2",
+      "imagery_provider": "Esri_World_Imagery",
+      "tile_offset_dx_dy": [
+        1,
+        0
+      ],
       "registration": {
+        "inliers": 8,
+        "matches": 24,
+        "rmse_px": 1.63,
+        "source_spread_px": [
+          381.20001220703125,
+          521.5999755859375
+        ],
+        "image_spread_px": [
+          643.9000244140625,
+          514.0
+        ],
+        "projected_bbox_area_px": 993.5,
         "nondegenerate_geographic_match_candidate": false,
-        "reason": "no nonzero geometric registration"
+        "score": 23.2
       }
     },
     {
@@ -20,38 +38,38 @@
         0
       ],
       "registration": {
-        "inliers": 179,
-        "matches": 217,
-        "rmse_px": 1.15,
+        "inliers": 183,
+        "matches": 229,
+        "rmse_px": 1.12,
         "source_spread_px": [
-          528.2000122070312,
+          524.0999755859375,
           521.7999877929688
         ],
         "image_spread_px": [
-          758.7999877929688,
+          752.5,
           742.0
         ],
-        "projected_bbox_area_px": 383542.8,
+        "projected_bbox_area_px": 383652.0,
         "nondegenerate_geographic_match_candidate": true,
-        "score": 646.0
+        "score": 660.4
       }
     },
     {
       "farm_id": "8242",
       "source_pdf": "Louie Johnson FSA_Map.pdf",
       "source_view": "p1_c1",
-      "imagery_provider": "USGS_NAIP",
+      "imagery_provider": "Esri_World_Imagery",
       "tile_offset_dx_dy": [
-        0,
+        1,
         1
       ],
       "registration": {
-        "inliers": 20,
-        "matches": 46,
+        "inliers": 18,
+        "matches": 57,
         "rmse_px": 0.0,
         "source_spread_px": [
-          600.5,
-          588.7000122070312
+          513.2999877929688,
+          535.7000122070312
         ],
         "image_spread_px": [
           0.0,
@@ -59,7 +77,7 @@
         ],
         "projected_bbox_area_px": 0.0,
         "nondegenerate_geographic_match_candidate": false,
-        "score": 78.9
+        "score": 64.2
       }
     },
     {
@@ -72,18 +90,18 @@
         -1
       ],
       "registration": {
-        "inliers": 289,
-        "matches": 300,
+        "inliers": 292,
+        "matches": 302,
         "rmse_px": 0.53,
         "source_spread_px": [
           547.9000244140625,
-          535.2999877929688
+          527.7999877929688
         ],
         "image_spread_px": [
           433.70001220703125,
-          423.5
+          417.79998779296875
         ],
-        "projected_bbox_area_px": 117709.3,
+        "projected_bbox_area_px": 117708.0,
         "nondegenerate_geographic_match_candidate": true,
         "score": 1062.5
       }
