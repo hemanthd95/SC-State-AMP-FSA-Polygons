@@ -1,0 +1,7 @@
+/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/fitz/__init__.py:17: FutureWarning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/home/runner/work/SC-State-AMP-FSA-Polygons/SC-State-AMP-FSA-Polygons/scripts/orangeburg_audit_veronica_alt21.py", line 14, in <module>
+    if not shutil.which('tesseract'):raise RuntimeError('tesseract OCR unavailable')
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: tesseract OCR unavailable
