@@ -17,7 +17,7 @@ report=[]
 for atlas in MANIFEST['atlases']:
     path=SOURCE/atlas['filename']
     doc=fitz.open(path)
-    if len(doc)!=4:raise RuntimeError(f'Expected 4 pages in {path.name}, got {len(doc)}')
+    if len(doc)!=atlas['pages']:raise RuntimeError(f'Expected {atlas["pages"]} pages in {path.name}, got {len(doc)}')
     checks=[]
     for idx,page in enumerate(doc):
         txt=page.get_text('text')
@@ -28,7 +28,7 @@ for atlas in MANIFEST['atlases']:
         if nimg==0 or std<10:raise RuntimeError(f'Blank or imageless map on {path.name} p{idx+1}')
         if 'INCOMPLETE QA PREVIEW' not in txt:raise RuntimeError('Missing incompleteness disclaimer')
         checks.append({'page':idx+1,'images':nimg,'grayscale_std':round(std,2)})
-        if idx in (0,1):
+        if idx in (0,1,len(doc)-1):
             pix=page.get_pixmap(matrix=fitz.Matrix(1.1,1.1),alpha=False)
             image=Image.open(io.BytesIO(pix.tobytes('png'))).convert('RGB')
             image.thumbnail((1560,1040))
@@ -42,5 +42,6 @@ for atlas in MANIFEST['atlases']:
 (OUT/'orangeburg_working_atlas_render_check.json').write_text(json.dumps({
     'generated_utc':datetime.now(timezone.utc).isoformat(),
     'status':'PREVIEW_PDF_PAGES_RENDERED_QA_PASS__DRAFT_NOT_FINAL',
-    'registered_fields':3,'fields_remaining':29,
+    'registered_fields':MANIFEST['atlases'][0]['verified_fields'],
+    'fields_remaining':MANIFEST['atlases'][0]['unverified_fields'],
     'atlases':report},indent=2)+'\n')
