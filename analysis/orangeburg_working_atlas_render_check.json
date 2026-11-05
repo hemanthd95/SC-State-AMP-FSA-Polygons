@@ -1,81 +1,101 @@
 {
-  "generated_utc": "2026-11-05T18:04:37.080825+00:00",
+  "generated_utc": "2026-11-05T18:59:06.768610+00:00",
   "status": "PREVIEW_PDF_PAGES_RENDERED_QA_PASS__DRAFT_NOT_FINAL",
-  "registered_fields": 6,
-  "fields_remaining": 26,
+  "registered_fields": 8,
+  "fields_remaining": 24,
   "atlases": [
     {
-      "filename": "Orangeburg_County_Satellite_DRAFT_6of32.pdf",
-      "pages": 6,
-      "size_bytes": 31080768,
+      "filename": "Orangeburg_County_Satellite_DRAFT_8of32.pdf",
+      "pages": 8,
+      "size_bytes": 39989944,
       "rendered_page_checks": [
         {
           "page": 1,
           "images": 1,
-          "grayscale_std": 69.91
+          "grayscale_std": 69.58
         },
         {
           "page": 2,
           "images": 1,
-          "grayscale_std": 80.22
+          "grayscale_std": 58.77
         },
         {
           "page": 3,
           "images": 1,
-          "grayscale_std": 78.26
+          "grayscale_std": 70.61
         },
         {
           "page": 4,
           "images": 1,
-          "grayscale_std": 78.74
+          "grayscale_std": 80.27
         },
         {
           "page": 5,
           "images": 1,
-          "grayscale_std": 72.3
+          "grayscale_std": 78.12
         },
         {
           "page": 6,
           "images": 1,
-          "grayscale_std": 62.67
+          "grayscale_std": 78.66
+        },
+        {
+          "page": 7,
+          "images": 1,
+          "grayscale_std": 73.04
+        },
+        {
+          "page": 8,
+          "images": 1,
+          "grayscale_std": 62.81
         }
       ],
       "status": "QA_PASS"
     },
     {
-      "filename": "Orangeburg_County_Topography_DRAFT_6of32.pdf",
-      "pages": 6,
-      "size_bytes": 7107365,
+      "filename": "Orangeburg_County_Topography_DRAFT_8of32.pdf",
+      "pages": 8,
+      "size_bytes": 8796115,
       "rendered_page_checks": [
         {
           "page": 1,
           "images": 1,
-          "grayscale_std": 30.16
+          "grayscale_std": 30.28
         },
         {
           "page": 2,
           "images": 1,
-          "grayscale_std": 29.64
+          "grayscale_std": 30.9
         },
         {
           "page": 3,
           "images": 1,
-          "grayscale_std": 30.19
+          "grayscale_std": 30.38
         },
         {
           "page": 4,
           "images": 1,
-          "grayscale_std": 31.56
+          "grayscale_std": 29.71
         },
         {
           "page": 5,
           "images": 1,
-          "grayscale_std": 29.7
+          "grayscale_std": 29.84
         },
         {
           "page": 6,
           "images": 1,
-          "grayscale_std": 30.42
+          "grayscale_std": 31.45
+        },
+        {
+          "page": 7,
+          "images": 1,
+          "grayscale_std": 30.58
+        },
+        {
+          "page": 8,
+          "images": 1,
+          "grayscale_std": 30.67
         }
       ],
       "status": "QA_PASS"
