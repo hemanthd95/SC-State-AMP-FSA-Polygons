@@ -1,0 +1,3 @@
+/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/fitz/__init__.py:17: FutureWarning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+  warnings.warn(
+VALID SHARED-LOCATION HOMOGRAPHY USGS_NAIP_offset_3_0 p1_c1 115 inliers 0.96 px RMSE

@@ -1,0 +1,243 @@
+{
+  "farm_id": "1033",
+  "tract_id": "3879",
+  "field_id": "4",
+  "source_pdf": "Montez Hillard_FSA _Map.pdf",
+  "source_page": 1,
+  "status": "MATCH_CANDIDATE_SOURCE_FIELD_TRACE_REQUIRED",
+  "tests": [
+    {
+      "tile": "Nearby_Farm3873_USGS_NAIP",
+      "view": "p1_c1",
+      "metrics": {
+        "inliers": 74,
+        "matches": 107,
+        "rmse_px": 0.93,
+        "source_spread_px": [
+          549.2999877929688,
+          444.0
+        ],
+        "image_spread_px": [
+          392.20001220703125,
+          319.8999938964844
+        ],
+        "projected_bbox_area_px": 98383.3,
+        "nondegenerate_geographic_match_candidate": true,
+        "score": 238.3
+      }
+    },
+    {
+      "tile": "Nearby_Farm3873_USGS_NAIP",
+      "view": "p1_c2",
+      "metrics": {
+        "inliers": 90,
+        "matches": 117,
+        "rmse_px": 0.95,
+        "source_spread_px": [
+          533.0,
+          453.70001220703125
+        ],
+        "image_spread_px": [
+          378.1000061035156,
+          326.1000061035156
+        ],
+        "projected_bbox_area_px": 96982.3,
+        "nondegenerate_geographic_match_candidate": true,
+        "score": 294.2
+      }
+    },
+    {
+      "tile": "USGS_NAIP_offset_3_0",
+      "view": "p1_c1",
+      "metrics": {
+        "inliers": 115,
+        "matches": 163,
+        "rmse_px": 0.96,
+        "source_spread_px": [
+          566.9000244140625,
+          544.5999755859375
+        ],
+        "image_spread_px": [
+          404.5,
+          401.3999938964844
+        ],
+        "projected_bbox_area_px": 98278.4,
+        "nondegenerate_geographic_match_candidate": true,
+        "score": 428.2
+      }
+    },
+    {
+      "tile": "USGS_NAIP_offset_3_0",
+      "view": "p1_c2",
+      "metrics": {
+        "inliers": 117,
+        "matches": 154,
+        "rmse_px": 0.95,
+        "source_spread_px": [
+          593.5,
+          469.5
+        ],
+        "image_spread_px": [
+          415.79998779296875,
+          344.0
+        ],
+        "projected_bbox_area_px": 97167.6,
+        "nondegenerate_geographic_match_candidate": true,
+        "score": 391.6
+      }
+    },
+    {
+      "tile": "USGS_NAIP_offset_4_0",
+      "view": "p1_c1",
+      "metrics": {
+        "inliers": 102,
+        "matches": 148,
+        "rmse_px": 1.0,
+        "source_spread_px": [
+          563.4000244140625,
+          543.4000244140625
+        ],
+        "image_spread_px": [
+          400.70001220703125,
+          401.0
+        ],
+        "projected_bbox_area_px": 98209.9,
+        "nondegenerate_geographic_match_candidate": true,
+        "score": 379.2
+      }
+    },
+    {
+      "tile": "USGS_NAIP_offset_4_0",
+      "view": "p1_c2",
+      "metrics": {
+        "inliers": 117,
+        "matches": 162,
+        "rmse_px": 1.28,
+        "source_spread_px": [
+          563.2999877929688,
+          467.5
+        ],
+        "image_spread_px": [
+          405.6000061035156,
+          343.1000061035156
+        ],
+        "projected_bbox_area_px": 96899.0,
+        "nondegenerate_geographic_match_candidate": true,
+        "score": 390.5
+      }
+    },
+    {
+      "tile": "USGS_NAIP_offset_2_-1",
+      "view": "p1_c1",
+      "metrics": {
+        "inliers": 6,
+        "matches": 29
+      }
+    },
+    {
+      "tile": "USGS_NAIP_offset_2_-1",
+      "view": "p1_c2",
+      "metrics": {
+        "inliers": 5,
+        "matches": 30
+      }
+    },
+    {
+      "tile": "USGS_NAIP_offset_3_1",
+      "view": "p1_c1",
+      "metrics": {
+        "inliers": 6,
+        "matches": 41
+      }
+    },
+    {
+      "tile": "USGS_NAIP_offset_3_1",
+      "view": "p1_c2",
+      "metrics": {
+        "inliers": 6,
+        "matches": 29
+      }
+    },
+    {
+      "tile": "USGS_NAIP_offset_2_1",
+      "view": "p1_c1",
+      "metrics": {
+        "inliers": 6,
+        "matches": 33
+      }
+    },
+    {
+      "tile": "USGS_NAIP_offset_2_1",
+      "view": "p1_c2",
+      "metrics": {
+        "inliers": 7,
+        "matches": 32
+      }
+    },
+    {
+      "tile": "USGS_NAIP_offset_4_1",
+      "view": "p1_c1",
+      "metrics": {
+        "inliers": 6,
+        "matches": 38
+      }
+    },
+    {
+      "tile": "USGS_NAIP_offset_4_1",
+      "view": "p1_c2",
+      "metrics": {
+        "inliers": 6,
+        "matches": 36
+      }
+    }
+  ],
+  "tile_source": "USGS_NAIP_offset_3_0",
+  "tile_bbox_epsg3857": [
+    -8960322.882655019,
+    3956455.8350966345,
+    -8958672.882655019,
+    3958105.8350966345
+  ],
+  "tile_size_wh": [
+    850,
+    850
+  ],
+  "source_view": "p1_c1",
+  "source_view_size_wh": [
+    619,
+    620
+  ],
+  "homography_source_to_tile_px": [
+    [
+      0.7086005772477827,
+      0.06759822581658467,
+      419.1854691358403
+    ],
+    [
+      -0.03377522710858294,
+      0.7955381911065061,
+      387.2912888618396
+    ],
+    [
+      -3.7051161089399634e-05,
+      9.394650178906776e-05,
+      1.0
+    ]
+  ],
+  "metrics": {
+    "inliers": 115,
+    "matches": 163,
+    "rmse_px": 0.96,
+    "source_spread_px": [
+      566.9000244140625,
+      544.5999755859375
+    ],
+    "image_spread_px": [
+      404.5,
+      401.3999938964844
+    ],
+    "projected_bbox_area_px": 98278.4,
+    "nondegenerate_geographic_match_candidate": true,
+    "score": 428.2
+  }
+}
