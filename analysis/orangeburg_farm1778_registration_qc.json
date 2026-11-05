@@ -1,0 +1,76 @@
+{
+  "status": "GEOREGISTRATION_CONFIRMED_FIELD_OUTLINE_UNDER_REVIEW",
+  "farm_id": "1778",
+  "tract_id": "1334",
+  "target_field_id": "6",
+  "printed_target_field_acres": 14.31,
+  "source_view": "p1_c2",
+  "source_view_size_wh": [
+    661,
+    583
+  ],
+  "target_tile_size_wh": [
+    850,
+    850
+  ],
+  "tile_bbox_epsg3857": [
+    -8963176.406378618,
+    3961568.4350122274,
+    -8961526.406378618,
+    3963218.4350122274
+  ],
+  "homography_source_view_to_tile_px": [
+    [
+      1.4440122379157025,
+      0.0030685633396085356,
+      65.88196974373383
+    ],
+    [
+      0.004450996339189775,
+      1.4240476887880753,
+      -10.370626310466681
+    ],
+    [
+      8.302806234609632e-06,
+      4.260467868789135e-06,
+      1.0
+    ]
+  ],
+  "registration_metrics": {
+    "inliers": 180,
+    "matches": 221,
+    "rmse_px": 1.15,
+    "source_spread_px": [
+      524.0999755859375,
+      521.7999877929688
+    ],
+    "image_spread_px": [
+      752.5,
+      742.0
+    ],
+    "projected_bbox_area_px": 383555.8,
+    "nondegenerate_geographic_match_candidate": true,
+    "score": 649.6
+  },
+  "candidate_enclosed_field_regions": [
+    {
+      "label": 1,
+      "bbox_xywh": [
+        0,
+        0,
+        661,
+        583
+      ],
+      "pixel_area": 380767,
+      "centroid_xy": [
+        329.4,
+        290.9
+      ]
+    }
+  ],
+  "warnings": [
+    "FSA yellow lines include whole-tract and neighboring fields; only field 6 of tract 1334 is requested.",
+    "Connected-component segmentation is for QC only; do not export a guessed polygon.",
+    "Do not replace current satellite scene with a fake or unlabeled basemap."
+  ]
+}
