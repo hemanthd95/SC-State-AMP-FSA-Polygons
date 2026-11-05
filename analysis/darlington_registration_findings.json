@@ -1,0 +1,115 @@
+{
+  "purpose": "Identify Darlington field placements, not fabricate polygons",
+  "results": [
+    {
+      "farm_id": "10262",
+      "source_pdf": "Mava Jackson_FSA map, (dragged).pdf",
+      "source_page": 2,
+      "status": "IMAGE_ALIGNMENT_CANDIDATE_NEEDS_FIELD_TRACE",
+      "source_view": "p2_crop3",
+      "source_full_width_height": [
+        833,
+        1085
+      ],
+      "source_normalized_to_tile_homography": [
+        [
+          242.3638172362218,
+          -2.562527859075101,
+          5.375115294198778
+        ],
+        [
+          0.28033787751801037,
+          311.45376626193234,
+          311.3002996213845
+        ],
+        [
+          -0.0049712924399595545,
+          -0.009286708275667936,
+          1.0
+        ]
+      ],
+      "tile_bbox_epsg3857": [
+        -8907667.33414862,
+        4067796.1573815094,
+        -8906017.33414862,
+        4069446.1573815094
+      ],
+      "tile_size_wh": [
+        850,
+        850
+      ],
+      "tile_provider": "USGS NAIP",
+      "registration": {
+        "inliers": 66,
+        "matches": 80,
+        "rmse_px": 0.47,
+        "source_spread_px": [
+          738.0,
+          660.5
+        ],
+        "image_spread_px": [
+          216.6999969482422,
+          192.1999969482422
+        ],
+        "projected_bbox_area_px": 28893.0,
+        "nondegenerate_geographic_match_candidate": true,
+        "score": 264.0
+      }
+    },
+    {
+      "farm_id": "7370",
+      "source_pdf": "Garrett Patterson_FSA_MAP.pdf",
+      "source_page": 6,
+      "status": "IMAGE_ALIGNMENT_CANDIDATE_NEEDS_FIELD_TRACE",
+      "source_view": "p6_crop1",
+      "source_full_width_height": [
+        857,
+        1109
+      ],
+      "source_normalized_to_tile_homography": [
+        [
+          1006.7549599889745,
+          -3.964374901579689,
+          -197.08605981883298
+        ],
+        [
+          11.196294674273926,
+          1310.4000244002016,
+          -318.28717578742743
+        ],
+        [
+          -0.0036554282864711663,
+          0.010835722895125702,
+          1.0
+        ]
+      ],
+      "tile_bbox_epsg3857": [
+        -8921993.905474983,
+        4048290.740034391,
+        -8920343.905474983,
+        4049940.740034391
+      ],
+      "tile_size_wh": [
+        850,
+        850
+      ],
+      "tile_provider": "USGS NAIP",
+      "registration": {
+        "inliers": 241,
+        "matches": 252,
+        "rmse_px": 1.01,
+        "source_spread_px": [
+          622.5999755859375,
+          578.5999755859375
+        ],
+        "image_spread_px": [
+          730.2999877929688,
+          674.7000122070312
+        ],
+        "projected_bbox_area_px": 406849.0,
+        "nondegenerate_geographic_match_candidate": true,
+        "score": 938.2
+      }
+    }
+  ]
+}

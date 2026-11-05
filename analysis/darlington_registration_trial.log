@@ -1,0 +1,7 @@
+/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/fitz/__init__.py:17: FutureWarning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+  warnings.warn(
+START 10262 page 2 source variants 3
+MATCH 10262 inliers 66 rmse 0.47
+START 7370 page 6 source variants 3
+MATCH 7370 inliers 241 rmse 1.01
+COMPLETE [('10262', 'IMAGE_ALIGNMENT_CANDIDATE_NEEDS_FIELD_TRACE'), ('7370', 'IMAGE_ALIGNMENT_CANDIDATE_NEEDS_FIELD_TRACE')]
