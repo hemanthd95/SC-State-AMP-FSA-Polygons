@@ -331,7 +331,17 @@ def field_features():
             # also support the cross-tile and FSA printed-acreage checks.
             inliers=p['image_registration_inliers']
             high_precision_small_map=(inliers>=60 and p['image_registration_rmse_px']<=0.5)
-            if abs(error)>2 or (inliers<100 and not high_precision_small_map) or p['independent_tile_rmse_m']>1:
+            if p.get('registration_crosscheck_method'):
+                # Old FSA scans can only be registered against historical
+                # imagery. Do not label repeat-split model stability as an
+                # independent satellite-tile or field-survey accuracy result.
+                if not (inliers>=200 and
+                        p.get('resampled_vertex_p95_m', 999)>0 and
+                        p['resampled_vertex_p95_m']<=1 and
+                        p['image_registration_rmse_px']<=2 and
+                        abs(error)<=2):
+                    raise ValueError('Archived FSA source / Wayback repeated-fit QA fails: '+fid)
+            elif abs(error)>2 or (inliers<100 and not high_precision_small_map) or p['independent_tile_rmse_m']>1:
                 raise ValueError('Scanned FSA registration fails acreage/independent tile QA: '+fid)
             p['calculated_acres']=round(acres,3);p['area_error_percent']=round(error,2)
             eligible.append(f)
@@ -439,7 +449,11 @@ def draw_detail(c,county,farms,fid,fields,basetype,number,source_tracker):
         yy=wrap(c,f'Important: the AMP spreadsheet lists {origin} County, but both source FSA maps identify Darlington County and exactly match Farm 8185, Tract 2352, field acreages.',923,yy,250,9,13,GRAY)-12
     method=p.get('method','')
     if 'raster' in method.lower():
-        yy=wrap(c,'FSA source aerial photograph was matched to USGS NAIP using 170 image features. Field outlines were traced from source lines and verified against printed acreage; approximate, not surveyed.',923,yy,250,9,13,GRAY)-12
+        if 'Wayback' in method:
+            explain=f"2016 FSA aerial image matched to historical 2015 Esri Wayback using {p['image_registration_inliers']} image features. Field outlines traced from source boundaries and checked against printed acres. Approximate, not surveyed."
+        else:
+            explain=f"FSA aerial image matched to USGS NAIP using {p['image_registration_inliers']} image features. Field outlines traced from source boundaries and checked against printed acres. Approximate, not surveyed."
+        yy=wrap(c,explain,923,yy,250,9,13,GRAY)-12
     else:
         yy=wrap(c,'Boundaries were reproduced from native FSA GeoPDF vector paths and mapped using the PDF geographic reference.',923,yy,250,10,15,GRAY)-18
     yy=wrap(c,'Source-image date and current land cover can differ from the displayed basemap date.',923,yy,250,10,15,GRAY)
