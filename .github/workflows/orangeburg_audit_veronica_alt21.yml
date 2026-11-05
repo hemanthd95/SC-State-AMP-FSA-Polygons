@@ -19,6 +19,8 @@ jobs:
         with:
           python-version: '3.11'
       - run: python -m pip install pymupdf
+      - name: Install OCR utility for scanned FSA page identifiers
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq tesseract-ocr
       - name: OCR only Farm and Tract IDs for 21 source pages
         id: scan
         continue-on-error: true
