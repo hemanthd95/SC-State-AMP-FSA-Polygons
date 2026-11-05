@@ -5,6 +5,7 @@ on:
     paths:
       - 'scripts/qa_orangeburg_atlas_previews.py'
       - '.github/workflows/qa_orangeburg_atlas_previews.yml'
+      - 'orangeburg_working_atlas/preview_manifest.json'
 permissions:
   contents: write
 jobs:
@@ -14,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          lfs: true
+          lfs: false
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
