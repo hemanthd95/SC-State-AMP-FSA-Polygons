@@ -1,0 +1,62 @@
+{
+  "farm_id": "13653",
+  "tract_id": "5515",
+  "field_id": "1",
+  "printed_acres": 2.58,
+  "source_page": 1,
+  "source_view": "p1_c2",
+  "imagery_provider": "USGS_NAIP",
+  "tile_offsets": [
+    -1,
+    1
+  ],
+  "registration_metrics": {
+    "inliers": 66,
+    "matches": 89,
+    "rmse_px": 0.46,
+    "source_spread_px": [
+      530.7000122070312,
+      142.0
+    ],
+    "image_spread_px": [
+      420.5,
+      112.80000305175781
+    ],
+    "projected_bbox_area_px": 117615.5,
+    "nondegenerate_geographic_match_candidate": true,
+    "score": 112.8
+  },
+  "status": "TRACT_5515_REGISTRATION_CANDIDATE",
+  "warning": "Tract 5516 appears on the second PDF page and is out-of-scope",
+  "homography_source_view_to_tile_px": [
+    [
+      0.7882826865358595,
+      -0.006783607166124914,
+      328.3277836203922
+    ],
+    [
+      3.3488566951578914e-05,
+      0.7860436158286401,
+      -268.1551384206798
+    ],
+    [
+      1.8719132402491043e-06,
+      -1.4689602322045362e-05,
+      1.0
+    ]
+  ],
+  "tile_bbox_epsg3857": [
+    -8999902.808093844,
+    3937214.9735706556,
+    -8998252.808093844,
+    3938864.9735706556
+  ],
+  "source_view_size_wh": [
+    661,
+    583
+  ],
+  "target_tile_size_wh": [
+    850,
+    850
+  ]
+}
