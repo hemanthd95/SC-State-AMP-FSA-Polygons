@@ -21,7 +21,7 @@
 | 1033 | Montez Hillard | 3879 | 4 | 8.67 | ~6.83 | Approximate FSA highlight | 115 inliers, 0.96 px RMSE; USGS NAIP | **Registered & practical outline review passed** |
 | 11782 | Mageret Berry | 6230 | 13 | 7.53 | ~13.11 | Approximate FSA white outline | 201 inliers, 0.57 px RMSE; USGS NAIP | **Registered & practical outline review passed** |
 
-**Atlas-accepted source-derived field polygons: 12 of 32 workbook records. Remaining workbook records: 20.** Two of the 20 cannot physically belong to Orangeburg? No: **three** Marva Jackson entries are explicitly mapped by FSA to Darlington County and should be moved out of this county atlas, leaving 17 geographically unresolved Orangeburg-workbook targets. Last two traces are approximate visible FSA borders; detailed acreage reconciliation is not a requirement for the user's county map purpose.
+**Atlas-accepted source-derived field polygons: 12 of 32 workbook records. Remaining workbook records: 20.** **Three** Marva Jackson entries are explicitly mapped by FSA to Darlington County and should not be depicted in Orangeburg. That leaves **17 unresolved workbook field targets that may belong in Orangeburg**. Last two traces are approximate visible FSA borders; detailed acreage reconciliation is not a requirement for the user's county map purpose.
 
 ### Data and review images
 - [Digitized, QA-passed GeoJSON](../geojson/orangeburg_registered_fields.geojson)
