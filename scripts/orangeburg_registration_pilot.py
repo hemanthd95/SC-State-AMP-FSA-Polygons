@@ -158,7 +158,7 @@ def main():
     doc={'status':'REGISTRATION_DIAGNOSTICS_ONLY__NO_POLYGONS_ACCEPTED',
          'warning':'A high inlier count alone never verifies exact field geometry. Human review, source-field tracing and acreage checks are still required.',
          'farm_candidates':out}
-    (OUT/'orangeburg_registration_pilot.json').write_text(json.dumps(doc,indent=2)+'\n')
+    (OUT/os.getenv('ORANGEBURG_PILOT_REPORT','orangeburg_registration_pilot.json')).write_text(json.dumps(doc,indent=2)+'\n')
     print('FINISHED',len(out),'diagnostic farms',flush=True)
 
 if __name__=='__main__':main()
