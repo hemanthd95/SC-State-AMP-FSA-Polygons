@@ -32,7 +32,7 @@ INK = colors.HexColor('#233745')
 PALE = colors.HexColor('#EEF4F6')
 GRAY = colors.HexColor('#637781')
 GOLD = colors.HexColor('#F2B044')
-PALETTE = ['#F25F4C', '#0795B5', '#B25AC4', '#72A251', '#EA9A31']
+PALETTE = ['#F25F4C', '#0795B5', '#B25AC4', '#72A251', '#EA9A31', '#4263C6', '#B06D43', '#CE4477', '#388F79', '#A39426', '#704FB7', '#307A9D', '#B85724', '#5C8759', '#9B507E', '#B17535', '#3973AD', '#7E9C4D']
 COUNTIES = {'Aiken':'45003', 'Allendale':'45005', 'Barnwell': '45011', 'Darlington': '45031', 'Florence': '45041', 'Marion': '45067', 'Williamsburg': '45089'}
 GEOD = Geod(ellps='WGS84')
 TO_UTM = Transformer.from_crs(4326, 32617, always_xy=True)
@@ -415,7 +415,7 @@ def draw_county(c,county,farms,boundary,basetype,source_tracker):
         if p['amp_roster_county'] != county:
             yy=wrap(c,f'AMP roster: {p["amp_roster_county"]}; FSA physical map: {county}',923,yy-3,260,9,13,GRAY)
         selected=sum(bool(f['properties']['county_workbook_selected']) for f in fields)
-        yy=wrap(c,f'{selected} county-sheet field(s); {len(fields)-selected} additional FSA context fields',923,yy-4,260,10,14,GRAY)-(12 if len(farms)>=5 else 28)
+        yy=wrap(c,f'{selected} county-sheet field(s); {len(fields)-selected} additional FSA context fields',923,yy-4,260,10,14,GRAY)-(0 if len(farms)>=7 else 12 if len(farms)>=5 else 28)
     yy=wrap(c,'Markers represent locations computed from georeferenced FSA field polygons, not reported residential addresses.',923,yy-5,260,10,14,GRAY)
     font(c,922,137,'County boundary: U.S. Census cartographic GeoJSON',8,GRAY)
     c.showPage()
