@@ -1,0 +1,43 @@
+name: Bounded FSA georegistration search for Orangeburg remaining farms
+on:
+  push:
+    paths:
+      - 'scripts/orangeburg_wide_registration_batch.py'
+      - '.github/workflows/orangeburg_wide_registration.yml'
+permissions:
+  contents: write
+jobs:
+  wider_search:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install aerial image matching dependencies
+        run: python -m pip install pymupdf numpy opencv-python-headless requests
+      - name: Run bounded search and save source-to-satellite evidence
+        run: |
+          python scripts/orangeburg_wide_registration_batch.py > analysis/orangeburg_wide_registration_batch.log 2>&1
+          tail -30 analysis/orangeburg_wide_registration_batch.log
+      - name: Save diagnostic matches without claiming fields accepted
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add analysis/orangeburg_wide_*.json analysis/orangeburg_wide_*.jpg analysis/orangeburg_wide_registration_batch.log || true
+          if ! git diff --cached --quiet; then
+            git commit -m "Record Orangeburg spatial match diagnostics for more FSA farms"
+            git pull --rebase origin main
+            git push
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: orangeburg-bounded-georegistration-diagnostics
+          path: |
+            analysis/orangeburg_wide_registration_batch.log
+            analysis/orangeburg_wide_registration_batch.json
+            analysis/orangeburg_wide_*.jpg
+          retention-days: 10
