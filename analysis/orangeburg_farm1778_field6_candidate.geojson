@@ -1,0 +1,64 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.5073211899881,
+              33.506938433922315
+            ],
+            [
+              -80.5037189456988,
+              33.50843648561904
+            ],
+            [
+              -80.50372792885163,
+              33.50711820149514
+            ],
+            [
+              -80.50474302512269,
+              33.50652271997991
+            ],
+            [
+              -80.50474302512269,
+              33.50594596039237
+            ],
+            [
+              -80.50599168336761,
+              33.505247476914626
+            ],
+            [
+              -80.50671931874774,
+              33.50615381899842
+            ],
+            [
+              -80.5073211899881,
+              33.506938433922315
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "county": "Orangeburg",
+        "farm_id": "1778",
+        "tract_id": "1334",
+        "field_id": "6",
+        "producer": "Robert Seaberry",
+        "source_pdf": "Robert Seaberry Jr. FSA.pdf",
+        "source_page": 1,
+        "fsa_printed_acres": 14.31,
+        "traced_geodesic_acres": 14.318,
+        "area_difference_percent": 0.06,
+        "image_provider": "USGS NAIP Imagery",
+        "registration_inliers": 180,
+        "registration_rmse_pixels": 1.15,
+        "registration_method": "SIFT and MAGSAC homography + human trace of printed FSA yellow field boundary",
+        "status": "CANDIDATE_UNDER_VISUAL_OVERLAY_QA"
+      }
+    }
+  ]
+}
