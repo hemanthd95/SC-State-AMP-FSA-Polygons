@@ -1,0 +1,4 @@
+/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/fitz/__init__.py:17: FutureWarning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+  warnings.warn(
+NO RELIABLE MATCH FOR 1033
+PAGE1 VERIFIED MAP CANDIDATE 3873 p1_c1 USGS_NAIP [2, 0] INLIERS 134 RMSE 0.86

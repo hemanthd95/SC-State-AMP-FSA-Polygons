@@ -1,0 +1,82 @@
+{
+  "status": "TARGET_PAGE_REGISTRATION_DIAGNOSTICS_NOT_YET_ACCEPTED_POLYGONS",
+  "scope": "Only source pages confirmed to depict the workbook Farm/Tract/Field",
+  "results": [
+    {
+      "farm_id": "1033",
+      "tract_id": "3879",
+      "target_fields": [
+        "4"
+      ],
+      "source_pdf": "Montez Hillard_FSA _Map.pdf",
+      "source_page": 1,
+      "candidate_only": true,
+      "status": "NO_RELIABLE_PAGE1_REGISTRATION_FOUND"
+    },
+    {
+      "farm_id": "3873",
+      "tract_id": "3895",
+      "target_fields": [
+        "1",
+        "4"
+      ],
+      "source_pdf": "Tywone Hillard_FSA_Map.pdf",
+      "source_page": 1,
+      "candidate_only": true,
+      "status": "P1_GEOMETRIC_REGISTRATION_CANDIDATE_AWAIT_FIELD_QA",
+      "provider": "USGS_NAIP",
+      "offset_dx_dy": [
+        2,
+        0
+      ],
+      "view": "p1_c1",
+      "view_size_wh": [
+        619,
+        620
+      ],
+      "tile_bbox_epsg3857": [
+        -8961172.882655019,
+        3956455.8350966345,
+        -8959522.882655019,
+        3958105.8350966345
+      ],
+      "tile_size_wh": [
+        850,
+        850
+      ],
+      "homography_source_view_to_tile_px": [
+        [
+          0.9488992124896083,
+          0.03830145887077356,
+          579.1067562165755
+        ],
+        [
+          -0.011751709803413848,
+          0.989782271889907,
+          286.1908547882951
+        ],
+        [
+          -1.5664360853832348e-05,
+          3.7029290205077147e-05,
+          1.0
+        ]
+      ],
+      "registration": {
+        "inliers": 134,
+        "matches": 168,
+        "rmse_px": 0.86,
+        "source_spread_px": [
+          175.1999969482422,
+          374.29998779296875
+        ],
+        "image_spread_px": [
+          170.0,
+          359.8999938964844
+        ],
+        "projected_bbox_area_px": 172984.2,
+        "nondegenerate_geographic_match_candidate": true,
+        "score": 251.4
+      }
+    }
+  ]
+}
