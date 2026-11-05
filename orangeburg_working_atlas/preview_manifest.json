@@ -10,8 +10,9 @@
       "verified_fields": 8,
       "unverified_fields": 24,
       "pages": 8,
-      "bytes": 39989944,
+      "bytes": 40586921,
       "imagery_services": [
+        "Esri World Imagery",
         "USGS NAIP"
       ],
       "is_final": false
@@ -23,7 +24,7 @@
       "verified_fields": 8,
       "unverified_fields": 24,
       "pages": 8,
-      "bytes": 8796115,
+      "bytes": 8796084,
       "imagery_services": [
         "USGS US Topo"
       ],
