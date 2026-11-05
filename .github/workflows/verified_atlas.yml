@@ -6,6 +6,7 @@ on:
     paths:
       - '.github/workflows/verified_atlas.yml'
       - 'scripts/build_verified_atlases.py'
+      - 'geojson/registered_scanned_fields.geojson'
 
 permissions:
   contents: read
