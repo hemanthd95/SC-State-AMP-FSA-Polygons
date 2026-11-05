@@ -28,6 +28,8 @@
 - [Tarsha Mosley Tract46008 Field1 overlay](orangeburg_farm14048_field1_candidate_satellite.jpg)
 - [Tywone Tract3895 Fields1 and4 original source geometry](orangeburg_farm3873_fields_candidate_source_zoom.jpg)
 - [Tywone two field polygons on independent USGS satellite image](orangeburg_farm3873_fields_candidate_satellite.jpg)
+- [Montez Farm1033 target FSA source photo aligned to independent NAIP](orangeburg_montez_farm1033_match_overlay.jpg)
+- [Montez source Field4 boundary enlarged for review](orangeburg_montez_farm1033_field4_source_zoom.jpg)
 - [17 FSA scanned-map source preview sheets](orangeburg_fsa_review_previews/review_manifest.json)
 - [Official U.S. Census Orangeburg County boundary](../geojson/orangeburg_county_boundary.geojson)
 - [Farm/Tract/Field source inventory](orangeburg_source_inventory.json)
@@ -43,7 +45,7 @@
 8. **Anthron Williams Farm11990**: the only filename-matched PDF, `Antron Williams_FSA Map.pdf`, actually contains a producer-eligibility/subsidiary report, not a field map. A real **Farm11990 / Tract44081 / Fields6 and7** FSA aerial boundary map is needed to digitize these fields.
 9. **Tywone Hillard Farm3873 / Tract3895 — resolved for Fields1 and4**: PDF page2 belongs to DIFFERENT **Farm4261 / Tract5953** and was rejected. Page1 matched independent imagery with **156 inliers / 0.95px RMSE**; boundaries traced, checked against USGS NAIP and accepted (Field1 0.458 vs 0.43 FSA acres; Field4 1.942 vs 1.93 FSA acres).
 10. **Veronica Hodges Farm13709**: strong 250-inlier match to PDF page2 was confirmed, but page2 is **Tract45511 Fields17/19**, whereas the workbook requests **Tract45511 Field1**. This match is not a substitute for the requested field boundary; the remaining 2024 map pages need exact field-ID reconciliation.
-11. **Montez Hillard Farm1033 / Tract3879 / Field4**: requested identifiers are visible on the source photo-map, but source page1 did not pass stable georegistration in the current GPS-hint tile search. Address/GPS remains a search hint, not a replacement boundary.
+11. **Montez Hillard Farm1033 / Tract3879 / Field4 — registration found; field polygon pending**: the requested identifier is visible on original FSA page1. The initial GPS-hint tile search missed the field; matching nearby Tywone interstate-loop imagery located a **115-inlier / 0.96px RMSE** independent USGS NAIP homography. However, the hand-marked orange highlight and white source boundary contain ambiguous internal field/tract divisions, so **no field polygon has been accepted**. Preserve the image match and seek exact Field4 perimeter confirmation.
 12. **Edward Carson Farm14291 / Tract46266**: the source photo does label requested Fields13, 18 and19, but no nondegenerate satellite registration was found near the initial provided coordinates. Both coordinates are outside the county boundary; FSA page says Orangeburg County, so actual field location requires separate confirmation.
 13. Final deliverables require **two professional PDF atlases (satellite and topography)** with county overview and zoomed field polygons plus legend, not merely screenshots of FSA source PDFs. These atlases are **not yet complete**; do not represent this QA ledger as a finished atlas.
 
