@@ -21,7 +21,7 @@
 | 1033 | Montez Hillard | 3879 | 4 | 8.67 | ~6.83 | Approximate FSA highlight | 115 inliers, 0.96 px RMSE; USGS NAIP | **Registered & practical outline review passed** |
 | 11782 | Mageret Berry | 6230 | 13 | 7.53 | ~13.11 | Approximate FSA white outline | 201 inliers, 0.57 px RMSE; USGS NAIP | **Registered & practical outline review passed** |
 
-**Atlas-accepted source-derived field polygons: 8 of 32 workbook records. Remaining workbook records: 24.** Last two traces are approximate visible FSA borders; detailed acreage reconciliation is not a requirement for the user's county map purpose.
+**Atlas-accepted source-derived field polygons: 12 of 32 workbook records. Remaining workbook records: 20.** Two of the 20 cannot physically belong to Orangeburg? No: **three** Marva Jackson entries are explicitly mapped by FSA to Darlington County and should be moved out of this county atlas, leaving 17 geographically unresolved Orangeburg-workbook targets. Last two traces are approximate visible FSA borders; detailed acreage reconciliation is not a requirement for the user's county map purpose.
 
 ### Data and review images
 - [Digitized, QA-passed GeoJSON](../geojson/orangeburg_registered_fields.geojson)
@@ -39,6 +39,15 @@
 - [Official U.S. Census Orangeburg County boundary](../geojson/orangeburg_county_boundary.geojson)
 - [Farm/Tract/Field source inventory](orangeburg_source_inventory.json)
 
+## New FSA image registrations, 5 November 2026
+
+| Farm ID | Producer | Tract | Field(s) | Source | Satellite-match evidence | Approximate tracing |
+|---|---|---|---|---|---|---|
+| 13618 | Rosa Berry | 3260 | 17, 26 | `Rosa_Berry_FSA_Map.jpeg` (previously missed by PDF-only inventory) | 69 inliers / 1.92 px; independent USGS NAIP; 26 field center is very close to workbook GPS | Both visible yellow FSA polygons manually outlined; ~1.97 and 7.63 ac |
+| 14187 | Bruce Jenkins | 46145 | 46, 52 | `Bruce Jenkins_FSA Map.pdf` page 2 | 113 inliers / 1.09 px; independent USGS NAIP | Both visible yellow FSA polygons manually outlined; ~3.30 and 7.60 ac; source acreage approximate |
+
+Farm14187 requested **Field22** is still absent from the printed map (the map appears to show Field32), so Field22 is not assigned an invented footprint. Farm13618 fields17/26 are now included; previous suspicion that no Rosa map was supplied was incorrect.
+
 ## Important unresolved issues
 1. Source FSA PDFs are flattened scans rather than GeoPDFs; no farm polygon is counted until a geometric image registration and individual field boundary reconstruction both pass review.
 2. Jasper Summers Farm13653 source contains both **Tract5515**, which is requested, and **Tract5516**, which is *not* requested. The 289-inlier match to Tract5516 was excluded; independent 187-inlier Tract5515 source-page registration and 2.559-acre field trace have now passed QA.
@@ -54,7 +63,7 @@
 12. **Edward Carson Farm14291 / Tract46266**: the source photo does label requested Fields13, 18 and19, but no nondegenerate satellite registration was found near the initial provided coordinates. Both coordinates are outside the county boundary; FSA page says Orangeburg County, so actual field location requires separate confirmation.
 13. Final deliverables require **two professional PDF atlases (satellite and topography)** with county overview and zoomed field polygons plus legend, not merely screenshots of FSA source PDFs. These atlases are **not yet complete**; do not represent this QA ledger as a finished atlas.
 
-## Practical acceptance gates for each of the 24 outstanding workbook features
+## Practical acceptance gates for each of the 20 outstanding workbook features
 1. Farm/Tract/Field ID matches workbook and printed source map.
 2. Aerial georegistration is nondegenerate and visually aligned with distinctive permanent features.
 3. Individual **field** boundary, not whole-farm tract, traced from source.
