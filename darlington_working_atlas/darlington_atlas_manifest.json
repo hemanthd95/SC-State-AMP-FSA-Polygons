@@ -1,0 +1,33 @@
+{
+  "county": "Darlington",
+  "scope": "2 FSA source farms, 4 traced field polygons",
+  "source_roster_warning": "Marva Jackson 3 fields originally appear in Orangeburg AMP spreadsheet; printed FSA source county is Darlington.",
+  "garrett_census_boundary_warning": "Farm 7370 FSA printed Darlington; registered field center lies beyond supplied Census Darlington geometry. See GeoJSON provenance.",
+  "geometric_accuracy_notice": "FSA image-derived approximate field outlines; not legal survey",
+  "atlasses": [
+    {
+      "basemap": "Satellite",
+      "pdf": "Darlington_County_Satellite_4_Field_Atlas.pdf",
+      "pages": 3,
+      "farms": 2,
+      "fields": 4,
+      "bytes": 16123675,
+      "providers": [
+        "USGS NAIP"
+      ],
+      "source_geometry": "FSA raster image registered to NAIP"
+    },
+    {
+      "basemap": "Topography",
+      "pdf": "Darlington_County_Topography_4_Field_Atlas.pdf",
+      "pages": 3,
+      "farms": 2,
+      "fields": 4,
+      "bytes": 4054079,
+      "providers": [
+        "USGS US Topo"
+      ],
+      "source_geometry": "FSA raster image registered to NAIP"
+    }
+  ]
+}
