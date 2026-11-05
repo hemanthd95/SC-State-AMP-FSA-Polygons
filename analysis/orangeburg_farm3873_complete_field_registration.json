@@ -1,0 +1,251 @@
+{
+  "farm_id": "3873",
+  "tract_id": "3895",
+  "field_ids": [
+    "1",
+    "4"
+  ],
+  "source_pdf": "Tywone Hillard_FSA_Map.pdf",
+  "source_page": 1,
+  "source_view": "p1_c1",
+  "target_bbox_epsg3857": [
+    -8960322.882655019,
+    3955605.8350966345,
+    -8958672.882655019,
+    3957255.8350966345
+  ],
+  "image_size_wh": [
+    850,
+    850
+  ],
+  "view_size_wh": [
+    619,
+    620
+  ],
+  "homography_source_view_to_target_px": [
+    [
+      0.9987906159613938,
+      0.0447827600671825,
+      134.22067246663613
+    ],
+    [
+      0.002592894187244366,
+      1.0054129390501207,
+      -158.98175536750836
+    ],
+    [
+      2.7168690545358337e-05,
+      9.199514185676138e-05,
+      1.0
+    ]
+  ],
+  "metrics": {
+    "inliers": 156,
+    "matches": 183,
+    "rmse_px": 0.95,
+    "source_spread_px": [
+      462.29998779296875,
+      359.6000061035156
+    ],
+    "image_spread_px": [
+      436.20001220703125,
+      341.20001220703125
+    ],
+    "projected_bbox_area_px": 171313.0,
+    "nondegenerate_geographic_match_candidate": true,
+    "score": 436.5
+  },
+  "target_field_region_tile_bbox_xyxy": [
+    469.8436279296875,
+    80.67257690429688,
+    593.71044921875,
+    167.07080078125
+  ],
+  "status": "REGISTRATION_AND_FIELD_REGION_IN_TILE_QA_PASS__POLYGON_TRACING_PENDING",
+  "tests": [
+    {
+      "source_view": "p1_c1",
+      "offset": [
+        3,
+        1
+      ],
+      "metrics": {
+        "inliers": 28,
+        "matches": 68,
+        "rmse_px": 0.78,
+        "source_spread_px": [
+          381.5,
+          64.5999984741211
+        ],
+        "image_spread_px": [
+          368.0,
+          60.20000076293945
+        ],
+        "projected_bbox_area_px": 167501.8,
+        "nondegenerate_geographic_match_candidate": false,
+        "score": 37.0
+      }
+    },
+    {
+      "source_view": "p1_c2",
+      "offset": [
+        3,
+        1
+      ],
+      "metrics": {
+        "inliers": 22,
+        "matches": 63,
+        "rmse_px": 0.69,
+        "source_spread_px": [
+          384.6000061035156,
+          47.099998474121094
+        ],
+        "image_spread_px": [
+          370.5,
+          45.599998474121094
+        ],
+        "projected_bbox_area_px": 132730.7,
+        "nondegenerate_geographic_match_candidate": false,
+        "score": 27.2
+      }
+    },
+    {
+      "source_view": "p1_c1",
+      "offset": [
+        3,
+        -1
+      ],
+      "metrics": {
+        "inliers": 156,
+        "matches": 183,
+        "rmse_px": 0.95,
+        "source_spread_px": [
+          462.29998779296875,
+          359.6000061035156
+        ],
+        "image_spread_px": [
+          436.20001220703125,
+          341.20001220703125
+        ],
+        "projected_bbox_area_px": 171313.0,
+        "nondegenerate_geographic_match_candidate": true,
+        "score": 436.5
+      }
+    },
+    {
+      "source_view": "p1_c2",
+      "offset": [
+        3,
+        -1
+      ],
+      "metrics": {
+        "inliers": 155,
+        "matches": 184,
+        "rmse_px": 0.98,
+        "source_spread_px": [
+          462.29998779296875,
+          358.6000061035156
+        ],
+        "image_spread_px": [
+          436.20001220703125,
+          340.5
+        ],
+        "projected_bbox_area_px": 169598.3,
+        "nondegenerate_geographic_match_candidate": true,
+        "score": 432.9
+      }
+    },
+    {
+      "source_view": "p1_c1",
+      "offset": [
+        2,
+        1
+      ],
+      "metrics": {
+        "inliers": 20,
+        "matches": 62,
+        "rmse_px": 0.48,
+        "source_spread_px": [
+          160.0,
+          58.20000076293945
+        ],
+        "image_spread_px": [
+          154.1999969482422,
+          54.599998474121094
+        ],
+        "projected_bbox_area_px": 244117.6,
+        "nondegenerate_geographic_match_candidate": false,
+        "score": 25.8
+      }
+    },
+    {
+      "source_view": "p1_c2",
+      "offset": [
+        2,
+        1
+      ],
+      "metrics": {
+        "inliers": 10,
+        "matches": 57,
+        "rmse_px": 1.78,
+        "source_spread_px": [
+          314.70001220703125,
+          501.5
+        ],
+        "image_spread_px": [
+          244.60000610351562,
+          582.0
+        ],
+        "projected_bbox_area_px": 46.4,
+        "nondegenerate_geographic_match_candidate": false,
+        "score": 25.7
+      }
+    },
+    {
+      "source_view": "p1_c1",
+      "offset": [
+        4,
+        0
+      ],
+      "metrics": {
+        "inliers": 119,
+        "matches": 151,
+        "rmse_px": 0.96,
+        "source_spread_px": [
+          228.39999389648438,
+          428.79998779296875
+        ],
+        "image_spread_px": [
+          216.6999969482422,
+          410.5
+        ],
+        "projected_bbox_area_px": 175389.4,
+        "nondegenerate_geographic_match_candidate": true,
+        "score": 254.9
+      }
+    },
+    {
+      "source_view": "p1_c2",
+      "offset": [
+        4,
+        0
+      ],
+      "metrics": {
+        "inliers": 114,
+        "matches": 155,
+        "rmse_px": 1.01,
+        "source_spread_px": [
+          232.60000610351562,
+          428.79998779296875
+        ],
+        "image_spread_px": [
+          220.39999389648438,
+          410.20001220703125
+        ],
+        "projected_bbox_area_px": 174033.4,
+        "nondegenerate_geographic_match_candidate": true,
+        "score": 246.6
+      }
+    }
+  ]
+}

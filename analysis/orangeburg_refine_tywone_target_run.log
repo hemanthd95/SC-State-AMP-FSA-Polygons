@@ -1,0 +1,3 @@
+/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/fitz/__init__.py:17: FutureWarning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+  warnings.warn(
+FARM3873 target-page:  p1_c1 3 -1 inliers 156 RMSE 0.95 field region [469.8436279296875, 80.67257690429688, 593.71044921875, 167.07080078125]
