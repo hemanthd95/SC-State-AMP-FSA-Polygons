@@ -1,0 +1,138 @@
+{
+  "farm_id": "13709",
+  "tract_id": "45514",
+  "field_id": "8",
+  "source_pdf": "Vronica Hodges_FSA_Map.pdf",
+  "source_page": 20,
+  "fsa_printed_acres": 4.79,
+  "image_source_crop_xyxy": [
+    15,
+    44,
+    710,
+    739
+  ],
+  "search_match_candidates": [
+    {
+      "hint_index": 0,
+      "offset": [
+        0,
+        0
+      ],
+      "registration": {
+        "inliers": 86,
+        "matches": 100,
+        "rmse_px": 0.37,
+        "source_spread_px": [
+          566.4000244140625,
+          595.4000244140625
+        ],
+        "image_spread_px": [
+          193.5,
+          203.6999969482422
+        ],
+        "projected_bbox_area_px": 27697.9,
+        "nondegenerate_geographic_match_candidate": true,
+        "score": 329.5
+      }
+    },
+    {
+      "hint_index": 0,
+      "offset": [
+        0,
+        -1
+      ],
+      "registration": {
+        "inliers": 87,
+        "matches": 95,
+        "rmse_px": 0.44,
+        "source_spread_px": [
+          632.0999755859375,
+          649.4000244140625
+        ],
+        "image_spread_px": [
+          216.0,
+          221.10000610351562
+        ],
+        "projected_bbox_area_px": 27692.7,
+        "nondegenerate_geographic_match_candidate": true,
+        "score": 348.0
+      }
+    },
+    {
+      "hint_index": 1,
+      "offset": [
+        -2,
+        0
+      ],
+      "registration": {
+        "inliers": 65,
+        "matches": 75,
+        "rmse_px": 0.45,
+        "source_spread_px": [
+          552.2999877929688,
+          536.0
+        ],
+        "image_spread_px": [
+          188.5,
+          183.10000610351562
+        ],
+        "projected_bbox_area_px": 27623.9,
+        "nondegenerate_geographic_match_candidate": true,
+        "score": 239.2
+      }
+    }
+  ],
+  "status": "STABLE_GEOREGISTRATION_CANDIDATE_FIELD_TRACE_PENDING",
+  "hint_index": 0,
+  "offset_dx_dy": [
+    0,
+    -1
+  ],
+  "source_view_size_wh": [
+    695,
+    695
+  ],
+  "target_tile_size_wh": [
+    850,
+    850
+  ],
+  "bbox_epsg3857": [
+    -8999052.808093844,
+    3935514.9735706556,
+    -8997402.808093844,
+    3937164.9735706556
+  ],
+  "H_source_to_tile": [
+    [
+      0.3435195339817148,
+      0.0004803993098498616,
+      334.80302611062524
+    ],
+    [
+      -0.00010358391423593227,
+      0.3422034220777667,
+      197.92180688799934
+    ],
+    [
+      1.1142764923496653e-06,
+      1.5060411026145803e-06,
+      1.0
+    ]
+  ],
+  "registration": {
+    "inliers": 87,
+    "matches": 95,
+    "rmse_px": 0.44,
+    "source_spread_px": [
+      632.0999755859375,
+      649.4000244140625
+    ],
+    "image_spread_px": [
+      216.0,
+      221.10000610351562
+    ],
+    "projected_bbox_area_px": 27692.7,
+    "nondegenerate_geographic_match_candidate": true,
+    "score": 348.0
+  }
+}
