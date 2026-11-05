@@ -339,6 +339,106 @@
           ]
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -79.5644073,
+              33.8771608
+            ],
+            [
+              -79.5625687,
+              33.8777648
+            ],
+            [
+              -79.5625916,
+              33.8766788
+            ],
+            [
+              -79.5641479,
+              33.8762507
+            ],
+            [
+              -79.5644073,
+              33.8771608
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "county": "Florence",
+        "amp_roster_county": "Florence",
+        "farm_id": "15803",
+        "tract_id": "12462",
+        "producer": "June Bazen",
+        "county_workbook_selected": true,
+        "source_pdf": "June_Bazen_FSA_Map.pdf",
+        "source_sha256": "b0d003d5babcdf3f7d3fc0ab879e993a1b9e8ebefcabe241e7729236f126fb7a",
+        "page_number": 1,
+        "method": "FSA 2016 raster map manually traced; 2015 Esri Wayback historical satellite SIFT/MAGSAC registration",
+        "image_registration_inliers": 223,
+        "image_registration_rmse_px": 1.425,
+        "registration_crosscheck_method": "40 repeated independent random 70-percent SIFT-match homography fits; compare eight field vertices",
+        "resampled_vertex_p95_m": 0.345,
+        "status": "REGISTERED_FSA_RASTER_MANUAL_TRACE__NOT_SURVEY",
+        "source_registration_note": "2016 FSA raster aligned to Esri Wayback 2015 historical aerial imagery (223 SIFT inliers; source-to-image residual 1.43 pixels). Field edges traced from 2016 source and verified against reported acreage. Approximate, not surveyed; land cover may have changed.",
+        "field_id": "2",
+        "fsa_reported_acres": 4.45
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -79.5612793,
+              33.87838
+            ],
+            [
+              -79.5604706,
+              33.8788875
+            ],
+            [
+              -79.5605621,
+              33.8781305
+            ],
+            [
+              -79.5610275,
+              33.878122
+            ],
+            [
+              -79.5612793,
+              33.87838
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "county": "Florence",
+        "amp_roster_county": "Florence",
+        "farm_id": "15803",
+        "tract_id": "12462",
+        "producer": "June Bazen",
+        "county_workbook_selected": true,
+        "source_pdf": "June_Bazen_FSA_Map.pdf",
+        "source_sha256": "b0d003d5babcdf3f7d3fc0ab879e993a1b9e8ebefcabe241e7729236f126fb7a",
+        "page_number": 1,
+        "method": "FSA 2016 raster map manually traced; 2015 Esri Wayback historical satellite SIFT/MAGSAC registration",
+        "image_registration_inliers": 223,
+        "image_registration_rmse_px": 1.425,
+        "registration_crosscheck_method": "40 repeated independent random 70-percent SIFT-match homography fits; compare eight field vertices",
+        "resampled_vertex_p95_m": 0.345,
+        "status": "REGISTERED_FSA_RASTER_MANUAL_TRACE__NOT_SURVEY",
+        "source_registration_note": "2016 FSA raster aligned to Esri Wayback 2015 historical aerial imagery (223 SIFT inliers; source-to-image residual 1.43 pixels). Field edges traced from 2016 source and verified against reported acreage. Approximate, not surveyed; land cover may have changed.",
+        "field_id": "4",
+        "fsa_reported_acres": 0.86
+      }
     }
   ]
 }
