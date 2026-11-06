@@ -1,0 +1,53 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "county": "Charleston",
+        "farm_id": "1436",
+        "tract_id": "1859",
+        "field_id": "1",
+        "producer": "Keesha Jenkins",
+        "fsa_reported_acres": 2.23,
+        "mapped_acres_approx": 2.21,
+        "source_pdf": "Keesha Jenkins_FSA_Map.pdf",
+        "source_page": 1,
+        "method": "Hand-traced FSA raster boundary, aligned to aerial imagery",
+        "registered_to": "NAIP",
+        "registration_inliers": 113,
+        "registration_rmse_pixels": 0.43,
+        "status": "FSA_FIELD_OUTLINE_REGISTERED_APPROXIMATE_NOT_SURVEY",
+        "source_warning": "Raster-traced boundaries are illustrative; not surveyed",
+        "digitization_date": "2026-11-06"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -79.73828460002119,
+              32.89736518427853
+            ],
+            [
+              -79.73784686338367,
+              32.89739072999605
+            ],
+            [
+              -79.73575678066747,
+              32.89552983515222
+            ],
+            [
+              -79.73596270215262,
+              32.89533950972439
+            ],
+            [
+              -79.73828460002119,
+              32.89736518427853
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}
