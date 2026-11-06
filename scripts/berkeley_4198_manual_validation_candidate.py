@@ -122,7 +122,7 @@ def process(t):
     _,res,view,M,tile,bbox,provider,dx,dy=best
     check=strip_result(res)
     base.update(registration=check,provider=provider,tile_offset=[dx,dy])
-    good=bool(res.get('nondegenerate_geographic_match_candidate')) and res.get('inliers',0)>=35 and res.get('rmse_px',99)<3.5
+    good=bool(res.get('nondegenerate_geographic_match_candidate')) and res.get('inliers',0)>=25 and res.get('rmse_px',99)<3.5
     if not good:return dict(base,status='REGISTRATION_NEEDS_REVIEW'),[]
     Htot=np.asarray(res['H'])@M
     feats=[]
