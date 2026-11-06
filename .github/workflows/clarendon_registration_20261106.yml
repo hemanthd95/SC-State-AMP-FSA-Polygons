@@ -1,0 +1,41 @@
+name: Clarendon AMP source-image registration (2026-11-06)
+
+on:
+  push:
+    paths:
+      - scripts/clarendon_registration_batch_20261106.py
+      - .github/workflows/clarendon_registration_20261106.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  register:
+    strategy:
+      fail-fast: false
+      matrix:
+        group: [core, transfers]
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - name: Checkout private repository and FSA source maps
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install matching packages
+        run: python -m pip install "numpy<2.3" opencv-python-headless pymupdf pillow requests
+      - name: Match FSA aerials to registered satellite basemap
+        run: python scripts/clarendon_registration_batch_20261106.py ${{ matrix.group }}
+      - name: Retain Clarendon match diagnostics and images
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Clarendon-registration-${{ matrix.group }}-20261106
+          path: outputs/clarendon_registration_20261106/
+          retention-days: 90
+          if-no-files-found: warn
