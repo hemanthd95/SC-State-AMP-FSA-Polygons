@@ -1,0 +1,11 @@
+roster,actual,id,producer,tract,field,filename,page,status,note
+Colleton,Colleton,1283,Charles Manigault,2004,"5, 6",Manigault Charles_FSAmap.pdf,1,SOURCE_CONFIRMED_MAP_NOT_GEOREGISTERED,FSA scan confirmed; no coordinate hint for automated georegistration; needs QGIS placement
+Colleton,Colleton,1867,Aretha Bennett,3986,9,Aretha_Bennette_FSAmap.pdf,1,GEOREFERENCED_APPROXIMATE_FIELD_COMPLETE,FSA field polygon aligned to aerial imagery in Colleton
+Colleton,Colleton,4917,Loyd Fields,21131,1,Loyd Fields_FSA_Map.pdf,1,GEOREFERENCED_APPROXIMATE_FIELD_COMPLETE,FSA field polygon aligned to aerial imagery in Colleton
+Dorchester,Colleton,6579,Eartha Pinckney,22687,11,Eartha_Pinckney_FSA_Map.pdf,1,FSA_COUNTY_MISMATCH_MAP_NOT_GEOREGISTERED,Roster Dorchester; source map clearly labels Colleton; imagery registration did not verify field placement (except Farm 4261)
+Dorchester,Dorchester,4943,Brenda Harris,4414,3,Brenda Harris_FSAmap.pdf,1,SOURCE_CONFIRMED_MAP_NOT_GEOREGISTERED,FSA map present; additional producer-data page in source
+Dorchester,Dorchester,548,Arthur Cobbs,295,1,Arthur Cobbs_FSA Map.pdf,1,SOURCE_CONFIRMED_MAP_NOT_GEOREGISTERED,"Source county Dorchester, Farm 548, Tract 295 verified visually"
+Sumter,Clarendon,3603,Tyrease Riley,848,1,Tyreese Riley_FSA Map.pdf,1,FSA_COUNTY_MISMATCH_MAP_NOT_GEOREGISTERED,Roster Sumter; FSA map says Clarendon; imagery registration did not verify field placement (except Farm 4261)
+Sumter,Clarendon,7832,Christopher Riley,5341,2,Christopher Riley FSAmap1.pdf,3,FSA_COUNTY_MISMATCH_MAP_NOT_GEOREGISTERED,Roster Sumter; correct Farm 7832 appears on page 3 of 7; FSA says Clarendon; imagery registration did not verify field placement (except Farm 4261)
+Sumter,Orangeburg,4261,Tywone Hilliard,5953,2,Tywone Hillard_FSA_Map.pdf,2,GEOREFERENCED_APPROXIMATE_FIELD_COMPLETE,FSA field polygon aligned to aerial imagery in Orangeburg
+Sumter,Orangeburg,960,Tywone Hilliard,3812,1,Tywone Hillard_FSA_Map.pdf,3,FSA_COUNTY_MISMATCH_MAP_NOT_GEOREGISTERED,"Roster Sumter; Farm 960 is page 3 of 3, FSA says Orangeburg; imagery registration did not verify field placement (except Farm 4261)"
