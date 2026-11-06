@@ -1,0 +1,117 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.49448314668525,
+              33.47540588638371
+            ],
+            [
+              -80.49442952158854,
+              33.475496628637806
+            ],
+            [
+              -80.49425700895736,
+              33.47554191755924
+            ],
+            [
+              -80.4939654907701,
+              33.475550745138854
+            ],
+            [
+              -80.49380348894789,
+              33.47552329495679
+            ],
+            [
+              -80.49359880970322,
+              33.475350416638186
+            ],
+            [
+              -80.49342660428407,
+              33.47524136498545
+            ],
+            [
+              -80.49325449557693,
+              33.475150550394915
+            ],
+            [
+              -80.49307255966107,
+              33.474960431669295
+            ],
+            [
+              -80.49291186097355,
+              33.47485189941751
+            ],
+            [
+              -80.49271876792142,
+              33.47477044708169
+            ],
+            [
+              -80.49264468973524,
+              33.47465333987833
+            ],
+            [
+              -80.49293692004724,
+              33.474465559230815
+            ],
+            [
+              -80.4932261652951,
+              33.47455586287967
+            ],
+            [
+              -80.49349407647397,
+              33.47465515534933
+            ],
+            [
+              -80.49388017507846,
+              33.474853708743126
+            ],
+            [
+              -80.49418101636836,
+              33.47498938607506
+            ],
+            [
+              -80.49436390249134,
+              33.47508893790037
+            ],
+            [
+              -80.49445042590713,
+              33.47526989373874
+            ],
+            [
+              -80.49448314668525,
+              33.47540588638371
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "county": "Orangeburg",
+        "amp_roster_county": "Sumter",
+        "original_amp_roster_county": "Sumter",
+        "county_workbook_selected": true,
+        "farm_id": "4261",
+        "tract_id": "5953",
+        "field_id": "2",
+        "producer": "Tywone Hilliard",
+        "fsa_reported_acres": 2.1,
+        "calculated_acres": 2.37,
+        "approx_area_difference_percent": 13.1,
+        "source_pdf": "Tywone Hillard_FSA_Map.pdf",
+        "source_page": 2,
+        "method": "Hand-traced FSA raster polygon, registered to aerial imagery with SIFT feature matches",
+        "registered_to": "NAIP",
+        "image_registration_inliers": 66,
+        "registration_rmse_pixels": 0.9,
+        "status": "FSA_RASTER_ALIGNED_APPROXIMATE_NOT_SURVEY",
+        "source_warning": "Field boundary is illustrative; not a legal property survey",
+        "registration_date": "2026-11-06"
+      }
+    }
+  ]
+}
