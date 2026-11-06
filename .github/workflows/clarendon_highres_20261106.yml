@@ -1,0 +1,27 @@
+name: Clarendon higher resolution source registration
+on:
+  push:
+    paths:
+      - scripts/clarendon_highres_registration_20261106.py
+      - .github/workflows/clarendon_highres_20261106.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  register:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with: {lfs: true}
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.11"}
+      - run: python -m pip install "numpy<2.3" opencv-python-headless pymupdf pillow requests
+      - run: python scripts/clarendon_highres_registration_20261106.py core
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Clarendon-FSA-Highres-20261106
+          path: outputs/clarendon_highres_20261106/
+          retention-days: 90
+          if-no-files-found: warn
