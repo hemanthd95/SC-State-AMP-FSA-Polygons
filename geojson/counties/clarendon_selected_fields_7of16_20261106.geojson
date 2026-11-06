@@ -1,0 +1,420 @@
+{
+  "type": "FeatureCollection",
+  "name": "Clarendon_AMP_FSA_Approximate_7of16",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.3564761,
+              33.6705593
+            ],
+            [
+              -80.3564132,
+              33.6716283
+            ],
+            [
+              -80.3561257,
+              33.671761
+            ],
+            [
+              -80.3560808,
+              33.6718657
+            ],
+            [
+              -80.3555059,
+              33.6718657
+            ],
+            [
+              -80.355443,
+              33.6717891
+            ],
+            [
+              -80.3554969,
+              33.6716769
+            ],
+            [
+              -80.355973,
+              33.6710751
+            ],
+            [
+              -80.3559191,
+              33.6705181
+            ],
+            [
+              -80.3564761,
+              33.6705593
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "county": "Clarendon",
+        "producer": "Bryan Green",
+        "farm_id": "9274",
+        "tract_id": "646",
+        "field_id": "1",
+        "source_pdf": "Bryan Green_FSAmap.pdf",
+        "fsa_reported_acres": 2.18,
+        "status": "FSA_SOURCE_IMAGE_REGISTERED_APPROXIMATE",
+        "accuracy": "visual field boundary approximate, not survey",
+        "atlas_date": "2026-11-06"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.3557754,
+              33.6713013
+            ],
+            [
+              -80.3554161,
+              33.6716096
+            ],
+            [
+              -80.3548591,
+              33.6715797
+            ],
+            [
+              -80.3546795,
+              33.6720507
+            ],
+            [
+              -80.3537632,
+              33.6720227
+            ],
+            [
+              -80.3537183,
+              33.6716881
+            ],
+            [
+              -80.3539249,
+              33.670378
+            ],
+            [
+              -80.3555508,
+              33.6704901
+            ],
+            [
+              -80.355461,
+              33.6706471
+            ],
+            [
+              -80.3555329,
+              33.6709966
+            ],
+            [
+              -80.3555329,
+              33.6711816
+            ],
+            [
+              -80.3557754,
+              33.6713013
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "county": "Clarendon",
+        "producer": "Bryan Green",
+        "farm_id": "9274",
+        "tract_id": "646",
+        "field_id": "2",
+        "source_pdf": "Bryan Green_FSAmap.pdf",
+        "fsa_reported_acres": 6.19,
+        "status": "FSA_SOURCE_IMAGE_REGISTERED_APPROXIMATE",
+        "accuracy": "visual field boundary approximate, not survey",
+        "atlas_date": "2026-11-06"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.2942139,
+              33.6459518
+            ],
+            [
+              -80.2933874,
+              33.6459817
+            ],
+            [
+              -80.2928125,
+              33.6462734
+            ],
+            [
+              -80.292543,
+              33.6459256
+            ],
+            [
+              -80.2922825,
+              33.6458695
+            ],
+            [
+              -80.292022,
+              33.6459873
+            ],
+            [
+              -80.2918154,
+              33.645806
+            ],
+            [
+              -80.2918154,
+              33.6455592
+            ],
+            [
+              -80.2922825,
+              33.6452993
+            ],
+            [
+              -80.2925879,
+              33.6453087
+            ],
+            [
+              -80.2933605,
+              33.6459574
+            ],
+            [
+              -80.2940701,
+              33.6456751
+            ],
+            [
+              -80.2942139,
+              33.6459518
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "county": "Clarendon",
+        "producer": "Willie Richburg",
+        "farm_id": "1118",
+        "tract_id": "2455",
+        "field_id": "1",
+        "source_pdf": "Willie Richburg _FSA Map.pdf",
+        "fsa_reported_acres": 2.9,
+        "status": "FSA_SOURCE_IMAGE_REGISTERED_APPROXIMATE",
+        "accuracy": "visual field boundary approximate, not survey",
+        "atlas_date": "2026-11-06"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.2919232,
+              33.6468174
+            ],
+            [
+              -80.2914111,
+              33.6470305
+            ],
+            [
+              -80.2913213,
+              33.6461126
+            ],
+            [
+              -80.2915189,
+              33.6459873
+            ],
+            [
+              -80.2916896,
+              33.6460584
+            ],
+            [
+              -80.2916716,
+              33.6463743
+            ],
+            [
+              -80.2919232,
+              33.6468174
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "county": "Clarendon",
+        "producer": "Willie Richburg",
+        "farm_id": "1118",
+        "tract_id": "2455",
+        "field_id": "2",
+        "source_pdf": "Willie Richburg _FSA Map.pdf",
+        "fsa_reported_acres": 1.11,
+        "status": "FSA_SOURCE_IMAGE_REGISTERED_APPROXIMATE",
+        "accuracy": "visual field boundary approximate, not survey",
+        "atlas_date": "2026-11-06"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.295229,
+              33.6459911
+            ],
+            [
+              -80.2928843,
+              33.6471296
+            ],
+            [
+              -80.2928215,
+              33.6464641
+            ],
+            [
+              -80.2947349,
+              33.6457424
+            ],
+            [
+              -80.295229,
+              33.6459911
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "county": "Clarendon",
+        "producer": "Willie Richburg",
+        "farm_id": "1118",
+        "tract_id": "4102",
+        "field_id": "1",
+        "source_pdf": "Willie Richburg _FSA Map.pdf",
+        "fsa_reported_acres": 3.3,
+        "status": "FSA_SOURCE_IMAGE_REGISTERED_APPROXIMATE",
+        "accuracy": "visual field boundary approximate, not survey",
+        "atlas_date": "2026-11-06"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.2928304,
+              33.6471053
+            ],
+            [
+              -80.2924621,
+              33.6471352
+            ],
+            [
+              -80.2922286,
+              33.6470866
+            ],
+            [
+              -80.2919501,
+              33.646909
+            ],
+            [
+              -80.291492,
+              33.6470249
+            ],
+            [
+              -80.2918064,
+              33.6475428
+            ],
+            [
+              -80.2928304,
+              33.6471053
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "county": "Clarendon",
+        "producer": "Willie Richburg",
+        "farm_id": "1118",
+        "tract_id": "4102",
+        "field_id": "2",
+        "source_pdf": "Willie Richburg _FSA Map.pdf",
+        "fsa_reported_acres": 1.05,
+        "status": "FSA_SOURCE_IMAGE_REGISTERED_APPROXIMATE",
+        "accuracy": "visual field boundary approximate, not survey",
+        "atlas_date": "2026-11-06"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.3583266,
+              33.6755195
+            ],
+            [
+              -80.354949,
+              33.675142
+            ],
+            [
+              -80.3550118,
+              33.6743608
+            ],
+            [
+              -80.3569342,
+              33.6744879
+            ],
+            [
+              -80.3568085,
+              33.6745869
+            ],
+            [
+              -80.3569163,
+              33.6746654
+            ],
+            [
+              -80.3571319,
+              33.6746038
+            ],
+            [
+              -80.3572756,
+              33.6746953
+            ],
+            [
+              -80.3574642,
+              33.6749495
+            ],
+            [
+              -80.3583446,
+              33.6751009
+            ],
+            [
+              -80.3583266,
+              33.6755195
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "county": "Clarendon",
+        "producer": "Erica Wallace",
+        "farm_id": "9274",
+        "tract_id": "662",
+        "field_id": "1",
+        "source_pdf": "Erica Wallace Green_FSA_Map.jpeg",
+        "fsa_reported_acres": 6.09,
+        "status": "FSA_SOURCE_IMAGE_REGISTERED_APPROXIMATE",
+        "accuracy": "visual field boundary approximate, not survey",
+        "atlas_date": "2026-11-06"
+      }
+    }
+  ]
+}
