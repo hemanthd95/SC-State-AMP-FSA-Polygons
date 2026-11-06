@@ -1,0 +1,80 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.24508499224794,
+              33.36058514395259
+            ],
+            [
+              -80.24482448081554,
+              33.36079897822018
+            ],
+            [
+              -80.24430345795075,
+              33.36088338633906
+            ],
+            [
+              -80.24425854218654,
+              33.36065267062017
+            ],
+            [
+              -80.2446807503701,
+              33.36055325634134
+            ],
+            [
+              -80.24508499224794,
+              33.36058514395259
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "county": "Orangeburg",
+        "roster_county": "Berkeley",
+        "farm_id": "14118",
+        "tract_id": "46082",
+        "field_id": "23",
+        "producer": "Shane Middleton",
+        "source_file": "Shane Middleton_FSA Map.pdf",
+        "source_page": 1,
+        "source_method": "manual rough FSA yellow-outline tracing plus image registration",
+        "quality": "APPROXIMATE_DIGITIZED_BOUNDARY_NOT_SURVEY",
+        "source_pixel_vertices_1p5x": [
+          [
+            55,
+            487
+          ],
+          [
+            111,
+            433
+          ],
+          [
+            220,
+            412
+          ],
+          [
+            230,
+            470
+          ],
+          [
+            141,
+            495
+          ]
+        ],
+        "registered_provider": "NAIP",
+        "image_inliers": 60,
+        "registration_rmse_px": 0.43,
+        "amp_roster_county": "Berkeley",
+        "physical_county": "Orangeburg",
+        "county_reassignment_evidence": "FSA map county label and polygon representative point inside official Orangeburg county boundary",
+        "status": "IMAGE_REGISTERED_APPROXIMATE_NOT_SURVEY"
+      }
+    }
+  ]
+}
