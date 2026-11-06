@@ -1,0 +1,132 @@
+{
+  "type": "FeatureCollection",
+  "name": "Unverified_FSA_Coordinate_Hints_For_QGIS_Review",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "farm_id": "6579",
+        "producer": "Eartha Pinckney",
+        "roster_county": "Dorchester",
+        "fsa_map_county": "Colleton",
+        "coordinate_point_county": "Berkeley",
+        "feature_role": "UNVERIFIED_GPS_REVIEW_HINT__NOT_FARM_POLYGON",
+        "review_reason": "FSA county Colleton conflicts with GPS point in Berkeley",
+        "source_status": "FSA_PDF_PRESENT",
+        "polygon_status": "NOT_MAPPED"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.2869,
+          33.1822
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "farm_id": "4943",
+        "producer": "Brenda Harris",
+        "roster_county": "Dorchester",
+        "fsa_map_county": "Dorchester",
+        "coordinate_point_county": "Orangeburg",
+        "feature_role": "UNVERIFIED_GPS_REVIEW_HINT__NOT_FARM_POLYGON",
+        "review_reason": "FSA county Dorchester conflicts with GPS point in Orangeburg",
+        "source_status": "FSA_PDF_PRESENT",
+        "polygon_status": "NOT_MAPPED"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.289,
+          33.3243
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "farm_id": "548",
+        "producer": "Arthur Cobbs",
+        "roster_county": "Dorchester",
+        "fsa_map_county": "Dorchester",
+        "coordinate_point_county": "Dorchester",
+        "feature_role": "UNVERIFIED_GPS_REVIEW_HINT__NOT_FARM_POLYGON",
+        "review_reason": "Scan has weak image matching; QGIS tracing needed",
+        "source_status": "FSA_PDF_PRESENT",
+        "polygon_status": "NOT_MAPPED"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.5391,
+          33.2872
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "farm_id": "3603",
+        "producer": "Tyrease Riley",
+        "roster_county": "Sumter",
+        "fsa_map_county": "Clarendon",
+        "coordinate_point_county": "Clarendon",
+        "feature_role": "UNVERIFIED_GPS_REVIEW_HINT__NOT_FARM_POLYGON",
+        "review_reason": "FSA map and GPS county Clarendon; image registration inconclusive",
+        "source_status": "FSA_PDF_PRESENT",
+        "polygon_status": "NOT_MAPPED"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.4385762,
+          33.5946765
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "farm_id": "7832",
+        "producer": "Christopher Riley",
+        "roster_county": "Sumter",
+        "fsa_map_county": "Clarendon",
+        "coordinate_point_county": "Clarendon",
+        "feature_role": "UNVERIFIED_GPS_REVIEW_HINT__NOT_FARM_POLYGON",
+        "review_reason": "FSA map and GPS county Clarendon; image registration inconclusive",
+        "source_status": "FSA_PDF_PRESENT",
+        "polygon_status": "NOT_MAPPED"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.4379171,
+          33.5954525
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "farm_id": "960",
+        "producer": "Tywone Hilliard",
+        "roster_county": "Sumter",
+        "fsa_map_county": "Orangeburg",
+        "coordinate_point_county": "Orangeburg",
+        "feature_role": "UNVERIFIED_GPS_REVIEW_HINT__NOT_FARM_POLYGON",
+        "review_reason": "FSA map Orangeburg; farm 960 polygon not matched; do not reuse farm 4261 polygon",
+        "source_status": "FSA_PDF_PRESENT",
+        "polygon_status": "NOT_MAPPED"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.5074459,
+          33.4656894
+        ]
+      }
+    }
+  ]
+}
