@@ -1,0 +1,55 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -80.14812232077648,
+                34.15008241939667
+              ],
+              [
+                -80.14124263674827,
+                34.15540487524305
+              ],
+              [
+                -80.14176463529549,
+                34.15720487023343
+              ],
+              [
+                -80.13976664085617,
+                34.15884286567468
+              ],
+              [
+                -80.13733332260439,
+                34.15729574260946
+              ],
+              [
+                -80.14762517930295,
+                34.149465278257104
+              ],
+              [
+                -80.14812232077648,
+                34.15008241939667
+              ]
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "county": "Darlington",
+        "farm_id": "7370",
+        "tract_id": "442",
+        "producer": "Garrett Patterson",
+        "feature_role": "user_digitized_farm_outline_not_additional_selected_field",
+        "source_file": "Garrett_Patterson_Farm_Polygon.geojson",
+        "method": "User hand-digitized in QGIS from hand-annotated FSA map",
+        "boundary_notice": "Rough farm perimeter for visual reference; distinct from selected FSA Field 1"
+      }
+    }
+  ]
+}
