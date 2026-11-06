@@ -1,0 +1,5 @@
+county,farm_id,producer,status,source_pdf,detail
+Marlboro,3776,Johnie Thomas,MAPPED,Johnie Thomas_FSA_Map.pdf,POTENTIAL_REGISTRATION_NEEDS_FIELD_TRACE
+York,4330,Rick Boswell,MAPPED,Rick Boswell.pdf,POTENTIAL_REGISTRATION_NEEDS_FIELD_TRACE
+Charleston,1436,Keesha Jenkins,MAPPED,Keesha Jenkins_FSA_Map.pdf,POTENTIAL_REGISTRATION_NEEDS_FIELD_TRACE
+Charleston,1134,Sharon Taylor,FSA_PRESENT_GEOGRAPHIC_ALIGNMENT_UNRESOLVED,Sharon Taylor_Farm_FSA_Map.pdf,WEAK_ALIGNMENT_NEEDS_REVIEW
