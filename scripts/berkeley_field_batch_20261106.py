@@ -171,6 +171,7 @@ def image_for_bbox(bbox,kind,px=(1600,950)):
     except Exception:return None
 
 def extent(geom,pad=.2):
+    if geom.geom_type=='MultiPolygon':geom=geom.convex_hull
     xy=np.asarray([TO_MERC.transform(x,y) for x,y in geom.exterior.coords])
     x1,y1=xy.min(axis=0);x2,y2=xy.max(axis=0)
     w=max(300,(x2-x1)*(1+pad*2));h=max(300,(y2-y1)*(1+pad*2))
