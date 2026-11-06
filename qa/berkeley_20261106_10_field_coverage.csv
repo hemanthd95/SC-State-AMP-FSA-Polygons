@@ -1,0 +1,11 @@
+Farm ID,Producer,Tract ID,Selected Field,FSA Source County,GIS Status,Source PDF,Evidence or next step
+3756,John Loyd,3313,1,Berkeley,MAPPED_APPROXIMATE,John_Lloyd_FSA_Map.pdf,Shown in Berkeley satellite and topographic atlases
+4273,John Loyd,33795,5,Berkeley,GEOGRAPHIC_LOCATION_UNRESOLVED,John_Lloyd_FSA_Map.pdf,FSA photograph available but bounded NAIP and Esri searches did not validate placement
+4198,John Loyd,33763,3,Berkeley,GEOGRAPHIC_LOCATION_UNRESOLVED,John_Lloyd_FSA_Map.pdf,FSA photograph available but bounded NAIP and Esri searches did not validate placement
+4236,Julian Ramsue,2906,4,Berkeley,MAPPED_APPROXIMATE,Sonya_Ramsue_FSA_Map.pdf,FSA source photograph field outline aligned to aerial imagery
+4236,Julian Ramsue,2906,30,Berkeley,MAPPED_APPROXIMATE,Sonya_Ramsue_FSA_Map.pdf,Field 30 trace refined to exclude neighboring Field 29
+13739,Latonya Flood,45688,2,Orangeburg on FSA map,COUNTY_AND_LOCATION_UNRESOLVED,Latonya Flood_FSAmap.pdf,Printed source county disagrees with Berkeley roster and needs geographic registration
+14118,Shane Middleton,46082,23,Orangeburg,MAPPED_REASSIGNED_TO_ORANGEBURG,Shane Middleton_FSA Map.pdf,Imagery-registered polygon in Orangeburg separate GeoJSON
+9387,Shane Middleton,8069,7,Clarendon on FSA map,COUNTY_AND_LOCATION_UNRESOLVED,Shane Middleton_FSA Map.pdf,Printed source county disagrees with Berkeley roster and needs geographic registration
+9387,Shane Middleton,8069,11,Clarendon on FSA map,COUNTY_AND_LOCATION_UNRESOLVED,Shane Middleton_FSA Map.pdf,Printed source county disagrees with Berkeley roster and needs geographic registration
+577,Ivan Flood,1397,1,Dorchester on provided source documents,FSA_FIELD_BOUNDARY_MAP_MISSING,Iven Flood_FSA Map.pdf,Provided document is eligibility paperwork and not an FSA boundary map
