@@ -1,0 +1,27 @@
+name: Clarendon county imagery and topographic atlas backgrounds
+on:
+  push:
+    paths:
+      - scripts/clarendon_download_basemaps_20261106.py
+      - .github/workflows/clarendon_basemaps_20261106.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  backgrounds:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with: {lfs: false}
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.11"}
+      - run: python -m pip install requests pillow shapely pyproj
+      - run: python scripts/clarendon_download_basemaps_20261106.py
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Clarendon-mapped-farms-backgrounds-20261106
+          path: outputs/clarendon_backgrounds_20261106/
+          retention-days: 90
+          if-no-files-found: warn
