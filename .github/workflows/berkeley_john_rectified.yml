@@ -1,0 +1,46 @@
+name: Berkeley John photo perspective recovery
+
+on:
+  push:
+    paths:
+      - "scripts/berkeley_john_rectified_registration_20261106.py"
+      - ".github/workflows/berkeley_john_rectified.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  process-berkeley:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install geospatial and image matching packages
+        run: python -m pip install "numpy<2.3" opencv-python-headless pymupdf pyproj shapely reportlab pillow requests
+      - name: Register Berkeley FSA outlines and generate atlases
+        run: python scripts/berkeley_john_rectified_registration_20261106.py
+      - name: Upload Berkeley PDF and GeoJSON deliverables
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Berkeley-John-Rectified-20261106
+          path: outputs/berkeley_rectified_20261106/
+          retention-days: 90
+          if-no-files-found: warn
+      - name: Commit verified Berkeley GIS and PDF deliverables
+        if: success()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add outputs/berkeley_rectified_20261106/*.geojson outputs/berkeley_rectified_20261106/*.csv outputs/berkeley_rectified_20261106/*.json outputs/berkeley_rectified_20261106/*.pdf
+          if ! git diff --cached --quiet; then
+            git commit -m "Save Berkeley FSA field registrations and county atlases"
+            git pull --rebase origin main
+            git push
+          fi
