@@ -1,0 +1,160 @@
+{
+  "created": "2026-11-06",
+  "deferred": [
+    "Berkeley",
+    "Clarendon"
+  ],
+  "fields": [
+    {
+      "farm_id": "1638",
+      "producer": "Myra Louden",
+      "amp_roster_county": "Greenwood",
+      "fsa_source_county": "Greenwood",
+      "tracts": [
+        "7136"
+      ],
+      "selected_fields": [
+        "2"
+      ],
+      "source_pdf": "Louden, James - FSA Map.pdf",
+      "source_pdf_available": true,
+      "workbook_coordinate_inside_fsa_county": true,
+      "geometry_status": "FSA_IMAGE_REGISTERED_APPROXIMATE",
+      "issue": "Source PDF title is James Louden; Farm 1638 Tract 7136 matches AMP Myra Louden"
+    },
+    {
+      "farm_id": "4706",
+      "producer": "Annette Weekley",
+      "amp_roster_county": "Hampton",
+      "fsa_source_county": "Hampton",
+      "tracts": [
+        "11322"
+      ],
+      "selected_fields": [
+        "2"
+      ],
+      "source_pdf": "Annette Weekley_FSA_Map.pdf",
+      "source_pdf_available": true,
+      "workbook_coordinate_inside_fsa_county": false,
+      "geometry_status": "REQUIRES_QGIS_FSA_REVIEW"
+    },
+    {
+      "farm_id": "1274",
+      "producer": "John Lee",
+      "amp_roster_county": "Hampton",
+      "fsa_source_county": "Jasper",
+      "tracts": [
+        "1974"
+      ],
+      "selected_fields": [
+        "25",
+        "26"
+      ],
+      "source_pdf": "John H. Lee, Jr_FSA_Map.pdf",
+      "source_pdf_available": true,
+      "workbook_coordinate_inside_fsa_county": true,
+      "geometry_status": "FSA_IMAGE_REGISTERED_APPROXIMATE"
+    },
+    {
+      "farm_id": "22560",
+      "producer": "Angale Johnson",
+      "amp_roster_county": "Horry",
+      "fsa_source_county": "Horry",
+      "tracts": [
+        "17266"
+      ],
+      "selected_fields": [
+        "1"
+      ],
+      "source_pdf": "Johnson Angale_FSAmap.pdf",
+      "source_pdf_available": true,
+      "workbook_coordinate_inside_fsa_county": true,
+      "geometry_status": "REQUIRES_QGIS_FSA_REVIEW"
+    },
+    {
+      "farm_id": "22564",
+      "producer": "Angale Johnson",
+      "amp_roster_county": "Horry",
+      "fsa_source_county": "Horry",
+      "tracts": [
+        "17268",
+        "17265"
+      ],
+      "selected_fields": [
+        "2",
+        "13"
+      ],
+      "source_pdf": "Johnson Angale_FSAmap.pdf",
+      "source_pdf_available": true,
+      "workbook_coordinate_inside_fsa_county": true,
+      "geometry_status": "REQUIRES_QGIS_FSA_REVIEW"
+    },
+    {
+      "farm_id": "1662",
+      "producer": "Derick Muhammed",
+      "amp_roster_county": "Jasper",
+      "fsa_source_county": "Jasper",
+      "tracts": [
+        "2387"
+      ],
+      "selected_fields": [
+        "1"
+      ],
+      "source_pdf": "Derick Muhammed_FSA Map.pdf",
+      "source_pdf_available": true,
+      "workbook_coordinate_inside_fsa_county": false,
+      "geometry_status": "REQUIRES_QGIS_FSA_REVIEW"
+    },
+    {
+      "farm_id": "4083",
+      "producer": "Francena Ellis",
+      "amp_roster_county": "Jasper",
+      "fsa_source_county": "Hampton",
+      "tracts": [
+        "10683"
+      ],
+      "selected_fields": [
+        "3",
+        "7"
+      ],
+      "source_pdf": "Francenia Ellis 2026 FSA Map.pdf",
+      "source_pdf_available": true,
+      "workbook_coordinate_inside_fsa_county": false,
+      "geometry_status": "REQUIRES_QGIS_FSA_REVIEW"
+    },
+    {
+      "farm_id": "3107",
+      "producer": "David Gates",
+      "amp_roster_county": "Spartanburg",
+      "fsa_source_county": "Cherokee",
+      "tracts": [
+        "16606"
+      ],
+      "selected_fields": [
+        "34"
+      ],
+      "source_pdf": "David Gates FSA_Map.pdf",
+      "source_pdf_available": true,
+      "workbook_coordinate_inside_fsa_county": false,
+      "geometry_status": "REQUIRES_QGIS_FSA_REVIEW",
+      "issue": "AMP tract 16606 conflicts with FSA source tract 16607"
+    },
+    {
+      "farm_id": "1659",
+      "producer": "Deone Jones",
+      "amp_roster_county": "Spartanburg",
+      "fsa_source_county": "Greenwood",
+      "tracts": [
+        "7406"
+      ],
+      "selected_fields": [
+        "28"
+      ],
+      "source_pdf": "Deone Jones_FSA Map.pdf",
+      "source_pdf_available": true,
+      "workbook_coordinate_inside_fsa_county": true,
+      "geometry_status": "REQUIRES_QGIS_FSA_REVIEW",
+      "issue": "AMP Field 28 not depicted in supplied Greenwood FSA PDF"
+    }
+  ]
+}
