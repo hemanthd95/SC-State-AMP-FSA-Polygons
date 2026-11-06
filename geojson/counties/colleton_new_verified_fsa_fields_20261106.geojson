@@ -1,0 +1,125 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.51586153428784,
+              32.930998100370964
+            ],
+            [
+              -80.51482552671006,
+              32.931131657253864
+            ],
+            [
+              -80.51465869308169,
+              32.93019075757721
+            ],
+            [
+              -80.51563016990573,
+              32.92999067760139
+            ],
+            [
+              -80.51586153428784,
+              32.930998100370964
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "county": "Colleton",
+        "amp_roster_county": "Colleton",
+        "original_amp_roster_county": "Colleton",
+        "county_workbook_selected": true,
+        "farm_id": "1867",
+        "tract_id": "3986",
+        "field_id": "9",
+        "producer": "Aretha Bennett",
+        "fsa_reported_acres": 2.56,
+        "calculated_acres": 2.59,
+        "approx_area_difference_percent": 1.2,
+        "source_pdf": "Aretha_Bennette_FSAmap.pdf",
+        "source_page": 1,
+        "method": "Hand-traced FSA raster polygon, registered to aerial imagery with SIFT feature matches",
+        "registered_to": "NAIP",
+        "image_registration_inliers": 252,
+        "registration_rmse_pixels": 0.91,
+        "status": "FSA_RASTER_ALIGNED_APPROXIMATE_NOT_SURVEY",
+        "source_warning": "Field boundary is illustrative; not a legal property survey",
+        "registration_date": "2026-11-06"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.66149355885251,
+              32.74886756292773
+            ],
+            [
+              -80.65771803245714,
+              32.74619135616682
+            ],
+            [
+              -80.65808380356624,
+              32.74564797977855
+            ],
+            [
+              -80.65762311194383,
+              32.745354476110855
+            ],
+            [
+              -80.6580153676958,
+              32.744892319080485
+            ],
+            [
+              -80.65726723823532,
+              32.74440751541176
+            ],
+            [
+              -80.65735999797067,
+              32.744347337487305
+            ],
+            [
+              -80.66099340879946,
+              32.746770397787884
+            ],
+            [
+              -80.66149355885251,
+              32.74886756292773
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "county": "Colleton",
+        "amp_roster_county": "Colleton",
+        "original_amp_roster_county": "Colleton",
+        "county_workbook_selected": true,
+        "farm_id": "4917",
+        "tract_id": "21131",
+        "field_id": "1",
+        "producer": "Loyd Fields",
+        "fsa_reported_acres": 14.73,
+        "calculated_acres": 14.77,
+        "approx_area_difference_percent": 0.3,
+        "source_pdf": "Loyd Fields_FSA_Map.pdf",
+        "source_page": 1,
+        "method": "Hand-traced FSA raster polygon, registered to aerial imagery with SIFT feature matches",
+        "registered_to": "NAIP",
+        "image_registration_inliers": 138,
+        "registration_rmse_pixels": 0.63,
+        "status": "FSA_RASTER_ALIGNED_APPROXIMATE_NOT_SURVEY",
+        "source_warning": "Field boundary is illustrative; not a legal property survey",
+        "registration_date": "2026-11-06"
+      }
+    }
+  ]
+}
