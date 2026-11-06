@@ -1,0 +1,489 @@
+{
+  "type": "FeatureCollection",
+  "name": "Darlington_FSA_Selected_5_Fields",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.0171020229361,
+              34.29638600356327
+            ],
+            [
+              -80.0168361923606,
+              34.29640497861309
+            ],
+            [
+              -80.01669641503683,
+              34.29576374380034
+            ],
+            [
+              -80.01695241808804,
+              34.295749042459086
+            ],
+            [
+              -80.0171020229361,
+              34.29638600356327
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "county": "Darlington",
+        "amp_roster_county": "Orangeburg",
+        "county_workbook_selected": true,
+        "farm_id": "10262",
+        "tract_id": "10855",
+        "field_id": "28",
+        "producer": "Marva Jackson",
+        "fsa_reported_acres": 0.36,
+        "traced_geodesic_acres": 0.427,
+        "source_pdf": "Mava Jackson_FSA map, (dragged).pdf",
+        "source_page": 2,
+        "image_provider": "USGS NAIP",
+        "image_registration_inliers": 66,
+        "image_registration_rmse_pixels": 0.47,
+        "method": "Source raster geometry manually traced; SIFT homography to USGS NAIP",
+        "status": "IMAGE_REGISTERED__MANUAL_APPROXIMATE_FIELD_BOUNDARY",
+        "census_darlington_county_contains_field": true,
+        "county_boundary_note": "Inside Census Darlington boundary",
+        "boundary_notice": "Digitized approximation from FSA PDF; not a legal parcel survey",
+        "qa_source_outline_pixels": [
+          [
+            344,
+            303
+          ],
+          [
+            396,
+            298
+          ],
+          [
+            424,
+            450
+          ],
+          [
+            374,
+            454
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.0168361923606,
+              34.29640497861309
+            ],
+            [
+              -80.01647819323102,
+              34.29641484420703
+            ],
+            [
+              -80.0164236405057,
+              34.29604812643589
+            ],
+            [
+              -80.01631100621748,
+              34.296042998706234
+            ],
+            [
+              -80.01625062604575,
+              34.295793730139664
+            ],
+            [
+              -80.01669641503683,
+              34.29576374380034
+            ],
+            [
+              -80.0168361923606,
+              34.29640497861309
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "county": "Darlington",
+        "amp_roster_county": "Orangeburg",
+        "county_workbook_selected": true,
+        "farm_id": "10262",
+        "tract_id": "10855",
+        "field_id": "26",
+        "producer": "Marva Jackson",
+        "fsa_reported_acres": 0.63,
+        "traced_geodesic_acres": 0.622,
+        "source_pdf": "Mava Jackson_FSA map, (dragged).pdf",
+        "source_page": 2,
+        "image_provider": "USGS NAIP",
+        "image_registration_inliers": 66,
+        "image_registration_rmse_pixels": 0.47,
+        "method": "Source raster geometry manually traced; SIFT homography to USGS NAIP",
+        "status": "IMAGE_REGISTERED__MANUAL_APPROXIMATE_FIELD_BOUNDARY",
+        "census_darlington_county_contains_field": true,
+        "county_boundary_note": "Inside Census Darlington boundary",
+        "boundary_notice": "Digitized approximation from FSA PDF; not a legal parcel survey",
+        "qa_source_outline_pixels": [
+          [
+            396,
+            298
+          ],
+          [
+            466,
+            295
+          ],
+          [
+            477,
+            382
+          ],
+          [
+            499,
+            383
+          ],
+          [
+            511,
+            442
+          ],
+          [
+            424,
+            450
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.01647819323102,
+              34.29641484420703
+            ],
+            [
+              -80.01637583378891,
+              34.29642247254039
+            ],
+            [
+              -80.01631100621748,
+              34.296042998706234
+            ],
+            [
+              -80.0164236405057,
+              34.29604812643589
+            ],
+            [
+              -80.01647819323102,
+              34.29641484420703
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "county": "Darlington",
+        "amp_roster_county": "Orangeburg",
+        "county_workbook_selected": true,
+        "farm_id": "10262",
+        "tract_id": "10855",
+        "field_id": "24",
+        "producer": "Marva Jackson",
+        "fsa_reported_acres": 0.1,
+        "traced_geodesic_acres": 0.101,
+        "source_pdf": "Mava Jackson_FSA map, (dragged).pdf",
+        "source_page": 2,
+        "image_provider": "USGS NAIP",
+        "image_registration_inliers": 66,
+        "image_registration_rmse_pixels": 0.47,
+        "method": "Source raster geometry manually traced; SIFT homography to USGS NAIP",
+        "status": "IMAGE_REGISTERED__MANUAL_APPROXIMATE_FIELD_BOUNDARY",
+        "census_darlington_county_contains_field": true,
+        "county_boundary_note": "Inside Census Darlington boundary",
+        "boundary_notice": "Digitized approximation from FSA PDF; not a legal parcel survey",
+        "qa_source_outline_pixels": [
+          [
+            466,
+            295
+          ],
+          [
+            486,
+            293
+          ],
+          [
+            499,
+            383
+          ],
+          [
+            477,
+            382
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.1437406621785,
+              34.15339664118802
+            ],
+            [
+              -80.143636769848,
+              34.15368394776107
+            ],
+            [
+              -80.14328772019765,
+              34.153934996481425
+            ],
+            [
+              -80.14310169153372,
+              34.154255666021015
+            ],
+            [
+              -80.14279262586672,
+              34.154609247877204
+            ],
+            [
+              -80.14240153845833,
+              34.154962226200254
+            ],
+            [
+              -80.14201046173184,
+              34.15528140414032
+            ],
+            [
+              -80.14174551559685,
+              34.155108854476985
+            ],
+            [
+              -80.14146073193933,
+              34.154851148396695
+            ],
+            [
+              -80.14113543298633,
+              34.154542118863084
+            ],
+            [
+              -80.14144418340909,
+              34.15430731795965
+            ],
+            [
+              -80.14177303089805,
+              34.154106767904686
+            ],
+            [
+              -80.14212232700734,
+              34.153889521059774
+            ],
+            [
+              -80.14243036091315,
+              34.15370588894262
+            ],
+            [
+              -80.14282017519389,
+              34.15350617200447
+            ],
+            [
+              -80.14339376957552,
+              34.15330837688066
+            ],
+            [
+              -80.1437406621785,
+              34.15339664118802
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "county": "Darlington",
+        "amp_roster_county": "Darlington",
+        "county_workbook_selected": true,
+        "farm_id": "7370",
+        "tract_id": "442",
+        "field_id": "1",
+        "producer": "Garrett Patterson",
+        "fsa_reported_acres": 3.9,
+        "traced_geodesic_acres": 5.529,
+        "source_pdf": "Garrett Patterson_FSA_MAP.pdf",
+        "source_page": 6,
+        "image_provider": "USGS NAIP",
+        "image_registration_inliers": 241,
+        "image_registration_rmse_pixels": 1.01,
+        "method": "Source raster geometry manually traced; SIFT homography to USGS NAIP",
+        "status": "IMAGE_REGISTERED__MANUAL_APPROXIMATE_FIELD_BOUNDARY",
+        "census_darlington_county_contains_field": false,
+        "county_boundary_note": "Printed FSA county is Darlington; registered location lies outside the supplied Census Darlington polygon",
+        "boundary_notice": "Digitized approximation from FSA PDF; not a legal parcel survey",
+        "qa_source_outline_pixels": [
+          [
+            360,
+            494
+          ],
+          [
+            365,
+            477
+          ],
+          [
+            382,
+            462
+          ],
+          [
+            391,
+            443
+          ],
+          [
+            406,
+            422
+          ],
+          [
+            425,
+            401
+          ],
+          [
+            444,
+            382
+          ],
+          [
+            457,
+            392
+          ],
+          [
+            471,
+            407
+          ],
+          [
+            487,
+            425
+          ],
+          [
+            472,
+            439
+          ],
+          [
+            456,
+            451
+          ],
+          [
+            439,
+            464
+          ],
+          [
+            424,
+            475
+          ],
+          [
+            405,
+            487
+          ],
+          [
+            377,
+            499
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.0065304939374,
+              34.12702049655401
+            ],
+            [
+              -80.00703384628267,
+              34.12702454116832
+            ],
+            [
+              -80.00747059689681,
+              34.12703150790426
+            ],
+            [
+              -80.00744971022714,
+              34.127038257672375
+            ],
+            [
+              -80.0092935659125,
+              34.127305546647705
+            ],
+            [
+              -80.0097129859012,
+              34.127367708163
+            ],
+            [
+              -80.00998074584416,
+              34.1275808436169
+            ],
+            [
+              -80.00997797858669,
+              34.12780218847605
+            ],
+            [
+              -80.01001442384833,
+              34.12788203431985
+            ],
+            [
+              -80.01019560411761,
+              34.12803221628149
+            ],
+            [
+              -80.01028882011042,
+              34.128230117844616
+            ],
+            [
+              -80.01025788442992,
+              34.1283751421718
+            ],
+            [
+              -80.01022889396533,
+              34.128364533148485
+            ],
+            [
+              -80.00989085265176,
+              34.12844829770206
+            ],
+            [
+              -80.00928986404969,
+              34.1285991306534
+            ],
+            [
+              -80.00896936900315,
+              34.128610396841744
+            ],
+            [
+              -80.0065304939374,
+              34.12702049655401
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "county": "Darlington",
+        "amp_roster_county": "Florence",
+        "county_workbook_selected": true,
+        "farm_id": "8185",
+        "tract_id": "2352",
+        "field_id": "2",
+        "producer": "Anthony Jackson",
+        "fsa_reported_acres": 7.72,
+        "traced_geodesic_acres": 7.73,
+        "source_pdf": "Dread Marley_FSAmap.pdf",
+        "source_page": 1,
+        "crosscheck_pdf": "Anthony Jackson_FSA_Map.pdf",
+        "method": "Native georeferenced FSA GeoPDF vector; Anthony Jackson photo cross-check",
+        "status": "FSA_NATIVE_VECTOR__PHOTO_FARM_TRACT_FIELD_MATCH",
+        "boundary_notice": "FSA administrative boundary; not a legal survey"
+      }
+    }
+  ]
+}
