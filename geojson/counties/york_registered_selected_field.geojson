@@ -1,0 +1,57 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "county": "York",
+        "farm_id": "4330",
+        "tract_id": "8916",
+        "field_id": "1",
+        "producer": "Rick Boswell",
+        "fsa_reported_acres": null,
+        "mapped_acres_approx": 9.71,
+        "source_pdf": "Rick Boswell.pdf",
+        "source_page": 1,
+        "method": "Hand-traced FSA raster boundary, aligned to aerial imagery",
+        "registered_to": "NAIP",
+        "registration_inliers": 57,
+        "registration_rmse_pixels": 0.44,
+        "status": "FSA_FIELD_OUTLINE_REGISTERED_APPROXIMATE_NOT_SURVEY",
+        "source_warning": "Raster-traced boundaries are illustrative; not surveyed",
+        "digitization_date": "2026-11-06"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -81.21850988004479,
+              35.08979382060294
+            ],
+            [
+              -81.21713097312197,
+              35.089310029856286
+            ],
+            [
+              -81.21711114015667,
+              35.089166536582816
+            ],
+            [
+              -81.22096707753393,
+              35.086974153872454
+            ],
+            [
+              -81.22106187078973,
+              35.08771716491763
+            ],
+            [
+              -81.21850988004479,
+              35.08979382060294
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}
