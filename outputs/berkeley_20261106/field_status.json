@@ -1,0 +1,260 @@
+[
+  {
+    "farm": "4198",
+    "name": "John Loyd",
+    "tract": "33763",
+    "file": "John_Lloyd_FSA_Map.pdf",
+    "page": 1,
+    "county": "Berkeley",
+    "roster_county": "Berkeley",
+    "registration": {
+      "inliers": 81,
+      "matches": 112,
+      "rmse_px": 0.0,
+      "source_spread_px": [
+        707.0,
+        712.0
+      ],
+      "image_spread_px": [
+        0.0,
+        0.0
+      ],
+      "projected_bbox_area_px": 0.0,
+      "nondegenerate_geographic_match_candidate": false,
+      "score": 324.0
+    },
+    "provider": "ESRI",
+    "tile_offset": [
+      1,
+      0
+    ],
+    "status": "REGISTRATION_NEEDS_REVIEW"
+  },
+  {
+    "farm": "3756",
+    "name": "John Loyd",
+    "tract": "3313",
+    "file": "John_Lloyd_FSA_Map.pdf",
+    "page": 3,
+    "county": "Berkeley",
+    "roster_county": "Berkeley",
+    "registration": {
+      "inliers": 66,
+      "matches": 88,
+      "rmse_px": 0.94,
+      "source_spread_px": [
+        527.0999755859375,
+        502.0
+      ],
+      "image_spread_px": [
+        204.0,
+        199.0
+      ],
+      "projected_bbox_area_px": 27818.8,
+      "nondegenerate_geographic_match_candidate": true,
+      "score": 231.7
+    },
+    "provider": "NAIP",
+    "tile_offset": [
+      0,
+      0
+    ],
+    "status": "REGISTERED_APPROXIMATE",
+    "fields_georeferenced": [
+      "1"
+    ]
+  },
+  {
+    "farm": "4273",
+    "name": "John Loyd",
+    "tract": "33795",
+    "file": "John_Lloyd_FSA_Map.pdf",
+    "page": 2,
+    "county": "Berkeley",
+    "roster_county": "Berkeley",
+    "registration": {
+      "inliers": 87,
+      "matches": 145,
+      "rmse_px": 0.0,
+      "source_spread_px": [
+        653.9000244140625,
+        724.7999877929688
+      ],
+      "image_spread_px": [
+        0.0,
+        0.0
+      ],
+      "projected_bbox_area_px": 0.0,
+      "nondegenerate_geographic_match_candidate": false,
+      "score": 348.0
+    },
+    "provider": "NAIP",
+    "tile_offset": [
+      -2,
+      0
+    ],
+    "status": "REGISTRATION_NEEDS_REVIEW"
+  },
+  {
+    "farm": "4236",
+    "name": "Julian Ramsue",
+    "tract": "2906",
+    "file": "Sonya_Ramsue_FSA_Map.pdf",
+    "page": 2,
+    "county": "Berkeley",
+    "roster_county": "Berkeley",
+    "registration": {
+      "inliers": 154,
+      "matches": 184,
+      "rmse_px": 1.08,
+      "source_spread_px": [
+        799.5,
+        789.0
+      ],
+      "image_spread_px": [
+        433.20001220703125,
+        432.8999938964844
+      ],
+      "projected_bbox_area_px": 102778.7,
+      "nondegenerate_geographic_match_candidate": true,
+      "score": 616.0
+    },
+    "provider": "NAIP",
+    "tile_offset": [
+      0,
+      0
+    ],
+    "status": "REGISTERED_APPROXIMATE",
+    "fields_georeferenced": [
+      "4",
+      "30"
+    ]
+  },
+  {
+    "farm": "13739",
+    "name": "Latonya Flood",
+    "tract": "45688",
+    "file": "Latonya Flood_FSAmap.pdf",
+    "page": 1,
+    "county": "Orangeburg",
+    "roster_county": "Berkeley",
+    "registration": {
+      "inliers": 33,
+      "matches": 58,
+      "rmse_px": 0.93,
+      "source_spread_px": [
+        276.3999938964844,
+        601.0999755859375
+      ],
+      "image_spread_px": [
+        3.200000047683716,
+        2.0
+      ],
+      "projected_bbox_area_px": 0.0,
+      "nondegenerate_geographic_match_candidate": false,
+      "score": 78.6
+    },
+    "provider": "NAIP",
+    "tile_offset": [
+      -1,
+      0
+    ],
+    "status": "REGISTRATION_NEEDS_REVIEW"
+  },
+  {
+    "farm": "14118",
+    "name": "Shane Middleton",
+    "tract": "46082",
+    "file": "Shane Middleton_FSA Map.pdf",
+    "page": 1,
+    "county": "Orangeburg",
+    "roster_county": "Berkeley",
+    "registration": {
+      "inliers": 60,
+      "matches": 80,
+      "rmse_px": 0.43,
+      "source_spread_px": [
+        794.9000244140625,
+        721.0
+      ],
+      "image_spread_px": [
+        217.39999389648438,
+        197.60000610351562
+      ],
+      "projected_bbox_area_px": 27515.5,
+      "nondegenerate_geographic_match_candidate": true,
+      "score": 240.0
+    },
+    "provider": "NAIP",
+    "tile_offset": [
+      0,
+      -2
+    ],
+    "status": "REGISTERED_APPROXIMATE",
+    "fields_georeferenced": [
+      "23"
+    ]
+  },
+  {
+    "farm": "9387",
+    "name": "Shane Middleton",
+    "tract": "8069",
+    "file": "Shane Middleton_FSA Map.pdf",
+    "page": 2,
+    "county": "Clarendon",
+    "roster_county": "Berkeley",
+    "registration": {
+      "inliers": 36,
+      "matches": 59,
+      "rmse_px": 0.0,
+      "source_spread_px": [
+        853.9000244140625,
+        694.0
+      ],
+      "image_spread_px": [
+        0.0,
+        0.0
+      ],
+      "projected_bbox_area_px": 0.0,
+      "nondegenerate_geographic_match_candidate": false,
+      "score": 144.0
+    },
+    "provider": "NAIP",
+    "tile_offset": [
+      0,
+      0
+    ],
+    "status": "REGISTRATION_NEEDS_REVIEW"
+  },
+  {
+    "farm": "577",
+    "name": "Ivan Flood",
+    "tract": "1397",
+    "file": "Iven Flood_FSA_Map.pdf",
+    "page": 1,
+    "county": "Dorchester",
+    "roster_county": "Berkeley",
+    "registration": {
+      "inliers": 19,
+      "matches": 52,
+      "rmse_px": 0.0,
+      "source_spread_px": [
+        480.79998779296875,
+        707.5999755859375
+      ],
+      "image_spread_px": [
+        0.0,
+        0.0
+      ],
+      "projected_bbox_area_px": 0.0,
+      "nondegenerate_geographic_match_candidate": false,
+      "score": 64.7
+    },
+    "provider": "ESRI",
+    "tile_offset": [
+      2,
+      0
+    ],
+    "status": "REGISTRATION_NEEDS_REVIEW"
+  }
+]

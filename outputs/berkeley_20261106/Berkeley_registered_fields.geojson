@@ -1,0 +1,242 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -79.93508537085113,
+              33.190014839186325
+            ],
+            [
+              -79.93451943222213,
+              33.19008249790967
+            ],
+            [
+              -79.93472604473747,
+              33.18906949100179
+            ],
+            [
+              -79.93452841537497,
+              33.18890785987336
+            ],
+            [
+              -79.93431281970679,
+              33.18782717896767
+            ],
+            [
+              -79.93456434798634,
+              33.187626076875624
+            ],
+            [
+              -79.93499553932273,
+              33.18767870176674
+            ],
+            [
+              -79.93508537085113,
+              33.190014839186325
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "county": "Berkeley",
+        "roster_county": "Berkeley",
+        "farm_id": "3756",
+        "tract_id": "3313",
+        "field_id": "1",
+        "producer": "John Loyd",
+        "source_file": "John_Lloyd_FSA_Map.pdf",
+        "source_page": 3,
+        "source_method": "manual rough FSA yellow-outline tracing plus image registration",
+        "quality": "APPROXIMATE_DIGITIZED_BOUNDARY_NOT_SURVEY",
+        "source_pixel_vertices_1p5x": [
+          [
+            396,
+            295
+          ],
+          [
+            477,
+            283
+          ],
+          [
+            446,
+            455
+          ],
+          [
+            476,
+            483
+          ],
+          [
+            507,
+            674
+          ],
+          [
+            469,
+            710
+          ],
+          [
+            405,
+            700
+          ]
+        ],
+        "registered_provider": "NAIP",
+        "image_inliers": 66,
+        "registration_rmse_px": 0.94
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -79.93725929383871,
+              33.33806395423254
+            ],
+            [
+              -79.93653165845856,
+              33.337919484650776
+            ],
+            [
+              -79.93672928782107,
+              33.33742791103225
+            ],
+            [
+              -79.93738505797847,
+              33.33748607446771
+            ],
+            [
+              -79.93725929383871,
+              33.33806395423254
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "county": "Berkeley",
+        "roster_county": "Berkeley",
+        "farm_id": "4236",
+        "tract_id": "2906",
+        "field_id": "4",
+        "producer": "Julian Ramsue",
+        "source_file": "Sonya_Ramsue_FSA_Map.pdf",
+        "source_page": 2,
+        "source_method": "manual rough FSA yellow-outline tracing plus image registration",
+        "quality": "APPROXIMATE_DIGITIZED_BOUNDARY_NOT_SURVEY",
+        "source_pixel_vertices_1p5x": [
+          [
+            579,
+            330
+          ],
+          [
+            656,
+            348
+          ],
+          [
+            635,
+            410
+          ],
+          [
+            565,
+            403
+          ]
+        ],
+        "registered_provider": "NAIP",
+        "image_inliers": 154,
+        "registration_rmse_px": 1.08
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -79.9397027114115,
+              33.33796263792757
+            ],
+            [
+              -79.93765455256371,
+              33.33753485667395
+            ],
+            [
+              -79.93769946832792,
+              33.33725529673708
+            ],
+            [
+              -79.93783421562054,
+              33.33700200340205
+            ],
+            [
+              -79.93856185100067,
+              33.33691757212669
+            ],
+            [
+              -79.9390918570183,
+              33.33704515713341
+            ],
+            [
+              -79.93966677880015,
+              33.33702451839499
+            ],
+            [
+              -79.9397027114115,
+              33.33796263792757
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "county": "Berkeley",
+        "roster_county": "Berkeley",
+        "farm_id": "4236",
+        "tract_id": "2906",
+        "field_id": "30",
+        "producer": "Julian Ramsue",
+        "source_file": "Sonya_Ramsue_FSA_Map.pdf",
+        "source_page": 2,
+        "source_method": "manual rough FSA yellow-outline tracing plus image registration",
+        "quality": "APPROXIMATE_DIGITIZED_BOUNDARY_NOT_SURVEY",
+        "source_pixel_vertices_1p5x": [
+          [
+            320,
+            344
+          ],
+          [
+            537,
+            397
+          ],
+          [
+            532,
+            432
+          ],
+          [
+            518,
+            464
+          ],
+          [
+            441,
+            475
+          ],
+          [
+            385,
+            459
+          ],
+          [
+            325,
+            462
+          ]
+        ],
+        "registered_provider": "NAIP",
+        "image_inliers": 154,
+        "registration_rmse_px": 1.08
+      }
+    }
+  ]
+}
