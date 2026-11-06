@@ -1,0 +1,88 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "county": "Bamberg",
+        "amp_roster_county": "Bamberg",
+        "producer": "John Brabham",
+        "farm_id": "3524",
+        "tract_id": "3531",
+        "field_id": null,
+        "target_fsa_field_id": "25",
+        "target_fsa_field_acres": 10.2,
+        "calculated_area_acres": 18.1,
+        "geometry_represents": "USER_QGIS_DIGITIZED_APPROXIMATE_FARM_AREA",
+        "source_fsa_pdf": "John Henry Brabham_FSA_Map.pdf",
+        "source_fsa_page": 2,
+        "user_source_geojson": "John_Brabham_Farm_Area.geojson",
+        "fsa_field_boundary_verified": false,
+        "status": "FARM_AREA_LOCATED__SELECTED_FSA_FIELD25_BOUNDARY_PENDING",
+        "source_note": "Whole QGIS area is not claimed to be FSA Field 25; source Field 25 is 10.20 acres.",
+        "updated": "2026-11-06"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -81.0492581911154,
+                33.23891828083974
+              ],
+              [
+                -81.04745038135955,
+                33.240874348246415
+              ],
+              [
+                -81.04505521038875,
+                33.23865576369144
+              ],
+              [
+                -81.04740060750072,
+                33.23643654300639
+              ],
+              [
+                -81.04770491535385,
+                33.23682249442988
+              ],
+              [
+                -81.04743771821451,
+                33.23766861870445
+              ],
+              [
+                -81.0473857632152,
+                33.23823270155416
+              ],
+              [
+                -81.04782366963799,
+                33.23840341083762
+              ],
+              [
+                -81.04797211249318,
+                33.23862607512041
+              ],
+              [
+                -81.04783109178075,
+                33.238937805116294
+              ],
+              [
+                -81.04811313320562,
+                33.239286645825985
+              ],
+              [
+                -81.04846197391531,
+                33.23946477725221
+              ],
+              [
+                -81.0492581911154,
+                33.23891828083974
+              ]
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}
