@@ -1,0 +1,191 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -82.17410028390768,
+              34.049147535157765
+            ],
+            [
+              -82.17353434527868,
+              34.049160560510984
+            ],
+            [
+              -82.1729055245798,
+              34.04275184504083
+            ],
+            [
+              -82.17419909858893,
+              34.04283558573521
+            ],
+            [
+              -82.17419909858893,
+              34.04368787521011
+            ],
+            [
+              -82.17472910460656,
+              34.04368787521011
+            ],
+            [
+              -82.17472012145372,
+              34.04397259009115
+            ],
+            [
+              -82.17419011543609,
+              34.04397259009115
+            ],
+            [
+              -82.17410028390768,
+              34.049147535157765
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "farm_id": "1638",
+        "tract_id": "7136",
+        "field_id": "2",
+        "county": "Greenwood",
+        "amp_roster_county": "Greenwood",
+        "producer": "Myra Louden",
+        "source_pdf": "Louden, James - FSA Map.pdf",
+        "source_sha256": "dcebcfde08e7c01c9fa0d96ce6785ae60152da9abb29b4aca74348d634b40960",
+        "fsa_reported_acres": 13.41,
+        "calculated_acres": 15.41,
+        "area_error_percent": 14.9,
+        "county_workbook_selected": true,
+        "method": "FSA highlighted source line hand-traced and aerial-registered with USGS NAIP SIFT homography",
+        "image_registration_inliers": 384,
+        "image_registration_rmse_px": 0.51,
+        "boundary_status": "FSA_IMAGE_REGISTERED_APPROXIMATE_NOT_SURVEY",
+        "source_page": 1,
+        "source_producer_name_note": "Supplied PDF is named for James Louden; Farm/Tract IDs match Myra Louden AMP entry."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -81.18587262300063,
+              32.61486421997161
+            ],
+            [
+              -81.18577380831938,
+              32.61492475293343
+            ],
+            [
+              -81.18420175657216,
+              32.6149644776674
+            ],
+            [
+              -81.18407599243238,
+              32.61476017884785
+            ],
+            [
+              -81.18388734622273,
+              32.61412079619668
+            ],
+            [
+              -81.18365378424885,
+              32.613871095223416
+            ],
+            [
+              -81.18556719580404,
+              32.613871095223416
+            ],
+            [
+              -81.18587262300063,
+              32.61486421997161
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "farm_id": "1274",
+        "tract_id": "1974",
+        "field_id": "25",
+        "county": "Jasper",
+        "amp_roster_county": "Hampton",
+        "producer": "John Lee",
+        "source_pdf": "John H. Lee, Jr_FSA_Map.pdf",
+        "source_sha256": "b20b6efc1b17f90553285f3bb6c80de6434d4477dfc8957d413f565e8f303a27",
+        "fsa_reported_acres": 4.85,
+        "calculated_acres": 4.88,
+        "area_error_percent": 0.7,
+        "county_workbook_selected": true,
+        "method": "FSA highlighted source line hand-traced and aerial-registered with USGS NAIP SIFT homography",
+        "image_registration_inliers": 247,
+        "image_registration_rmse_px": 0.55,
+        "boundary_status": "FSA_IMAGE_REGISTERED_APPROXIMATE_NOT_SURVEY",
+        "source_page": 1,
+        "source_producer_name_note": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -81.18556719580404,
+              32.613871095223416
+            ],
+            [
+              -81.18365378424885,
+              32.613871095223416
+            ],
+            [
+              -81.18345615488634,
+              32.61361382682571
+            ],
+            [
+              -81.18327649182953,
+              32.613226031152934
+            ],
+            [
+              -81.18330344128805,
+              32.61291011831476
+            ],
+            [
+              -81.18554922949835,
+              32.612985786161936
+            ],
+            [
+              -81.18556719580404,
+              32.613871095223416
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "farm_id": "1274",
+        "tract_id": "1974",
+        "field_id": "26",
+        "county": "Jasper",
+        "amp_roster_county": "Hampton",
+        "producer": "John Lee",
+        "source_pdf": "John H. Lee, Jr_FSA_Map.pdf",
+        "source_sha256": "b20b6efc1b17f90553285f3bb6c80de6434d4477dfc8957d413f565e8f303a27",
+        "fsa_reported_acres": 5.15,
+        "calculated_acres": 5.13,
+        "area_error_percent": -0.3,
+        "county_workbook_selected": true,
+        "method": "FSA highlighted source line hand-traced and aerial-registered with USGS NAIP SIFT homography",
+        "image_registration_inliers": 247,
+        "image_registration_rmse_px": 0.55,
+        "boundary_status": "FSA_IMAGE_REGISTERED_APPROXIMATE_NOT_SURVEY",
+        "source_page": 1,
+        "source_producer_name_note": ""
+      }
+    }
+  ]
+}
