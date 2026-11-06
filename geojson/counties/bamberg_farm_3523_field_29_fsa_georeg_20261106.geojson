@@ -1,0 +1,61 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -81.04871202447134,
+              33.24181733492437
+            ],
+            [
+              -81.0474455438932,
+              33.24087655349602
+            ],
+            [
+              -81.04925882196322,
+              33.238916115879015
+            ],
+            [
+              -81.05016796181926,
+              33.23928838906525
+            ],
+            [
+              -81.0503900804293,
+              33.23997679111343
+            ],
+            [
+              -81.05057300915159,
+              33.24027474590207
+            ],
+            [
+              -81.04871202447134,
+              33.24181733492437
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "county": "Bamberg",
+        "amp_roster_county": "Bamberg",
+        "county_workbook_selected": true,
+        "farm_id": "3523",
+        "tract_id": "3532",
+        "field_id": "29",
+        "producer": "Corey Cosby",
+        "fsa_reported_acres": 11.85,
+        "calculated_acres": 12.04,
+        "source_pdf": "Corey  Jacoby Crosby FSAmap.pdf",
+        "source_page": 1,
+        "method": "FSA raster field traced and aligned to USGS NAIP aerial imagery",
+        "image_registration_inliers": 89,
+        "registration_rmse_pixels": 0.61,
+        "status": "FSA_RASTER_ALIGNED_APPROXIMATE_NOT_SURVEY",
+        "registration_date": "2026-11-06"
+      }
+    }
+  ]
+}
