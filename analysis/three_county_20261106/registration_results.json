@@ -1,0 +1,258 @@
+[
+  {
+    "county": "Marlboro",
+    "farm_id": "3776",
+    "source_pdf": "Johnie Thomas_FSA_Map.pdf",
+    "source_page": 1,
+    "reported_anchor_lonlat": [
+      -79.8616282,
+      34.7554972
+    ],
+    "status": "POTENTIAL_REGISTRATION_NEEDS_FIELD_TRACE",
+    "source_render_scale": 1.8,
+    "source_full_width_height": [
+      1102,
+      1426
+    ],
+    "tile_bbox_epsg3857": [
+      -8890980.785145737,
+      4129878.632962813,
+      -8889330.785145737,
+      4131528.632962813
+    ],
+    "tile_size_wh": [
+      850,
+      850
+    ],
+    "source_render_to_tile_homography": [
+      [
+        1.7492145801241448,
+        -0.019251137864219125,
+        -70.34340868478357
+      ],
+      [
+        0.01989938900571987,
+        1.7586242184079606,
+        -172.9502709685417
+      ],
+      [
+        -1.2716787769384327e-07,
+        1.1638888067768205e-06,
+        1.0
+      ]
+    ],
+    "tile_provider": "NAIP",
+    "matched_offset": [
+      0,
+      0
+    ],
+    "registration": {
+      "inliers": 611,
+      "matches": 628,
+      "rmse_px": 0.47,
+      "source_spread_px": [
+        858.2999877929688,
+        841.2999877929688
+      ],
+      "image_spread_px": [
+        835.0,
+        826.2000122070312
+      ],
+      "projected_bbox_area_px": 361279.9,
+      "nondegenerate_geographic_match_candidate": true,
+      "score": 2444.0
+    }
+  },
+  {
+    "county": "York",
+    "farm_id": "4330",
+    "source_pdf": "Rick Boswell.pdf",
+    "source_page": 1,
+    "reported_anchor_lonlat": [
+      -81.2212065,
+      35.0891533
+    ],
+    "status": "POTENTIAL_REGISTRATION_NEEDS_FIELD_TRACE",
+    "source_render_scale": 0.7867494824016563,
+    "source_full_width_height": [
+      1426,
+      1900
+    ],
+    "tile_bbox_epsg3857": [
+      -9042328.349195322,
+      4175178.331292213,
+      -9040678.349195322,
+      4176828.331292213
+    ],
+    "tile_size_wh": [
+      850,
+      850
+    ],
+    "source_render_to_tile_homography": [
+      [
+        0.17957427620047556,
+        -0.008011584416922906,
+        424.7897611581265
+      ],
+      [
+        0.00568012692857399,
+        0.16513741608495763,
+        337.3667705306675
+      ],
+      [
+        7.479296973132656e-06,
+        -1.1941758536276191e-05,
+        1.0
+      ]
+    ],
+    "tile_provider": "NAIP",
+    "matched_offset": [
+      0,
+      0
+    ],
+    "registration": {
+      "inliers": 57,
+      "matches": 92,
+      "rmse_px": 0.44,
+      "source_spread_px": [
+        683.2999877929688,
+        674.5999755859375
+      ],
+      "image_spread_px": [
+        215.39999389648438,
+        206.8000030517578
+      ],
+      "projected_bbox_area_px": 50407.7,
+      "nondegenerate_geographic_match_candidate": true,
+      "score": 228.0
+    }
+  },
+  {
+    "county": "Charleston",
+    "farm_id": "1436",
+    "source_pdf": "Keesha Jenkins_FSA_Map.pdf",
+    "source_page": 1,
+    "reported_anchor_lonlat": [
+      -79.736953,
+      32.895935
+    ],
+    "status": "POTENTIAL_REGISTRATION_NEEDS_FIELD_TRACE",
+    "source_render_scale": 1.8,
+    "source_full_width_height": [
+      1102,
+      1426
+    ],
+    "tile_bbox_epsg3857": [
+      -8877102.005367188,
+      3880674.2073679375,
+      -8875452.005367188,
+      3882324.2073679375
+    ],
+    "tile_size_wh": [
+      850,
+      850
+    ],
+    "source_render_to_tile_homography": [
+      [
+        0.410163170632069,
+        -0.0012856308102030833,
+        297.0174561189936
+      ],
+      [
+        0.0009513758998756103,
+        0.40896343572295096,
+        259.0958572667688
+      ],
+      [
+        1.5986841644504718e-06,
+        -2.8071762658475862e-06,
+        1.0
+      ]
+    ],
+    "tile_provider": "NAIP",
+    "matched_offset": [
+      0,
+      0
+    ],
+    "registration": {
+      "inliers": 113,
+      "matches": 136,
+      "rmse_px": 0.43,
+      "source_spread_px": [
+        973.7999877929688,
+        959.9000244140625
+      ],
+      "image_spread_px": [
+        221.5,
+        218.6999969482422
+      ],
+      "projected_bbox_area_px": 26522.3,
+      "nondegenerate_geographic_match_candidate": true,
+      "score": 452.0
+    }
+  },
+  {
+    "county": "Charleston",
+    "farm_id": "1134",
+    "source_pdf": "Sharon Taylor_Farm_FSA_Map.pdf",
+    "source_page": 1,
+    "reported_anchor_lonlat": [
+      -80.3267275,
+      32.6485761
+    ],
+    "status": "WEAK_ALIGNMENT_NEEDS_REVIEW",
+    "source_render_scale": 1.8,
+    "source_full_width_height": [
+      1102,
+      1426
+    ],
+    "tile_bbox_epsg3857": [
+      -8943605.402390044,
+      3847925.6795684397,
+      -8941955.402390044,
+      3849575.6795684397
+    ],
+    "tile_size_wh": [
+      850,
+      850
+    ],
+    "source_render_to_tile_homography": [
+      [
+        -0.07968509711799933,
+        -0.03816029314333618,
+        20.401182795453124
+      ],
+      [
+        -3.152471063618117,
+        -1.509682789940305,
+        807.1037205571317
+      ],
+      [
+        -0.0039059057506614717,
+        -0.001870494152745381,
+        1.0
+      ]
+    ],
+    "tile_provider": "NAIP",
+    "matched_offset": [
+      -1,
+      0
+    ],
+    "registration": {
+      "inliers": 65,
+      "matches": 120,
+      "rmse_px": 0.0,
+      "source_spread_px": [
+        491.3999938964844,
+        750.0999755859375
+      ],
+      "image_spread_px": [
+        0.0,
+        0.0
+      ],
+      "projected_bbox_area_px": 0.0,
+      "nondegenerate_geographic_match_candidate": false,
+      "score": 224.7
+    }
+  }
+]
