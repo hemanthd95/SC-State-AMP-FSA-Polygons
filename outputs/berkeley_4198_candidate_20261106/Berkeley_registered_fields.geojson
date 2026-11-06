@@ -1,0 +1,68 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -79.94943146593852,
+              33.16998931972879
+            ],
+            [
+              -79.94824568976348,
+              33.17000247860274
+            ],
+            [
+              -79.9482277234578,
+              33.16841776000613
+            ],
+            [
+              -79.94885654415668,
+              33.16824293164479
+            ],
+            [
+              -79.94943146593852,
+              33.16998931972879
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "county": "Berkeley",
+        "roster_county": "Berkeley",
+        "farm_id": "4198",
+        "tract_id": "33763",
+        "field_id": "3",
+        "producer": "John Loyd",
+        "source_file": "John_Lloyd_FSA_Map.pdf",
+        "source_page": 1,
+        "source_method": "manual rough FSA yellow-outline tracing plus image registration",
+        "quality": "APPROXIMATE_DIGITIZED_BOUNDARY_NOT_SURVEY",
+        "source_pixel_vertices_1p5x": [
+          [
+            287,
+            353
+          ],
+          [
+            456,
+            350
+          ],
+          [
+            464,
+            624
+          ],
+          [
+            368,
+            655
+          ]
+        ],
+        "registered_provider": "NAIP",
+        "image_inliers": 39,
+        "registration_rmse_px": 0.63
+      }
+    }
+  ]
+}
