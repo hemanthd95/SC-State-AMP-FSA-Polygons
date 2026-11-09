@@ -27,16 +27,6 @@ jobs:
           python -m pip install numpy pyproj shapely requests pillow reportlab pymupdf
       - name: Generate county outlines and real imagery overlays
         run: python scripts/publish_amp_county_atlases_20261109.py
-      - name: Upload downloadable atlas ZIP and individual PDFs
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: SC_AMP_Completed_Polygon_Atlases_2026-11-09
-          path: |
-            deliverables/current_polygon_atlases_2026-11-09/
-            outputs/SC_AMP_County_Polygon_Atlases_GitHub_2026-11-09.zip
-          retention-days: 90
-          if-no-files-found: warn
       - name: Commit PDF pairs and ZIP to private GitHub
         if: success()
         run: |
