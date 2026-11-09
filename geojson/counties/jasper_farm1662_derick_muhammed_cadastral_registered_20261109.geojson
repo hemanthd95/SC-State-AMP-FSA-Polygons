@@ -1,0 +1,62 @@
+{
+  "type": "FeatureCollection",
+  "name": "Jasper_Farm1662_DerickMuhammed_20261109",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "county": "Jasper",
+        "producer": "Derick Muhammed",
+        "farm_id": "1662",
+        "tract_id": "2387",
+        "field_id": "1",
+        "fsa_reported_acres": 5.01,
+        "calculated_acres": 5.0375,
+        "parcel_reference_acres": 5.0251,
+        "source_pdf": "Derick Muhammed_FSA Map.pdf",
+        "source_page": 1,
+        "fsa_aerial_year": 2023,
+        "registration_method": "Five FSA field corners matched to corresponding georeferenced Jasper County public parcel points, 5-point least-squares affine UTM17N; raster field outline traced independently",
+        "registration_control_pin": "039-00 -03-016",
+        "source_address_hint": "1066 Levy Rd, Hardeeville, SC 29927",
+        "registration_rmse_m": 2.1145,
+        "parcel_control_polygon_IoU": 0.9724,
+        "parcel_control_hausdorff_m": 2.2833,
+        "geospatial_status": "REGISTERED_INDEPENDENT_CADASTRAL_CONTROL_FIELD_TRACE_APPROXIMATE_NOT_SURVEY",
+        "naip_sift_status": "196 aerial tiles attempted, no image match passed QA; do not represent as NAIP validated",
+        "qa_package": "Jasper_Farm1662_DerickMuhammed_Georeferenced_20261109.zip"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -81.06111257445971,
+              32.20460841484313
+            ],
+            [
+              -81.06052910332733,
+              32.20424847049396
+            ],
+            [
+              -81.06205231176358,
+              32.20227000740523
+            ],
+            [
+              -81.06267235885156,
+              32.202274577576944
+            ],
+            [
+              -81.06266360886349,
+              32.20276589965506
+            ],
+            [
+              -81.06111257445971,
+              32.20460841484313
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}
