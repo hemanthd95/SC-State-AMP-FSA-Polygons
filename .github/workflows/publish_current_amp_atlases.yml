@@ -1,0 +1,53 @@
+name: Publish current SC AMP county polygon atlas collection
+on:
+  push:
+    paths:
+      - scripts/publish_amp_county_atlases_20261109.py
+      - .github/workflows/publish_current_amp_atlases.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  build-release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - name: Check out private GIS repository
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+      - name: Configure Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install geospatial map and PDF tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ghostscript
+          python -m pip install numpy pyproj shapely requests pillow reportlab pymupdf
+      - name: Generate county outlines and real imagery overlays
+        run: python scripts/publish_amp_county_atlases_20261109.py
+      - name: Upload downloadable atlas ZIP and individual PDFs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: SC_AMP_Completed_Polygon_Atlases_2026-11-09
+          path: |
+            deliverables/current_polygon_atlases_2026-11-09/
+            outputs/SC_AMP_County_Polygon_Atlases_GitHub_2026-11-09.zip
+          retention-days: 90
+          if-no-files-found: warn
+      - name: Commit PDF pairs and ZIP to private GitHub
+        if: success()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add deliverables/current_polygon_atlases_2026-11-09/
+          if [ -f outputs/SC_AMP_County_Polygon_Atlases_GitHub_2026-11-09.zip ] && [ $(stat -c%s outputs/SC_AMP_County_Polygon_Atlases_GitHub_2026-11-09.zip) -lt 90000000 ]; then
+            git add outputs/SC_AMP_County_Polygon_Atlases_GitHub_2026-11-09.zip
+          fi
+          if ! git diff --cached --quiet; then
+            git commit -m "Publish 16 SC AMP county satellite/topographic polygon atlas pairs"
+            git pull --rebase origin main
+            git push origin main
+          fi
