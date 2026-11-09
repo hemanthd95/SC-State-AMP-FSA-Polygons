@@ -1,0 +1,2 @@
+LOCATION_HINTS [{'method': 'jasper_parcel_lookup_not_fsa_proof', 'longitude': -81.06165688461004, 'latitude': 32.20338676859988}, {'method': 'census_address', 'longitude': -81.060482534975, 'latitude': 32.204273403856}]
+NO_ACCEPTABLE_MATCH

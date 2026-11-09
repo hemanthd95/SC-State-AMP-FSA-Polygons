@@ -1,0 +1,38 @@
+{
+  "farm_id": "1662",
+  "tract_id": "2387",
+  "field_id": "1",
+  "producer": "Derick Muhammed",
+  "fsa_source_acres": 5.01,
+  "enrollment_total_field_acres": 5.91,
+  "work_source": {
+    "source_sha256": "894c57de62dd7b73ab965b683bb7d9308757764c7923f17f887270fc9b9b5de3",
+    "map_crop_original_xyxy": [
+      48,
+      1215,
+      2220,
+      3380
+    ],
+    "source_render_shape_wh": [
+      2304,
+      4992
+    ],
+    "crop_scale": 0.5156537753222836
+  },
+  "location_hints": [
+    {
+      "method": "jasper_parcel_lookup_not_fsa_proof",
+      "longitude": -81.06165688461004,
+      "latitude": 32.20338676859988
+    },
+    {
+      "method": "census_address",
+      "longitude": -81.060482534975,
+      "latitude": 32.204273403856
+    }
+  ],
+  "tiles_attempted": 196,
+  "exact_fsa_field_footprint_gps_used": false,
+  "warning": "Source map fields not land surveys; position accepted only with image registration",
+  "status": "NO_GEOREFERENCED_FIELD_ACCEPTED_NO_NAIP_MATCH_PASSED_QA"
+}
