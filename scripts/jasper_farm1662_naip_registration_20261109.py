@@ -141,7 +141,7 @@ def query_image(x,y,kind):
     url=URL_NAIP if kind=="USGS_NAIP" else URL_ESRI
     try:
         r=S.get(url,params=dict(bbox=",".join(f"{v:.2f}" for v in bbox),
-                 bboxSR=3857,imageSR=3857,size=f"{SIDE},{SIDE}",format="jpg",f="image"),timeout=30)
+                 bboxSR=3857,imageSR=3857,size=f"{SIDE},{SIDE}",format="jpg",f="image"),timeout=14)
         r.raise_for_status()
         tile=cv2.imdecode(np.frombuffer(r.content,np.uint8),cv2.IMREAD_COLOR)
         return tile,bbox if tile is not None and tile.shape[:2]==(SIDE,SIDE) else (None,None)
@@ -171,30 +171,49 @@ def run():
     print("LOCATION_HINTS",all_hints,flush=True)
     best=None
     ntiles=0
+    # Download many independent georeferenced tiles concurrently so a slow
+    # public image endpoint cannot hold an entire farm search hostage.
+    from concurrent.futures import ThreadPoolExecutor, as_completed
+    tile_jobs=[]
     for method,lon,lat in hints:
         if not (-82<lon<-80 and 31.5<lat<33.5):continue
         base_x,base_y=meters(lon,lat)
         for kind in ["USGS_NAIP","Esri_World_Imagery"]:
             for dx in range(-3,4):
                 for dy in range(-3,4):
-                    tile,bbox=query_image(base_x+dx*STRIDE,base_y+dy*STRIDE,kind)
-                    ntiles+=1
-                    if tile is None:continue
-                    reg=test_match(img,keys,desc,tile)
-                    if reg is None:continue
-                    result=candidate_from_match(reg,pts,bbox)
-                    if result is None:continue
-                    poly,pred,acres=result
-                    overlap=None
-                    if parcel is not None:
-                        overlap=float(poly.intersection(parcel).area/poly.area) if poly.area else 0.
-                    score=reg["score"]*(1+max(0,overlap or 0))
-                    if best is None or score>best["score"]:
-                        best=dict(poly=poly,pred=pred,acres=acres,reg=reg,kind=kind,
-                            method=method,bbox=bbox,tile=tile,
-                            dx=dx,dy=dy,score=score,parcel_overlap=overlap)
-                        print("BEST",method,kind,dx,dy,"inliers",reg["n"],"rmse",round(reg["rmse"],2),"acres",round(acres,2),"parcel_overlap",overlap,flush=True)
-            # Do not skip another service if a weak but plausible match was found.
+                    tile_jobs.append((method,kind,dx,dy,base_x+dx*STRIDE,base_y+dy*STRIDE))
+    def load_one(job):
+        return job,query_image(job[4],job[5],job[1])
+    with ThreadPoolExecutor(max_workers=12) as pool:
+        futures=[pool.submit(load_one,job) for job in tile_jobs]
+        for future in as_completed(futures):
+            try:
+                job,result=future.result()
+                tile,bbox=result
+            except Exception as exc:
+                print("TILE_ERROR",str(exc)[:100],flush=True)
+                continue
+            method,kind,dx,dy,_,_=job
+            ntiles+=1
+            if tile is None or not isinstance(bbox,(tuple,list)) or len(bbox)!=4:continue
+            reg=test_match(img,keys,desc,tile)
+            if reg is None:continue
+            result=candidate_from_match(reg,pts,bbox)
+            if result is None:continue
+            poly,pred,acres=result
+            overlap=None
+            if parcel is not None:
+                overlap=float(poly.intersection(parcel).area/poly.area) if poly.area else 0.
+            score=reg["score"]*(1+max(0,overlap or 0))
+            if best is None or score>best["score"]:
+                best=dict(poly=poly,pred=pred,acres=acres,reg=reg,kind=kind,
+                    method=method,bbox=bbox,tile=tile,
+                    dx=dx,dy=dy,score=score,parcel_overlap=overlap)
+                print("BEST",method,kind,dx,dy,"inliers",reg["n"],"rmse",round(reg["rmse"],2),"acres",round(acres,2),"parcel_overlap",overlap,flush=True)
+                if reg["n"]>=150 and reg["rmse"]<1.1 and abs(acres-FSA_ACRES)<.15 and (overlap is None or overlap>.75):
+                    print("STRONG_MATCH_STOPPING_EARLY",flush=True)
+                    for f in futures:f.cancel()
+                    break
     report=dict(farm_id=FARM,tract_id="2387",field_id="1",producer="Derick Muhammed",
          fsa_source_acres=FSA_ACRES,enrollment_total_field_acres=5.91,
          work_source=source,location_hints=all_hints,tiles_attempted=ntiles,
