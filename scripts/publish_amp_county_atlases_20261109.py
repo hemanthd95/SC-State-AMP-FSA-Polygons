@@ -42,6 +42,8 @@ INPUTS=[
  'geojson/counties/marion_fsa_fields.geojson',
  'geojson/counties/marlboro_registered_selected_field.geojson',
  'geojson/orangeburg_registered_fields.geojson',
+ 'geojson/counties/orangeburg_new_verified_fsa_fields_20261106.geojson',
+ 'geojson/counties/berkeley_roster_14118_orangeburg_field_23_20261106.geojson',
  'geojson/counties/williamsburg_fsa_fields.geojson',
  'geojson/counties/york_registered_selected_field.geojson']
 COLOR=['#D34D40','#167C8A','#8A62B8','#B47D22','#4574BC','#A75D84','#5B8453','#C27D51',
@@ -60,7 +62,7 @@ notes={'Bamberg':'John Brabham polygon is QGIS farm AREA, not separately confirm
 'Greenwood':'Myra Louden boundary needs source-area review; not a survey.',
 'Jasper':'John Lee fields mapped in Jasper; enrolled under Hampton in AMP workbook.',
 'Marion':'Partial; other farm fields remain unresolved.',
-'Orangeburg':'12 accepted field polygons; Farm 4261 supplement is in earlier local package, not merged here.'}
+'Orangeburg':'12 original mapped fields plus Farm 4261 (Sumter roster) and Farm 14118 (Berkeley roster); remaining maps unresolved.'}
 def feats():
  out={}
  for path in INPUTS:
