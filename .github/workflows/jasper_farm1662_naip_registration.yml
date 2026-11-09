@@ -1,0 +1,49 @@
+name: Register Jasper Farm1662 with public USGS NAIP aerial imagery
+on:
+  push:
+    paths:
+      - 'scripts/jasper_farm1662_naip_registration_20261109.py'
+      - '.github/workflows/jasper_farm1662_naip_registration.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  register-farm1662:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install NAIP registration and geospatial QA packages
+        run: python -m pip install 'numpy<2.5' opencv-python-headless pymupdf requests pillow shapely pyproj
+      - name: Register Derick Muhammed FSA map to NAIP and validate field acreage
+        run: |
+          set -o pipefail
+          python scripts/jasper_farm1662_naip_registration_20261109.py | tee analysis/jasper_farm1662_run.log
+      - name: Upload independent evidence and field GeoJSON (only if QA passes)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Jasper-Farm1662-FSA-NAIP-Registration-20261109
+          path: |
+            analysis/jasper_farm1662/
+            analysis/jasper_farm1662_run.log
+            geojson/counties/jasper_farm1662_derick_muhammed_candidate.geojson
+          if-no-files-found: warn
+          retention-days: 60
+      - name: Store reproducible QA files in private repo
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add analysis/jasper_farm1662 analysis/jasper_farm1662_run.log || true
+          git add geojson/counties/jasper_farm1662_derick_muhammed_candidate.geojson || true
+          if ! git diff --cached --quiet; then
+            git commit -m "Record Jasper Farm1662 NAIP registration diagnostics and QA"
+            git pull --rebase origin main
+            git push
+          fi
