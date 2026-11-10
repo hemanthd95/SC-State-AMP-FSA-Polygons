@@ -13,5 +13,5 @@
     "Where two named OSM roads are unavailable or out of view, explicit QA flags; no invented road labels",
     "Shared Farm753 producer boundaries use separately georeferenced Fields 2,9,10"
   ],
-  "zip_bytes": 47567319
+  "zip_bytes": 47567220
 }
