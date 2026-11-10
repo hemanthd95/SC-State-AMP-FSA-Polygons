@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-10",
+  "farmers": 7,
+  "registered_farmers": 4,
+  "workbook_selected_field_count": 10,
+  "workbook_selected_fields_georegistered": 5,
+  "all_georeferenced_features_included": 7,
+  "status": {
+    "SOURCE_MAP_NOT_SAME_AS_WORKBOOK_FIELD": [
+      "Annette Weekley",
+      "Christopher Riley"
+    ],
+    "UNLOCATED_AFTER_NAIP_SEARCH": [
+      "Albert Vareen",
+      "Christopher Riley",
+      "Tyrease Riley"
+    ],
+    "PARTIAL_LOW_INLIER": [
+      "Angale Johnson"
+    ],
+    "SOURCE_FIELD_IDS_MATCH": [
+      "Rick Boswell",
+      "Francena Ellis"
+    ]
+  },
+  "county_rule": "Use Excel addresses to locate field search; FSA office county is not an indicator of real location",
+  "critical_note": "Four farmer map folders contain geographically registered source polygons. Three remaining farmer folders explicitly carry UNREGISTERED source pages only, NOT shapefiles. One mapped farmer (Annette) has only non-enrolled source fields. Do not claim all seven selected farms complete."
+}
