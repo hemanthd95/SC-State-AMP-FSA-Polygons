@@ -1,0 +1,56 @@
+name: Verify seven-farmer batch PDF cartography
+on:
+  push:
+    paths:
+      - '.github/workflows/qa_recovery7_map_previews.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  visual-qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install pymupdf pillow
+      - name: Render representative field and county PDFs
+        run: |
+          python - <<'PY'
+          import zipfile,io,fitz
+          from PIL import Image
+          from pathlib import Path
+          archive=zipfile.ZipFile('deliverables/SC_AMP_Seven_Farmer_Recovery_20261110.zip')
+          output=Path('analysis/recovery7_20261110/map_previews')
+          output.mkdir(parents=True,exist_ok=True)
+          tasks=[
+           ('Horry_Angale_Field','Horry/L-Johnson, Angale/AngaleJohnson-FieldMap.pdf',[0,1]),
+           ('Hampton_Annette_Field','Hampton/L-Weekley, Annette/AnnetteWeekley-FieldMap.pdf',[0]),
+           ('Hampton_Francena_Field','Hampton/L-Ellis, Francena/FrancenaEllis-FieldMap.pdf',[0]),
+           ('York_Rick_Field','York/L-Boswell, Rick/RickBoswell-FieldMap.pdf',[0]),
+           ('Horry_Angale_County','Horry/L-Johnson, Angale/AngaleJohnson-CountyMap.pdf',[0])
+          ]
+          for nm,rel,pages in tasks:
+           matches=[x for x in archive.namelist() if x.endswith(rel)]
+           if len(matches)!=1:raise ValueError((nm,matches))
+           doc=fitz.open(stream=archive.read(matches[0]),filetype='pdf')
+           for p in pages:
+            pix=doc[p].get_pixmap(matrix=fitz.Matrix(1.25,1.25),colorspace=fitz.csRGB,alpha=False)
+            image=Image.open(io.BytesIO(pix.tobytes('png'))).convert('RGB')
+            dest=output/(nm+f'_p{p+1}.jpg')
+            image.save(dest,quality=87,optimize=True)
+            print('VERIFIED',nm,p+1,image.size,flush=True)
+          PY
+      - name: Store previews in private repository for human visual inspection
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin main
+          git reset --mixed origin/main
+          git add analysis/recovery7_20261110/map_previews
+          if ! git diff --cached --quiet; then
+            git commit -m "Verify seven-farmer field and county PDFs via rendered map previews"
+            git push origin HEAD:main
+          fi
