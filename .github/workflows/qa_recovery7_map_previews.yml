@@ -27,11 +27,28 @@ jobs:
           output.mkdir(parents=True,exist_ok=True)
           tasks=[
            ('Horry_Angale_Field','Horry/L-Johnson, Angale/AngaleJohnson-FieldMap.pdf',[0,1]),
+           ('Marion_Albert_Field','Marion/L-Vareen, Albert/AlbertVareen-FieldMap.pdf',[0]),
+           ('Marion_Albert_County','Marion/L-Vareen, Albert/AlbertVareen-CountyMap.pdf',[0]),
            ('Hampton_Annette_Field','Hampton/L-Weekley, Annette/AnnetteWeekley-FieldMap.pdf',[0]),
            ('Hampton_Francena_Field','Hampton/L-Ellis, Francena/FrancenaEllis-FieldMap.pdf',[0]),
            ('York_Rick_Field','York/L-Boswell, Rick/RickBoswell-FieldMap.pdf',[0]),
            ('Horry_Angale_County','Horry/L-Johnson, Angale/AngaleJohnson-CountyMap.pdf',[0])
           ]
+          # Structural QA: shapefiles and two maps for all 5 georegistered farmers.
+          csvindex=archive.namelist()
+          for fld in ['Horry/L-Johnson, Angale','Hampton/L-Weekley, Annette',
+                      'Hampton/L-Ellis, Francena','York/L-Boswell, Rick',
+                      'Marion/L-Vareen, Albert']:
+           prefix=[p for p in csvindex if fld in p]
+           for suffix in ['.shp','.shx','.dbf','.prj','.cpg','-FieldMap.pdf','-CountyMap.pdf','REGISTERED_FIELDS.geojson']:
+            if not any(p.endswith(suffix) for p in prefix):
+             raise ValueError('Missing '+suffix+' for '+fld)
+          for name in ['UNREGISTERED__SOURCE_ONLY/L-Riley, Christopher',
+                       'UNREGISTERED__SOURCE_ONLY/L-Riley, Tyrease']:
+           prefix=[p for p in csvindex if name in p]
+           if not any(p.endswith('FSA_Source_Pages_UNREGISTERED.pdf') for p in prefix):
+            raise ValueError('Missing source review page for '+name)
+          print('STRUCTURAL_QA_PASS',len(csvindex),'ZIP entries',flush=True)
           for nm,rel,pages in tasks:
            matches=[x for x in archive.namelist() if x.endswith(rel)]
            if len(matches)!=1:raise ValueError((nm,matches))
