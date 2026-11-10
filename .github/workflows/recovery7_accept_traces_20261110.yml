@@ -1,0 +1,29 @@
+name: QA and publish seven-batch accepted image-registered field polygons
+on:
+  push:
+    paths:
+      - 'scripts/recovery7_accept_traces_20261110.py'
+      - '.github/workflows/recovery7_accept_traces_20261110.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  polygon-qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install 'numpy<2.5' opencv-python-headless shapely pyproj
+      - run: python scripts/recovery7_accept_traces_20261110.py
+      - name: Commit QA reports and only accepted geodetic polygons
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin main
+          git reset --mixed origin/main
+          git add analysis/recovery7_20261110/accepted_polygon_qa.json geojson/counties/recovery7_address_registered_20261110.geojson
+          git commit -m "Publish image-registered source-traced polygons with acreage and mismatch QA"
+          git push origin HEAD:main
