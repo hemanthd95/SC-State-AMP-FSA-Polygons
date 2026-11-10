@@ -1,0 +1,16 @@
+START Annette Weekley pages [1] views 3 tiles 50
+START Albert Vareen pages [1] views 3 tiles 50
+START Angale Johnson pages [1, 2, 3] views 9 tiles 50
+MATCH Annette Weekley p 1 valid True inliers 233 rmse 0.74 provider USGS_NAIP anchor US_Census
+MATCH Albert Vareen p 1 valid False inliers 67 rmse 0.0 provider USGS_NAIP anchor US_Census
+START Christopher Riley pages [3, 4] views 6 tiles 50
+START Tyrease Riley pages [1] views 3 tiles 50
+NO_MATCH Tyrease Riley p 1 tiles_loaded 50
+START Francena Ellis pages [1] views 3 tiles 50
+NO_MATCH Christopher Riley p 3 tiles_loaded 50
+NO_MATCH Christopher Riley p 4 tiles_loaded 50
+MATCH Angale Johnson p 1 valid False inliers 22 rmse 0.58 provider USGS_NAIP anchor US_Census
+MATCH Angale Johnson p 2 valid False inliers 31 rmse 0.41 provider USGS_NAIP anchor US_Census
+MATCH Angale Johnson p 3 valid False inliers 36 rmse 0.0 provider USGS_NAIP anchor US_Census
+MATCH Francena Ellis p 1 valid True inliers 96 rmse 0.53 provider USGS_NAIP anchor OSM_Nominatim
+DONE 6 farmers

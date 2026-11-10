@@ -1,0 +1,76 @@
+[
+  {
+    "name": "Albert Vareen",
+    "source_pdf": "Albert vareen_FSA_Map.pdf",
+    "source_page": 1,
+    "workbook_fields": [
+      "9652/7769/1"
+    ],
+    "address": "112 East End Street, Mullins SC 29574",
+    "geocode_anchors": [
+      {
+        "provider": "US_Census",
+        "lat": 34.207898180987,
+        "lon": -79.244945120089,
+        "quality": "MATCHED",
+        "matched_address": "112 E END ST, MULLINS, SC, 29574"
+      }
+    ],
+    "loaded_tiles": 48,
+    "requested_tiles": 50,
+    "registration": {
+      "inliers": 67,
+      "rmse_px": 0.0,
+      "source_spread_px": [
+        572.4891357421875,
+        630.8840942382812
+      ],
+      "target_spread_px": [
+        0.0,
+        0.0
+      ],
+      "valid": false,
+      "score": 220.42373657226562,
+      "full_pdf_points_to_tile_homography": [
+        [
+          -0.4097508126980433,
+          -0.13665027263594384,
+          583.8352846991129
+        ],
+        [
+          -0.11609329810303091,
+          -0.038716654965308926,
+          165.4160569038102
+        ],
+        [
+          -0.0007018260516906131,
+          -0.00023405620766200923,
+          1.0
+        ]
+      ],
+      "tile_bbox_epsg3857": [
+        -8821541.938709216,
+        4054496.950925087,
+        -8819991.938709216,
+        4056046.950925087
+      ],
+      "tile_size_wh": [
+        900,
+        900
+      ],
+      "provider": "USGS_NAIP",
+      "geocode_anchor": "US_Census",
+      "matched_offset": [
+        1,
+        -2
+      ],
+      "page_scale": 0.45549521877513083,
+      "source_page_render_wh": [
+        1445,
+        1900
+      ],
+      "source_crop": "center"
+    },
+    "status": "WEAK_IMAGE_MATCH_NO_ACCEPTED_REGISTRATION"
+  }
+]

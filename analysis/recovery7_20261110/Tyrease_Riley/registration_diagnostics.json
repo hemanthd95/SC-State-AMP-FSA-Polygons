@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Tyrease Riley",
+    "source_pdf": "Tyreese Riley_FSA Map.pdf",
+    "source_page": 1,
+    "workbook_fields": [
+      "3603/848/1"
+    ],
+    "address": "1033 Armour Hill Dr Pinewood SC 29125",
+    "geocode_anchors": [
+      {
+        "provider": "US_Census",
+        "lat": 33.594059411505,
+        "lon": -80.436293255423,
+        "quality": "MATCHED",
+        "matched_address": "1033 ARMOUR HILL DR, PINEWOOD, SC, 29125"
+      }
+    ],
+    "loaded_tiles": 50,
+    "requested_tiles": 50,
+    "status": "NO_IMAGE_MATCH"
+  }
+]

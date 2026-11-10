@@ -1,0 +1,77 @@
+[
+  {
+    "name": "Francena Ellis",
+    "source_pdf": "Francenia Ellis 2026 FSA Map.pdf",
+    "source_page": 1,
+    "workbook_fields": [
+      "4083/10683/3",
+      "4083/10683/7"
+    ],
+    "address": "1718 Browning Gate Rd SC 29921",
+    "geocode_anchors": [
+      {
+        "provider": "OSM_Nominatim",
+        "lat": 32.7529372,
+        "lon": -81.2113561,
+        "quality": "house",
+        "matched_address": "1718, Browning Gate Road, Estill, Hampton County, South Carolina, 29918, United States"
+      }
+    ],
+    "loaded_tiles": 49,
+    "requested_tiles": 50,
+    "registration": {
+      "inliers": 96,
+      "rmse_px": 0.528,
+      "source_spread_px": [
+        759.2804565429688,
+        639.9883422851562
+      ],
+      "target_spread_px": [
+        243.09320068359375,
+        203.5217742919922
+      ],
+      "valid": true,
+      "score": 375.2881774902344,
+      "full_pdf_points_to_tile_homography": [
+        [
+          0.46699904367271794,
+          0.0009972204057823093,
+          293.659863809677
+        ],
+        [
+          0.002744801941963121,
+          0.4599428162342351,
+          -75.84754130574257
+        ],
+        [
+          4.0906016341935335e-06,
+          -9.002711485264514e-07,
+          1.0
+        ]
+      ],
+      "tile_bbox_epsg3857": [
+        -9041181.80768321,
+        3861041.2376022893,
+        -9039631.80768321,
+        3862591.2376022893
+      ],
+      "tile_size_wh": [
+        900,
+        900
+      ],
+      "provider": "USGS_NAIP",
+      "geocode_anchor": "OSM_Nominatim",
+      "matched_offset": [
+        0,
+        -1
+      ],
+      "page_scale": 1.45,
+      "source_page_render_wh": [
+        888,
+        1149
+      ],
+      "source_crop": "map"
+    },
+    "status": "GEOGRAPHIC_IMAGE_MATCH_CANDIDATE_REQUIRES_MANUAL_FIELD_BOUNDARY_QA"
+  }
+]

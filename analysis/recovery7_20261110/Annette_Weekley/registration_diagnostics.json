@@ -1,0 +1,76 @@
+[
+  {
+    "name": "Annette Weekley",
+    "source_pdf": "Annette Weekley_FSA_Map.pdf",
+    "source_page": 1,
+    "workbook_fields": [
+      "4706/11322/2"
+    ],
+    "address": "8225 Pocataligo Rd Hampton SC 29924",
+    "geocode_anchors": [
+      {
+        "provider": "US_Census",
+        "lat": 32.847362886289,
+        "lon": -81.132470601693,
+        "quality": "MATCHED",
+        "matched_address": "8225 POCOTALIGO RD, HAMPTON, SC, 29924"
+      }
+    ],
+    "loaded_tiles": 45,
+    "requested_tiles": 50,
+    "registration": {
+      "inliers": 233,
+      "rmse_px": 0.738,
+      "source_spread_px": [
+        768.2028198242188,
+        820.44140625
+      ],
+      "target_spread_px": [
+        486.60894775390625,
+        517.923095703125
+      ],
+      "valid": true,
+      "score": 1431.706298828125,
+      "full_pdf_points_to_tile_homography": [
+        [
+          0.9204397575817147,
+          0.0007358460001799129,
+          250.63680635285468
+        ],
+        [
+          0.001993996825381554,
+          0.9144655672421875,
+          -6.6406384425716
+        ],
+        [
+          3.1806471452467012e-06,
+          2.279841972562403e-07,
+          1.0
+        ]
+      ],
+      "tile_bbox_epsg3857": [
+        -9032400.314180702,
+        3874286.4206410847,
+        -9030850.314180702,
+        3875836.4206410847
+      ],
+      "tile_size_wh": [
+        900,
+        900
+      ],
+      "provider": "USGS_NAIP",
+      "geocode_anchor": "US_Census",
+      "matched_offset": [
+        0,
+        0
+      ],
+      "page_scale": 1.45,
+      "source_page_render_wh": [
+        888,
+        1149
+      ],
+      "source_crop": "map"
+    },
+    "status": "GEOGRAPHIC_IMAGE_MATCH_CANDIDATE_REQUIRES_MANUAL_FIELD_BOUNDARY_QA"
+  }
+]
