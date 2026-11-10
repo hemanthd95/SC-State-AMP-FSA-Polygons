@@ -4,6 +4,7 @@
   "producer_count": 39,
   "registered_field_count": 69,
   "two_visible_road_labels_pass": 39,
+  "field_map_total_pages": 43,
   "map_pairs_complete": 39,
   "warnings": [
     "Do not use as ownership or cadastral surveys",
@@ -12,5 +13,5 @@
     "Where two named OSM roads are unavailable or out of view, explicit QA flags; no invented road labels",
     "Shared Farm753 producer boundaries use separately georeferenced Fields 2,9,10"
   ],
-  "zip_bytes": 45750202
+  "zip_bytes": 47567319
 }
