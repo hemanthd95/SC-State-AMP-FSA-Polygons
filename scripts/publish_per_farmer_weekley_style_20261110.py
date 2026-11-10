@@ -285,7 +285,7 @@ def process(key,features):
             if style=="field":
                 road_labels=labelled
                 # PNG is a convenient source-map preview matching the Weekley ArchSite example.
-                im.convert("RGB").save(folder/(base+"-FieldMap.png"),"PNG",optimize=True)
+                im.convert("RGB").save(folder/(base+"-FieldMap.jpg"),"JPEG",quality=88,optimize=True)
             outcomes[style]="CREATED"
         except Exception as exc:
             outcomes[style]="FAILED:"+str(exc)[:125]
@@ -345,7 +345,7 @@ def main():
     (OUT/"README_START_HERE.txt").write_text(
       "SC State AMP — PER-FARMER FSA MAPS (Weekley reference format)\n"
       "Each L-Last, First folder contains an EPSG:4326 shapefile directory, individual county topographic PDF, "
-      "satellite field PDF with road labels, PNG preview, registered-field GeoJSON and QA notes.\n"
+      "satellite field PDF with road labels, JPG preview, registered-field GeoJSON and QA notes.\n"
       "Check Producer_Atlas_Index_QA.csv for failed basemaps or fewer than two VERIFIED road labels.\n"
       "Do not treat a farm address, source PDF county, or raster-pixel tracing as field georeferencing.\n"
       "FSA administrative outlines are research planning approximations, not legal boundaries.\n")
