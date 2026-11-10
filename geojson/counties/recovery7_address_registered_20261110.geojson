@@ -1,0 +1,510 @@
+{
+  "type": "FeatureCollection",
+  "name": "recovery7_address_registered_subset_20261110",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "producer": "Angale Johnson",
+        "county": "Horry",
+        "physical_county_basis": "Excel farm address geocoded, image registration independently verified; FSA printed county ignored",
+        "amp_roster_county": "Horry",
+        "farm_id": "22564",
+        "tract_id": "17265",
+        "field_id": "13",
+        "fsa_reported_acres": 2.06,
+        "geodesic_acres": 2.1106,
+        "source_pdf": "Johnson Angale_FSAmap.pdf",
+        "source_page": 1,
+        "source_workbook_field_match": true,
+        "registered_provider": "USGS_NAIP",
+        "registration_inliers": 22,
+        "registration_rmse_px": 0.582,
+        "area_difference_pct": 2.5,
+        "status": "REGISTERED_WITH_LOWER_INLIER_QA_FLAG",
+        "geometry_quality": "PHOTO_TRACED_APPROXIMATE_NOT_SURVEY",
+        "source_attribution": "FSA photo map and USGS NAIP aerial image; no new acreage or registered farm location invented",
+        "map_source_date": "2026-11-10"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -79.09465026855469,
+              34.048211650781425
+            ],
+            [
+              -79.09454345703125,
+              34.04818618407337
+            ],
+            [
+              -79.09439086914062,
+              34.04820599151365
+            ],
+            [
+              -79.09356689453125,
+              34.048155058086444
+            ],
+            [
+              -79.09333801269531,
+              34.048172035898915
+            ],
+            [
+              -79.09342193603516,
+              34.04734011909061
+            ],
+            [
+              -79.09395599365234,
+              34.04737407503848
+            ],
+            [
+              -79.09394073486328,
+              34.047637233173425
+            ],
+            [
+              -79.09465026855469,
+              34.04768533726034
+            ],
+            [
+              -79.09465026855469,
+              34.048211650781425
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "producer": "Angale Johnson",
+        "county": "Horry",
+        "physical_county_basis": "Excel farm address geocoded, image registration independently verified; FSA printed county ignored",
+        "amp_roster_county": "Horry",
+        "farm_id": "22564",
+        "tract_id": "17268",
+        "field_id": "2",
+        "fsa_reported_acres": 3.4,
+        "geodesic_acres": 4.048,
+        "source_pdf": "Johnson Angale_FSAmap.pdf",
+        "source_page": 2,
+        "source_workbook_field_match": true,
+        "registered_provider": "USGS_NAIP",
+        "registration_inliers": 31,
+        "registration_rmse_px": 0.406,
+        "area_difference_pct": 19.1,
+        "status": "REGISTERED_WITH_LOWER_INLIER_QA_FLAG",
+        "geometry_quality": "PHOTO_TRACED_APPROXIMATE_NOT_SURVEY",
+        "source_attribution": "FSA photo map and USGS NAIP aerial image; no new acreage or registered farm location invented",
+        "map_source_date": "2026-11-10"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -79.09455871582031,
+              34.047388223346104
+            ],
+            [
+              -79.0931625366211,
+              34.04731748178449
+            ],
+            [
+              -79.09335327148438,
+              34.04567909070617
+            ],
+            [
+              -79.09380340576172,
+              34.045823406217586
+            ],
+            [
+              -79.09375762939453,
+              34.04597055119208
+            ],
+            [
+              -79.0937728881836,
+              34.046066761229646
+            ],
+            [
+              -79.09403228759766,
+              34.046287477962174
+            ],
+            [
+              -79.09430694580078,
+              34.04649121597461
+            ],
+            [
+              -79.09449768066406,
+              34.04673456907014
+            ],
+            [
+              -79.0946273803711,
+              34.047006218212296
+            ],
+            [
+              -79.0946273803711,
+              34.04707130069006
+            ],
+            [
+              -79.0945816040039,
+              34.04719297649274
+            ],
+            [
+              -79.09455871582031,
+              34.047388223346104
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "producer": "Annette Weekley",
+        "county": "Hampton",
+        "physical_county_basis": "Excel farm address geocoded, image registration independently verified; FSA printed county ignored",
+        "amp_roster_county": "Hampton",
+        "farm_id": "4706",
+        "tract_id": "11322",
+        "field_id": "3",
+        "fsa_reported_acres": 10.68,
+        "geodesic_acres": 11.2446,
+        "source_pdf": "Annette Weekley_FSA_Map.pdf",
+        "source_page": 1,
+        "source_workbook_field_match": false,
+        "registered_provider": "USGS_NAIP",
+        "registration_inliers": 233,
+        "registration_rmse_px": 0.738,
+        "area_difference_pct": 5.3,
+        "status": "SOURCE_VISIBLE_NOT_WORKBOOK_SELECTED",
+        "geometry_quality": "PHOTO_TRACED_APPROXIMATE_NOT_SURVEY",
+        "source_attribution": "FSA photo map and USGS NAIP aerial image; no new acreage or registered farm location invented",
+        "map_source_date": "2026-11-10",
+        "workbook_field_mismatch": "Workbook selects Farm4706/Tract11322/Field2, but available source shows fields 3,4,5,8,10, NOT Field2"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -81.13070678710938,
+              32.8504342908197
+            ],
+            [
+              -81.12948608398438,
+              32.850448635743064
+            ],
+            [
+              -81.12899780273438,
+              32.85037117312933
+            ],
+            [
+              -81.1292495727539,
+              32.84999820404252
+            ],
+            [
+              -81.12956237792969,
+              32.84955063906905
+            ],
+            [
+              -81.12996673583984,
+              32.849051429320134
+            ],
+            [
+              -81.13072204589844,
+              32.848009965458296
+            ],
+            [
+              -81.1317138671875,
+              32.848357121436976
+            ],
+            [
+              -81.13240814208984,
+              32.84873009742139
+            ],
+            [
+              -81.13198852539062,
+              32.84918914263481
+            ],
+            [
+              -81.13148498535156,
+              32.84982319493066
+            ],
+            [
+              -81.13070678710938,
+              32.8504342908197
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "producer": "Annette Weekley",
+        "county": "Hampton",
+        "physical_county_basis": "Excel farm address geocoded, image registration independently verified; FSA printed county ignored",
+        "amp_roster_county": "Hampton",
+        "farm_id": "4706",
+        "tract_id": "11322",
+        "field_id": "10",
+        "fsa_reported_acres": 14.25,
+        "geodesic_acres": 14.1152,
+        "source_pdf": "Annette Weekley_FSA_Map.pdf",
+        "source_page": 1,
+        "source_workbook_field_match": false,
+        "registered_provider": "USGS_NAIP",
+        "registration_inliers": 233,
+        "registration_rmse_px": 0.738,
+        "area_difference_pct": -0.9,
+        "status": "SOURCE_VISIBLE_NOT_WORKBOOK_SELECTED",
+        "geometry_quality": "PHOTO_TRACED_APPROXIMATE_NOT_SURVEY",
+        "source_attribution": "FSA photo map and USGS NAIP aerial image; no new acreage or registered farm location invented",
+        "map_source_date": "2026-11-10",
+        "workbook_field_mismatch": "Workbook selects Farm4706/Tract11322/Field2, but available source shows fields 3,4,5,8,10, NOT Field2"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -81.13102722167969,
+              32.8518056550071
+            ],
+            [
+              -81.128662109375,
+              32.85074127167354
+            ],
+            [
+              -81.12897491455078,
+              32.85034535224305
+            ],
+            [
+              -81.12945556640625,
+              32.85045437371178
+            ],
+            [
+              -81.13068389892578,
+              32.8504342908197
+            ],
+            [
+              -81.13240814208984,
+              32.84874731165976
+            ],
+            [
+              -81.13250732421875,
+              32.84872149030095
+            ],
+            [
+              -81.1332015991211,
+              32.848118989796234
+            ],
+            [
+              -81.1336669921875,
+              32.848110382616504
+            ],
+            [
+              -81.13391876220703,
+              32.84829113321499
+            ],
+            [
+              -81.13102722167969,
+              32.8518056550071
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "producer": "Francena Ellis",
+        "county": "Hampton",
+        "physical_county_basis": "Excel farm address geocoded, image registration independently verified; FSA printed county ignored",
+        "amp_roster_county": "Jasper",
+        "farm_id": "4083",
+        "tract_id": "10683",
+        "field_id": "7",
+        "fsa_reported_acres": 1.88,
+        "geodesic_acres": 2.0989,
+        "source_pdf": "Francenia Ellis 2026 FSA Map.pdf",
+        "source_page": 1,
+        "source_workbook_field_match": true,
+        "registered_provider": "USGS_NAIP",
+        "registration_inliers": 96,
+        "registration_rmse_px": 0.528,
+        "area_difference_pct": 11.6,
+        "status": "REGISTERED_AERIAL_MATCH_APPROXIMATE_NOT_SURVEY",
+        "geometry_quality": "PHOTO_TRACED_APPROXIMATE_NOT_SURVEY",
+        "source_attribution": "FSA photo map and USGS NAIP aerial image; no new acreage or registered farm location invented",
+        "map_source_date": "2026-11-10",
+        "county_note": "Workbook lists Jasper; geocoded field at Browning Gate Rd is geographically in Hampton"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -81.21195983886719,
+              32.75279213354177
+            ],
+            [
+              -81.21145629882812,
+              32.752516407891534
+            ],
+            [
+              -81.21154022216797,
+              32.75225217000909
+            ],
+            [
+              -81.21161651611328,
+              32.751999419996714
+            ],
+            [
+              -81.21135711669922,
+              32.75171220320294
+            ],
+            [
+              -81.21154022216797,
+              32.75156859445876
+            ],
+            [
+              -81.21149444580078,
+              32.75138764711142
+            ],
+            [
+              -81.211669921875,
+              32.75122967690447
+            ],
+            [
+              -81.21221923828125,
+              32.751333075617055
+            ],
+            [
+              -81.21212768554688,
+              32.751792623998554
+            ],
+            [
+              -81.21195983886719,
+              32.75279213354177
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "producer": "Francena Ellis",
+        "county": "Hampton",
+        "physical_county_basis": "Excel farm address geocoded, image registration independently verified; FSA printed county ignored",
+        "amp_roster_county": "Jasper",
+        "farm_id": "4083",
+        "tract_id": "10683",
+        "field_id": "3",
+        "fsa_reported_acres": 2.56,
+        "geodesic_acres": 2.2638,
+        "source_pdf": "Francenia Ellis 2026 FSA Map.pdf",
+        "source_page": 1,
+        "source_workbook_field_match": true,
+        "registered_provider": "USGS_NAIP",
+        "registration_inliers": 96,
+        "registration_rmse_px": 0.528,
+        "area_difference_pct": -11.6,
+        "status": "REGISTERED_AERIAL_MATCH_APPROXIMATE_NOT_SURVEY",
+        "geometry_quality": "PHOTO_TRACED_APPROXIMATE_NOT_SURVEY",
+        "source_attribution": "FSA photo map and USGS NAIP aerial image; no new acreage or registered farm location invented",
+        "map_source_date": "2026-11-10",
+        "county_note": "Workbook lists Jasper; geocoded field at Browning Gate Rd is geographically in Hampton"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -81.21139526367188,
+              32.75218036610123
+            ],
+            [
+              -81.21101379394531,
+              32.75216313315474
+            ],
+            [
+              -81.21100616455078,
+              32.75198793134274
+            ],
+            [
+              -81.21111297607422,
+              32.75176964663579
+            ],
+            [
+              -81.21150383213272,
+              32.75159713498952
+            ],
+            [
+              -81.21135711669922,
+              32.75171220320294
+            ],
+            [
+              -81.21161651611328,
+              32.751999419996714
+            ],
+            [
+              -81.21154022216797,
+              32.75225217000909
+            ],
+            [
+              -81.21145629882812,
+              32.752516407891534
+            ],
+            [
+              -81.21195983886719,
+              32.75279213354177
+            ],
+            [
+              -81.21212768554688,
+              32.751792623998554
+            ],
+            [
+              -81.21221923828125,
+              32.751333075617055
+            ],
+            [
+              -81.211669921875,
+              32.75122967690447
+            ],
+            [
+              -81.21149586307435,
+              32.75138637122809
+            ],
+            [
+              -81.21149444580078,
+              32.75138190274517
+            ],
+            [
+              -81.211669921875,
+              32.75108606738231
+            ],
+            [
+              -81.2123794555664,
+              32.75122967690447
+            ],
+            [
+              -81.21208190917969,
+              32.753102323878
+            ],
+            [
+              -81.21139526367188,
+              32.75300467148127
+            ],
+            [
+              -81.21139526367188,
+              32.75218036610123
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}
