@@ -96,33 +96,62 @@ def load_curated():
         p=f["properties"];groups[(p["producer"],p["physical_county"])].append(f)
     return dict(sorted(groups.items()))
 def find_roads(lon,lat):
-    """Return named OSM road centerlines, never use inferred or fabricated street names."""
-    q=f'[out:json][timeout:40];way(around:7000,{lat:.6f},{lon:.6f})["highway"]["name"];out center;'
+    """Ground every named road label in published US Census TIGER or OSM features."""
+    # TIGERweb January 2026 road centerlines give dependable names even
+    # when volunteer/community OSM endpoints are throttled.
+    cx,cy=WEBM.transform(lon,lat)
+    result={}
+    for layer in (2,1,0): # Local, secondary, primary roads
+        endpoint=f"https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Transportation_LargeScale/MapServer/{layer}/query"
+        try:
+            d=S.get(endpoint,params=dict(
+                where="NAME IS NOT NULL",
+                geometry=",".join(f"{v:.1f}" for v in (cx-6600,cy-6600,cx+6600,cy+6600)),
+                geometryType="esriGeometryEnvelope",inSR=3857,spatialRel="esriSpatialRelIntersects",
+                outFields="NAME,BASENAME",returnGeometry="true",outSR=4326,
+                resultRecordCount=1000,f="geojson"),timeout=34)
+            d.raise_for_status()
+            obj=d.json()
+            for feat in obj.get("features",[]):
+                p=feat.get("properties") or {}
+                name=str(p.get("NAME") or p.get("BASENAME") or "").strip()
+                if not name or not re.search(r"[A-Za-z]",name):continue
+                geo=shape(feat["geometry"])
+                if geo.is_empty:continue
+                merc=transform(WEBM.transform,geo)
+                from shapely.ops import nearest_points
+                nearest=nearest_points(Point(cx,cy),merc)[1]
+                dd=math.hypot(nearest.x-cx,nearest.y-cy)
+                reverse=Transformer.from_crs(3857,4326,always_xy=True)
+                rx,ry=reverse.transform(nearest.x,nearest.y)
+                if name not in result or dd<result[name]["distance_m"]:
+                    result[name]=dict(name=name,lon=rx,lat=ry,distance_m=dd)
+            if len(result)>=2:
+                return sorted(result.values(),key=lambda x:x["distance_m"])[:30],"U.S. Census TIGERweb (2026)"
+        except Exception as ex:
+            print("TIGER_ROAD_QUERY_WARNING",layer,str(ex)[:130],flush=True)
+    # Volunteer OSM data is a secondary, separately verifiable fallback.
+    q=f'[out:json][timeout:30];way(around:7000,{lat:.6f},{lon:.6f})["highway"]["name"];out center;'
     endpts=["https://overpass.kumi.systems/api/interpreter",
-      "https://overpass-api.de/api/interpreter",
-      "https://overpass.nchc.org.tw/api/interpreter"]
+      "https://overpass-api.de/api/interpreter"]
     for ep in endpts:
         try:
-            r=S.post(ep,data={"data":q},timeout=37)
-            r.raise_for_status()
-            d=r.json()
-            by_name={}
+            response=S.post(ep,data={"data":q},timeout=25)
+            response.raise_for_status()
+            d=response.json()
             for e in d.get("elements",[]):
                 name=str(e.get("tags",{}).get("name","")).strip()
                 co=e.get("center") or {}
                 if not name or "lon" not in co or "lat" not in co:continue
                 if e.get("tags",{}).get("highway") in ("service","footway","path","track","steps","cycleway","pedestrian"):continue
-                ename=re.sub(r"\s+"," ",name)
-                if not re.search(r"[A-Za-z]",ename):continue
                 x,y=WEBM.transform(float(co["lon"]),float(co["lat"]))
-                cx,cy=WEBM.transform(lon,lat)
                 dist=math.hypot(x-cx,y-cy)
-                if ename not in by_name or dist<by_name[ename]["distance_m"]:
-                    by_name[ename]={"name":ename,"lon":float(co["lon"]),"lat":float(co["lat"]),"distance_m":dist}
-            if len(by_name)>=2:return sorted(by_name.values(),key=lambda x:x["distance_m"])[:30],"OSM Overpass: "+ep
+                if name not in result or dist<result[name]["distance_m"]:
+                    result[name]={"name":name,"lon":float(co["lon"]),"lat":float(co["lat"]),"distance_m":dist}
+            if len(result)>=2:return sorted(result.values(),key=lambda x:x["distance_m"])[:30],"Census TIGER / OSM combined"
         except Exception as ex:
-            print("ROAD_PROVIDER_WARNING",ep,str(ex)[:110],flush=True)
-    return [],"No named-road vector service available"
+            print("OSM_ROAD_QUERY_WARNING",ep,str(ex)[:115],flush=True)
+    return sorted(result.values(),key=lambda x:x["distance_m"])[:30],"No two vector street names found"
 def choose_bbox(geoms,roads,context=False):
     u=unary_union(geoms)
     a,b,c,d=transform(WEBM.transform,u).bounds
@@ -180,14 +209,25 @@ def arrow_and_labels(im,bbox,roads,style):
            stroke_width=3,stroke_fill="black")
     shown=[]
     if style=="field":
-        for road in roads[:10]:
+        for road in roads[:15]:
             x,y=pix(road["lon"],road["lat"],bbox)
-            if not (30<x<SCALE_W-170 and 50<y<SCALE_H-80):continue
-            # spread labels to avoid overlap; geographic anchor is sourced from OSM.
-            if any(math.hypot(x-u,y-v)<145 for u,v in [(a[1],a[2]) for a in shown]):continue
-            name=road["name"][:27]
-            d.text((x,y),name,font=small,fill=(255,255,255,255),stroke_width=4,stroke_fill=(0,0,0,240))
-            shown.append((name,x,y))
+            if not (20<x<SCALE_W-120 and 45<y<SCALE_H-85):continue
+            if road["name"] in [a[0] for a in shown]:continue
+            labelx,labely=x,y
+            # A label is never invented. When intersections crowd text,
+            # offset the *verified* road name and draw a small anchor line.
+            for ix in range(4):
+                if not any(math.hypot(labelx-u,labely-v)<125 for _,u,v in shown):break
+                labelx=min(SCALE_W-180,max(25,x+90*(ix%2*2-1)))
+                labely=min(SCALE_H-85,max(50,y+85*(1+ix//2)))
+            if any(math.hypot(labelx-u,labely-v)<125 for _,u,v in shown):continue
+            if math.hypot(labelx-x,labely-y)>25:
+                d.line([(x,y),(labelx,labely)],fill="white",width=3)
+                d.ellipse((x-4,y-4,x+4,y+4),fill="yellow",outline="black",width=2)
+            name=road["name"][:30]
+            d.text((labelx,labely),name,font=small,fill=(255,255,255,255),
+                   stroke_width=4,stroke_fill=(0,0,0,240))
+            shown.append((name,labelx,labely))
             if len(shown)>=5:break
     return [a[0] for a in shown]
 def legend_scalebar(img,bbox,style):
