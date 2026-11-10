@@ -1,0 +1,37 @@
+name: Wide-address-search three unresolved FSA farms
+on:
+  push:
+    paths:
+      - 'scripts/recovery7_wide_address_search_20261110.py'
+      - '.github/workflows/recovery7_wide_address_search_20261110.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  wide-registration:
+    runs-on: ubuntu-latest
+    timeout-minutes: 65
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install 'numpy<2.5' opencv-python-headless pymupdf requests
+      - name: Search physical fields outward from geocoded Excel addresses
+        run: |
+          set -o pipefail
+          OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python scripts/recovery7_wide_address_search_20261110.py | tee analysis/recovery7_20261110/wide_search_run.log
+      - name: Publish address-based aerial evidence (never guessed polygons)
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin main
+          git reset --mixed origin/main
+          git add analysis/recovery7_20261110
+          if ! git diff --cached --quiet; then
+            git commit -m "Save wider geocoded-address aerial matching diagnostics for remaining three"
+            git push origin HEAD:main
+          fi
