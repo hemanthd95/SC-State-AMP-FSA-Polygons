@@ -1,0 +1,37 @@
+name: Recover remaining farmer FSA aerial registrations
+on:
+  push:
+    paths:
+      - 'scripts/recovery7_aerial_registration_20261110.py'
+      - '.github/workflows/recovery7_aerial_registration_20261110.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  register:
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install 'numpy<2.5' opencv-python-headless pymupdf requests
+      - name: Match specified source map pages to NAIP and Esri around Excel addresses
+        run: |
+          set -o pipefail
+          OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python scripts/recovery7_aerial_registration_20261110.py | tee analysis/recovery7_20261110/registration_run.log
+      - name: Publish candidate diagnostics without accepting unsupported polygons
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin main
+          git reset --mixed origin/main
+          git add analysis/recovery7_20261110
+          if ! git diff --cached --quiet; then
+            git commit -m "Record address-first FSA to NAIP registration diagnostics for six farmers"
+            git push origin HEAD:main
+          fi
