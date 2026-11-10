@@ -268,8 +268,9 @@ def PDF(path,im,producer,county,features,bbox,style,roadnames,road_source,base_s
     c.drawString(25,90,fields[:110])
     cx,cy=unary_union([shape(f["geometry"]) for f in features]).centroid.coords[0]
     c.drawString(25,78,f"Field center (WGS84): {cy:.5f} N, {abs(cx):.5f} W  |  FSA-source geometry, NOT a legal survey")
-    c.drawString(25,65,("Satellite: Esri/USGS | Roads: OpenStreetMap" if style=="field" else
-                        "Topographic: USGS National Map")+"  |  Map generated 10 Nov 2026")
+    attribution=("Satellite: Esri/USGS | Road labels: "+str(road_source) if style=="field" else
+                 "Topographic: USGS National Map")
+    c.drawString(25,65,(attribution+"  |  10 Nov 2026")[:117])
     if style=="field":
         c.drawString(25,52,("Verified named roads shown: "+", ".join(roadnames[:2]) if len(roadnames)>=2
                             else "WARNING: Two independently sourced road labels not established")[:115])
