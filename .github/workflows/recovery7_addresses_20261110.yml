@@ -1,0 +1,28 @@
+name: Seven-farmer address-first geography anchors
+on:
+  push:
+    paths:
+      - 'scripts/recovery7_address_anchors_20261110.py'
+      - '.github/workflows/recovery7_addresses_20261110.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  geocode:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install requests
+      - run: python scripts/recovery7_address_anchors_20261110.py
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin main
+          git reset --mixed origin/main
+          git add analysis/recovery7_20261110/address_first_anchors.json
+          git commit -m "Record seven farmers geocoded Excel-address search anchors"
+          git push origin HEAD:main
