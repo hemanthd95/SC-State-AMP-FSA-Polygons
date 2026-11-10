@@ -1,0 +1,16 @@
+{
+  "source": "Curated private GitHub SCSU AMP FSA polygons; rejected 719-feature master excluded",
+  "generated": "2026-11-10",
+  "producer_count": 39,
+  "registered_field_count": 69,
+  "two_visible_road_labels_pass": 39,
+  "map_pairs_complete": 39,
+  "warnings": [
+    "Do not use as ownership or cadastral surveys",
+    "Farm location counties were retained from curated mapping; county of enrollment may differ",
+    "County maps are local-area topographic views, matching Weekley example, not entire county outlines",
+    "Where two named OSM roads are unavailable or out of view, explicit QA flags; no invented road labels",
+    "Shared Farm753 producer boundaries use separately georeferenced Fields 2,9,10"
+  ],
+  "zip_bytes": 45750202
+}

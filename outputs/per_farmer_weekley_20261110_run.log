@@ -1,0 +1,41 @@
+PRODUCER-COUNTY GROUPS 39 RAW FIELDS 69
+FARM Aretha Bennett Colleton 1 roads 5 {'county': 'CREATED', 'field': 'CREATED'}
+FARM Bruce Jenkins Orangeburg 2 roads 5 {'county': 'CREATED', 'field': 'CREATED'}
+FARM Anthony Jackson Darlington 1 roads 3 {'county': 'CREATED', 'field': 'CREATED'}
+FARM Bryan Green Clarendon 2 roads 3 {'county': 'CREATED', 'field': 'CREATED'}
+FARM Christopher Edward Williamsburg 2 roads 4 {'county': 'CREATED', 'field': 'CREATED'}
+FARM Bruce S. Turner Jr. Florence 1 roads 3 {'county': 'CREATED', 'field': 'CREATED'}
+FARM Dread Marley Darlington 4 roads 3 {'county': 'CREATED', 'field': 'CREATED'}
+FARM Derick Muhammed Jasper 1 roads 5 {'county': 'CREATED', 'field': 'CREATED'}
+FARM Chris Berlin Williamsburg 7 roads 5 {'county': 'CREATED', 'field': 'CREATED'}
+FARM Corey Crosby Bamberg 1 roads 3 {'county': 'CREATED', 'field': 'CREATED'}
+FARM Garrett Patterson Darlington 1 roads 2 {'county': 'CREATED', 'field': 'CREATED'}
+FARM Jasper Summers Orangeburg 1 roads 5 {'county': 'CREATED', 'field': 'CREATED'}
+FARM John Lee Jasper 2 roads 5 {'county': 'CREATED', 'field': 'CREATED'}
+FARM Erica Wallace Clarendon 1 roads 5 {'county': 'CREATED', 'field': 'CREATED'}
+FARM Jesus Melendez Barnwell 1 roads 3 {'county': 'CREATED', 'field': 'CREATED'}
+FARM John Loyd Berkeley 2 roads 5 {'county': 'CREATED', 'field': 'CREATED'}
+FARM Joseph Wright Barnwell 1 roads 3 {'county': 'CREATED', 'field': 'CREATED'}
+FARM John Brabham Bamberg 1 roads 2 {'county': 'CREATED', 'field': 'CREATED'}
+FARM Johnie Thomas Marlboro 1 roads 3 {'county': 'CREATED', 'field': 'CREATED'}
+FARM Keesha Jenkins Charleston 1 roads 5 {'county': 'CREATED', 'field': 'CREATED'}
+FARM Marva Jackson Darlington 3 roads 2 {'county': 'CREATED', 'field': 'CREATED'}
+FARM Julian Ramsue Berkeley 2 roads 5 {'county': 'CREATED', 'field': 'CREATED'}
+FARM Mageret Berry Orangeburg 1 roads 5 {'county': 'CREATED', 'field': 'CREATED'}
+FARM June Bazen Florence 4 roads 5 {'county': 'CREATED', 'field': 'CREATED'}
+FARM Loyd Fields Colleton 1 roads 3 {'county': 'CREATED', 'field': 'CREATED'}
+FARM Montez Hillard Orangeburg 1 roads 5 {'county': 'CREATED', 'field': 'CREATED'}
+FARM Rick Boswell York 1 roads 5 {'county': 'CREATED', 'field': 'CREATED'}
+FARM Rosa Berry Orangeburg 2 roads 4 {'county': 'CREATED', 'field': 'CREATED'}
+FARM Shane Middleton Orangeburg 1 roads 5 {'county': 'CREATED', 'field': 'CREATED'}
+FARM Myra Louden Greenwood 1 roads 2 {'county': 'CREATED', 'field': 'CREATED'}
+FARM Shannon Lowe Aiken 1 roads 5 {'county': 'CREATED', 'field': 'CREATED'}
+FARM Robert Seaberry Orangeburg 1 roads 5 {'county': 'CREATED', 'field': 'CREATED'}
+FARM Shelia McAllister Florence 2 roads 5 {'county': 'CREATED', 'field': 'CREATED'}
+FARM Veronica Hodges Orangeburg 1 roads 5 {'county': 'CREATED', 'field': 'CREATED'}
+FARM Tarsha Mosley Orangeburg 1 roads 5 {'county': 'CREATED', 'field': 'CREATED'}
+FARM Vemour Green Barnwell 1 roads 5 {'county': 'CREATED', 'field': 'CREATED'}
+FARM Tywone Hilliard Orangeburg 3 roads 5 {'county': 'CREATED', 'field': 'CREATED'}
+FARM Yvette Moses Marion 4 roads 5 {'county': 'CREATED', 'field': 'CREATED'}
+FARM Willie Richburg Clarendon 4 roads 2 {'county': 'CREATED', 'field': 'CREATED'}
+FINAL_SUMMARY {"source": "Curated private GitHub SCSU AMP FSA polygons; rejected 719-feature master excluded", "generated": "2026-11-10", "producer_count": 39, "registered_field_count": 69, "two_visible_road_labels_pass": 39, "map_pairs_complete": 39, "warnings": ["Do not use as ownership or cadastral surveys", "Farm location counties were retained from curated mapping; county of enrollment may differ", "County maps are local-area topographic views, matching Weekley example, not entire county outlines", "Where two named OSM roads are unavailable or out of view, explicit QA flags; no invented road labels", "Shared Farm753 producer boundaries use separately georeferenced Fields 2,9,10"], "zip_bytes": 45750202}
