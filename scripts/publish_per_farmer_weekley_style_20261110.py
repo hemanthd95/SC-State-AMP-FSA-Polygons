@@ -312,47 +312,97 @@ def process(key,features):
     base=file_slug(farmer).replace("_","")[:24] or "Farmer"
     write_shapes(folder,base,features,county)
     geoms=[shape(f["geometry"]) for f in features]
-    rep=unary_union(geoms).representative_point()
-    roads,road_source=find_roads(rep.x,rep.y)
-    # For distinct farm IDs, keep all their fields on one map whenever practical.
-    road_labels=[]
     outcomes={}
-    for style in ("county","field"):
-        bbox=choose_bbox(geoms,roads,context=style=="county")
+    # County map follows the Weekley example: a single topographic local
+    # context map of all known fields for this producer.
+    try:
+        bbox=choose_bbox(geoms,[],context=True)
+        image,source=basemap(bbox,"county")
+        im=polygon_overlay(image,geoms,bbox)
+        arrow_and_labels(im,bbox,[],"county")
+        legend_scalebar(im,bbox,"county")
+        PDF(folder/(base+"-CountyMap.pdf"),im,farmer,county,features,bbox,"county",[],"",source)
+        outcomes["county"]="CREATED"
+    except Exception as exc:
+        outcomes["county"]="FAILED:"+str(exc)[:130]
+        print("MAP_ERROR",farmer,county,"county",str(exc)[:130],flush=True)
+
+    # One farmer shapefile, one FieldMap PDF; where the farmer operates
+    # spatially separated FSA farms/tracts, retain full-resolution
+    # individual close-up sheets in the same PDF instead of shrinking fields.
+    clusters=defaultdict(list)
+    for f in features:
+        p=f["properties"]
+        clusters[(str(p.get("farm_id") or ""),str(p.get("tract_id") or ""))].append(f)
+    clusters=dict(sorted(clusters.items()))
+    partfiles=[]
+    road_pages=[]
+    road_sources=[]
+    for i,((farm,tract),ff) in enumerate(clusters.items(),1):
+        groupgeoms=[shape(f["geometry"]) for f in ff]
+        rep=unary_union(groupgeoms).representative_point()
+        roads,road_source=find_roads(rep.x,rep.y)
+        road_sources.append(road_source)
         try:
-            image,base_source=basemap(bbox,style)
-            im=polygon_overlay(image,geoms,bbox)
-            labelled=arrow_and_labels(im,bbox,roads,style)
-            legend_scalebar(im,bbox,style)
-            filename=base+("-CountyMap.pdf" if style=="county" else "-FieldMap.pdf")
-            PDF(folder/filename,im,farmer,county,features,bbox,style,labelled,road_source,base_source)
-            if style=="field":
-                road_labels=labelled
-                # PNG is a convenient source-map preview matching the Weekley ArchSite example.
+            bbox=choose_bbox(groupgeoms,roads,context=False)
+            image,source=basemap(bbox,"field")
+            im=polygon_overlay(image,groupgeoms,bbox)
+            labelled=arrow_and_labels(im,bbox,roads,"field")
+            legend_scalebar(im,bbox,"field")
+            temp=folder/(base+f"-Sheet{i:02d}.pdf")
+            PDF(temp,im,farmer,county,ff,bbox,"field",labelled,road_source,source)
+            partfiles.append(temp)
+            road_pages.append(labelled)
+            if i==1:
                 im.convert("RGB").save(folder/(base+"-FieldMap.jpg"),"JPEG",quality=88,optimize=True)
-            outcomes[style]="CREATED"
+            print("FIELD_SHEET",farmer,county,farm,tract,"roads",len(labelled),flush=True)
         except Exception as exc:
-            outcomes[style]="FAILED:"+str(exc)[:125]
-            print("MAP_ERROR",farmer,county,style,str(exc)[:125],flush=True)
-    with (folder/"REGISTERED_FIELDS.geojson").open("w") as f:
-        json.dump({"type":"FeatureCollection","features":features},f,indent=2)
+            print("SHEET_ERROR",farmer,county,farm,tract,str(exc)[:180],flush=True)
+    if partfiles and len(partfiles)==len(clusters):
+        final=folder/(base+"-FieldMap.pdf")
+        if len(partfiles)==1:
+            partfiles[0].rename(final)
+        else:
+            merged=fitz.open()
+            for p in partfiles:
+                with fitz.open(p) as d:merged.insert_pdf(d)
+            merged.save(final,garbage=4,deflate=True)
+            merged.close()
+            for p in partfiles:p.unlink(missing_ok=True)
+        with fitz.open(final) as check:
+            if len(check)!=len(clusters):raise RuntimeError("Multipage field atlas missing a sheet")
+        outcomes["field"]="CREATED"
+    else:outcomes["field"]="FAILED: "+str(len(partfiles))+" of "+str(len(clusters))+" field sheets"
+    visible_min=min((len(x) for x in road_pages),default=0)
+    visible_names=[]
+    for page in road_pages:
+        for r in page:
+            if r not in visible_names:visible_names.append(r)
+    with (folder/"REGISTERED_FIELDS.geojson").open("w") as file:
+        json.dump({"type":"FeatureCollection","features":features},file,indent=2)
     qa={"producer":farmer,"physical_county":county,"folder":str(folder.relative_to(OUT)),
-        "source_field_features":len(features),"farm_ids":";".join(sorted({str(f["properties"].get("farm_id","")) for f in features})),
-        "field_map_status":outcomes.get("field"),"county_map_status":outcomes.get("county"),
-        "named_roads_visible_count":len(road_labels),"named_roads":", ".join(road_labels[:5]),
-        "two_road_names_pass":len(set(road_labels))>=2,"road_data_provider":road_source,
+        "source_field_features":len(features),
+        "farm_ids":";".join(sorted({str(f["properties"].get("farm_id","")) for f in features})),
+        "field_map_pages":len(partfiles),"county_map_status":outcomes.get("county"),
+        "field_map_status":outcomes.get("field"),
+        "named_roads_visible_count":visible_min,
+        "named_roads":", ".join(visible_names[:8]),
+        "two_road_names_pass":len(partfiles)==len(clusters) and visible_min>=2,
+        "road_data_provider":";".join(sorted(set(road_sources))),
         "boundary_quality":"Approximate FSA-source / user-QGIS location; NOT surveyed. Special status preserved in source GeoJSON."}
     (folder/"README_QA.txt").write_text(
         f"SCSU AMP: {farmer}, {county} County\n"
-        f"Shapefile: {base}.shp/ (EPSG:4326, one feature per previously accepted field)\n"
-        f"County map: {base}-CountyMap.pdf (topographic)\n"
-        f"Field map: {base}-FieldMap.pdf (satellite + named road labels)\n"
-        f"Registered feature count: {len(features)}\n"
-        f"Independently named roads visible: {len(road_labels)} -> {road_labels}\n"
+        f"Shapefile: {base}.shp/ (EPSG:4326; one record per accepted field)\n"
+        f"County context map: {base}-CountyMap.pdf (topographic)\n"
+        f"Farmer field map: {base}-FieldMap.pdf ({len(partfiles)} separate satellite field-close-up sheet(s))\n"
+        f"Source features: {len(features)}. Distinct farm/tract close-up sheets: {len(clusters)}\n"
+        f"Road labels visible on each sheet: {[len(x) for x in road_pages]}\n"
         f"Road-label compliance: {'PASS' if qa['two_road_names_pass'] else 'NEEDS_REVIEW'}\n"
-        f"NOTE: original producer workbook county and FSA county may differ from actual physical county.\n"
-        f"NOTE: These are not legal, cadastral, CLU, or ownership boundaries.\n")
-    print("FARM",farmer,county,len(features),"roads",len(road_labels),outcomes,flush=True)
+        f"Roads: {visible_names}\n"
+        f"Physical county need not be the same as workbook/registration county.\n"
+        f"These are NOT surveyed, legal, cadastral, CLU, or ownership polygons.\n")
+    print("FARM",farmer,county,len(features),"field pages",len(partfiles),
+          "min roads/sheet",visible_min,outcomes,flush=True)
     return qa
 def main():
     groups=load_curated()
@@ -378,6 +428,7 @@ def main():
       "producer_count":len(rows),
       "registered_field_count":sum(len(v) for v in groups.values()),
       "two_visible_road_labels_pass":sum(bool(r.get("two_road_names_pass")) for r in rows),
+      "field_map_total_pages":sum(int(r.get("field_map_pages") or 0) for r in rows),
       "map_pairs_complete":sum(r.get("field_map_status")=="CREATED" and r.get("county_map_status")=="CREATED" for r in rows),
       "warnings":["Do not use as ownership or cadastral surveys",
         "Farm location counties were retained from curated mapping; county of enrollment may differ",
