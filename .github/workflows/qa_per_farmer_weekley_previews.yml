@@ -1,0 +1,56 @@
+name: Verify sample Weekley-style map renders
+on:
+  push:
+    paths:
+      - '.github/workflows/qa_per_farmer_weekley_previews.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  render-qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Prepare PDF rendering
+        run: python -m pip install pymupdf pillow
+      - name: Inspect representative farmer maps
+        run: |
+          python - <<'PY'
+          import zipfile,fitz,io
+          from pathlib import Path
+          from PIL import Image
+          z=zipfile.ZipFile('deliverables/SC_AMP_Per_Farmer_Weekley_Format_20261110.zip')
+          dest=Path('deliverables/per_farmer_weekley_style_20261110/QA_Previews')
+          dest.mkdir(parents=True,exist_ok=True)
+          samples={
+            'Jasper_DerickMuhammed_Field':'Jasper/L-Muhammed, Derick/DerickMuhammed-FieldMap.pdf',
+            'Jasper_DerickMuhammed_County':'Jasper/L-Muhammed, Derick/DerickMuhammed-CountyMap.pdf',
+            'Barnwell_JesusMelendez_Field':'Barnwell/L-Melendez, Jesus/JesusMelendez-FieldMap.pdf',
+            'Orangeburg_TywoneHilliard_Field':'Orangeburg/L-Hilliard, Tywone/TywoneHilliard-FieldMap.pdf'
+          }
+          for name,sub in samples.items():
+            choices=[p for p in z.namelist() if p.endswith(sub)]
+            if len(choices)!=1:raise ValueError((name,choices))
+            pdf=fitz.open(stream=z.read(choices[0]),filetype='pdf')
+            if len(pdf)!=1:raise ValueError('Unexpected map page count '+name)
+            png=pdf[0].get_pixmap(matrix=fitz.Matrix(1.2,1.2),colorspace=fitz.csRGB,alpha=False)
+            im=Image.open(io.BytesIO(png.tobytes('png'))).convert('RGB')
+            im.save(dest/(name+'.jpg'),quality=83,optimize=True)
+            print('PREVIEW',name,im.size,flush=True)
+          PY
+      - name: Publish visual QA previews to same private repository
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add deliverables/per_farmer_weekley_style_20261110/QA_Previews
+          if ! git diff --cached --quiet; then
+            git commit -m "Add rendered visual QA previews for Weekley-format farmer maps"
+            git pull --rebase origin main
+            git push
+          fi
