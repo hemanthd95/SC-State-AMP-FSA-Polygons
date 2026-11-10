@@ -1,0 +1,51 @@
+[
+  {
+    "farmer": "Albert Vareen",
+    "source_pdf": "Albert vareen_FSA_Map.pdf",
+    "page": 1,
+    "verified_address": "112 East End Street, Mullins SC 29574",
+    "tiles_loaded": 98,
+    "status": "WIDE_SOURCE_REGISTRATION_CANDIDATE_REQUIRES_SOURCE_FIELD_QA",
+    "inliers": 141,
+    "rmse_px": 1.0542937517166138,
+    "source_spread_px": [
+      995.0142822265625,
+      1011.9495849609375
+    ],
+    "target_spread_px": [
+      307.00433349609375,
+      299.7711486816406
+    ],
+    "valid": true,
+    "provider": "USGS_NAIP",
+    "bbox_epsg3857": [
+      -8824806.938709216,
+      4061251.950925087,
+      -8822106.938709216,
+      4063951.950925087
+    ],
+    "tile_size": 950,
+    "page_pdf_to_tile_H": [
+      [
+        0.10252949124952468,
+        -0.00509575080784872,
+        312.0116021014944
+      ],
+      [
+        -0.006716904064208689,
+        0.10217389262383232,
+        237.20283462439127
+      ],
+      [
+        -1.8385407987427714e-05,
+        -1.200708540466338e-05,
+        1.0
+      ]
+    ],
+    "view": "map",
+    "grid_offset": [
+      -1,
+      3
+    ]
+  }
+]

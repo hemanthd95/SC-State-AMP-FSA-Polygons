@@ -1,0 +1,149 @@
+[
+  {
+    "farmer": "Christopher Riley",
+    "source_pdf": "Christopher Riley FSAmap1.pdf",
+    "page": 2,
+    "verified_address": "1095 Armour Hill Drive Pinewood SC 29125",
+    "tiles_loaded": 96,
+    "status": "WEAK_ALIGNMENT",
+    "inliers": 24,
+    "rmse_px": 0.5364508032798767,
+    "source_spread_px": [
+      740.0012817382812,
+      625.3075561523438
+    ],
+    "target_spread_px": [
+      143.69171142578125,
+      121.25559997558594
+    ],
+    "valid": false,
+    "provider": "USGS_NAIP",
+    "bbox_epsg3857": [
+      -8953480.289286934,
+      3973127.8248772514,
+      -8950780.289286934,
+      3975827.8248772514
+    ],
+    "tile_size": 950,
+    "page_pdf_to_tile_H": [
+      [
+        0.29024627552025095,
+        0.00742805867278756,
+        688.1343541882483
+      ],
+      [
+        0.0018576584971877611,
+        0.2839619004491455,
+        135.04530517462854
+      ],
+      [
+        1.020788289862491e-05,
+        9.99644708513983e-06,
+        1.0
+      ]
+    ],
+    "view": "map",
+    "grid_offset": [
+      1,
+      0
+    ]
+  },
+  {
+    "farmer": "Christopher Riley",
+    "source_pdf": "Christopher Riley FSAmap1.pdf",
+    "page": 3,
+    "verified_address": "1095 Armour Hill Drive Pinewood SC 29125",
+    "tiles_loaded": 96,
+    "status": "WEAK_ALIGNMENT",
+    "inliers": 27,
+    "rmse_px": 0.4522365629673004,
+    "source_spread_px": [
+      697.7175903320312,
+      725.19970703125
+    ],
+    "target_spread_px": [
+      135.33929443359375,
+      140.1481475830078
+    ],
+    "valid": false,
+    "provider": "USGS_NAIP",
+    "bbox_epsg3857": [
+      -8953480.289286934,
+      3973127.8248772514,
+      -8950780.289286934,
+      3975827.8248772514
+    ],
+    "tile_size": 950,
+    "page_pdf_to_tile_H": [
+      [
+        0.28429848504397487,
+        0.007816244926145802,
+        685.1426810570396
+      ],
+      [
+        0.00027575838064471223,
+        0.28324075629735646,
+        146.24706403544224
+      ],
+      [
+        3.3353899165727274e-06,
+        9.79773909582241e-06,
+        1.0
+      ]
+    ],
+    "view": "map",
+    "grid_offset": [
+      1,
+      0
+    ]
+  },
+  {
+    "farmer": "Christopher Riley",
+    "source_pdf": "Christopher Riley FSAmap1.pdf",
+    "page": 4,
+    "verified_address": "1095 Armour Hill Drive Pinewood SC 29125",
+    "tiles_loaded": 96,
+    "status": "WEAK_ALIGNMENT",
+    "inliers": 28,
+    "rmse_px": 0.5884925127029419,
+    "source_spread_px": [
+      754.3296508789062,
+      708.7722778320312
+    ],
+    "target_spread_px": [
+      145.601806640625,
+      136.37689208984375
+    ],
+    "valid": false,
+    "provider": "USGS_NAIP",
+    "bbox_epsg3857": [
+      -8953480.289286934,
+      3973127.8248772514,
+      -8950780.289286934,
+      3975827.8248772514
+    ],
+    "tile_size": 950,
+    "page_pdf_to_tile_H": [
+      [
+        0.2882583664973134,
+        0.0037526188419329046,
+        688.1402965694241
+      ],
+      [
+        0.00019432985471057012,
+        0.2816424684090508,
+        146.40553877529942
+      ],
+      [
+        9.206047167161471e-06,
+        3.748441383842437e-06,
+        1.0
+      ]
+    ],
+    "view": "map",
+    "grid_offset": [
+      1,
+      0
+    ]
+  }
+]
