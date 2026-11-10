@@ -254,7 +254,10 @@ def PDF(path,im,producer,county,features,bbox,style,roadnames,road_source,base_s
     p=features[0]["properties"]
     c=canvas.Canvas(str(path),pagesize=(612,792),pageCompression=1)
     c.setTitle(f"{producer} - {county} - "+("Field Map" if style=="field" else "County Map"))
-    c.drawImage(ImageReader(im.convert("RGB")) ,24,117,width=564,height=633)
+    # Preserve satellite detail without raw-RGB/Flate inflation inside ReportLab.
+    raster_path=path.with_suffix(".render_tmp.jpg")
+    im.convert("RGB").save(raster_path,"JPEG",quality=82,optimize=True,subsampling=1)
+    c.drawImage(str(raster_path),24,117,width=564,height=633)
     c.setFont("Helvetica",8)
     c.setFillColorRGB(.15,.15,.15)
     label=f"Overview of {producer} mapped fields in {county} County  |  SCSU AMP"
@@ -271,6 +274,7 @@ def PDF(path,im,producer,county,features,bbox,style,roadnames,road_source,base_s
         c.drawString(25,52,("Verified named roads shown: "+", ".join(roadnames[:2]) if len(roadnames)>=2
                             else "WARNING: Two independently sourced road labels not established")[:115])
     c.save()
+    raster_path.unlink(missing_ok=True)
 def write_shapes(folder,base,features,county):
     d=folder/(base+".shp");d.mkdir(parents=True,exist_ok=True)
     wr=shapefile.Writer(str(d/base),shapeType=shapefile.POLYGON,encoding="utf-8")
