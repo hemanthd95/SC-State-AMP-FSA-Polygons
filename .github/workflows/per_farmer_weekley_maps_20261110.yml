@@ -30,7 +30,10 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          # Align the branch to the current remote while keeping this run\x27s generated files.\n          # Avoid binary ZIP conflicts from previously completed map runs.\n          git fetch origin main\n          git reset --mixed origin/main\n          git add deliverables/per_farmer_weekley_style_20261110/README_START_HERE.txt || true
+          # Align with current remote while preserving generated files.
+          git fetch origin main
+          git reset --mixed origin/main
+          git add deliverables/per_farmer_weekley_style_20261110/README_START_HERE.txt || true
           git add deliverables/per_farmer_weekley_style_20261110/BUILD_SUMMARY.json || true
           git add deliverables/per_farmer_weekley_style_20261110/Producer_Atlas_Index_QA.csv || true
           git add outputs/per_farmer_weekley_20261110_run.log || true
