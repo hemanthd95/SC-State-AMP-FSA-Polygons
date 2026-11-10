@@ -38,11 +38,16 @@ jobs:
             choices=[p for p in z.namelist() if p.endswith(sub)]
             if len(choices)!=1:raise ValueError((name,choices))
             pdf=fitz.open(stream=z.read(choices[0]),filetype='pdf')
-            if len(pdf)!=1:raise ValueError('Unexpected map page count '+name)
+            if len(pdf)<1:raise ValueError('No map pages '+name)
             png=pdf[0].get_pixmap(matrix=fitz.Matrix(1.2,1.2),colorspace=fitz.csRGB,alpha=False)
             im=Image.open(io.BytesIO(png.tobytes('png'))).convert('RGB')
             im.save(dest/(name+'.jpg'),quality=83,optimize=True)
-            print('PREVIEW',name,im.size,flush=True)
+            print('PREVIEW',name,im.size,'pages',len(pdf),flush=True)
+            if name.startswith('Orangeburg') and len(pdf)>1:
+              pix2=pdf[1].get_pixmap(matrix=fitz.Matrix(1.2,1.2),colorspace=fitz.csRGB,alpha=False)
+              image2=Image.open(io.BytesIO(pix2.tobytes('png'))).convert('RGB')
+              image2.save(dest/(name+'_Page2.jpg'),quality=83,optimize=True)
+              print('PREVIEW',name+'_Page2',image2.size,flush=True)
           PY
       - name: Publish visual QA previews to same private repository
         run: |
