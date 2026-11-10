@@ -505,6 +505,64 @@
           ]
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "producer": "Albert Vareen",
+        "county": "Marion",
+        "amp_roster_county": "Marion",
+        "physical_county_basis": "Farm image registered to USGS NAIP after widening search from geocoded Excel address; FSA office county ignored",
+        "farm_id": "9652",
+        "tract_id": "7769",
+        "field_id": "1",
+        "fsa_reported_acres": 10.13,
+        "geodesic_acres": 9.9642,
+        "source_pdf": "Albert vareen_FSA_Map.pdf",
+        "source_page": 1,
+        "source_workbook_field_match": true,
+        "registered_provider": "USGS_NAIP",
+        "registration_inliers": 141,
+        "registration_rmse_px": 1.054,
+        "distance_from_excel_address_m": 5254.6,
+        "area_difference_pct": -1.64,
+        "status": "REGISTERED_AERIAL_MATCH_APPROXIMATE_NOT_SURVEY",
+        "geometry_quality": "MANUALLY_TRACED_FSA_SOURCE_AERIAL_MATCH_NOT_SURVEY",
+        "registration_source": "analysis/recovery7_20261110/Albert_Vareen/wide_registration_report.json",
+        "source_attribution": "FSA 2024 photo map and USGS NAIP reference",
+        "map_source_date": "2026-11-10"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -79.26272607693771,
+              34.25408323691348
+            ],
+            [
+              -79.26081655375543,
+              34.25333082863604
+            ],
+            [
+              -79.2621501249802,
+              34.25162981147042
+            ],
+            [
+              -79.26365189051678,
+              34.25267697550053
+            ],
+            [
+              -79.26363190853077,
+              34.25331242865712
+            ],
+            [
+              -79.26272607693771,
+              34.25408323691348
+            ]
+          ]
+        ]
+      }
     }
   ]
 }

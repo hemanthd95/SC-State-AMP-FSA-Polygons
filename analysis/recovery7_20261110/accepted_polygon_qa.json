@@ -89,8 +89,23 @@
       "image_match_rmse_px": 0.528,
       "distance_from_excel_address_m": 95.1,
       "status": "REGISTERED_AERIAL_MATCH_APPROXIMATE_NOT_SURVEY"
+    },
+    {
+      "farmer": "Albert Vareen",
+      "farm": "9652",
+      "tract": "7769",
+      "field": "1",
+      "area": 10.13,
+      "page": 1,
+      "enrolled_selected_field": true,
+      "geodetic_acres": 9.9642,
+      "area_difference_pct": -1.64,
+      "image_match_inliers": 141,
+      "image_match_rmse_px": 1.054,
+      "distance_from_excel_address_m": 5254.6,
+      "status": "REGISTERED_AERIAL_MATCH_APPROXIMATE_NOT_SURVEY"
     }
   ],
-  "accepted_feature_count": 6,
+  "accepted_feature_count": 7,
   "rule": "Never infer farm boundary from printed FSA county or mere producer address; a scanned source must be geographically registered, then manually traced and checked against FSA acreage."
 }
