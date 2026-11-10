@@ -1,0 +1,330 @@
+[
+  {
+    "name": "Angale Johnson",
+    "roster_county": "Horry",
+    "address": "5937 Primrose Drive Galivants Ferry, SC 29544",
+    "workbook_lat": 34.0470542,
+    "workbook_lon": -79.0934566,
+    "fields": [
+      "22560/17266/1",
+      "22564/17268/2",
+      "22564/17265/13"
+    ],
+    "source_pdf": "Johnson Angale_FSAmap.pdf",
+    "pages": [
+      1,
+      2,
+      3
+    ],
+    "geocoder_candidates": [
+      {
+        "provider": "US_Census",
+        "lat": 34.048143192823,
+        "lon": -79.093040298665,
+        "quality": "MATCHED",
+        "matched_address": "5937 PRIMROSE DR, GALIVANTS FERRY, SC, 29544"
+      },
+      {
+        "provider": "workbook_coordinate_UNVERIFIED",
+        "lat": 34.0470542,
+        "lon": -79.0934566,
+        "quality": "UNVERIFIED",
+        "matched_address": "5937 Primrose Drive Galivants Ferry, SC 29544"
+      }
+    ],
+    "errors": [],
+    "unique_search_anchors": [
+      {
+        "provider": "US_Census",
+        "lat": 34.048143192823,
+        "lon": -79.093040298665,
+        "quality": "MATCHED",
+        "matched_address": "5937 PRIMROSE DR, GALIVANTS FERRY, SC, 29544"
+      }
+    ]
+  },
+  {
+    "name": "Annette Weekley",
+    "roster_county": "Hampton",
+    "address": "8225 Pocataligo Rd Hampton SC 29924",
+    "workbook_lat": 33.5346,
+    "workbook_lon": -80.663,
+    "fields": [
+      "4706/11322/2"
+    ],
+    "source_pdf": "Annette Weekley_FSA_Map.pdf",
+    "pages": [
+      1
+    ],
+    "geocoder_candidates": [
+      {
+        "provider": "US_Census",
+        "lat": 32.847362886289,
+        "lon": -81.132470601693,
+        "quality": "MATCHED",
+        "matched_address": "8225 POCOTALIGO RD, HAMPTON, SC, 29924"
+      },
+      {
+        "provider": "workbook_coordinate_UNVERIFIED",
+        "lat": 33.5346,
+        "lon": -80.663,
+        "quality": "UNVERIFIED",
+        "matched_address": "8225 Pocataligo Rd Hampton SC 29924"
+      }
+    ],
+    "errors": [],
+    "unique_search_anchors": [
+      {
+        "provider": "US_Census",
+        "lat": 32.847362886289,
+        "lon": -81.132470601693,
+        "quality": "MATCHED",
+        "matched_address": "8225 POCOTALIGO RD, HAMPTON, SC, 29924"
+      },
+      {
+        "provider": "workbook_coordinate_UNVERIFIED",
+        "lat": 33.5346,
+        "lon": -80.663,
+        "quality": "UNVERIFIED",
+        "matched_address": "8225 Pocataligo Rd Hampton SC 29924"
+      }
+    ]
+  },
+  {
+    "name": "Albert Vareen",
+    "roster_county": "Marion",
+    "address": "112 East End Street, Mullins SC 29574",
+    "workbook_lat": 33.792,
+    "workbook_lon": -79.2745,
+    "fields": [
+      "9652/7769/1"
+    ],
+    "source_pdf": "Albert vareen_FSA_Map.pdf",
+    "pages": [
+      1
+    ],
+    "geocoder_candidates": [
+      {
+        "provider": "US_Census",
+        "lat": 34.207898180987,
+        "lon": -79.244945120089,
+        "quality": "MATCHED",
+        "matched_address": "112 E END ST, MULLINS, SC, 29574"
+      },
+      {
+        "provider": "OSM_Nominatim",
+        "lat": 34.2079519,
+        "lon": -79.2449259,
+        "quality": "house",
+        "matched_address": "112, East End Street, North Mullins, Mullins, Marion County, South Carolina, 29574, United States"
+      },
+      {
+        "provider": "OSM_Nominatim",
+        "lat": 34.2072871,
+        "lon": -79.2449902,
+        "quality": "house",
+        "matched_address": "112, East End Street, North Mullins, Mullins, Marion County, South Carolina, 29574, United States"
+      },
+      {
+        "provider": "workbook_coordinate_UNVERIFIED",
+        "lat": 33.792,
+        "lon": -79.2745,
+        "quality": "UNVERIFIED",
+        "matched_address": "112 East End Street, Mullins SC 29574"
+      }
+    ],
+    "errors": [],
+    "unique_search_anchors": [
+      {
+        "provider": "US_Census",
+        "lat": 34.207898180987,
+        "lon": -79.244945120089,
+        "quality": "MATCHED",
+        "matched_address": "112 E END ST, MULLINS, SC, 29574"
+      },
+      {
+        "provider": "workbook_coordinate_UNVERIFIED",
+        "lat": 33.792,
+        "lon": -79.2745,
+        "quality": "UNVERIFIED",
+        "matched_address": "112 East End Street, Mullins SC 29574"
+      }
+    ]
+  },
+  {
+    "name": "Rick Boswell",
+    "roster_county": "York",
+    "address": "1281 Tom Joye Rd Clover SC 29710",
+    "workbook_lat": 35.0891533,
+    "workbook_lon": -81.2212065,
+    "fields": [
+      "4330/8916/1"
+    ],
+    "source_pdf": "Rick Boswell.pdf",
+    "pages": [
+      1
+    ],
+    "geocoder_candidates": [
+      {
+        "provider": "US_Census",
+        "lat": 35.089751379203,
+        "lon": -81.218548137618,
+        "quality": "MATCHED",
+        "matched_address": "1281 TOM JOYE RD, CLOVER, SC, 29710"
+      },
+      {
+        "provider": "workbook_coordinate_UNVERIFIED",
+        "lat": 35.0891533,
+        "lon": -81.2212065,
+        "quality": "UNVERIFIED",
+        "matched_address": "1281 Tom Joye Rd Clover SC 29710"
+      }
+    ],
+    "errors": [],
+    "unique_search_anchors": [
+      {
+        "provider": "US_Census",
+        "lat": 35.089751379203,
+        "lon": -81.218548137618,
+        "quality": "MATCHED",
+        "matched_address": "1281 TOM JOYE RD, CLOVER, SC, 29710"
+      },
+      {
+        "provider": "workbook_coordinate_UNVERIFIED",
+        "lat": 35.0891533,
+        "lon": -81.2212065,
+        "quality": "UNVERIFIED",
+        "matched_address": "1281 Tom Joye Rd Clover SC 29710"
+      }
+    ]
+  },
+  {
+    "name": "Christopher Riley",
+    "roster_county": "Sumter",
+    "address": "1095 Armour Hill Drive Pinewood SC 29125",
+    "workbook_lat": 33.5954525,
+    "workbook_lon": -80.4379171,
+    "fields": [
+      "7832/5341/2"
+    ],
+    "source_pdf": "Christopher Riley FSAmap1.pdf",
+    "pages": [
+      3,
+      4
+    ],
+    "geocoder_candidates": [
+      {
+        "provider": "US_Census",
+        "lat": 33.594465911032,
+        "lon": -80.435871790998,
+        "quality": "MATCHED",
+        "matched_address": "1095 ARMOUR HILL DR, PINEWOOD, SC, 29125"
+      },
+      {
+        "provider": "workbook_coordinate_UNVERIFIED",
+        "lat": 33.5954525,
+        "lon": -80.4379171,
+        "quality": "UNVERIFIED",
+        "matched_address": "1095 Armour Hill Drive Pinewood SC 29125"
+      }
+    ],
+    "errors": [],
+    "unique_search_anchors": [
+      {
+        "provider": "US_Census",
+        "lat": 33.594465911032,
+        "lon": -80.435871790998,
+        "quality": "MATCHED",
+        "matched_address": "1095 ARMOUR HILL DR, PINEWOOD, SC, 29125"
+      }
+    ]
+  },
+  {
+    "name": "Tyrease Riley",
+    "roster_county": "Sumter",
+    "address": "1033 Armour Hill Dr Pinewood SC 29125",
+    "workbook_lat": 33.5946765,
+    "workbook_lon": -80.4385762,
+    "fields": [
+      "3603/848/1"
+    ],
+    "source_pdf": "Tyreese Riley_FSA Map.pdf",
+    "pages": [
+      1
+    ],
+    "geocoder_candidates": [
+      {
+        "provider": "US_Census",
+        "lat": 33.594059411505,
+        "lon": -80.436293255423,
+        "quality": "MATCHED",
+        "matched_address": "1033 ARMOUR HILL DR, PINEWOOD, SC, 29125"
+      },
+      {
+        "provider": "workbook_coordinate_UNVERIFIED",
+        "lat": 33.5946765,
+        "lon": -80.4385762,
+        "quality": "UNVERIFIED",
+        "matched_address": "1033 Armour Hill Dr Pinewood SC 29125"
+      }
+    ],
+    "errors": [],
+    "unique_search_anchors": [
+      {
+        "provider": "US_Census",
+        "lat": 33.594059411505,
+        "lon": -80.436293255423,
+        "quality": "MATCHED",
+        "matched_address": "1033 ARMOUR HILL DR, PINEWOOD, SC, 29125"
+      }
+    ]
+  },
+  {
+    "name": "Francena Ellis",
+    "roster_county": "Jasper",
+    "address": "1718 Browning Gate Rd SC 29921",
+    "workbook_lat": 32.1502,
+    "workbook_lon": -80.7045,
+    "fields": [
+      "4083/10683/3",
+      "4083/10683/7"
+    ],
+    "source_pdf": "Francenia Ellis 2026 FSA Map.pdf",
+    "pages": [
+      1
+    ],
+    "geocoder_candidates": [
+      {
+        "provider": "OSM_Nominatim",
+        "lat": 32.7529372,
+        "lon": -81.2113561,
+        "quality": "house",
+        "matched_address": "1718, Browning Gate Road, Estill, Hampton County, South Carolina, 29918, United States"
+      },
+      {
+        "provider": "workbook_coordinate_UNVERIFIED",
+        "lat": 32.1502,
+        "lon": -80.7045,
+        "quality": "UNVERIFIED",
+        "matched_address": "1718 Browning Gate Rd SC 29921"
+      }
+    ],
+    "errors": [],
+    "unique_search_anchors": [
+      {
+        "provider": "OSM_Nominatim",
+        "lat": 32.7529372,
+        "lon": -81.2113561,
+        "quality": "house",
+        "matched_address": "1718, Browning Gate Road, Estill, Hampton County, South Carolina, 29918, United States"
+      },
+      {
+        "provider": "workbook_coordinate_UNVERIFIED",
+        "lat": 32.1502,
+        "lon": -80.7045,
+        "quality": "UNVERIFIED",
+        "matched_address": "1718 Browning Gate Rd SC 29921"
+      }
+    ]
+  }
+]
