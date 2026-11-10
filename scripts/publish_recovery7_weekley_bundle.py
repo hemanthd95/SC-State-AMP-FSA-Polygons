@@ -20,7 +20,7 @@ TARGS={x["name"]:x for x in json.loads((ROOT/"analysis/recovery7_20261110/addres
 FRACTION={
  "Angale Johnson":(2,3,"Two source-registered fields, Farm22564 Tract17265 Field13 and Tract17268 Field2; Farm22560 Tract17266 Field1 remains unregistered. Both registered field traces have lower-inlier QA flags."),
  "Annette Weekley":(0,1,"Source photo is strongly georegistered but the enrolled Field2 is absent; two independently georegistered CONTEXT fields 3 and 10 must not be represented as enrollment Field2."),
- "Albert Vareen":(0,1,"Requested source Field1 is visually identified, but wide-area aerial registration has not confirmed the property. Do not treat a geocoded residence or PDF pixel polygon as a georeferenced field."),
+ "Albert Vareen":(1,1,"Farm9652 Tract7769 Field1 registered to USGS NAIP by 141 real aerial feature matches (1.05 pixel RMSE); 10.00 mapped acres compared with FSA 10.13 acres; 5.3 km from verified Excel address."),
  "Rick Boswell":(1,1,"Previously registered York Farm4330 Tract8916 Field1 retained from existing curated GeoJSON."),
  "Christopher Riley":(0,1,"The source page for Farm7832 Tract5341 shows Fields 1,4,5 but not requested Field2. Field2 appears in source Tract5340, a different tract; do not substitute."),
  "Tyrease Riley":(0,1,"Farm3603 Tract848 Field1 visible in source; a robust NAIP/Esri geographic image match remains unconfirmed."),
@@ -101,11 +101,11 @@ overview={"date":"2026-11-10","farmers":7,"registered_farmers":len(groups),
  "workbook_selected_field_count":selected_req,"workbook_selected_fields_georegistered":selected_mapped,
  "all_georeferenced_features_included":sum(len(v) for v in groups.values()),
  "status":{"SOURCE_MAP_NOT_SAME_AS_WORKBOOK_FIELD": ["Annette Weekley","Christopher Riley"],
-    "UNLOCATED_AFTER_NAIP_SEARCH":["Albert Vareen","Christopher Riley","Tyrease Riley"],
+    "UNLOCATED_AFTER_NAIP_SEARCH":["Christopher Riley","Tyrease Riley"],
     "PARTIAL_LOW_INLIER":["Angale Johnson"],
-    "SOURCE_FIELD_IDS_MATCH": ["Rick Boswell","Francena Ellis"]},
+    "SOURCE_FIELD_IDS_MATCH": ["Rick Boswell","Francena Ellis","Albert Vareen"]},
  "county_rule":"Use Excel addresses to locate field search; FSA office county is not an indicator of real location",
- "critical_note":"Four farmer map folders contain geographically registered source polygons. Three remaining farmer folders explicitly carry UNREGISTERED source pages only, NOT shapefiles. One mapped farmer (Annette) has only non-enrolled source fields. Do not claim all seven selected farms complete."
+ "critical_note":"Five farmer map folders contain geographically registered source polygons. Two remaining farmer folders explicitly carry UNREGISTERED source pages only, NOT shapefiles. One mapped farmer (Annette) has only non-enrolled source fields. Do not claim all seven selected farms complete."
 }
 (OUT/"BUILD_SUMMARY.json").write_text(json.dumps(overview,indent=2))
 (OUT/"README_START_HERE.txt").write_text(
@@ -114,7 +114,7 @@ overview={"date":"2026-11-10","farmers":7,"registered_farmers":len(groups),
  "individual farmer shapefiles EPSG:4326, CountyMap topography, FieldMap aerial with two road names.\n"
  "All source boundaries are approximate FSA photo traces, not legal surveys.\n\n"
  "DO NOT CONFUSE SOURCE-ONLY FOLDERS WITH COMPLETED GEOREFERENCING.\n"
- "The three unresolved records are under UNREGISTERED__SOURCE_ONLY and have no shapefile.\n"
+ "The two unresolved records are under UNREGISTERED__SOURCE_ONLY and have no shapefile.\n"
  "Annette Weekley has fields 3 and 10 mapped for context, but not the workbook's Field2.\n"
  "Angale Johnson Field1 remains unregistered; Fields2 and13 have lower-inlier QA flags.\n"
  "Original workbook county, FSA office county and field's physical county are distinct attributes.\n"
