@@ -1,4 +1,5 @@
 name: Verify sample Weekley-style map renders
+# Final preview refresh against publisher revision e17bc02d (43 field atlas pages)
 on:
   push:
     paths:
