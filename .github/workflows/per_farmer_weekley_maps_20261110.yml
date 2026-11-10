@@ -30,7 +30,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add deliverables/per_farmer_weekley_style_20261110/README_START_HERE.txt || true
+          # Align the branch to the current remote while keeping this run\x27s generated files.\n          # Avoid binary ZIP conflicts from previously completed map runs.\n          git fetch origin main\n          git reset --mixed origin/main\n          git add deliverables/per_farmer_weekley_style_20261110/README_START_HERE.txt || true
           git add deliverables/per_farmer_weekley_style_20261110/BUILD_SUMMARY.json || true
           git add deliverables/per_farmer_weekley_style_20261110/Producer_Atlas_Index_QA.csv || true
           git add outputs/per_farmer_weekley_20261110_run.log || true
@@ -46,8 +46,7 @@ jobs:
           fi
           if ! git diff --cached --quiet; then
             git commit -m "Publish Weekley-style individual producer map and shapefile ZIP"
-            git pull --rebase origin main
-            git push
+            git push origin HEAD:main
           fi
       - name: Assert at least one individual farmer map was delivered
         run: test -f deliverables/SC_AMP_Per_Farmer_Weekley_Format_20261110.zip
