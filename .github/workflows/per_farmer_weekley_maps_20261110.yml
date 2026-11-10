@@ -1,0 +1,53 @@
+name: Publish per-farmer Weekley-format shapefiles and maps
+on:
+  push:
+    paths:
+      - 'scripts/publish_per_farmer_weekley_style_20261110.py'
+      - '.github/workflows/per_farmer_weekley_maps_20261110.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  create-individual-farmer-packages:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - name: Check out verified source field geometries
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install PDF, GIS and map rendering dependencies
+        run: python -m pip install 'numpy<2.5' pyshp shapely pyproj pillow reportlab pymupdf requests
+      - name: Produce per-farmer shapefile, county topo map and satellite field map
+        run: |
+          set -o pipefail
+          AMP_FARM_WORKERS=6 python scripts/publish_per_farmer_weekley_style_20261110.py | tee outputs/per_farmer_weekley_20261110_run.log
+      - name: Save build manifest and packed ZIP in existing private repository
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add deliverables/per_farmer_weekley_style_20261110/README_START_HERE.txt || true
+          git add deliverables/per_farmer_weekley_style_20261110/BUILD_SUMMARY.json || true
+          git add deliverables/per_farmer_weekley_style_20261110/Producer_Atlas_Index_QA.csv || true
+          git add outputs/per_farmer_weekley_20261110_run.log || true
+          if [ -f deliverables/SC_AMP_Per_Farmer_Weekley_Format_20261110.zip ]; then
+            bytes=$(stat -c%s deliverables/SC_AMP_Per_Farmer_Weekley_Format_20261110.zip)
+            if [ "$bytes" -lt 95000000 ]; then
+              git add deliverables/SC_AMP_Per_Farmer_Weekley_Format_20261110.zip
+              echo "ZIP_PREPARED bytes=$bytes"
+            else
+              echo "::error::ZIP exceeds GitHub 95MB safety limit"
+              exit 1
+            fi
+          fi
+          if ! git diff --cached --quiet; then
+            git commit -m "Publish Weekley-style individual producer map and shapefile ZIP"
+            git pull --rebase origin main
+            git push
+          fi
+      - name: Assert at least one individual farmer map was delivered
+        run: test -f deliverables/SC_AMP_Per_Farmer_Weekley_Format_20261110.zip
