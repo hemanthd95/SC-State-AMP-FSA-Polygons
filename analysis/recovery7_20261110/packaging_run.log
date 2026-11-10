@@ -1,0 +1,13 @@
+FIELD_SHEET Annette Weekley Hampton 4706 11322 roads 2
+FARM Annette Weekley Hampton 2 field pages 1 min roads/sheet 2 {'county': 'CREATED', 'field': 'CREATED'}
+FIELD_SHEET Angale Johnson Horry 22564 17265 roads 4
+FIELD_SHEET Francena Ellis Hampton 4083 10683 roads 5
+FARM Francena Ellis Hampton 2 field pages 1 min roads/sheet 5 {'county': 'CREATED', 'field': 'CREATED'}
+FIELD_SHEET Albert Vareen Marion 9652 7769 roads 5
+FARM Albert Vareen Marion 1 field pages 1 min roads/sheet 5 {'county': 'CREATED', 'field': 'CREATED'}
+FIELD_SHEET Angale Johnson Horry 22564 17268 roads 4
+FARM Angale Johnson Horry 2 field pages 2 min roads/sheet 4 {'county': 'CREATED', 'field': 'CREATED'}
+FIELD_SHEET Rick Boswell York 4330 8916 roads 5
+FARM Rick Boswell York 1 field pages 1 min roads/sheet 5 {'county': 'CREATED', 'field': 'CREATED'}
+SUMMARY {"date": "2026-11-10", "farmers": 7, "registered_farmers": 5, "workbook_selected_field_count": 10, "workbook_selected_fields_georegistered": 6, "all_georeferenced_features_included": 8, "status": {"SOURCE_MAP_NOT_SAME_AS_WORKBOOK_FIELD": ["Annette Weekley", "Christopher Riley"], "UNLOCATED_AFTER_NAIP_SEARCH": ["Christopher Riley", "Tyrease Riley"], "PARTIAL_LOW_INLIER": ["Angale Johnson"], "SOURCE_FIELD_IDS_MATCH": ["Rick Boswell", "Francena Ellis", "Albert Vareen"]}, "county_rule": "Use Excel addresses to locate field search; FSA office county is not an indicator of real location", "critical_note": "Five farmer map folders contain geographically registered source polygons. Two remaining farmer folders explicitly carry UNREGISTERED source pages only, NOT shapefiles. One mapped farmer (Annette) has only non-enrolled source fields. Do not claim all seven selected farms complete."}
+ZIP /home/runner/work/SC-State-AMP-FSA-Polygons/SC-State-AMP-FSA-Polygons/deliverables/SC_AMP_Seven_Farmer_Recovery_20261110.zip 7118548
