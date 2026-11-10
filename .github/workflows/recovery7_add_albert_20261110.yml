@@ -1,0 +1,28 @@
+name: Accept Albert Vareen field with NAIP acreage QA
+on:
+  push:
+    paths:
+      - 'scripts/recovery7_add_albert_20261110.py'
+      - '.github/workflows/recovery7_add_albert_20261110.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  accept:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install 'numpy<2.5' opencv-python-headless pyproj shapely
+      - run: python scripts/recovery7_add_albert_20261110.py
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin main
+          git reset --mixed origin/main
+          git add geojson/counties/recovery7_address_registered_20261110.geojson analysis/recovery7_20261110/accepted_polygon_qa.json
+          git commit -m "Accept Albert Vareen Marion FSA field1 based on 141 real aerial matches"
+          git push origin HEAD:main
