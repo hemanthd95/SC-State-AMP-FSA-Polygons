@@ -1,0 +1,35 @@
+name: Search Jaivean Spann distinctive rural road intersections against NAIP
+on:
+  push:
+    paths:
+      - 'scripts/recovery49_jaivean_regional_intersections.py'
+      - '.github/workflows/recovery49_jaivean_regional_intersections.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  candidate-intersections:
+    runs-on: ubuntu-latest
+    timeout-minutes: 48
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install shapely pyproj pillow requests
+      - name: Find regional TIGER road intersections matching 35/95 bearing in FSA image
+        run: |
+          set -o pipefail
+          python scripts/recovery49_jaivean_regional_intersections.py
+      - name: Save only spatial candidate evidence in existing private repository
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin main
+          git reset --mixed origin/main
+          git add analysis/recovery49_20261111/Jaivean_Spann/Regional_Road_Junction_Search/
+          if ! git diff --cached --quiet; then
+            git commit -m "Compare FSA Farm3988 road geometry with ranked Clarendon NAIP intersection candidates"
+            git push origin HEAD:main
+          fi
