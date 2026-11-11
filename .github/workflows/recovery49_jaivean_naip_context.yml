@@ -1,0 +1,33 @@
+name: Map Jaivean Spann FSA roads to address-first NAIP search images
+on:
+  push:
+    paths:
+      - 'scripts/recovery49_jaivean_naip_context.py'
+      - '.github/workflows/recovery49_jaivean_naip_context.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  search:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install pillow requests
+      - name: Find address from Excel, download cropped NAIP without assuming field position
+        run: python scripts/recovery49_jaivean_naip_context.py
+      - name: Publish search imagery and QA, excluding any producer private information
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin main
+          git reset --mixed origin/main
+          git add analysis/recovery49_20261111/Jaivean_Spann/
+          if ! git diff --cached --quiet; then
+            git commit -m "Search NAIP from Jaivean Spann's actual farm address, separately for Farm3988 and Farm9447"
+            git push origin HEAD:main
+          fi
