@@ -1,0 +1,30 @@
+name: Visually screen Cinnabar FSA road-registered field candidates
+on:
+  push:
+    paths:
+      - 'scripts/recovery_20261111_cinnabar_candidates.py'
+      - '.github/workflows/recovery_20261111_cinnabar_candidates.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  candidates:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install pillow shapely pyproj requests
+      - run: python scripts/recovery_20261111_cinnabar_candidates.py
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin main
+          git reset --mixed origin/main
+          git add analysis/recovery_20261111/Antron_Williams/Cinnabar_Candidate_Registration
+          if ! git diff --cached --quiet; then
+            git commit -m "Screen Antron source FSA Cinnabar field traces against NAIP road locations"
+            git push origin HEAD:main
+          fi
