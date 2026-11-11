@@ -1,0 +1,33 @@
+name: Batch2 four farmer FSA original PDF page inventory
+on:
+  push:
+    paths:
+      - 'scripts/recovery49_batch2_source_inventory.py'
+      - '.github/workflows/recovery49_batch2_source_inventory.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  inventory:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install pymupdf
+      - run: python scripts/recovery49_batch2_source_inventory.py
+      - name: Store only page metadata and nonconfidential source-label snippets
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin main
+          git reset --mixed origin/main
+          git add analysis/recovery49_20261111/batch2/batch2_source_page_inventory.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Index batch2 source FSA maps for exact Farm/Tract/Field reconciliation"
+            git push origin HEAD:main
+          fi
