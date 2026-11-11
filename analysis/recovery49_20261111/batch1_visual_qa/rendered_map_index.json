@@ -11,6 +11,16 @@
   },
   {
     "farmer": "L-Bright Jr., Charles",
+    "kind": "field",
+    "page": 2,
+    "render": "analysis/recovery49_20261111/batch1_visual_qa/L-Bright_Jr._Charles_field_p2.jpg",
+    "dimensions": [
+      735,
+      951
+    ]
+  },
+  {
+    "farmer": "L-Bright Jr., Charles",
     "kind": "county",
     "page": 1,
     "render": "analysis/recovery49_20261111/batch1_visual_qa/L-Bright_Jr._Charles_county_p1.jpg",
@@ -74,6 +84,16 @@
     "kind": "field",
     "page": 2,
     "render": "analysis/recovery49_20261111/batch1_visual_qa/L-Summers_Jasper_field_p2.jpg",
+    "dimensions": [
+      735,
+      951
+    ]
+  },
+  {
+    "farmer": "L-Summers, Jasper",
+    "kind": "field",
+    "page": 3,
+    "render": "analysis/recovery49_20261111/batch1_visual_qa/L-Summers_Jasper_field_p3.jpg",
     "dimensions": [
       735,
       951
