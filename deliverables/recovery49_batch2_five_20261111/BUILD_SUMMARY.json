@@ -4,20 +4,20 @@
   "people": 5,
   "year2_farmers_geographically_mapped": 1,
   "source_review_only": 3,
-  "admin_closed": 0,
+  "admin_closed": 1,
   "note": "Count means geographically mapped enrolled target, not verified legal acreage. Additional enrollment source-ID review is separately tracked.",
   "mapped_farmer": "Christine Berry Zeigler",
   "mappable_source_rows": [
     {
       "farmer": "Christine Berry Zeigler",
-      "status": "MAPPED_GEOGRAPHICALLY",
+      "status": "COMPLETED_KNOWN_YEAR2_FIELD_APPROXIMATE_GEOREGISTRATION",
       "accepted_polygon_count": "1",
       "physical_county": "Orangeburg",
       "target": "1271/469/1",
       "area_ac": "11.1279",
       "source_registration": "217 inliers, 1.28px",
-      "administratively_closed": "False",
-      "blocker": "FSA photo map footer Farm/Tract identification not machine-readable; confirm source association if formal enrollment closure required"
+      "administratively_closed": "True",
+      "blocker": "None for the known Year2 Farm1271/Tract469/Field1; approximate photo-boundary quality recorded separately"
     },
     {
       "farmer": "Javeiann Spann",
@@ -71,5 +71,11 @@
     "Tywone 4261/5953/2",
     "Tywone 960/3812/1"
   ],
-  "ty_hilliard_note": "Three source FSA farms 2024 geographically registered, but none matches Year2 Farm1064 or3826. Farmer NOT CLOSED."
+  "ty_hilliard_note": "Three source FSA farms 2024 geographically registered, but none matches Year2 Farm1064 or3826. Farmer NOT CLOSED.",
+  "closed_year2_farmers": [
+    "Christine Berry Zeigler"
+  ],
+  "remaining_followup_farmers_from_44": 43,
+  "baseline_outstanding_year2": 44,
+  "year2_completion_rule": "Registered source Farm1271 Tract469 Field1 matched to enrolled target; printed FSA source footer visually confirmed. Mapped acreage may differ up to 25% and is not survey accuracy."
 }

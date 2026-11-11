@@ -1,5 +1,5 @@
 farmer,status,accepted_polygon_count,physical_county,target,area_ac,source_registration,administratively_closed,blocker
-Christine Berry Zeigler,MAPPED_GEOGRAPHICALLY,1,Orangeburg,1271/469/1,11.1279,"217 inliers, 1.28px",False,FSA photo map footer Farm/Tract identification not machine-readable; confirm source association if formal enrollment closure required
+Christine Berry Zeigler,COMPLETED_KNOWN_YEAR2_FIELD_APPROXIMATE_GEOREGISTRATION,1,Orangeburg,1271/469/1,11.1279,"217 inliers, 1.28px",True,None for the known Year2 Farm1271/Tract469/Field1; approximate photo-boundary quality recorded separately
 Javeiann Spann,SOURCE_DIGITIZED_LOCATION_UNRESOLVED,0,,,,SEE QA,False,Year2 3988/4673/1; user supplied two photographs including unrelated 9447/8142; no unique independent NAIP match.
 Joe Hilliard,IMAGE_REGISTERED_SOURCE_FARM_MISMATCH,0,,,,SEE QA,False,612 NAIP features registered source Farm6528/Tract41114; Year2 target Farm13859/Tract45814/Field20; do NOT substitute source field.
 Calvin Blair,SOURCE_FARM_MATCHES_BUT_IMAGE_LOCATION_UNRESOLVED,0,,,,SEE QA,False,Farm3603/Tract848 source page includes Field3 (12.50 acres). Existing local SIFT match was geometrically degenerate.
