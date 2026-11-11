@@ -1,0 +1,55 @@
+{
+  "name": "John Brabham",
+  "source": "John Henry Brabham_FSA_Map.pdf",
+  "page": 2,
+  "target_farm_tract_fields": "3524/3531/25",
+  "fsa_area_acres": 10.2,
+  "imagery_tiles_requested": 52,
+  "imagery_tiles_loaded": 36,
+  "status": "WEAK_MATCH_REJECTED",
+  "inliers": 27,
+  "rmse_px": 0.437,
+  "valid_geometric_match": false,
+  "source_inlier_spread_px": [
+    626.9168090820312,
+    689.2599487304688
+  ],
+  "target_inlier_spread_px": [
+    220.447509765625,
+    243.80001831054688
+  ],
+  "source_pdf_page_points_to_naip_tile_H": [
+    [
+      0.5202212314350624,
+      0.006553442116596287,
+      301.47699247503203
+    ],
+    [
+      0.002566012639908733,
+      0.5200678075440657,
+      208.36123835635007
+    ],
+    [
+      1.240509757503249e-05,
+      1.2368207361543681e-05,
+      1.0
+    ]
+  ],
+  "tile_bbox_epsg3857": [
+    -9022828.58144097,
+    3926310.461030378,
+    -9021428.58144097,
+    3927710.461030378
+  ],
+  "tile_size_px": 900,
+  "anchor_name": "USER_QGIS_FARM_AREA",
+  "anchor_lonlat": [
+    -81.04716,
+    33.23855
+  ],
+  "tile_offset": [
+    0,
+    0
+  ],
+  "imagery_provider": "USGS_NAIP"
+}

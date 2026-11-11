@@ -1,0 +1,55 @@
+{
+  "name": "Margaret Berry",
+  "source": "Margaret_Berry_FSA_Map.pdf",
+  "page": 3,
+  "target_farm_tract_fields": "10939/43399/3",
+  "fsa_area_acres": 1.57,
+  "imagery_tiles_requested": 52,
+  "imagery_tiles_loaded": 40,
+  "status": "CANDIDATE_NEEDS_FIELD_TRACE_AND_QA",
+  "inliers": 163,
+  "rmse_px": 0.872,
+  "valid_geometric_match": true,
+  "source_inlier_spread_px": [
+    702.1879272460938,
+    552.463623046875
+  ],
+  "target_inlier_spread_px": [
+    275.0614013671875,
+    226.55303955078125
+  ],
+  "source_pdf_page_points_to_naip_tile_H": [
+    [
+      0.6374968649344306,
+      0.11070953962484732,
+      414.719792723364
+    ],
+    [
+      0.019620785785865333,
+      0.7222161903207924,
+      103.2001475039481
+    ],
+    [
+      1.9423938597391304e-06,
+      0.0002186399062221419,
+      1.0
+    ]
+  ],
+  "tile_bbox_epsg3857": [
+    -8978721.57279886,
+    3951316.9421185856,
+    -8977321.57279886,
+    3952716.9421185856
+  ],
+  "tile_size_px": 900,
+  "anchor_name": "EXCEL_ADDRESS",
+  "anchor_lonlat": [
+    -80.65094,
+    33.42136
+  ],
+  "tile_offset": [
+    0,
+    1
+  ],
+  "imagery_provider": "USGS_NAIP"
+}

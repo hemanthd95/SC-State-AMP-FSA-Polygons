@@ -1,0 +1,10 @@
+{
+  "name": "Shane Middleton",
+  "source": "Shane Middleton_FSA Map.pdf",
+  "page": 2,
+  "target_farm_tract_fields": "9387/8069/7;9387/8069/11",
+  "fsa_area_acres": null,
+  "imagery_tiles_requested": 52,
+  "imagery_tiles_loaded": 38,
+  "status": "NO_DEFENSIBLE_IMAGE_MATCH"
+}

@@ -1,0 +1,55 @@
+{
+  "name": "John Lloyd",
+  "source": "John_Lloyd_FSA_Map.pdf",
+  "page": 2,
+  "target_farm_tract_fields": "4273/33795/5",
+  "fsa_area_acres": null,
+  "imagery_tiles_requested": 78,
+  "imagery_tiles_loaded": 63,
+  "status": "WEAK_MATCH_REJECTED",
+  "inliers": 27,
+  "rmse_px": 0.0,
+  "valid_geometric_match": false,
+  "source_inlier_spread_px": [
+    575.0986328125,
+    710.0562133789062
+  ],
+  "target_inlier_spread_px": [
+    0.0,
+    0.0
+  ],
+  "source_pdf_page_points_to_naip_tile_H": [
+    [
+      -0.3170703561826416,
+      -0.9441907286053802,
+      586.9344863569537
+    ],
+    [
+      -0.18411992866133498,
+      -0.5482831371765873,
+      340.82762279634363
+    ],
+    [
+      -0.0005402142207568461,
+      -0.0016086816340710902,
+      1.0
+    ]
+  ],
+  "tile_bbox_epsg3857": [
+    -8899987.629176825,
+    3917840.420370345,
+    -8898587.629176825,
+    3919240.420370345
+  ],
+  "tile_size_px": 900,
+  "anchor_name": "PREVIOUS_FARM4198",
+  "anchor_lonlat": [
+    -79.9495,
+    33.17
+  ],
+  "tile_offset": [
+    1,
+    1
+  ],
+  "imagery_provider": "ESRI_World"
+}
