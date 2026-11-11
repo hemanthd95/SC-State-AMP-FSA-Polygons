@@ -29,11 +29,35 @@ SPECS=[
 ]
 geod=Geod(ellps="WGS84")
 counties=json.loads((ROOT/"geojson/sc_counties_for_verified_atlases.geojson").read_text())["features"]
+COUNTY_CACHE=None
 def real_county(geom):
+ global COUNTY_CACHE
  r=geom.representative_point()
  found=[x["properties"]["NAME"] for x in counties if shape(x["geometry"]).covers(r)]
- if len(found)!=1:raise RuntimeError("Cannot resolve independent physical SC county: "+str(found))
- return found[0]
+ if len(found)==1:return found[0]
+ # Source repository contains just seven SC counties. For all 46,
+ # retrieve authoritative U.S. Census 2025 generalized county boundaries.
+ if COUNTY_CACHE is None:
+  import requests,shapefile,tempfile,zipfile
+  from pathlib import Path
+  url="https://www2.census.gov/geo/tiger/GENZ2025/shp/cb_2025_us_county_500k.zip"
+  response=requests.get(url,timeout=65)
+  response.raise_for_status()
+  with tempfile.TemporaryDirectory() as td:
+   import io
+   with zipfile.ZipFile(io.BytesIO(response.content)) as z:
+    z.extractall(td)
+   shp=next(Path(td).glob("*.shp"))
+   dbf=shapefile.Reader(str(shp))
+   COUNTY_CACHE=[]
+   for geo,rec in zip(dbf.shapes(),dbf.records()):
+    item=rec.as_dict()
+    if item.get("STATEFP")!="45":continue
+    g=shape(geo.__geo_interface__)
+    COUNTY_CACHE.append((item.get("NAME"),g))
+ results=[name for name,g in COUNTY_CACHE if g.covers(r)]
+ if len(results)!=1:raise RuntimeError("Unable to confirm SC physical county: "+repr(results)+", point="+repr(r.wkt))
+ return results[0]
 def convert(s):
  n=s["name"];slug=n.replace(" ","_")
  q=json.loads((QC/slug/"registration_qa.json").read_text())
