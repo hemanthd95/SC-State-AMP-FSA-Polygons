@@ -1,0 +1,267 @@
+{
+  "type": "FeatureCollection",
+  "name": "Antron_Williams_Gordon_Three_Source_Fields_Provisional_20261111",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "producer": "Antron Williams",
+        "farm_id": "11990",
+        "tract_id": "44081",
+        "field_id": "61",
+        "county": "Orangeburg",
+        "roster_county": "Orangeburg",
+        "fsa_acres": 3.03,
+        "geodesic_acres": 3.0682,
+        "acreage_difference_pct": 1.26,
+        "source_page": 7,
+        "source_pdf": "Anthron Williams_FSA_Map.pdf (FSA map page only; tax pages excluded)",
+        "source_road": "Gordon Dr",
+        "source_workbook_field_match": false,
+        "fsa_field_type": "SOURCE_MAP_VISIBLE_WORKBOOK_ID_REQUIRES_RECONCILIATION",
+        "registration_method": "Three independent FSA-road to geographically referenced USGS NAIP control points, affine",
+        "registration_reference": "USGS NAIP and Census TIGERweb Orangeburg road geometry",
+        "registration_quality": "PROVISIONAL_MANUAL_CONTROL; not survey quality; visual and ground verification needed",
+        "road_control_count": 3,
+        "geometry_status": "GIS_APPROXIMATE_NAIP_REGISTERED_FSA_TRACE_PROVISIONAL"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.75560354625682,
+              33.37351563531325
+            ],
+            [
+              -80.75532886398855,
+              33.373526155425374
+            ],
+            [
+              -80.75525516485166,
+              33.37311896628633
+            ],
+            [
+              -80.75517950576744,
+              33.372879938179764
+            ],
+            [
+              -80.75509469889772,
+              33.3726778791069
+            ],
+            [
+              -80.75523096589886,
+              33.37257781030472
+            ],
+            [
+              -80.75545052810274,
+              33.37243553093505
+            ],
+            [
+              -80.75567009133009,
+              33.3722932509053
+            ],
+            [
+              -80.75583286828197,
+              33.37216215033366
+            ],
+            [
+              -80.75606113664354,
+              33.37202073739525
+            ],
+            [
+              -80.7564209763204,
+              33.37180824917235
+            ],
+            [
+              -80.75668909967358,
+              33.37198648115541
+            ],
+            [
+              -80.75659161813665,
+              33.372124085531766
+            ],
+            [
+              -80.75649809743321,
+              33.37229575607515
+            ],
+            [
+              -80.75621769037885,
+              33.37242355767759
+            ],
+            [
+              -80.7560278641069,
+              33.372631933661324
+            ],
+            [
+              -80.75590045013156,
+              33.372720257392366
+            ],
+            [
+              -80.75615184791853,
+              33.3728378950183
+            ],
+            [
+              -80.75614861374959,
+              33.37311536326902
+            ],
+            [
+              -80.75616440846872,
+              33.37325583168757
+            ],
+            [
+              -80.75561900630088,
+              33.37331093796048
+            ],
+            [
+              -80.75560354625682,
+              33.37351563531325
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "producer": "Antron Williams",
+        "farm_id": "11990",
+        "tract_id": "44081",
+        "field_id": "3",
+        "county": "Orangeburg",
+        "roster_county": "Orangeburg",
+        "fsa_acres": 1.05,
+        "geodesic_acres": 1.0383,
+        "acreage_difference_pct": -1.12,
+        "source_page": 7,
+        "source_pdf": "Anthron Williams_FSA_Map.pdf (FSA map page only; tax pages excluded)",
+        "source_road": "Gordon Dr",
+        "source_workbook_field_match": false,
+        "fsa_field_type": "SOURCE_MAP_VISIBLE_WORKBOOK_ID_REQUIRES_RECONCILIATION",
+        "registration_method": "Three independent FSA-road to geographically referenced USGS NAIP control points, affine",
+        "registration_reference": "USGS NAIP and Census TIGERweb Orangeburg road geometry",
+        "registration_quality": "PROVISIONAL_MANUAL_CONTROL; not survey quality; visual and ground verification needed",
+        "road_control_count": 3,
+        "geometry_status": "GIS_APPROXIMATE_NAIP_REGISTERED_FSA_TRACE_PROVISIONAL"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.7558560539983,
+              33.372042399359444
+            ],
+            [
+              -80.75560142255411,
+              33.372202231393864
+            ],
+            [
+              -80.75533813356711,
+              33.37235699168653
+            ],
+            [
+              -80.75505704078705,
+              33.372543650439454
+            ],
+            [
+              -80.75511888147498,
+              33.37172484898852
+            ],
+            [
+              -80.75524135413141,
+              33.371686540399814
+            ],
+            [
+              -80.75543367153224,
+              33.37163835249609
+            ],
+            [
+              -80.75556387037268,
+              33.37168499378205
+            ],
+            [
+              -80.75573138446096,
+              33.37189529379809
+            ],
+            [
+              -80.7558560539983,
+              33.372042399359444
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "producer": "Antron Williams",
+        "farm_id": "11990",
+        "tract_id": "44081",
+        "field_id": "16",
+        "county": "Orangeburg",
+        "roster_county": "Orangeburg",
+        "fsa_acres": 1.05,
+        "geodesic_acres": 1.0583,
+        "acreage_difference_pct": 0.79,
+        "source_page": 7,
+        "source_pdf": "Anthron Williams_FSA_Map.pdf (FSA map page only; tax pages excluded)",
+        "source_road": "Gordon Dr",
+        "source_workbook_field_match": false,
+        "fsa_field_type": "SOURCE_MAP_VISIBLE_WORKBOOK_ID_REQUIRES_RECONCILIATION",
+        "registration_method": "Three independent FSA-road to geographically referenced USGS NAIP control points, affine",
+        "registration_reference": "USGS NAIP and Census TIGERweb Orangeburg road geometry",
+        "registration_quality": "PROVISIONAL_MANUAL_CONTROL; not survey quality; visual and ground verification needed",
+        "road_control_count": 3,
+        "geometry_status": "GIS_APPROXIMATE_NAIP_REGISTERED_FSA_TRACE_PROVISIONAL"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.75528043333186,
+              33.37394222212531
+            ],
+            [
+              -80.75482743270169,
+              33.37354776103164
+            ],
+            [
+              -80.75448178805848,
+              33.373290260077965
+            ],
+            [
+              -80.75444818852279,
+              33.373181689789305
+            ],
+            [
+              -80.75457614135571,
+              33.37304712215302
+            ],
+            [
+              -80.7549361770273,
+              33.37281782044854
+            ],
+            [
+              -80.75498366813746,
+              33.372856222557104
+            ],
+            [
+              -80.75510681884356,
+              33.37313365271491
+            ],
+            [
+              -80.75516056643308,
+              33.37338312461235
+            ],
+            [
+              -80.75528043333186,
+              33.37394222212531
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}
