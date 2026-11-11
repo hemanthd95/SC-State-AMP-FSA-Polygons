@@ -1,0 +1,33 @@
+name: Complete Lewis Gin Farm4706 Field36 GIS
+on:
+  push:
+    paths:
+      - 'scripts/recovery49_lewis_gin_field36.py'
+      - '.github/workflows/recovery49_lewis_gin_field36.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  register:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install 'numpy<2.5' opencv-python-headless pyshp shapely pyproj pillow reportlab pymupdf requests
+      - name: Verify 119 NAIP features and 5.94-acre FSA Field36 source then render farmer GIS
+        run: python scripts/recovery49_lewis_gin_field36.py
+      - name: Publish shapefile and county/field maps as one producer ZIP
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin main
+          git reset --mixed origin/main
+          git add geojson/counties/lewis_gin_farm4706_field36_registered_20261111.geojson
+          git add deliverables/Lewis_Gin_Completed_AMP_Farmer_GIS_20261111.zip
+          git commit -m "Georeference Year2 Lewis Gin enrolled Field36 on shared FSA farm and publish Weekley atlas"
+          git push origin HEAD:main
