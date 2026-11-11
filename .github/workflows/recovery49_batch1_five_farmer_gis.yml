@@ -1,0 +1,60 @@
+name: Produce Batch1 five-farmer Weekley GIS packages
+on:
+  push:
+    paths:
+      - 'scripts/recovery49_batch1_five_farmer_gis.py'
+      - '.github/workflows/recovery49_batch1_five_farmer_gis.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: amp-batch1-five-farmers
+  cancel-in-progress: false
+jobs:
+  gis:
+    runs-on: ubuntu-latest
+    timeout-minutes: 70
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install GIS, raster, map and PDF dependencies
+        run: python -m pip install 'numpy<2.5' opencv-python-headless pyshp shapely pyproj pillow reportlab pymupdf requests
+      - name: Georeference first three producer fields and reuse two prior GIS folders
+        run: |
+          set -o pipefail
+          AMP_FARM_WORKERS=3 python scripts/recovery49_batch1_five_farmer_gis.py | tee /tmp/batch1_five.log
+      - name: Check one combined ZIP, five producer folders, and QA index
+        run: |
+          python - <<'PY'
+          import zipfile,csv,json
+          p='deliverables/AMP_Batch1_Five_Farmer_GIS_20261111.zip'
+          with zipfile.ZipFile(p) as z:
+            names=z.namelist()
+            assert len([s for s in names if s.endswith('-CountyMap.pdf')])==5
+            assert len([s for s in names if s.endswith('-FieldMap.pdf')])==5
+            assert len([s for s in names if s.endswith('.shp')])==5
+          q=json.load(open('deliverables/batch1_five_farmer_recovery_20261111/BATCH1_BUILD_SUMMARY.json'))
+          assert len(q['participants'])==5 and len(q['newly_closed_year2_farmers'])==1,q
+          print('ARCHIVE_VALIDATED',len(names),'entries',flush=True)
+          PY
+      - name: Publish five-producer GIS package and source field GeoJSON
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin main
+          git reset --mixed origin/main
+          git add geojson/counties/recovery49_batch1_source_registered_20261111.geojson
+          git add deliverables/AMP_Batch1_Five_Farmer_GIS_20261111.zip
+          git add deliverables/Charles_Bright_Jr_Batch1_GIS_20261111.zip
+          git add deliverables/Joseph_Gadson_Batch1_GIS_20261111.zip
+          git add deliverables/Arthur_Cobbs_Batch1_GIS_20261111.zip
+          git add deliverables/batch1_five_farmer_recovery_20261111/BATCH1_BUILD_SUMMARY.json
+          git add deliverables/batch1_five_farmer_recovery_20261111/Batch1_Farmer_QA.csv
+          if ! git diff --cached --quiet; then
+            git commit -m "Publish batch1 five individual farmer GIS folders with source geometry and exact QA"
+            git push origin HEAD:main
+          fi
