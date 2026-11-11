@@ -1,0 +1,64 @@
+{
+  "name": "Calvin Blair",
+  "source_pdf": "Calvin_Blair_FSA_Map.pdf",
+  "source_page": 1,
+  "enrolled_farm_tract_field": "3603/848/3",
+  "excel_farm_address": "1033 Armour Hill Dr, Pinewood, SC 29125",
+  "geocoded_address_anchors": [
+    {
+      "provider": "US_CENSUS_ADDRESS",
+      "lon": -80.436293255423,
+      "lat": 33.594059411505,
+      "matched_address": "1033 ARMOUR HILL DR, PINEWOOD, SC, 29125"
+    }
+  ],
+  "tile_requests": 26,
+  "loaded_tiles": 20,
+  "status": "WEAK_IMAGE_MATCH_REJECTED",
+  "inliers": 21,
+  "rmse_px": 0.0,
+  "source_spread": [
+    232.18406677246094,
+    328.38031005859375
+  ],
+  "image_spread": [
+    0.0,
+    0.0
+  ],
+  "valid_geometric_match": false,
+  "address_anchor": {
+    "provider": "US_CENSUS_ADDRESS",
+    "lon": -80.436293255423,
+    "lat": 33.594059411505,
+    "matched_address": "1033 ARMOUR HILL DR, PINEWOOD, SC, 29125"
+  },
+  "imagery_provider": "ESRI_World",
+  "tile_offset": [
+    2,
+    0
+  ],
+  "tile_bbox_epsg3857": [
+    -8953482.206492113,
+    3973548.500040753,
+    -8951732.206492113,
+    3975298.500040753
+  ],
+  "tile_size_px": 900,
+  "source_pdf_page_points_to_tile_H": [
+    [
+      -1.0970515607200209,
+      -1.64230601913234,
+      791.4683232309013
+    ],
+    [
+      -0.9498307530766492,
+      -1.4219138086007346,
+      685.2558078467355
+    ],
+    [
+      -0.001386096611222139,
+      -0.0020750116851527074,
+      1.0
+    ]
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "name": "Everett Rendell",
+  "source_pdf": "Everett Rendell FSAmap.pdf",
+  "source_page": 1,
+  "enrolled_farm_tract_field": "1568/1083/UNSPECIFIED",
+  "excel_farm_address": "34 Mayland Dr, Summerton, SC 29148",
+  "geocoded_address_anchors": [
+    {
+      "provider": "US_CENSUS_ADDRESS",
+      "lon": -80.345262608702,
+      "lat": 33.610068807373,
+      "matched_address": "34 MAYLAND DR, SUMMERTON, SC, 29148"
+    }
+  ],
+  "tile_requests": 26,
+  "loaded_tiles": 16,
+  "status": "WEAK_IMAGE_MATCH_REJECTED",
+  "inliers": 18,
+  "rmse_px": 0.0,
+  "source_spread": [
+    549.0403442382812,
+    756.4452514648438
+  ],
+  "image_spread": [
+    0.0,
+    0.0
+  ],
+  "valid_geometric_match": false,
+  "address_anchor": {
+    "provider": "US_CENSUS_ADDRESS",
+    "lon": -80.345262608702,
+    "lat": 33.610068807373,
+    "matched_address": "34 MAYLAND DR, SUMMERTON, SC, 29148"
+  },
+  "imagery_provider": "USGS_NAIP",
+  "tile_offset": [
+    0,
+    -1
+  ],
+  "tile_bbox_epsg3857": [
+    -8944868.72125255,
+    3974928.1987041845,
+    -8943118.72125255,
+    3976678.1987041845
+  ],
+  "tile_size_px": 900,
+  "source_pdf_page_points_to_tile_H": [
+    [
+      -0.04399502543931483,
+      -1.9564799411122942,
+      509.22171769711144
+    ],
+    [
+      -0.06035765788255194,
+      -2.6841340756308325,
+      698.6114888276317
+    ],
+    [
+      -8.639660075433788e-05,
+      -0.0038420983888122237,
+      1.0
+    ]
+  ]
+}

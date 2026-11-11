@@ -1,0 +1,18 @@
+{
+  "name": "Brandon Dingle",
+  "source_pdf": "Brandon dingle FSAmap.pdf",
+  "source_page": 1,
+  "enrolled_farm_tract_field": "6749/6174/UNSPECIFIED",
+  "excel_farm_address": "2580 Joseph Lemon and Dingle Rd Manning, SC 29102",
+  "geocoded_address_anchors": [
+    {
+      "provider": "US_CENSUS_ADDRESS",
+      "lon": -80.212409384121,
+      "lat": 33.597834390282,
+      "matched_address": "2580 JOSEPH LEMON AND DINGLE RD, MANNING, SC, 29102"
+    }
+  ],
+  "tile_requests": 26,
+  "loaded_tiles": 21,
+  "status": "NO_MATCH_IN_LOCAL_ADDRESS_WINDOW"
+}

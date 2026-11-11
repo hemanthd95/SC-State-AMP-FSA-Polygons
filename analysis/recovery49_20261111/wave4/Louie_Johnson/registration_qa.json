@@ -1,0 +1,64 @@
+{
+  "name": "Louie Johnson",
+  "source_pdf": "Louie Johnson FSA_Map.pdf",
+  "source_page": 1,
+  "enrolled_farm_tract_field": "8242/5134/2",
+  "excel_farm_address": "596 Chestnut St, Orangeburg, SC 29115",
+  "geocoded_address_anchors": [
+    {
+      "provider": "US_CENSUS_ADDRESS",
+      "lon": -80.849194909584,
+      "lat": 33.506647482392,
+      "matched_address": "596 CHESTNUT ST, ORANGEBURG, SC, 29115"
+    }
+  ],
+  "tile_requests": 26,
+  "loaded_tiles": 17,
+  "status": "WEAK_IMAGE_MATCH_REJECTED",
+  "inliers": 37,
+  "rmse_px": 0.0,
+  "source_spread": [
+    772.6641235351562,
+    711.8515625
+  ],
+  "image_spread": [
+    0.0,
+    0.0
+  ],
+  "valid_geometric_match": false,
+  "address_anchor": {
+    "provider": "US_CENSUS_ADDRESS",
+    "lon": -80.849194909584,
+    "lat": 33.506647482392,
+    "matched_address": "596 CHESTNUT ST, ORANGEBURG, SC, 29115"
+  },
+  "imagery_provider": "ESRI_World",
+  "tile_offset": [
+    0,
+    1
+  ],
+  "tile_bbox_epsg3857": [
+    -9000966.208381016,
+    3962632.6564108757,
+    -8999216.208381016,
+    3964382.6564108757
+  ],
+  "tile_size_px": 900,
+  "source_pdf_page_points_to_tile_H": [
+    [
+      -0.24344723532340393,
+      0.027897615566053524,
+      41.735959642132755
+    ],
+    [
+      -0.3024431413724436,
+      0.03465819801594595,
+      51.850064042461355
+    ],
+    [
+      -0.005833033130420333,
+      0.0006684311515627654,
+      1.0
+    ]
+  ]
+}

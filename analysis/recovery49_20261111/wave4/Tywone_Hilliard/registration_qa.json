@@ -1,0 +1,18 @@
+{
+  "name": "Tywone Hilliard",
+  "source_pdf": "Tywone Hillard_FSA_Map.pdf",
+  "source_page": 1,
+  "enrolled_farm_tract_field": "1064/3623/UNSPECIFIED;3826/3624/UNSPECIFIED",
+  "excel_farm_address": "157 Hollis Rd, Santee, SC 29142",
+  "geocoded_address_anchors": [
+    {
+      "provider": "US_CENSUS_ADDRESS",
+      "lon": -80.50430450531,
+      "lat": 33.464418972005,
+      "matched_address": "157 HOLLIS RD, SANTEE, SC, 29142"
+    }
+  ],
+  "tile_requests": 26,
+  "loaded_tiles": 15,
+  "status": "NO_MATCH_IN_LOCAL_ADDRESS_WINDOW"
+}

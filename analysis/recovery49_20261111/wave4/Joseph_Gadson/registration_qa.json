@@ -1,0 +1,64 @@
+{
+  "name": "Joseph Gadson",
+  "source_pdf": "Joseph Gadson_FSAmap.pdf",
+  "source_page": 1,
+  "enrolled_farm_tract_field": "UNSPECIFIED/UNSPECIFIED/UNSPECIFIED",
+  "excel_farm_address": "1942 Bonner Ave, Santee, SC 29142",
+  "geocoded_address_anchors": [
+    {
+      "provider": "US_CENSUS_ADDRESS",
+      "lon": -80.486696139859,
+      "lat": 33.44384855199,
+      "matched_address": "1942 BONNER AVE, SANTEE, SC, 29142"
+    }
+  ],
+  "tile_requests": 26,
+  "loaded_tiles": 14,
+  "status": "REGISTERED_PHOTO_CANDIDATE_NEEDS_FIELD_TRACE",
+  "inliers": 251,
+  "rmse_px": 0.442,
+  "source_spread": [
+    764.224853515625,
+    642.1585083007812
+  ],
+  "image_spread": [
+    431.5467529296875,
+    361.27264404296875
+  ],
+  "valid_geometric_match": true,
+  "address_anchor": {
+    "provider": "US_CENSUS_ADDRESS",
+    "lon": -80.486696139859,
+    "lat": 33.44384855199,
+    "matched_address": "1942 BONNER AVE, SANTEE, SC, 29142"
+  },
+  "imagery_provider": "USGS_NAIP",
+  "tile_offset": [
+    0,
+    1
+  ],
+  "tile_bbox_epsg3857": [
+    -8960613.029922042,
+    3954251.715355511,
+    -8958863.029922042,
+    3956001.715355511
+  ],
+  "tile_size_px": 900,
+  "source_pdf_page_points_to_tile_H": [
+    [
+      0.8186322936735538,
+      -0.005612464381194314,
+      152.22049823038108
+    ],
+    [
+      -0.00011574888175465176,
+      0.8136130864457585,
+      483.2968085494835
+    ],
+    [
+      -2.037785269500168e-06,
+      -1.4249539631092498e-06,
+      1.0
+    ]
+  ]
+}

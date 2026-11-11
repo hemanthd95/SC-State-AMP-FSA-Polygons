@@ -1,0 +1,458 @@
+[
+  {
+    "name": "Calvin Blair",
+    "source_pdf": "Calvin_Blair_FSA_Map.pdf",
+    "source_page": 1,
+    "enrolled_farm_tract_field": "3603/848/3",
+    "excel_farm_address": "1033 Armour Hill Dr, Pinewood, SC 29125",
+    "geocoded_address_anchors": [
+      {
+        "provider": "US_CENSUS_ADDRESS",
+        "lon": -80.436293255423,
+        "lat": 33.594059411505,
+        "matched_address": "1033 ARMOUR HILL DR, PINEWOOD, SC, 29125"
+      }
+    ],
+    "tile_requests": 26,
+    "loaded_tiles": 20,
+    "status": "WEAK_IMAGE_MATCH_REJECTED",
+    "inliers": 21,
+    "rmse_px": 0.0,
+    "source_spread": [
+      232.18406677246094,
+      328.38031005859375
+    ],
+    "image_spread": [
+      0.0,
+      0.0
+    ],
+    "valid_geometric_match": false,
+    "address_anchor": {
+      "provider": "US_CENSUS_ADDRESS",
+      "lon": -80.436293255423,
+      "lat": 33.594059411505,
+      "matched_address": "1033 ARMOUR HILL DR, PINEWOOD, SC, 29125"
+    },
+    "imagery_provider": "ESRI_World",
+    "tile_offset": [
+      2,
+      0
+    ],
+    "tile_bbox_epsg3857": [
+      -8953482.206492113,
+      3973548.500040753,
+      -8951732.206492113,
+      3975298.500040753
+    ],
+    "tile_size_px": 900,
+    "source_pdf_page_points_to_tile_H": [
+      [
+        -1.0970515607200209,
+        -1.64230601913234,
+        791.4683232309013
+      ],
+      [
+        -0.9498307530766492,
+        -1.4219138086007346,
+        685.2558078467355
+      ],
+      [
+        -0.001386096611222139,
+        -0.0020750116851527074,
+        1.0
+      ]
+    ]
+  },
+  {
+    "name": "Everett Rendell",
+    "source_pdf": "Everett Rendell FSAmap.pdf",
+    "source_page": 1,
+    "enrolled_farm_tract_field": "1568/1083/UNSPECIFIED",
+    "excel_farm_address": "34 Mayland Dr, Summerton, SC 29148",
+    "geocoded_address_anchors": [
+      {
+        "provider": "US_CENSUS_ADDRESS",
+        "lon": -80.345262608702,
+        "lat": 33.610068807373,
+        "matched_address": "34 MAYLAND DR, SUMMERTON, SC, 29148"
+      }
+    ],
+    "tile_requests": 26,
+    "loaded_tiles": 16,
+    "status": "WEAK_IMAGE_MATCH_REJECTED",
+    "inliers": 18,
+    "rmse_px": 0.0,
+    "source_spread": [
+      549.0403442382812,
+      756.4452514648438
+    ],
+    "image_spread": [
+      0.0,
+      0.0
+    ],
+    "valid_geometric_match": false,
+    "address_anchor": {
+      "provider": "US_CENSUS_ADDRESS",
+      "lon": -80.345262608702,
+      "lat": 33.610068807373,
+      "matched_address": "34 MAYLAND DR, SUMMERTON, SC, 29148"
+    },
+    "imagery_provider": "USGS_NAIP",
+    "tile_offset": [
+      0,
+      -1
+    ],
+    "tile_bbox_epsg3857": [
+      -8944868.72125255,
+      3974928.1987041845,
+      -8943118.72125255,
+      3976678.1987041845
+    ],
+    "tile_size_px": 900,
+    "source_pdf_page_points_to_tile_H": [
+      [
+        -0.04399502543931483,
+        -1.9564799411122942,
+        509.22171769711144
+      ],
+      [
+        -0.06035765788255194,
+        -2.6841340756308325,
+        698.6114888276317
+      ],
+      [
+        -8.639660075433788e-05,
+        -0.0038420983888122237,
+        1.0
+      ]
+    ]
+  },
+  {
+    "name": "Brandon Dingle",
+    "source_pdf": "Brandon dingle FSAmap.pdf",
+    "source_page": 1,
+    "enrolled_farm_tract_field": "6749/6174/UNSPECIFIED",
+    "excel_farm_address": "2580 Joseph Lemon and Dingle Rd Manning, SC 29102",
+    "geocoded_address_anchors": [
+      {
+        "provider": "US_CENSUS_ADDRESS",
+        "lon": -80.212409384121,
+        "lat": 33.597834390282,
+        "matched_address": "2580 JOSEPH LEMON AND DINGLE RD, MANNING, SC, 29102"
+      }
+    ],
+    "tile_requests": 26,
+    "loaded_tiles": 21,
+    "status": "NO_MATCH_IN_LOCAL_ADDRESS_WINDOW"
+  },
+  {
+    "name": "Charles Bright Jr.",
+    "source_pdf": "Bright, Charles, JR_ FSAmap.pdf",
+    "source_page": 1,
+    "enrolled_farm_tract_field": "2715/3022/UNSPECIFIED",
+    "excel_farm_address": "16047 ACE Basin Parkway, Jacksonboro, SC 29452",
+    "geocoded_address_anchors": [
+      {
+        "provider": "OSM_NOMINATIM",
+        "lon": -80.4512689,
+        "lat": 32.7678997,
+        "matched_address": "Ace Basin Parkway, Jacksonboro, Colleton County, South Carolina, 29452, United States"
+      }
+    ],
+    "tile_requests": 26,
+    "loaded_tiles": 19,
+    "status": "REGISTERED_PHOTO_CANDIDATE_NEEDS_FIELD_TRACE",
+    "inliers": 281,
+    "rmse_px": 0.729,
+    "source_spread": [
+      789.541748046875,
+      800.141357421875
+    ],
+    "image_spread": [
+      445.59686279296875,
+      453.03558349609375
+    ],
+    "valid_geometric_match": true,
+    "address_anchor": {
+      "provider": "OSM_NOMINATIM",
+      "lon": -80.4512689,
+      "lat": 32.7678997,
+      "matched_address": "Ace Basin Parkway, Jacksonboro, Colleton County, South Carolina, 29452, United States"
+    },
+    "imagery_provider": "USGS_NAIP",
+    "tile_offset": [
+      -2,
+      0
+    ],
+    "tile_bbox_epsg3857": [
+      -8958189.287620727,
+      3863661.8981027496,
+      -8956439.287620727,
+      3865411.8981027496
+    ],
+    "tile_size_px": 900,
+    "source_pdf_page_points_to_tile_H": [
+      [
+        0.8231498643935691,
+        -0.005249476290670792,
+        102.22998401462642
+      ],
+      [
+        0.0025447279561536663,
+        0.8193307030458291,
+        -20.94994401188258
+      ],
+      [
+        9.547538043324933e-06,
+        -1.1019910983586039e-05,
+        1.0
+      ]
+    ]
+  },
+  {
+    "name": "Angela Solomon",
+    "source_pdf": "Angela_Solomon_FSA_Map.pdf",
+    "source_page": 1,
+    "enrolled_farm_tract_field": "5661/5039/18",
+    "excel_farm_address": "2251 Magnolia Street, Orangeburg, SC 29115",
+    "geocoded_address_anchors": [
+      {
+        "provider": "US_CENSUS_ADDRESS",
+        "lon": -80.849263646354,
+        "lat": 33.508849138022,
+        "matched_address": "2251 MAGNOLIA ST, ORANGEBURG, SC, 29115"
+      }
+    ],
+    "tile_requests": 26,
+    "loaded_tiles": 20,
+    "status": "NO_MATCH_IN_LOCAL_ADDRESS_WINDOW"
+  },
+  {
+    "name": "Jasper Summers",
+    "source_pdf": "Jasper Summers FSA Map.pdf",
+    "source_page": 1,
+    "enrolled_farm_tract_field": "13709/45508/UNSPECIFIED",
+    "excel_farm_address": "299 Greywood Dr, Branchville, SC 29432",
+    "geocoded_address_anchors": [
+      {
+        "provider": "US_CENSUS_ADDRESS",
+        "lon": -80.832197804191,
+        "lat": 33.314646881776,
+        "matched_address": "299 GREYWOOD DR, BRANCHVILLE, SC, 29432"
+      }
+    ],
+    "tile_requests": 26,
+    "loaded_tiles": 21,
+    "status": "REGISTERED_PHOTO_CANDIDATE_NEEDS_FIELD_TRACE",
+    "inliers": 97,
+    "rmse_px": 0.374,
+    "source_spread": [
+      567.5252685546875,
+      574.5908813476562
+    ],
+    "image_spread": [
+      208.92498779296875,
+      211.79803466796875
+    ],
+    "valid_geometric_match": true,
+    "address_anchor": {
+      "provider": "US_CENSUS_ADDRESS",
+      "lon": -80.832197804191,
+      "lat": 33.314646881776,
+      "matched_address": "299 GREYWOOD DR, BRANCHVILLE, SC, 29432"
+    },
+    "imagery_provider": "USGS_NAIP",
+    "tile_offset": [
+      0,
+      0
+    ],
+    "tile_bbox_epsg3857": [
+      -8999074.099263707,
+      3936267.934473437,
+      -8997324.099263707,
+      3938017.934473437
+    ],
+    "tile_size_px": 900,
+    "source_pdf_page_points_to_tile_H": [
+      [
+        0.5365054031876255,
+        0.0006378917194739288,
+        292.168804555392
+      ],
+      [
+        0.0013615472019368321,
+        0.5364317245782096,
+        582.4487781971218
+      ],
+      [
+        1.6014542944545666e-06,
+        1.0202298960301188e-06,
+        1.0
+      ]
+    ]
+  },
+  {
+    "name": "Joseph Gadson",
+    "source_pdf": "Joseph Gadson_FSAmap.pdf",
+    "source_page": 1,
+    "enrolled_farm_tract_field": "UNSPECIFIED/UNSPECIFIED/UNSPECIFIED",
+    "excel_farm_address": "1942 Bonner Ave, Santee, SC 29142",
+    "geocoded_address_anchors": [
+      {
+        "provider": "US_CENSUS_ADDRESS",
+        "lon": -80.486696139859,
+        "lat": 33.44384855199,
+        "matched_address": "1942 BONNER AVE, SANTEE, SC, 29142"
+      }
+    ],
+    "tile_requests": 26,
+    "loaded_tiles": 14,
+    "status": "REGISTERED_PHOTO_CANDIDATE_NEEDS_FIELD_TRACE",
+    "inliers": 251,
+    "rmse_px": 0.442,
+    "source_spread": [
+      764.224853515625,
+      642.1585083007812
+    ],
+    "image_spread": [
+      431.5467529296875,
+      361.27264404296875
+    ],
+    "valid_geometric_match": true,
+    "address_anchor": {
+      "provider": "US_CENSUS_ADDRESS",
+      "lon": -80.486696139859,
+      "lat": 33.44384855199,
+      "matched_address": "1942 BONNER AVE, SANTEE, SC, 29142"
+    },
+    "imagery_provider": "USGS_NAIP",
+    "tile_offset": [
+      0,
+      1
+    ],
+    "tile_bbox_epsg3857": [
+      -8960613.029922042,
+      3954251.715355511,
+      -8958863.029922042,
+      3956001.715355511
+    ],
+    "tile_size_px": 900,
+    "source_pdf_page_points_to_tile_H": [
+      [
+        0.8186322936735538,
+        -0.005612464381194314,
+        152.22049823038108
+      ],
+      [
+        -0.00011574888175465176,
+        0.8136130864457585,
+        483.2968085494835
+      ],
+      [
+        -2.037785269500168e-06,
+        -1.4249539631092498e-06,
+        1.0
+      ]
+    ]
+  },
+  {
+    "name": "Jaylon Carson",
+    "source_pdf": "Jaylon carson_FSA Map.pdf",
+    "source_page": 1,
+    "enrolled_farm_tract_field": "14291/46266/18;14280/46258/3",
+    "excel_farm_address": "2169 Bull Swamp Rd, North, SC 29112",
+    "geocoded_address_anchors": [
+      {
+        "provider": "US_CENSUS_ADDRESS",
+        "lon": -81.006028829202,
+        "lat": 33.636067001467,
+        "matched_address": "2169 BULL SWAMP RD, NORTH, SC, 29112"
+      }
+    ],
+    "tile_requests": 26,
+    "loaded_tiles": 18,
+    "status": "NO_MATCH_IN_LOCAL_ADDRESS_WINDOW"
+  },
+  {
+    "name": "Louie Johnson",
+    "source_pdf": "Louie Johnson FSA_Map.pdf",
+    "source_page": 1,
+    "enrolled_farm_tract_field": "8242/5134/2",
+    "excel_farm_address": "596 Chestnut St, Orangeburg, SC 29115",
+    "geocoded_address_anchors": [
+      {
+        "provider": "US_CENSUS_ADDRESS",
+        "lon": -80.849194909584,
+        "lat": 33.506647482392,
+        "matched_address": "596 CHESTNUT ST, ORANGEBURG, SC, 29115"
+      }
+    ],
+    "tile_requests": 26,
+    "loaded_tiles": 17,
+    "status": "WEAK_IMAGE_MATCH_REJECTED",
+    "inliers": 37,
+    "rmse_px": 0.0,
+    "source_spread": [
+      772.6641235351562,
+      711.8515625
+    ],
+    "image_spread": [
+      0.0,
+      0.0
+    ],
+    "valid_geometric_match": false,
+    "address_anchor": {
+      "provider": "US_CENSUS_ADDRESS",
+      "lon": -80.849194909584,
+      "lat": 33.506647482392,
+      "matched_address": "596 CHESTNUT ST, ORANGEBURG, SC, 29115"
+    },
+    "imagery_provider": "ESRI_World",
+    "tile_offset": [
+      0,
+      1
+    ],
+    "tile_bbox_epsg3857": [
+      -9000966.208381016,
+      3962632.6564108757,
+      -8999216.208381016,
+      3964382.6564108757
+    ],
+    "tile_size_px": 900,
+    "source_pdf_page_points_to_tile_H": [
+      [
+        -0.24344723532340393,
+        0.027897615566053524,
+        41.735959642132755
+      ],
+      [
+        -0.3024431413724436,
+        0.03465819801594595,
+        51.850064042461355
+      ],
+      [
+        -0.005833033130420333,
+        0.0006684311515627654,
+        1.0
+      ]
+    ]
+  },
+  {
+    "name": "Tywone Hilliard",
+    "source_pdf": "Tywone Hillard_FSA_Map.pdf",
+    "source_page": 1,
+    "enrolled_farm_tract_field": "1064/3623/UNSPECIFIED;3826/3624/UNSPECIFIED",
+    "excel_farm_address": "157 Hollis Rd, Santee, SC 29142",
+    "geocoded_address_anchors": [
+      {
+        "provider": "US_CENSUS_ADDRESS",
+        "lon": -80.50430450531,
+        "lat": 33.464418972005,
+        "matched_address": "157 HOLLIS RD, SANTEE, SC, 29142"
+      }
+    ],
+    "tile_requests": 26,
+    "loaded_tiles": 15,
+    "status": "NO_MATCH_IN_LOCAL_ADDRESS_WINDOW"
+  }
+]

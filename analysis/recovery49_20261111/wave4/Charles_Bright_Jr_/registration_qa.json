@@ -1,0 +1,64 @@
+{
+  "name": "Charles Bright Jr.",
+  "source_pdf": "Bright, Charles, JR_ FSAmap.pdf",
+  "source_page": 1,
+  "enrolled_farm_tract_field": "2715/3022/UNSPECIFIED",
+  "excel_farm_address": "16047 ACE Basin Parkway, Jacksonboro, SC 29452",
+  "geocoded_address_anchors": [
+    {
+      "provider": "OSM_NOMINATIM",
+      "lon": -80.4512689,
+      "lat": 32.7678997,
+      "matched_address": "Ace Basin Parkway, Jacksonboro, Colleton County, South Carolina, 29452, United States"
+    }
+  ],
+  "tile_requests": 26,
+  "loaded_tiles": 19,
+  "status": "REGISTERED_PHOTO_CANDIDATE_NEEDS_FIELD_TRACE",
+  "inliers": 281,
+  "rmse_px": 0.729,
+  "source_spread": [
+    789.541748046875,
+    800.141357421875
+  ],
+  "image_spread": [
+    445.59686279296875,
+    453.03558349609375
+  ],
+  "valid_geometric_match": true,
+  "address_anchor": {
+    "provider": "OSM_NOMINATIM",
+    "lon": -80.4512689,
+    "lat": 32.7678997,
+    "matched_address": "Ace Basin Parkway, Jacksonboro, Colleton County, South Carolina, 29452, United States"
+  },
+  "imagery_provider": "USGS_NAIP",
+  "tile_offset": [
+    -2,
+    0
+  ],
+  "tile_bbox_epsg3857": [
+    -8958189.287620727,
+    3863661.8981027496,
+    -8956439.287620727,
+    3865411.8981027496
+  ],
+  "tile_size_px": 900,
+  "source_pdf_page_points_to_tile_H": [
+    [
+      0.8231498643935691,
+      -0.005249476290670792,
+      102.22998401462642
+    ],
+    [
+      0.0025447279561536663,
+      0.8193307030458291,
+      -20.94994401188258
+    ],
+    [
+      9.547538043324933e-06,
+      -1.1019910983586039e-05,
+      1.0
+    ]
+  ]
+}

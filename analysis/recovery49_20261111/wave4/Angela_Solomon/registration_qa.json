@@ -1,0 +1,18 @@
+{
+  "name": "Angela Solomon",
+  "source_pdf": "Angela_Solomon_FSA_Map.pdf",
+  "source_page": 1,
+  "enrolled_farm_tract_field": "5661/5039/18",
+  "excel_farm_address": "2251 Magnolia Street, Orangeburg, SC 29115",
+  "geocoded_address_anchors": [
+    {
+      "provider": "US_CENSUS_ADDRESS",
+      "lon": -80.849263646354,
+      "lat": 33.508849138022,
+      "matched_address": "2251 MAGNOLIA ST, ORANGEBURG, SC, 29115"
+    }
+  ],
+  "tile_requests": 26,
+  "loaded_tiles": 20,
+  "status": "NO_MATCH_IN_LOCAL_ADDRESS_WINDOW"
+}
