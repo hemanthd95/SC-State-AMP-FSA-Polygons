@@ -1,0 +1,32 @@
+name: Batch2 source-footer verification and final completion ledger
+on:
+  push:
+    paths:
+      - 'scripts/recovery49_batch2_finalize_ledger.py'
+      - '.github/workflows/recovery49_batch2_finalize_ledger.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  finalize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python scripts/recovery49_batch2_finalize_ledger.py
+      - name: Commit internally consistent corrected farmer ZIP and QA summaries
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin main
+          git reset --mixed origin/main
+          git add deliverables/AMP_Recovery49_Batch2_Five_Farmer_20261111.zip
+          git add deliverables/recovery49_batch2_five_20261111/BUILD_SUMMARY.json
+          git add deliverables/recovery49_batch2_five_20261111/Batch2_Five_Farmer_QA.csv
+          if ! git diff --cached --quiet; then
+            git commit -m "Close Christine Year2 enrolled field from verified FSA footer; Batch2 remaining 43"
+            git push origin HEAD:main
+          fi
