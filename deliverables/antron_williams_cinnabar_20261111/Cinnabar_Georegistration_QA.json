@@ -1,0 +1,112 @@
+{
+  "farm_id": "11990",
+  "tract_id": "44081",
+  "source_page": 5,
+  "source_road": "Cinnabar Rd",
+  "control_source": "US Census TIGER road geometry",
+  "source_FSA_road_pixels": [
+    [
+      99.0,
+      -213.0
+    ],
+    [
+      160.0,
+      -254.0
+    ],
+    [
+      220.0,
+      -300.0
+    ],
+    [
+      283.0,
+      -345.0
+    ],
+    [
+      349.0,
+      -388.0
+    ],
+    [
+      414.0,
+      -417.0
+    ],
+    [
+      482.0,
+      -449.0
+    ],
+    [
+      554.0,
+      -480.0
+    ],
+    [
+      628.0,
+      -514.0
+    ],
+    [
+      698.0,
+      -547.0
+    ],
+    [
+      766.0,
+      -573.0
+    ],
+    [
+      846.0,
+      -602.0
+    ],
+    [
+      944.0,
+      -636.0
+    ]
+  ],
+  "road_line_fit_rmse_m": 3.3762,
+  "road_line_rotation_deg": 1.1667,
+  "source_scale_m_per_pixel": 0.68,
+  "road_fit_alongroad_m": 185.69328517775003,
+  "second_best_candidate_error": 6.546551141397285,
+  "qa": [
+    {
+      "field": "7",
+      "source_fsa_acres": 1.23,
+      "trace_geodetic_acres": 1.2257,
+      "acreage_difference_pct": -0.35,
+      "status": "PROVISIONAL_ROAD_REGISTERED_NOT_SIFT_VALIDATED"
+    },
+    {
+      "field": "18",
+      "source_fsa_acres": 1.68,
+      "trace_geodetic_acres": 1.6993,
+      "acreage_difference_pct": 1.15,
+      "status": "PROVISIONAL_ROAD_REGISTERED_NOT_SIFT_VALIDATED"
+    },
+    {
+      "field": "19",
+      "source_fsa_acres": 0.41,
+      "trace_geodetic_acres": 0.8034,
+      "acreage_difference_pct": 95.94,
+      "status": "REJECTED_AREA_DISAGREEMENT"
+    },
+    {
+      "field": "20",
+      "source_fsa_acres": 1.71,
+      "trace_geodetic_acres": 1.5839,
+      "acreage_difference_pct": -7.37,
+      "status": "PROVISIONAL_ROAD_REGISTERED_NOT_SIFT_VALIDATED"
+    }
+  ],
+  "rejected": [
+    {
+      "field": "19",
+      "source_fsa_acres": 0.41,
+      "trace_geodetic_acres": 0.8034,
+      "acreage_difference_pct": 95.94,
+      "status": "REJECTED_AREA_DISAGREEMENT"
+    }
+  ],
+  "limitations": [
+    "Printed county not used as farm locator",
+    "Independent NAIP imagery feature matching not confirmed; positional accuracy remains provisional",
+    "The road-line fit is a georegistration control, not independent verification of field ownership",
+    "The Year2 roster Field6 is NOT confirmed from this page",
+    "Do not count farmer as completed from source-only or provisional field labels"
+  ]
+}

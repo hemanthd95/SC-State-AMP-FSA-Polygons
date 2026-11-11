@@ -1,0 +1,199 @@
+{
+  "type": "FeatureCollection",
+  "name": "Antron_Williams_Cinnabar_Page5_Provisional",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "producer": "Antron Williams",
+        "county": "Orangeburg",
+        "farm_id": "11990",
+        "tract_id": "44081",
+        "field_id": "7",
+        "roster_county": "Orangeburg",
+        "fsa_acres": 1.23,
+        "geodetic_acres": 1.2257,
+        "acreage_difference_pct": -0.35,
+        "source_pdf": "Anthron Williams_FSA_Map.pdf, page 5 map only",
+        "source_road": "Cinnabar Rd",
+        "source_page": 5,
+        "source_workbook_field_match": true,
+        "registration_method": "13 visually digitized FSA road points fit to 2026 US Census TIGER Cinnabar road curve, north-up 0.68m per source image pixel",
+        "registration_control_rmse_m": 3.376,
+        "registration_rotation_deg": 1.167,
+        "registration_quality": "PROVISIONAL_ROAD_CURVE_FIT_NO_INDEPENDENT_NAIP_IMAGE_FEATURE_VALIDATION",
+        "field_status": "PROVISIONAL_FSA_FIELD_OUTLINE_NOT_SURVEY",
+        "source_attribute_warning": "Enrolled workbook Field7 covered; Field6 is not established; FSA map Field61 may be a distinct field"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.75837048285479,
+              33.36838879020828
+            ],
+            [
+              -80.75811369745051,
+              33.36835650004828
+            ],
+            [
+              -80.75787735663735,
+              33.368262764249685
+            ],
+            [
+              -80.75811448712543,
+              33.36748889747033
+            ],
+            [
+              -80.75848362074511,
+              33.3676292524061
+            ],
+            [
+              -80.75870682816712,
+              33.36778430946222
+            ],
+            [
+              -80.75858416062047,
+              33.36815298329381
+            ],
+            [
+              -80.75837048285479,
+              33.36838879020828
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "producer": "Antron Williams",
+        "county": "Orangeburg",
+        "farm_id": "11990",
+        "tract_id": "44081",
+        "field_id": "18",
+        "roster_county": "Orangeburg",
+        "fsa_acres": 1.68,
+        "geodetic_acres": 1.6993,
+        "acreage_difference_pct": 1.15,
+        "source_pdf": "Anthron Williams_FSA_Map.pdf, page 5 map only",
+        "source_road": "Cinnabar Rd",
+        "source_page": 5,
+        "source_workbook_field_match": false,
+        "registration_method": "13 visually digitized FSA road points fit to 2026 US Census TIGER Cinnabar road curve, north-up 0.68m per source image pixel",
+        "registration_control_rmse_m": 3.376,
+        "registration_rotation_deg": 1.167,
+        "registration_quality": "PROVISIONAL_ROAD_CURVE_FIT_NO_INDEPENDENT_NAIP_IMAGE_FEATURE_VALIDATION",
+        "field_status": "PROVISIONAL_FSA_FIELD_OUTLINE_NOT_SURVEY",
+        "source_attribute_warning": "Enrolled workbook Field7 covered; Field6 is not established; FSA map Field61 may be a distinct field"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.75326631330978,
+              33.366636579793024
+            ],
+            [
+              -80.75317560089252,
+              33.366515927374984
+            ],
+            [
+              -80.75322320567118,
+              33.366368482718556
+            ],
+            [
+              -80.75365563888931,
+              33.365805135765456
+            ],
+            [
+              -80.75385901238057,
+              33.36574668784979
+            ],
+            [
+              -80.75422725259499,
+              33.36585039928831
+            ],
+            [
+              -80.75423633554868,
+              33.36622294151028
+            ],
+            [
+              -80.75405383829433,
+              33.36653764514452
+            ],
+            [
+              -80.75342805311442,
+              33.36667048690685
+            ],
+            [
+              -80.75326631330978,
+              33.366636579793024
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "producer": "Antron Williams",
+        "county": "Orangeburg",
+        "farm_id": "11990",
+        "tract_id": "44081",
+        "field_id": "20",
+        "roster_county": "Orangeburg",
+        "fsa_acres": 1.71,
+        "geodetic_acres": 1.5839,
+        "acreage_difference_pct": -7.37,
+        "source_pdf": "Anthron Williams_FSA_Map.pdf, page 5 map only",
+        "source_road": "Cinnabar Rd",
+        "source_page": 5,
+        "source_workbook_field_match": false,
+        "registration_method": "13 visually digitized FSA road points fit to 2026 US Census TIGER Cinnabar road curve, north-up 0.68m per source image pixel",
+        "registration_control_rmse_m": 3.376,
+        "registration_rotation_deg": 1.167,
+        "registration_quality": "PROVISIONAL_ROAD_CURVE_FIT_NO_INDEPENDENT_NAIP_IMAGE_FEATURE_VALIDATION",
+        "field_status": "PROVISIONAL_FSA_FIELD_OUTLINE_NOT_SURVEY",
+        "source_attribute_warning": "Enrolled workbook Field7 covered; Field6 is not established; FSA map Field61 may be a distinct field"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.75514075105923,
+              33.36491839108101
+            ],
+            [
+              -80.7543839749402,
+              33.36477852109211
+            ],
+            [
+              -80.75474852274625,
+              33.36413079207502
+            ],
+            [
+              -80.7549829429048,
+              33.363845754021035
+            ],
+            [
+              -80.75538683065695,
+              33.364211579665536
+            ],
+            [
+              -80.75521177844662,
+              33.3648316457768
+            ],
+            [
+              -80.75514075105923,
+              33.36491839108101
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}
