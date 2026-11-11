@@ -1,0 +1,52 @@
+name: Batch2 map Joe correct Farm13859 source Field36
+on:
+  push:
+    paths:
+      - 'scripts/recovery49_batch2_joe_source_field36.py'
+      - '.github/workflows/recovery49_batch2_joe_source_field36.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  gis:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install 'numpy<2.5' opencv-python-headless shapely pyproj pyshp pillow reportlab pymupdf requests
+      - name: Georeference correct Joe FSA Farm13859 Field36 to NAIP; preserve missing Field20
+        run: |
+          set -o pipefail
+          AMP_FARM_WORKERS=2 python scripts/recovery49_batch2_joe_source_field36.py | tee /tmp/batch2_joe_source.log
+      - name: Verify three mapped-source farmer folders and four total accepted source polygons
+        run: |
+          python - <<'PY'
+          import zipfile,json
+          p="deliverables/AMP_Recovery49_Batch2_Five_Farmer_20261111.zip"
+          with zipfile.ZipFile(p) as z:
+           a=z.namelist()
+           assert sum(x.endswith('.shp') for x in a)==3
+           assert sum(x.endswith('-FieldMap.pdf') for x in a)==3
+          s=json.load(open("deliverables/recovery49_batch2_five_20261111/BUILD_SUMMARY.json"))
+          assert s['geographically_mapped_source_producers']==3 and s['admin_closed']==1
+          print("BATCH2_THREE_REGISTERED_SOURCE_FARMERS",len(a))
+          PY
+      - name: Persist Joe source-only GIS and updated combined ZIP in private repository
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin main
+          git reset --mixed origin/main
+          git add geojson/counties/recovery49_batch2_joe_hilliard_farm13859_source_field36_20261111.geojson
+          git add deliverables/AMP_Recovery49_Batch2_Five_Farmer_20261111.zip
+          git add deliverables/recovery49_batch2_five_20261111/BUILD_SUMMARY.json
+          git add deliverables/recovery49_batch2_five_20261111/Batch2_Five_Farmer_QA.csv
+          if ! git diff --cached --quiet; then
+            git commit -m "Register Joe Farm13859 source Field36, keep missing Year2 Field20 open"
+            git push origin HEAD:main
+          fi
