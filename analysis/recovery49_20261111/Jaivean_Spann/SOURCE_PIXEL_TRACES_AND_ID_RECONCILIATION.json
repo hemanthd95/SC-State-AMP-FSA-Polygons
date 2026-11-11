@@ -1,0 +1,189 @@
+{
+  "type": "SOURCE_PIXEL_TRACES_NOT_GEOREFERENCED",
+  "date": "2026-11-11",
+  "producer": "Jaivean Spann",
+  "aliases": [
+    "Javieann Spann",
+    "Javeiann Spann",
+    "Jaivien Spann"
+  ],
+  "amp_producer_id": "AMPSC029",
+  "year2_enrollment_target": {
+    "farm_id": "3988",
+    "tract_id": "4673",
+    "field_id": "1",
+    "acres": 9.35
+  },
+  "source_images": [
+    {
+      "filename": "Javeiann_Spann_Field_1.jpeg",
+      "pixel_size": [
+        1320,
+        1755
+      ],
+      "farm_id": "3988",
+      "tract_id": "4673",
+      "fields": [
+        {
+          "field_id": "1",
+          "printed_acres": 9.35,
+          "source_polygon_pixels": [
+            [
+              199,
+              979
+            ],
+            [
+              637,
+              407
+            ],
+            [
+              927,
+              545
+            ],
+            [
+              959,
+              548
+            ],
+            [
+              1109,
+              678
+            ],
+            [
+              1084,
+              1090
+            ],
+            [
+              209,
+              1022
+            ]
+          ],
+          "exclude_neighboring_field_4_pixels": [
+            [
+              199,
+              979
+            ],
+            [
+              439,
+              707
+            ],
+            [
+              453,
+              764
+            ],
+            [
+              455,
+              784
+            ],
+            [
+              405,
+              838
+            ],
+            [
+              355,
+              864
+            ],
+            [
+              278,
+              894
+            ]
+          ]
+        },
+        {
+          "field_id": "4",
+          "printed_acres": 0.29,
+          "source_polygon_pixels": [
+            [
+              199,
+              979
+            ],
+            [
+              439,
+              707
+            ],
+            [
+              453,
+              764
+            ],
+            [
+              455,
+              784
+            ],
+            [
+              405,
+              838
+            ],
+            [
+              355,
+              864
+            ],
+            [
+              278,
+              894
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "filename": "Javeiann_Spann_Field_2.jpeg",
+      "pixel_size": [
+        1320,
+        1621
+      ],
+      "farm_id": "9447",
+      "tract_id": "8142",
+      "fields": [
+        {
+          "field_id": "NOT_VISIBLE_A",
+          "printed_acres": null,
+          "source_polygon_pixels": [
+            [
+              306,
+              707
+            ],
+            [
+              462,
+              648
+            ],
+            [
+              697,
+              789
+            ],
+            [
+              392,
+              904
+            ]
+          ]
+        },
+        {
+          "field_id": "NOT_VISIBLE_B",
+          "printed_acres": null,
+          "source_polygon_pixels": [
+            [
+              462,
+              648
+            ],
+            [
+              878,
+              462
+            ],
+            [
+              1004,
+              645
+            ],
+            [
+              697,
+              789
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "search_address_source": "Historic site candidate: 1353 Rev J W Carter Rd, Manning SC 29102; Year 2 address 415 Drayton Street is not verified farm location.",
+  "administrative_county_rule": "Ignore FSA printed office county; use independently georegistered aerial matching and physical county polygons",
+  "registration_status": "SOURCE_DIGITIZED_NO_INDEPENDENT_AERIAL_REGISTRATION",
+  "next_validation": "Find independently matching NAIP aerial features for the unique highway intersection, tree boundary and parcel footprint; transform source pixels, check geodesic acreage within declared tolerance; generate Weekley farmer ZIP only if geometric tests pass",
+  "do_not_count_as_complete": true,
+  "warning": "All geometry above is IMAGE PIXELS (not EPSG:4326). Never import as geographic polygons or claim farm location from road intersection candidates."
+}
