@@ -25,154 +25,10 @@
   "other_enrollment_address": "415 Drayton street Manning SC 29102 \u2014 NOT FIELD LOCATION",
   "geocoded_addresses": [
     {
-      "source": "CENSUS_TIGER_ROAD_ONLY_NOT_ADDRESS",
-      "lon": -80.96513999994515,
-      "lat": 34.010204999785785,
-      "matched": "Carter Hill Dr",
-      "quality": "search_corridor_only",
-      "road_geometry_type": "LineString"
-    },
-    {
-      "source": "CENSUS_TIGER_ROAD_ONLY_NOT_ADDRESS",
-      "lon": -80.99373399976778,
-      "lat": 34.03774099975678,
-      "matched": "Carter St",
-      "quality": "search_corridor_only",
-      "road_geometry_type": "LineString"
-    },
-    {
-      "source": "CENSUS_TIGER_ROAD_ONLY_NOT_ADDRESS",
-      "lon": -81.19836799995652,
-      "lat": 33.93979400021079,
-      "matched": "McCarter Trl",
-      "quality": "search_corridor_only",
-      "road_geometry_type": "LineString"
-    },
-    {
-      "source": "CENSUS_TIGER_ROAD_ONLY_NOT_ADDRESS",
-      "lon": -80.21927599977478,
-      "lat": 34.055351000087434,
-      "matched": "Carter Ln",
-      "quality": "search_corridor_only",
-      "road_geometry_type": "LineString"
-    },
-    {
-      "source": "CENSUS_TIGER_ROAD_ONLY_NOT_ADDRESS",
-      "lon": -80.87400999990915,
-      "lat": 33.89959000019973,
-      "matched": "Martin Carter Rd",
-      "quality": "search_corridor_only",
-      "road_geometry_type": "LineString"
-    },
-    {
-      "source": "CENSUS_TIGER_ROAD_ONLY_NOT_ADDRESS",
-      "lon": -81.05698499965851,
-      "lat": 33.90092900025705,
-      "matched": "Carterhill Dr",
-      "quality": "search_corridor_only",
-      "road_geometry_type": "LineString"
-    },
-    {
-      "source": "CENSUS_TIGER_ROAD_ONLY_NOT_ADDRESS",
-      "lon": -81.42528500002537,
-      "lat": 34.12885299999079,
-      "matched": "Carteret Ln",
-      "quality": "search_corridor_only",
-      "road_geometry_type": "LineString"
-    },
-    {
-      "source": "CENSUS_TIGER_ROAD_ONLY_NOT_ADDRESS",
-      "lon": -81.01940199986049,
-      "lat": 34.0505890001521,
-      "matched": "Carteret St",
-      "quality": "search_corridor_only",
-      "road_geometry_type": "LineString"
-    },
-    {
-      "source": "CENSUS_TIGER_ROAD_ONLY_NOT_ADDRESS",
-      "lon": -80.52449900032818,
-      "lat": 34.19372299993639,
-      "matched": "Carter Ln",
-      "quality": "search_corridor_only",
-      "road_geometry_type": "LineString"
-    },
-    {
-      "source": "CENSUS_TIGER_ROAD_ONLY_NOT_ADDRESS",
-      "lon": -81.45278500005398,
-      "lat": 33.25244800009245,
-      "matched": "Carter Dr",
-      "quality": "search_corridor_only",
-      "road_geometry_type": "LineString"
-    },
-    {
-      "source": "CENSUS_TIGER_ROAD_ONLY_NOT_ADDRESS",
-      "lon": -81.01815400008066,
-      "lat": 33.31055600023493,
-      "matched": "Berte Carter Dr",
-      "quality": "search_corridor_only",
-      "road_geometry_type": "LineString"
-    },
-    {
-      "source": "CENSUS_TIGER_ROAD_ONLY_NOT_ADDRESS",
-      "lon": -80.33375300024602,
-      "lat": 33.60687200010297,
-      "matched": "Carter Rd",
-      "quality": "search_corridor_only",
-      "road_geometry_type": "LineString"
-    },
-    {
-      "source": "CENSUS_TIGER_ROAD_ONLY_NOT_ADDRESS",
-      "lon": -80.41248900000258,
-      "lat": 33.95631200014713,
-      "matched": "Carter Rd",
-      "quality": "search_corridor_only",
-      "road_geometry_type": "LineString"
-    },
-    {
-      "source": "CENSUS_TIGER_ROAD_ONLY_NOT_ADDRESS",
-      "lon": -81.19776100023421,
-      "lat": 33.940166999833195,
-      "matched": "McCarter Trl",
-      "quality": "search_corridor_only",
-      "road_geometry_type": "LineString"
-    },
-    {
-      "source": "CENSUS_TIGER_ROAD_ONLY_NOT_ADDRESS",
-      "lon": -81.19472900019903,
-      "lat": 33.9257140002216,
-      "matched": "Carter Ln",
-      "quality": "search_corridor_only",
-      "road_geometry_type": "LineString"
-    },
-    {
-      "source": "CENSUS_TIGER_ROAD_ONLY_NOT_ADDRESS",
-      "lon": -81.45541700005606,
-      "lat": 33.25710200001177,
-      "matched": "Carter Cir",
-      "quality": "search_corridor_only",
-      "road_geometry_type": "LineString"
-    },
-    {
-      "source": "CENSUS_TIGER_ROAD_ONLY_NOT_ADDRESS",
-      "lon": -81.02306900010538,
-      "lat": 34.054282000365745,
-      "matched": "Carteret St",
-      "quality": "search_corridor_only",
-      "road_geometry_type": "LineString"
-    },
-    {
-      "source": "CENSUS_TIGER_ROAD_ONLY_NOT_ADDRESS",
+      "source": "EXACT_CENSUS_TIGER_REV_J_W_CARTER_ROAD_NOT_HOUSE",
       "lon": -80.29018800039343,
       "lat": 33.63791600034979,
       "matched": "Reverend J W Carter Rd",
-      "quality": "search_corridor_only",
-      "road_geometry_type": "LineString"
-    },
-    {
-      "source": "CENSUS_TIGER_ROAD_ONLY_NOT_ADDRESS",
-      "lon": -80.47892099989139,
-      "lat": 34.18242000004364,
-      "matched": "Carter Dr",
       "quality": "search_corridor_only",
       "road_geometry_type": "LineString"
     }
@@ -187,10 +43,10 @@
     {
       "file": "AddressGrid_+0_+0_USGS_NAIP.jpg",
       "bbox_epsg3857": [
-        -9014148.1568,
-        4029022.390600001,
-        -9011848.1568,
-        4031322.390600001
+        -8939012.8439,
+        3979135.997699996,
+        -8936712.8439,
+        3981435.997699996
       ],
       "grid": [
         0,
@@ -199,43 +55,57 @@
       "provider": "USGS_NAIP"
     },
     {
-      "file": "AddressGrid_+1_+0_USGS_NAIP.jpg",
+      "file": "AddressGrid_-1_+0_USGS_NAIP.jpg",
       "bbox_epsg3857": [
-        -9012298.1568,
-        4029022.390600001,
-        -9009998.1568,
-        4031322.390600001
+        -8940862.8439,
+        3979135.997699996,
+        -8938562.8439,
+        3981435.997699996
       ],
       "grid": [
-        1,
+        -1,
         0
       ],
       "provider": "USGS_NAIP"
     },
     {
-      "file": "AddressGrid_+0_+1_USGS_NAIP.jpg",
+      "file": "AddressGrid_+0_-1_USGS_NAIP.jpg",
       "bbox_epsg3857": [
-        -9014148.1568,
-        4030872.390600001,
-        -9011848.1568,
-        4033172.390600001
+        -8939012.8439,
+        3977285.997699996,
+        -8936712.8439,
+        3979585.997699996
       ],
       "grid": [
         0,
-        1
+        -1
       ],
       "provider": "USGS_NAIP"
     },
     {
       "file": "AddressGrid_+1_+1_USGS_NAIP.jpg",
       "bbox_epsg3857": [
-        -9012298.1568,
-        4030872.390600001,
-        -9009998.1568,
-        4033172.390600001
+        -8937162.8439,
+        3980985.997699996,
+        -8934862.8439,
+        3983285.997699996
       ],
       "grid": [
         1,
+        1
+      ],
+      "provider": "USGS_NAIP"
+    },
+    {
+      "file": "AddressGrid_-1_+1_USGS_NAIP.jpg",
+      "bbox_epsg3857": [
+        -8940862.8439,
+        3980985.997699996,
+        -8938562.8439,
+        3983285.997699996
+      ],
+      "grid": [
+        -1,
         1
       ],
       "provider": "USGS_NAIP"
@@ -243,10 +113,10 @@
     {
       "file": "AddressGrid_+1_-1_USGS_NAIP.jpg",
       "bbox_epsg3857": [
-        -9012298.1568,
-        4027172.390600001,
-        -9009998.1568,
-        4029472.390600001
+        -8937162.8439,
+        3977285.997699996,
+        -8934862.8439,
+        3979585.997699996
       ],
       "grid": [
         1,
