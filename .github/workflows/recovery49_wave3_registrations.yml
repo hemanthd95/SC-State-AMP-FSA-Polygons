@@ -1,0 +1,38 @@
+name: Wave 3 register ten additional single-map farmers
+on:
+  push:
+    paths:
+      - 'scripts/recovery49_wave3_registrations.py'
+      - '.github/workflows/recovery49_wave3_registrations.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  register:
+    runs-on: ubuntu-latest
+    timeout-minutes: 65
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install 'numpy<2.5' opencv-python-headless pymupdf requests
+      - name: Match ten farmer PDF images to geocoded address and proven adjacent field areas
+        run: |
+          set -o pipefail
+          OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python scripts/recovery49_wave3_registrations.py | tee /tmp/recovery49_wave3.log
+      - name: Publish image-registration QC files and strong-match overlays
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin main
+          git reset --mixed origin/main
+          git add analysis/recovery49_20261111/wave3/
+          if ! git diff --cached --quiet; then
+            git commit -m "Add wave-three imagery registration evidence for ten more AMP farmers"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
