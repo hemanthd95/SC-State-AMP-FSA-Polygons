@@ -1,0 +1,64 @@
+{
+  "name": "Joe Hilliard",
+  "source_pdf": "Joe Hillard_FSA_Map.pdf",
+  "source_page": 1,
+  "enrolled_farm_tract_field": "13859/45814/20",
+  "excel_farm_address": "157 Hollis Rd, Santee, SC 29142",
+  "geocoded_address_anchors": [
+    {
+      "provider": "US_CENSUS_ADDRESS",
+      "lon": -80.50430450531,
+      "lat": 33.464418972005,
+      "matched_address": "157 HOLLIS RD, SANTEE, SC, 29142"
+    }
+  ],
+  "tile_requests": 26,
+  "loaded_tiles": 21,
+  "status": "REGISTERED_PHOTO_CANDIDATE_NEEDS_FIELD_TRACE",
+  "inliers": 337,
+  "rmse_px": 0.768,
+  "source_spread": [
+    687.1820068359375,
+    514.1660766601562
+  ],
+  "image_spread": [
+    776.052490234375,
+    580.36572265625
+  ],
+  "valid_geometric_match": true,
+  "address_anchor": {
+    "provider": "US_CENSUS_ADDRESS",
+    "lon": -80.50430450531,
+    "lat": 33.464418972005,
+    "matched_address": "157 HOLLIS RD, SANTEE, SC, 29142"
+  },
+  "imagery_provider": "USGS_NAIP",
+  "tile_offset": [
+    -1,
+    -1
+  ],
+  "tile_bbox_epsg3857": [
+    -8963333.184197748,
+    3955476.3078653384,
+    -8961583.184197748,
+    3957226.3078653384
+  ],
+  "tile_size_px": 900,
+  "source_pdf_page_points_to_tile_H": [
+    [
+      1.6417413261310883,
+      0.0030894731796586405,
+      70.79160594139279
+    ],
+    [
+      0.00029408594903316946,
+      1.6413682079525242,
+      227.98998489004168
+    ],
+    [
+      1.1939207206046938e-06,
+      3.5626567319993316e-06,
+      1.0
+    ]
+  ]
+}

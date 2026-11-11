@@ -1,0 +1,64 @@
+{
+  "name": "Arthur Cobbs",
+  "source_pdf": "Arthur Cobbs_FSA Map.pdf",
+  "source_page": 1,
+  "enrolled_farm_tract_field": "548/295/UNKNOWN",
+  "excel_farm_address": "115 Prosperity Ln, Reevesville, SC 29471",
+  "geocoded_address_anchors": [
+    {
+      "provider": "US_CENSUS_ADDRESS",
+      "lon": -80.649464790657,
+      "lat": 33.244438573865,
+      "matched_address": "115 PROSPERITY LN, REEVESVILLE, SC, 29471"
+    }
+  ],
+  "tile_requests": 26,
+  "loaded_tiles": 16,
+  "status": "REGISTERED_PHOTO_CANDIDATE_NEEDS_FIELD_TRACE",
+  "inliers": 48,
+  "rmse_px": 0.552,
+  "source_spread": [
+    472.96246337890625,
+    226.91949462890625
+  ],
+  "image_spread": [
+    297.42364501953125,
+    154.06927490234375
+  ],
+  "valid_geometric_match": true,
+  "address_anchor": {
+    "provider": "US_CENSUS_ADDRESS",
+    "lon": -80.649464790657,
+    "lat": 33.244438573865,
+    "matched_address": "115 PROSPERITY LN, REEVESVILLE, SC, 29471"
+  },
+  "imagery_provider": "USGS_NAIP",
+  "tile_offset": [
+    0,
+    1
+  ],
+  "tile_bbox_epsg3857": [
+    -8978732.353245983,
+    3927679.222967063,
+    -8976982.353245983,
+    3929429.222967063
+  ],
+  "tile_size_px": 900,
+  "source_pdf_page_points_to_tile_H": [
+    [
+      0.9233566691199631,
+      0.13109885747951594,
+      225.05011635877995
+    ],
+    [
+      -0.04230470216423467,
+      1.23254604596623,
+      669.0795493279128
+    ],
+    [
+      -4.500954520076367e-05,
+      0.00027356529506429117,
+      1.0
+    ]
+  ]
+}

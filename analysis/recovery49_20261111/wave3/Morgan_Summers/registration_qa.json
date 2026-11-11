@@ -1,0 +1,64 @@
+{
+  "name": "Morgan Summers",
+  "source_pdf": "Morgan summers_FSA_Map.pdf",
+  "source_page": 1,
+  "enrolled_farm_tract_field": "13225/6178/24",
+  "excel_farm_address": "5953 Freedom Rd, Branchville, SC 29432",
+  "geocoded_address_anchors": [
+    {
+      "provider": "US_CENSUS_ADDRESS",
+      "lon": -80.822462430198,
+      "lat": 33.306605344325,
+      "matched_address": "5953 FREEDOM RD, BRANCHVILLE, SC, 29432"
+    }
+  ],
+  "tile_requests": 26,
+  "loaded_tiles": 18,
+  "status": "WEAK_IMAGE_MATCH_REJECTED",
+  "inliers": 89,
+  "rmse_px": 0.0,
+  "source_spread": [
+    674.1278076171875,
+    711.574462890625
+  ],
+  "image_spread": [
+    0.0,
+    0.0
+  ],
+  "valid_geometric_match": false,
+  "address_anchor": {
+    "provider": "US_CENSUS_ADDRESS",
+    "lon": -80.822462430198,
+    "lat": 33.306605344325,
+    "matched_address": "5953 FREEDOM RD, BRANCHVILLE, SC, 29432"
+  },
+  "imagery_provider": "USGS_NAIP",
+  "tile_offset": [
+    1,
+    0
+  ],
+  "tile_bbox_epsg3857": [
+    -8997230.362388125,
+    3935196.7678615376,
+    -8995480.362388125,
+    3936946.7678615376
+  ],
+  "tile_size_px": 900,
+  "source_pdf_page_points_to_tile_H": [
+    [
+      -0.5132261653560306,
+      -0.759445190956598,
+      645.7840353928026
+    ],
+    [
+      -0.6092675603345952,
+      -0.9015622155228772,
+      766.6313417093722
+    ],
+    [
+      -0.0007947334359898163,
+      -0.001176004901538287,
+      1.0
+    ]
+  ]
+}

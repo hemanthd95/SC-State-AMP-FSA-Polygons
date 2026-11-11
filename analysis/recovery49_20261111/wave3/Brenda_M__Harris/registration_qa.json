@@ -1,0 +1,64 @@
+{
+  "name": "Brenda M. Harris",
+  "source_pdf": "Brenda Harris_FSAmap.pdf",
+  "source_page": 1,
+  "enrolled_farm_tract_field": "4943/4414/3",
+  "excel_farm_address": "192 Old Spell Road, St George, SC 29477",
+  "geocoded_address_anchors": [
+    {
+      "provider": "US_CENSUS_ADDRESS",
+      "lon": -80.587387804053,
+      "lat": 33.134006644633,
+      "matched_address": "192 OLD SPELL RD, SAINT GEORGE, SC, 29477"
+    }
+  ],
+  "tile_requests": 26,
+  "loaded_tiles": 17,
+  "status": "REGISTERED_PHOTO_CANDIDATE_NEEDS_FIELD_TRACE",
+  "inliers": 142,
+  "rmse_px": 0.517,
+  "source_spread": [
+    786.5640258789062,
+    378.29559326171875
+  ],
+  "image_spread": [
+    445.45867919921875,
+    211.73928833007812
+  ],
+  "valid_geometric_match": true,
+  "address_anchor": {
+    "provider": "US_CENSUS_ADDRESS",
+    "lon": -80.587387804053,
+    "lat": 33.134006644633,
+    "matched_address": "192 OLD SPELL RD, SAINT GEORGE, SC, 29477"
+  },
+  "imagery_provider": "USGS_NAIP",
+  "tile_offset": [
+    1,
+    -1
+  ],
+  "tile_bbox_epsg3857": [
+    -8971061.974707244,
+    3911469.6422868776,
+    -8969311.974707244,
+    3913219.6422868776
+  ],
+  "tile_size_px": 900,
+  "source_pdf_page_points_to_tile_H": [
+    [
+      0.8196265535245245,
+      0.009262417732470565,
+      -4.5072395210190175
+    ],
+    [
+      -0.0059946602205380745,
+      0.8186412462820732,
+      -279.912964041965
+    ],
+    [
+      -1.1805360188727338e-05,
+      1.072925111666802e-05,
+      1.0
+    ]
+  ]
+}

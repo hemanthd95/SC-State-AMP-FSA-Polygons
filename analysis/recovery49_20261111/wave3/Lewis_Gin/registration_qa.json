@@ -1,0 +1,70 @@
+{
+  "name": "Lewis Gin",
+  "source_pdf": "Lewis Gin_FSA Map.pdf",
+  "source_page": 1,
+  "enrolled_farm_tract_field": "4706/11322/36",
+  "excel_farm_address": "900 Magnolia Street, East Hampton, SC 29924",
+  "geocoded_address_anchors": [
+    {
+      "provider": "SAME_FSA_FARM_TRACT_PREVIOUSLY_REGISTERED",
+      "lon": -81.13247,
+      "lat": 32.84736,
+      "matched_address": "Farm 4706 Tract 11322 map anchor"
+    },
+    {
+      "provider": "US_CENSUS_ADDRESS",
+      "lon": -81.093935974836,
+      "lat": 32.859638925633,
+      "matched_address": "900 MAGNOLIA ST E EXD, HAMPTON, SC, 29924"
+    }
+  ],
+  "tile_requests": 26,
+  "loaded_tiles": 18,
+  "status": "REGISTERED_PHOTO_CANDIDATE_NEEDS_FIELD_TRACE",
+  "inliers": 119,
+  "rmse_px": 0.693,
+  "source_spread": [
+    545.308837890625,
+    631.3798217773438
+  ],
+  "image_spread": [
+    309.1770324707031,
+    357.76690673828125
+  ],
+  "valid_geometric_match": true,
+  "address_anchor": {
+    "provider": "SAME_FSA_FARM_TRACT_PREVIOUSLY_REGISTERED",
+    "lon": -81.13247,
+    "lat": 32.84736,
+    "matched_address": "Farm 4706 Tract 11322 map anchor"
+  },
+  "imagery_provider": "USGS_NAIP",
+  "tile_offset": [
+    1,
+    1
+  ],
+  "tile_bbox_epsg3857": [
+    -9031740.247200545,
+    3874946.038194792,
+    -9029990.247200545,
+    3876696.038194792
+  ],
+  "tile_size_px": 900,
+  "source_pdf_page_points_to_tile_H": [
+    [
+      0.8253784391566457,
+      0.0006196476845607135,
+      -122.20575212187316
+    ],
+    [
+      0.004039835321395477,
+      0.8217729290502411,
+      437.91636400916224
+    ],
+    [
+      6.260674751371239e-06,
+      8.46035553001775e-07,
+      1.0
+    ]
+  ]
+}

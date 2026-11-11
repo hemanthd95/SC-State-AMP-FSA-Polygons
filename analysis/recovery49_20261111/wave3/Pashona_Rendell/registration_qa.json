@@ -1,0 +1,64 @@
+{
+  "name": "Pashona Rendell",
+  "source_pdf": "PashonnaRendell_FSA_Map.pdf",
+  "source_page": 1,
+  "enrolled_farm_tract_field": "9231/7908/UNKNOWN",
+  "excel_farm_address": "34 Mayland Drive, Summerton, SC 29148",
+  "geocoded_address_anchors": [
+    {
+      "provider": "US_CENSUS_ADDRESS",
+      "lon": -80.345262608702,
+      "lat": 33.610068807373,
+      "matched_address": "34 MAYLAND DR, SUMMERTON, SC, 29148"
+    }
+  ],
+  "tile_requests": 26,
+  "loaded_tiles": 18,
+  "status": "WEAK_IMAGE_MATCH_REJECTED",
+  "inliers": 35,
+  "rmse_px": 0.0,
+  "source_spread": [
+    452.7718811035156,
+    734.383056640625
+  ],
+  "image_spread": [
+    0.0,
+    0.0
+  ],
+  "valid_geometric_match": false,
+  "address_anchor": {
+    "provider": "US_CENSUS_ADDRESS",
+    "lon": -80.345262608702,
+    "lat": 33.610068807373,
+    "matched_address": "34 MAYLAND DR, SUMMERTON, SC, 29148"
+  },
+  "imagery_provider": "ESRI_World",
+  "tile_offset": [
+    -1,
+    1
+  ],
+  "tile_bbox_epsg3857": [
+    -8945628.72125255,
+    3976448.1987041845,
+    -8943878.72125255,
+    3978198.1987041845
+  ],
+  "tile_size_px": 900,
+  "source_pdf_page_points_to_tile_H": [
+    [
+      -0.165127319748559,
+      -0.06657839480965791,
+      36.08233975015466
+    ],
+    [
+      -1.2703507346942116,
+      -0.5121981807125621,
+      277.58717867451674
+    ],
+    [
+      -0.004576402774653236,
+      -0.0018451795329963864,
+      1.0
+    ]
+  ]
+}

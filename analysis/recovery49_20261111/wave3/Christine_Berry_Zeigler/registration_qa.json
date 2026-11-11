@@ -1,0 +1,18 @@
+{
+  "name": "Christine Berry Zeigler",
+  "source_pdf": "Christine Berry Zeigler_FSA Map.pdf",
+  "source_page": 1,
+  "enrolled_farm_tract_field": "1271/469/1",
+  "excel_farm_address": "568 Nassau Drive, Bowman, SC 29018",
+  "geocoded_address_anchors": [
+    {
+      "provider": "NEAR_SAME_ADDRESS_PREVIOUS_BERRY_FIELD",
+      "lon": -80.6487298,
+      "lat": 33.4276425,
+      "matched_address": "568 Nassau Drive Bowman farm search"
+    }
+  ],
+  "tile_requests": 26,
+  "loaded_tiles": 18,
+  "status": "NO_MATCH_IN_LOCAL_ADDRESS_WINDOW"
+}

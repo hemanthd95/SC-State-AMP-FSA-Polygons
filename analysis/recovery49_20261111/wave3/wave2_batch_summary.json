@@ -1,0 +1,501 @@
+[
+  {
+    "name": "Joe Hilliard",
+    "source_pdf": "Joe Hillard_FSA_Map.pdf",
+    "source_page": 1,
+    "enrolled_farm_tract_field": "13859/45814/20",
+    "excel_farm_address": "157 Hollis Rd, Santee, SC 29142",
+    "geocoded_address_anchors": [
+      {
+        "provider": "US_CENSUS_ADDRESS",
+        "lon": -80.50430450531,
+        "lat": 33.464418972005,
+        "matched_address": "157 HOLLIS RD, SANTEE, SC, 29142"
+      }
+    ],
+    "tile_requests": 26,
+    "loaded_tiles": 21,
+    "status": "REGISTERED_PHOTO_CANDIDATE_NEEDS_FIELD_TRACE",
+    "inliers": 337,
+    "rmse_px": 0.768,
+    "source_spread": [
+      687.1820068359375,
+      514.1660766601562
+    ],
+    "image_spread": [
+      776.052490234375,
+      580.36572265625
+    ],
+    "valid_geometric_match": true,
+    "address_anchor": {
+      "provider": "US_CENSUS_ADDRESS",
+      "lon": -80.50430450531,
+      "lat": 33.464418972005,
+      "matched_address": "157 HOLLIS RD, SANTEE, SC, 29142"
+    },
+    "imagery_provider": "USGS_NAIP",
+    "tile_offset": [
+      -1,
+      -1
+    ],
+    "tile_bbox_epsg3857": [
+      -8963333.184197748,
+      3955476.3078653384,
+      -8961583.184197748,
+      3957226.3078653384
+    ],
+    "tile_size_px": 900,
+    "source_pdf_page_points_to_tile_H": [
+      [
+        1.6417413261310883,
+        0.0030894731796586405,
+        70.79160594139279
+      ],
+      [
+        0.00029408594903316946,
+        1.6413682079525242,
+        227.98998489004168
+      ],
+      [
+        1.1939207206046938e-06,
+        3.5626567319993316e-06,
+        1.0
+      ]
+    ]
+  },
+  {
+    "name": "Christine Berry Zeigler",
+    "source_pdf": "Christine Berry Zeigler_FSA Map.pdf",
+    "source_page": 1,
+    "enrolled_farm_tract_field": "1271/469/1",
+    "excel_farm_address": "568 Nassau Drive, Bowman, SC 29018",
+    "geocoded_address_anchors": [
+      {
+        "provider": "NEAR_SAME_ADDRESS_PREVIOUS_BERRY_FIELD",
+        "lon": -80.6487298,
+        "lat": 33.4276425,
+        "matched_address": "568 Nassau Drive Bowman farm search"
+      }
+    ],
+    "tile_requests": 26,
+    "loaded_tiles": 18,
+    "status": "NO_MATCH_IN_LOCAL_ADDRESS_WINDOW"
+  },
+  {
+    "name": "Lewis Gin",
+    "source_pdf": "Lewis Gin_FSA Map.pdf",
+    "source_page": 1,
+    "enrolled_farm_tract_field": "4706/11322/36",
+    "excel_farm_address": "900 Magnolia Street, East Hampton, SC 29924",
+    "geocoded_address_anchors": [
+      {
+        "provider": "SAME_FSA_FARM_TRACT_PREVIOUSLY_REGISTERED",
+        "lon": -81.13247,
+        "lat": 32.84736,
+        "matched_address": "Farm 4706 Tract 11322 map anchor"
+      },
+      {
+        "provider": "US_CENSUS_ADDRESS",
+        "lon": -81.093935974836,
+        "lat": 32.859638925633,
+        "matched_address": "900 MAGNOLIA ST E EXD, HAMPTON, SC, 29924"
+      }
+    ],
+    "tile_requests": 26,
+    "loaded_tiles": 18,
+    "status": "REGISTERED_PHOTO_CANDIDATE_NEEDS_FIELD_TRACE",
+    "inliers": 119,
+    "rmse_px": 0.693,
+    "source_spread": [
+      545.308837890625,
+      631.3798217773438
+    ],
+    "image_spread": [
+      309.1770324707031,
+      357.76690673828125
+    ],
+    "valid_geometric_match": true,
+    "address_anchor": {
+      "provider": "SAME_FSA_FARM_TRACT_PREVIOUSLY_REGISTERED",
+      "lon": -81.13247,
+      "lat": 32.84736,
+      "matched_address": "Farm 4706 Tract 11322 map anchor"
+    },
+    "imagery_provider": "USGS_NAIP",
+    "tile_offset": [
+      1,
+      1
+    ],
+    "tile_bbox_epsg3857": [
+      -9031740.247200545,
+      3874946.038194792,
+      -9029990.247200545,
+      3876696.038194792
+    ],
+    "tile_size_px": 900,
+    "source_pdf_page_points_to_tile_H": [
+      [
+        0.8253784391566457,
+        0.0006196476845607135,
+        -122.20575212187316
+      ],
+      [
+        0.004039835321395477,
+        0.8217729290502411,
+        437.91636400916224
+      ],
+      [
+        6.260674751371239e-06,
+        8.46035553001775e-07,
+        1.0
+      ]
+    ]
+  },
+  {
+    "name": "Jeremiah Conyers",
+    "source_pdf": "Jeremiah Conyers Farm Map.pdf",
+    "source_page": 1,
+    "enrolled_farm_tract_field": "948/2427/3",
+    "excel_farm_address": "9407 Paxville Hwy, Manning, SC 29102",
+    "geocoded_address_anchors": [
+      {
+        "provider": "US_CENSUS_ADDRESS",
+        "lon": -80.347670243985,
+        "lat": 33.7351526664,
+        "matched_address": "9407 PAXVILLE HWY, MANNING, SC, 29102"
+      }
+    ],
+    "tile_requests": 26,
+    "loaded_tiles": 22,
+    "status": "NO_MATCH_IN_LOCAL_ADDRESS_WINDOW"
+  },
+  {
+    "name": "Charles Manigault",
+    "source_pdf": "Manigault Charles_FSAmap.pdf",
+    "source_page": 1,
+    "enrolled_farm_tract_field": "1283/2004/UNKNOWN",
+    "excel_farm_address": "165 Corn Flower Lane, Round O, SC 29452",
+    "geocoded_address_anchors": [],
+    "status": "ADDRESS_NOT_GEOCODED"
+  },
+  {
+    "name": "Arthur Cobbs",
+    "source_pdf": "Arthur Cobbs_FSA Map.pdf",
+    "source_page": 1,
+    "enrolled_farm_tract_field": "548/295/UNKNOWN",
+    "excel_farm_address": "115 Prosperity Ln, Reevesville, SC 29471",
+    "geocoded_address_anchors": [
+      {
+        "provider": "US_CENSUS_ADDRESS",
+        "lon": -80.649464790657,
+        "lat": 33.244438573865,
+        "matched_address": "115 PROSPERITY LN, REEVESVILLE, SC, 29471"
+      }
+    ],
+    "tile_requests": 26,
+    "loaded_tiles": 16,
+    "status": "REGISTERED_PHOTO_CANDIDATE_NEEDS_FIELD_TRACE",
+    "inliers": 48,
+    "rmse_px": 0.552,
+    "source_spread": [
+      472.96246337890625,
+      226.91949462890625
+    ],
+    "image_spread": [
+      297.42364501953125,
+      154.06927490234375
+    ],
+    "valid_geometric_match": true,
+    "address_anchor": {
+      "provider": "US_CENSUS_ADDRESS",
+      "lon": -80.649464790657,
+      "lat": 33.244438573865,
+      "matched_address": "115 PROSPERITY LN, REEVESVILLE, SC, 29471"
+    },
+    "imagery_provider": "USGS_NAIP",
+    "tile_offset": [
+      0,
+      1
+    ],
+    "tile_bbox_epsg3857": [
+      -8978732.353245983,
+      3927679.222967063,
+      -8976982.353245983,
+      3929429.222967063
+    ],
+    "tile_size_px": 900,
+    "source_pdf_page_points_to_tile_H": [
+      [
+        0.9233566691199631,
+        0.13109885747951594,
+        225.05011635877995
+      ],
+      [
+        -0.04230470216423467,
+        1.23254604596623,
+        669.0795493279128
+      ],
+      [
+        -4.500954520076367e-05,
+        0.00027356529506429117,
+        1.0
+      ]
+    ]
+  },
+  {
+    "name": "Brenda M. Harris",
+    "source_pdf": "Brenda Harris_FSAmap.pdf",
+    "source_page": 1,
+    "enrolled_farm_tract_field": "4943/4414/3",
+    "excel_farm_address": "192 Old Spell Road, St George, SC 29477",
+    "geocoded_address_anchors": [
+      {
+        "provider": "US_CENSUS_ADDRESS",
+        "lon": -80.587387804053,
+        "lat": 33.134006644633,
+        "matched_address": "192 OLD SPELL RD, SAINT GEORGE, SC, 29477"
+      }
+    ],
+    "tile_requests": 26,
+    "loaded_tiles": 17,
+    "status": "REGISTERED_PHOTO_CANDIDATE_NEEDS_FIELD_TRACE",
+    "inliers": 142,
+    "rmse_px": 0.517,
+    "source_spread": [
+      786.5640258789062,
+      378.29559326171875
+    ],
+    "image_spread": [
+      445.45867919921875,
+      211.73928833007812
+    ],
+    "valid_geometric_match": true,
+    "address_anchor": {
+      "provider": "US_CENSUS_ADDRESS",
+      "lon": -80.587387804053,
+      "lat": 33.134006644633,
+      "matched_address": "192 OLD SPELL RD, SAINT GEORGE, SC, 29477"
+    },
+    "imagery_provider": "USGS_NAIP",
+    "tile_offset": [
+      1,
+      -1
+    ],
+    "tile_bbox_epsg3857": [
+      -8971061.974707244,
+      3911469.6422868776,
+      -8969311.974707244,
+      3913219.6422868776
+    ],
+    "tile_size_px": 900,
+    "source_pdf_page_points_to_tile_H": [
+      [
+        0.8196265535245245,
+        0.009262417732470565,
+        -4.5072395210190175
+      ],
+      [
+        -0.0059946602205380745,
+        0.8186412462820732,
+        -279.912964041965
+      ],
+      [
+        -1.1805360188727338e-05,
+        1.072925111666802e-05,
+        1.0
+      ]
+    ]
+  },
+  {
+    "name": "Edward Carson",
+    "source_pdf": "Edward Carson_FSA Map.pdf",
+    "source_page": 1,
+    "enrolled_farm_tract_field": "14291/46266/19,13",
+    "excel_farm_address": "358 Amber Rd, North, SC 29112",
+    "geocoded_address_anchors": [
+      {
+        "provider": "US_CENSUS_ADDRESS",
+        "lon": -81.002693848409,
+        "lat": 33.635166638242,
+        "matched_address": "358 AMBER RD, NORTH, SC, 29112"
+      }
+    ],
+    "tile_requests": 26,
+    "loaded_tiles": 19,
+    "status": "WEAK_IMAGE_MATCH_REJECTED",
+    "inliers": 26,
+    "rmse_px": 0.0,
+    "source_spread": [
+      670.0282592773438,
+      671.3331298828125
+    ],
+    "image_spread": [
+      0.0,
+      0.0
+    ],
+    "valid_geometric_match": false,
+    "address_anchor": {
+      "provider": "US_CENSUS_ADDRESS",
+      "lon": -81.002693848409,
+      "lat": 33.635166638242,
+      "matched_address": "358 AMBER RD, NORTH, SC, 29112"
+    },
+    "imagery_provider": "ESRI_World",
+    "tile_offset": [
+      1,
+      -1
+    ],
+    "tile_bbox_epsg3857": [
+      -9017293.632088322,
+      3978283.391042526,
+      -9015543.632088322,
+      3980033.391042526
+    ],
+    "tile_size_px": 900,
+    "source_pdf_page_points_to_tile_H": [
+      [
+        0.604552232615364,
+        -0.5736630634246649,
+        32.85519743352725
+      ],
+      [
+        14.751028952562324,
+        -13.997335550287689,
+        801.6643433561858
+      ],
+      [
+        0.01840050524238962,
+        -0.017460344427553728,
+        1.0
+      ]
+    ]
+  },
+  {
+    "name": "Morgan Summers",
+    "source_pdf": "Morgan summers_FSA_Map.pdf",
+    "source_page": 1,
+    "enrolled_farm_tract_field": "13225/6178/24",
+    "excel_farm_address": "5953 Freedom Rd, Branchville, SC 29432",
+    "geocoded_address_anchors": [
+      {
+        "provider": "US_CENSUS_ADDRESS",
+        "lon": -80.822462430198,
+        "lat": 33.306605344325,
+        "matched_address": "5953 FREEDOM RD, BRANCHVILLE, SC, 29432"
+      }
+    ],
+    "tile_requests": 26,
+    "loaded_tiles": 18,
+    "status": "WEAK_IMAGE_MATCH_REJECTED",
+    "inliers": 89,
+    "rmse_px": 0.0,
+    "source_spread": [
+      674.1278076171875,
+      711.574462890625
+    ],
+    "image_spread": [
+      0.0,
+      0.0
+    ],
+    "valid_geometric_match": false,
+    "address_anchor": {
+      "provider": "US_CENSUS_ADDRESS",
+      "lon": -80.822462430198,
+      "lat": 33.306605344325,
+      "matched_address": "5953 FREEDOM RD, BRANCHVILLE, SC, 29432"
+    },
+    "imagery_provider": "USGS_NAIP",
+    "tile_offset": [
+      1,
+      0
+    ],
+    "tile_bbox_epsg3857": [
+      -8997230.362388125,
+      3935196.7678615376,
+      -8995480.362388125,
+      3936946.7678615376
+    ],
+    "tile_size_px": 900,
+    "source_pdf_page_points_to_tile_H": [
+      [
+        -0.5132261653560306,
+        -0.759445190956598,
+        645.7840353928026
+      ],
+      [
+        -0.6092675603345952,
+        -0.9015622155228772,
+        766.6313417093722
+      ],
+      [
+        -0.0007947334359898163,
+        -0.001176004901538287,
+        1.0
+      ]
+    ]
+  },
+  {
+    "name": "Pashona Rendell",
+    "source_pdf": "PashonnaRendell_FSA_Map.pdf",
+    "source_page": 1,
+    "enrolled_farm_tract_field": "9231/7908/UNKNOWN",
+    "excel_farm_address": "34 Mayland Drive, Summerton, SC 29148",
+    "geocoded_address_anchors": [
+      {
+        "provider": "US_CENSUS_ADDRESS",
+        "lon": -80.345262608702,
+        "lat": 33.610068807373,
+        "matched_address": "34 MAYLAND DR, SUMMERTON, SC, 29148"
+      }
+    ],
+    "tile_requests": 26,
+    "loaded_tiles": 18,
+    "status": "WEAK_IMAGE_MATCH_REJECTED",
+    "inliers": 35,
+    "rmse_px": 0.0,
+    "source_spread": [
+      452.7718811035156,
+      734.383056640625
+    ],
+    "image_spread": [
+      0.0,
+      0.0
+    ],
+    "valid_geometric_match": false,
+    "address_anchor": {
+      "provider": "US_CENSUS_ADDRESS",
+      "lon": -80.345262608702,
+      "lat": 33.610068807373,
+      "matched_address": "34 MAYLAND DR, SUMMERTON, SC, 29148"
+    },
+    "imagery_provider": "ESRI_World",
+    "tile_offset": [
+      -1,
+      1
+    ],
+    "tile_bbox_epsg3857": [
+      -8945628.72125255,
+      3976448.1987041845,
+      -8943878.72125255,
+      3978198.1987041845
+    ],
+    "tile_size_px": 900,
+    "source_pdf_page_points_to_tile_H": [
+      [
+        -0.165127319748559,
+        -0.06657839480965791,
+        36.08233975015466
+      ],
+      [
+        -1.2703507346942116,
+        -0.5121981807125621,
+        277.58717867451674
+      ],
+      [
+        -0.004576402774653236,
+        -0.0018451795329963864,
+        1.0
+      ]
+    ]
+  }
+]

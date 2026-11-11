@@ -1,0 +1,64 @@
+{
+  "name": "Edward Carson",
+  "source_pdf": "Edward Carson_FSA Map.pdf",
+  "source_page": 1,
+  "enrolled_farm_tract_field": "14291/46266/19,13",
+  "excel_farm_address": "358 Amber Rd, North, SC 29112",
+  "geocoded_address_anchors": [
+    {
+      "provider": "US_CENSUS_ADDRESS",
+      "lon": -81.002693848409,
+      "lat": 33.635166638242,
+      "matched_address": "358 AMBER RD, NORTH, SC, 29112"
+    }
+  ],
+  "tile_requests": 26,
+  "loaded_tiles": 19,
+  "status": "WEAK_IMAGE_MATCH_REJECTED",
+  "inliers": 26,
+  "rmse_px": 0.0,
+  "source_spread": [
+    670.0282592773438,
+    671.3331298828125
+  ],
+  "image_spread": [
+    0.0,
+    0.0
+  ],
+  "valid_geometric_match": false,
+  "address_anchor": {
+    "provider": "US_CENSUS_ADDRESS",
+    "lon": -81.002693848409,
+    "lat": 33.635166638242,
+    "matched_address": "358 AMBER RD, NORTH, SC, 29112"
+  },
+  "imagery_provider": "ESRI_World",
+  "tile_offset": [
+    1,
+    -1
+  ],
+  "tile_bbox_epsg3857": [
+    -9017293.632088322,
+    3978283.391042526,
+    -9015543.632088322,
+    3980033.391042526
+  ],
+  "tile_size_px": 900,
+  "source_pdf_page_points_to_tile_H": [
+    [
+      0.604552232615364,
+      -0.5736630634246649,
+      32.85519743352725
+    ],
+    [
+      14.751028952562324,
+      -13.997335550287689,
+      801.6643433561858
+    ],
+    [
+      0.01840050524238962,
+      -0.017460344427553728,
+      1.0
+    ]
+  ]
+}
