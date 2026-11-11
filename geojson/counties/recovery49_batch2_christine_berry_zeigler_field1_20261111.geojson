@@ -1,0 +1,102 @@
+{
+  "type": "FeatureCollection",
+  "name": "Christine_Berry_Zeigler_FSA_Field1_20261111",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "producer": "Christine Berry Zeigler",
+        "county": "Orangeburg",
+        "roster_county": "Orangeburg",
+        "farm_id": "1271",
+        "tract_id": "469",
+        "field_id": "1",
+        "fsa_printed_acres": 10.51,
+        "geodesic_acres": 11.1279,
+        "acreage_difference_pct": 5.88,
+        "source_pdf": "Christine Berry Zeigler_FSA Map.pdf",
+        "source_page": 1,
+        "source_workbook_field_match": true,
+        "image_registration_inliers": 217,
+        "registration_rmse_px": 1.2803,
+        "registered_provider": "USGS_NAIP",
+        "registration_method": "FSA source photo aligned by SIFT to georeferenced NAIP near independently identified Arista/Baxley TIGER roads",
+        "physical_county_basis": "Official US Census 2025 county polygons, FSA printed county ignored",
+        "status": "REGISTERED_FIELD1_GEOGRAPHIC_QA_PASSED_SOURCE_PHOTO_APPROXIMATE",
+        "geometry_quality": "FSA_PHOTO_TRACED_APPROXIMATE_NOT_SURVEY",
+        "note": "Interior field traced from visible yellow FSA source outline; exclude small tree pockets only after separate validation."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.64479357099688,
+              33.376321099359984
+            ],
+            [
+              -80.64426608401695,
+              33.376394651802954
+            ],
+            [
+              -80.644265869492,
+              33.37680573979325
+            ],
+            [
+              -80.64380970997956,
+              33.376881751251744
+            ],
+            [
+              -80.64328012268093,
+              33.376658860229256
+            ],
+            [
+              -80.64268973132447,
+              33.376732582421226
+            ],
+            [
+              -80.64267713252879,
+              33.377299097817364
+            ],
+            [
+              -80.64159840006077,
+              33.37740141456631
+            ],
+            [
+              -80.64158978426099,
+              33.377115640120216
+            ],
+            [
+              -80.64209040913335,
+              33.37641055790961
+            ],
+            [
+              -80.64253984539236,
+              33.37586410361811
+            ],
+            [
+              -80.64201070973886,
+              33.37593664143559
+            ],
+            [
+              -80.64182083386319,
+              33.37543504449578
+            ],
+            [
+              -80.6416758264258,
+              33.37530512992481
+            ],
+            [
+              -80.64469378209418,
+              33.3752907808468
+            ],
+            [
+              -80.64479357099688,
+              33.376321099359984
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "batch": "Batch2 five farmers",
+  "date": "2026-11-11",
+  "people": 5,
+  "year2_farmers_geographically_mapped": 1,
+  "source_review_only": 4,
+  "admin_closed": 0,
+  "note": "Count means geographically mapped enrolled target, not verified legal acreage. Additional enrollment source-ID review is separately tracked.",
+  "mapped_farmer": "Christine Berry Zeigler",
+  "mappable_source_rows": [
+    {
+      "farmer": "Christine Berry Zeigler",
+      "status": "MAPPED_GEOGRAPHICALLY",
+      "accepted_polygon_count": 1,
+      "physical_county": "Orangeburg",
+      "target": "1271/469/1",
+      "area_ac": 11.1279,
+      "source_registration": "217 inliers, 1.28px",
+      "administratively_closed": false,
+      "blocker": "FSA photo map footer Farm/Tract identification not machine-readable; confirm source association if formal enrollment closure required"
+    },
+    {
+      "farmer": "Javeiann Spann",
+      "status": "SOURCE_DIGITIZED_LOCATION_UNRESOLVED",
+      "accepted_polygon_count": 0,
+      "physical_county": "",
+      "target": "",
+      "area_ac": "",
+      "source_registration": "SEE QA",
+      "administratively_closed": false,
+      "blocker": "Year2 3988/4673/1; user supplied two photographs including unrelated 9447/8142; no unique independent NAIP match."
+    },
+    {
+      "farmer": "Joe Hilliard",
+      "status": "IMAGE_REGISTERED_SOURCE_FARM_MISMATCH",
+      "accepted_polygon_count": 0,
+      "physical_county": "",
+      "target": "",
+      "area_ac": "",
+      "source_registration": "SEE QA",
+      "administratively_closed": false,
+      "blocker": "612 NAIP features registered source Farm6528/Tract41114; Year2 target Farm13859/Tract45814/Field20; do NOT substitute source field."
+    },
+    {
+      "farmer": "Calvin Blair",
+      "status": "SOURCE_FARM_MATCHES_BUT_IMAGE_LOCATION_UNRESOLVED",
+      "accepted_polygon_count": 0,
+      "physical_county": "",
+      "target": "",
+      "area_ac": "",
+      "source_registration": "SEE QA",
+      "administratively_closed": false,
+      "blocker": "Farm3603/Tract848 source page includes Field3 (12.50 acres). Existing local SIFT match was geometrically degenerate."
+    },
+    {
+      "farmer": "Tywone Hilliard",
+      "status": "THREE_IMAGE_REGISTRATIONS_SOURCE_IDS_UNRECONCILED",
+      "accepted_polygon_count": 0,
+      "physical_county": "",
+      "target": "",
+      "area_ac": "",
+      "source_registration": "SEE QA",
+      "administratively_closed": false,
+      "blocker": "Three 2024 photographed field-map pages registered geographically; enrolled Farms1064 and3826 not confirmed from these maps."
+    }
+  ],
+  "acreage_tolerance_pct": 25
+}
