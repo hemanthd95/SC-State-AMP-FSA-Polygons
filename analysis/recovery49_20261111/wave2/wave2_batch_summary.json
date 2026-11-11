@@ -1,0 +1,394 @@
+[
+  {
+    "name": "Samuel Lance Jr",
+    "source_pdf": "Samuel Lance JR.pdf",
+    "source_page": 1,
+    "enrolled_farm_tract_field": "3740/10333/2161",
+    "excel_farm_address": "134 Oxford Lane, Allendale, SC 29810",
+    "geocoded_address_anchors": [
+      {
+        "provider": "US_CENSUS_ADDRESS",
+        "lon": -81.274705823725,
+        "lat": 33.040972695752,
+        "matched_address": "134 OXFORD LN, ALLENDALE, SC, 29810"
+      }
+    ],
+    "tile_requests": 26,
+    "loaded_tiles": 23,
+    "status": "WEAK_IMAGE_MATCH_REJECTED",
+    "inliers": 80,
+    "rmse_px": 0.0,
+    "source_spread": [
+      516.5321655273438,
+      458.79083251953125
+    ],
+    "image_spread": [
+      0.0,
+      0.0
+    ],
+    "valid_geometric_match": false,
+    "address_anchor": {
+      "provider": "US_CENSUS_ADDRESS",
+      "lon": -81.274705823725,
+      "lat": 33.040972695752,
+      "matched_address": "134 OXFORD LN, ALLENDALE, SC, 29810"
+    },
+    "imagery_provider": "ESRI_World",
+    "tile_offset": [
+      1,
+      -1
+    ],
+    "tile_bbox_epsg3857": [
+      -9047573.866670173,
+      3899108.667122321,
+      -9045823.866670173,
+      3900858.667122321
+    ],
+    "tile_size_px": 900,
+    "source_pdf_page_points_to_tile_H": [
+      [
+        -0.1178152563727817,
+        -0.6962383038008553,
+        274.92929294162235
+      ],
+      [
+        -0.019939359770110705,
+        -0.11783317757498943,
+        46.529747097945666
+      ],
+      [
+        -0.0004285292960681286,
+        -0.0025324267790871324,
+        1.0
+      ]
+    ]
+  },
+  {
+    "name": "LaTonya Flood",
+    "source_pdf": "Latonya Flood_FSAmap.pdf",
+    "source_page": 1,
+    "enrolled_farm_tract_field": "13739/45688/2",
+    "excel_farm_address": "327 Underwood Ln, Summerville, SC 29486",
+    "geocoded_address_anchors": [
+      {
+        "provider": "US_CENSUS_ADDRESS",
+        "lon": -80.092962401652,
+        "lat": 33.056456224549,
+        "matched_address": "327 UNDERWOOD LN, SUMMERVILLE, SC, 29486"
+      }
+    ],
+    "tile_requests": 26,
+    "loaded_tiles": 19,
+    "status": "NO_MATCH_IN_LOCAL_ADDRESS_WINDOW"
+  },
+  {
+    "name": "Tiffany Loadholt",
+    "source_pdf": "Tifanny Loadholt_FSA_Map.pdf",
+    "source_page": 1,
+    "enrolled_farm_tract_field": "3779/10394/54",
+    "excel_farm_address": "115 Oxford Lane, Allendale, SC 29810",
+    "geocoded_address_anchors": [
+      {
+        "provider": "US_CENSUS_ADDRESS",
+        "lon": -81.275007352667,
+        "lat": 33.041138089189,
+        "matched_address": "115 OXFORD LN, ALLENDALE, SC, 29810"
+      }
+    ],
+    "tile_requests": 26,
+    "loaded_tiles": 17,
+    "status": "REGISTERED_PHOTO_CANDIDATE_NEEDS_FIELD_TRACE",
+    "inliers": 85,
+    "rmse_px": 0.772,
+    "source_spread": [
+      731.5165405273438,
+      610.9170532226562
+    ],
+    "image_spread": [
+      416.24395751953125,
+      345.29150390625
+    ],
+    "valid_geometric_match": true,
+    "address_anchor": {
+      "provider": "US_CENSUS_ADDRESS",
+      "lon": -81.275007352667,
+      "lat": 33.041138089189,
+      "matched_address": "115 OXFORD LN, ALLENDALE, SC, 29810"
+    },
+    "imagery_provider": "USGS_NAIP",
+    "tile_offset": [
+      0,
+      1
+    ],
+    "tile_bbox_epsg3857": [
+      -9048367.432718456,
+      3900650.630560787,
+      -9046617.432718456,
+      3902400.630560787
+    ],
+    "tile_size_px": 900,
+    "source_pdf_page_points_to_tile_H": [
+      [
+        0.8091692583931696,
+        -0.02465138970173844,
+        256.15005856867083
+      ],
+      [
+        -0.00846170565630857,
+        0.7725397874459334,
+        498.77632745114676
+      ],
+      [
+        -7.3535731259558225e-06,
+        -4.51054644368676e-05,
+        1.0
+      ]
+    ]
+  },
+  {
+    "name": "Sharon Taylor",
+    "source_pdf": "Sharon Taylor_Farm_FSA_Map.pdf",
+    "source_page": 1,
+    "enrolled_farm_tract_field": "1134/1563/8",
+    "excel_farm_address": "7881 White Point Road, Ravenel, SC 29470",
+    "geocoded_address_anchors": [],
+    "status": "ADDRESS_NOT_GEOCODED"
+  },
+  {
+    "name": "Christian Richburg",
+    "source_pdf": "Christian Richburg_FSA Map.pdf",
+    "source_page": 1,
+    "enrolled_farm_tract_field": "1375/1022/1",
+    "excel_farm_address": "3574 Rev JW Carter Road, Summerton, SC 29148",
+    "geocoded_address_anchors": [],
+    "status": "ADDRESS_NOT_GEOCODED"
+  },
+  {
+    "name": "Ivan Flood",
+    "source_pdf": "Iven Flood_FSA_Map.pdf",
+    "source_page": 1,
+    "enrolled_farm_tract_field": "577/1397/1",
+    "excel_farm_address": "337 Underwood Ln, Summerville, SC 29486",
+    "geocoded_address_anchors": [
+      {
+        "provider": "US_CENSUS_ADDRESS",
+        "lon": -80.092950162982,
+        "lat": 33.056401533067,
+        "matched_address": "337 UNDERWOOD LN, SUMMERVILLE, SC, 29486"
+      }
+    ],
+    "tile_requests": 26,
+    "loaded_tiles": 21,
+    "status": "NO_MATCH_IN_LOCAL_ADDRESS_WINDOW"
+  },
+  {
+    "name": "Jan Davis Boneparte",
+    "source_pdf": "Jan Davis-Boneparte_FSA_Map.pdf",
+    "source_page": 1,
+    "enrolled_farm_tract_field": "3549/8353/2",
+    "excel_farm_address": "114 Generation Lane, Cameron, SC 29030",
+    "geocoded_address_anchors": [
+      {
+        "provider": "US_CENSUS_ADDRESS",
+        "lon": -80.74932122002,
+        "lat": 33.552868607206,
+        "matched_address": "114 GENERATION LN, CAMERON, SC, 29030"
+      }
+    ],
+    "tile_requests": 26,
+    "loaded_tiles": 21,
+    "status": "REGISTERED_PHOTO_CANDIDATE_NEEDS_FIELD_TRACE",
+    "inliers": 201,
+    "rmse_px": 0.58,
+    "source_spread": [
+      530.601318359375,
+      808.1453247070312
+    ],
+    "image_spread": [
+      299.3602294921875,
+      454.0914306640625
+    ],
+    "valid_geometric_match": true,
+    "address_anchor": {
+      "provider": "US_CENSUS_ADDRESS",
+      "lon": -80.74932122002,
+      "lat": 33.552868607206,
+      "matched_address": "114 GENERATION LN, CAMERON, SC, 29030"
+    },
+    "imagery_provider": "USGS_NAIP",
+    "tile_offset": [
+      -1,
+      0
+    ],
+    "tile_bbox_epsg3857": [
+      -8990608.320115106,
+      3968045.0631087883,
+      -8988858.320115106,
+      3969795.0631087883
+    ],
+    "tile_size_px": 900,
+    "source_pdf_page_points_to_tile_H": [
+      [
+        0.8186766637953161,
+        -0.0008511047943249895,
+        569.0653409017817
+      ],
+      [
+        0.0028584506939817998,
+        0.8190326453047082,
+        137.03710680658253
+      ],
+      [
+        4.836106923789321e-08,
+        3.2957155258108963e-06,
+        1.0
+      ]
+    ]
+  },
+  {
+    "name": "Eartha Pinckney",
+    "source_pdf": "Eartha_Pinckney_FSA_Map.pdf",
+    "source_page": 1,
+    "enrolled_farm_tract_field": "6579/22687/11",
+    "excel_farm_address": "865 McDanieltown Rd, Ridgeville, SC 29472",
+    "geocoded_address_anchors": [
+      {
+        "provider": "US_CENSUS_ADDRESS",
+        "lon": -80.411692401724,
+        "lat": 32.938558335154,
+        "matched_address": "865 MCDANIELTOWN RD, RIDGEVILLE, SC, 29472"
+      }
+    ],
+    "tile_requests": 26,
+    "loaded_tiles": 16,
+    "status": "REGISTERED_PHOTO_CANDIDATE_NEEDS_FIELD_TRACE",
+    "inliers": 138,
+    "rmse_px": 0.714,
+    "source_spread": [
+      503.7151794433594,
+      514.8765258789062
+    ],
+    "image_spread": [
+      569.6095581054688,
+      579.4796752929688
+    ],
+    "valid_geometric_match": true,
+    "address_anchor": {
+      "provider": "US_CENSUS_ADDRESS",
+      "lon": -80.411692401724,
+      "lat": 32.938558335154,
+      "matched_address": "865 MCDANIELTOWN RD, RIDGEVILLE, SC, 29472"
+    },
+    "imagery_provider": "USGS_NAIP",
+    "tile_offset": [
+      0,
+      1
+    ],
+    "tile_bbox_epsg3857": [
+      -8952263.651985262,
+      3887036.4468298256,
+      -8950513.651985262,
+      3888786.4468298256
+    ],
+    "tile_size_px": 900,
+    "source_pdf_page_points_to_tile_H": [
+      [
+        1.6510549443279845,
+        0.003342182645963792,
+        250.4016570441802
+      ],
+      [
+        -0.004209822260491614,
+        1.6360383043704787,
+        213.3044932222366
+      ],
+      [
+        1.1394358385212706e-05,
+        -1.8453462732670589e-06,
+        1.0
+      ]
+    ]
+  },
+  {
+    "name": "Deone Jones",
+    "source_pdf": "Deone Jones_FSA Map.pdf",
+    "source_page": 1,
+    "enrolled_farm_tract_field": "1659/7406/18",
+    "excel_farm_address": "122 Hitching Post Road, Greenwood, SC 29646",
+    "geocoded_address_anchors": [
+      {
+        "provider": "US_CENSUS_ADDRESS",
+        "lon": -82.103835344632,
+        "lat": 34.162779582168,
+        "matched_address": "122 HITCHING POST RD, GREENWOOD, SC, 29646"
+      }
+    ],
+    "tile_requests": 26,
+    "loaded_tiles": 18,
+    "status": "NO_MATCH_IN_LOCAL_ADDRESS_WINDOW"
+  },
+  {
+    "name": "David Gates",
+    "source_pdf": "David Gates FSA_Map.pdf",
+    "source_page": 1,
+    "enrolled_farm_tract_field": "3107/16607/34",
+    "excel_farm_address": "220 Island Creek Road, Cowpens, SC 29330",
+    "geocoded_address_anchors": [
+      {
+        "provider": "US_CENSUS_ADDRESS",
+        "lon": -81.825259807884,
+        "lat": 35.121906481171,
+        "matched_address": "220 ISLAND CREEK RD, COWPENS, SC, 29330"
+      }
+    ],
+    "tile_requests": 26,
+    "loaded_tiles": 21,
+    "status": "WEAK_IMAGE_MATCH_REJECTED",
+    "inliers": 31,
+    "rmse_px": 0.389,
+    "source_spread": [
+      545.6480102539062,
+      705.0285034179688
+    ],
+    "image_spread": [
+      160.48928833007812,
+      205.4568634033203
+    ],
+    "valid_geometric_match": false,
+    "address_anchor": {
+      "provider": "US_CENSUS_ADDRESS",
+      "lon": -81.825259807884,
+      "lat": 35.121906481171,
+      "matched_address": "220 ISLAND CREEK RD, COWPENS, SC, 29330"
+    },
+    "imagery_provider": "USGS_NAIP",
+    "tile_offset": [
+      0,
+      0
+    ],
+    "tile_bbox_epsg3857": [
+      -9109621.25584096,
+      4179585.113252431,
+      -9107871.25584096,
+      4181335.113252431
+    ],
+    "tile_size_px": 900,
+    "source_pdf_page_points_to_tile_H": [
+      [
+        0.42563035310429204,
+        -0.0009201152064943946,
+        358.8530305929571
+      ],
+      [
+        0.00028423198333607015,
+        0.42156729980028057,
+        194.2481583547137
+      ],
+      [
+        6.923154913555836e-07,
+        -1.4294144097378283e-06,
+        1.0
+      ]
+    ]
+  }
+]

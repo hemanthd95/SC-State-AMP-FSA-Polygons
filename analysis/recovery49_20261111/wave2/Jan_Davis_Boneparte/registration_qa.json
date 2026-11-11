@@ -1,0 +1,64 @@
+{
+  "name": "Jan Davis Boneparte",
+  "source_pdf": "Jan Davis-Boneparte_FSA_Map.pdf",
+  "source_page": 1,
+  "enrolled_farm_tract_field": "3549/8353/2",
+  "excel_farm_address": "114 Generation Lane, Cameron, SC 29030",
+  "geocoded_address_anchors": [
+    {
+      "provider": "US_CENSUS_ADDRESS",
+      "lon": -80.74932122002,
+      "lat": 33.552868607206,
+      "matched_address": "114 GENERATION LN, CAMERON, SC, 29030"
+    }
+  ],
+  "tile_requests": 26,
+  "loaded_tiles": 21,
+  "status": "REGISTERED_PHOTO_CANDIDATE_NEEDS_FIELD_TRACE",
+  "inliers": 201,
+  "rmse_px": 0.58,
+  "source_spread": [
+    530.601318359375,
+    808.1453247070312
+  ],
+  "image_spread": [
+    299.3602294921875,
+    454.0914306640625
+  ],
+  "valid_geometric_match": true,
+  "address_anchor": {
+    "provider": "US_CENSUS_ADDRESS",
+    "lon": -80.74932122002,
+    "lat": 33.552868607206,
+    "matched_address": "114 GENERATION LN, CAMERON, SC, 29030"
+  },
+  "imagery_provider": "USGS_NAIP",
+  "tile_offset": [
+    -1,
+    0
+  ],
+  "tile_bbox_epsg3857": [
+    -8990608.320115106,
+    3968045.0631087883,
+    -8988858.320115106,
+    3969795.0631087883
+  ],
+  "tile_size_px": 900,
+  "source_pdf_page_points_to_tile_H": [
+    [
+      0.8186766637953161,
+      -0.0008511047943249895,
+      569.0653409017817
+    ],
+    [
+      0.0028584506939817998,
+      0.8190326453047082,
+      137.03710680658253
+    ],
+    [
+      4.836106923789321e-08,
+      3.2957155258108963e-06,
+      1.0
+    ]
+  ]
+}

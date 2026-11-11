@@ -1,0 +1,64 @@
+{
+  "name": "Eartha Pinckney",
+  "source_pdf": "Eartha_Pinckney_FSA_Map.pdf",
+  "source_page": 1,
+  "enrolled_farm_tract_field": "6579/22687/11",
+  "excel_farm_address": "865 McDanieltown Rd, Ridgeville, SC 29472",
+  "geocoded_address_anchors": [
+    {
+      "provider": "US_CENSUS_ADDRESS",
+      "lon": -80.411692401724,
+      "lat": 32.938558335154,
+      "matched_address": "865 MCDANIELTOWN RD, RIDGEVILLE, SC, 29472"
+    }
+  ],
+  "tile_requests": 26,
+  "loaded_tiles": 16,
+  "status": "REGISTERED_PHOTO_CANDIDATE_NEEDS_FIELD_TRACE",
+  "inliers": 138,
+  "rmse_px": 0.714,
+  "source_spread": [
+    503.7151794433594,
+    514.8765258789062
+  ],
+  "image_spread": [
+    569.6095581054688,
+    579.4796752929688
+  ],
+  "valid_geometric_match": true,
+  "address_anchor": {
+    "provider": "US_CENSUS_ADDRESS",
+    "lon": -80.411692401724,
+    "lat": 32.938558335154,
+    "matched_address": "865 MCDANIELTOWN RD, RIDGEVILLE, SC, 29472"
+  },
+  "imagery_provider": "USGS_NAIP",
+  "tile_offset": [
+    0,
+    1
+  ],
+  "tile_bbox_epsg3857": [
+    -8952263.651985262,
+    3887036.4468298256,
+    -8950513.651985262,
+    3888786.4468298256
+  ],
+  "tile_size_px": 900,
+  "source_pdf_page_points_to_tile_H": [
+    [
+      1.6510549443279845,
+      0.003342182645963792,
+      250.4016570441802
+    ],
+    [
+      -0.004209822260491614,
+      1.6360383043704787,
+      213.3044932222366
+    ],
+    [
+      1.1394358385212706e-05,
+      -1.8453462732670589e-06,
+      1.0
+    ]
+  ]
+}

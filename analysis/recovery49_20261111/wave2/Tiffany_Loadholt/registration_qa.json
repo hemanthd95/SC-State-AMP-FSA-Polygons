@@ -1,0 +1,64 @@
+{
+  "name": "Tiffany Loadholt",
+  "source_pdf": "Tifanny Loadholt_FSA_Map.pdf",
+  "source_page": 1,
+  "enrolled_farm_tract_field": "3779/10394/54",
+  "excel_farm_address": "115 Oxford Lane, Allendale, SC 29810",
+  "geocoded_address_anchors": [
+    {
+      "provider": "US_CENSUS_ADDRESS",
+      "lon": -81.275007352667,
+      "lat": 33.041138089189,
+      "matched_address": "115 OXFORD LN, ALLENDALE, SC, 29810"
+    }
+  ],
+  "tile_requests": 26,
+  "loaded_tiles": 17,
+  "status": "REGISTERED_PHOTO_CANDIDATE_NEEDS_FIELD_TRACE",
+  "inliers": 85,
+  "rmse_px": 0.772,
+  "source_spread": [
+    731.5165405273438,
+    610.9170532226562
+  ],
+  "image_spread": [
+    416.24395751953125,
+    345.29150390625
+  ],
+  "valid_geometric_match": true,
+  "address_anchor": {
+    "provider": "US_CENSUS_ADDRESS",
+    "lon": -81.275007352667,
+    "lat": 33.041138089189,
+    "matched_address": "115 OXFORD LN, ALLENDALE, SC, 29810"
+  },
+  "imagery_provider": "USGS_NAIP",
+  "tile_offset": [
+    0,
+    1
+  ],
+  "tile_bbox_epsg3857": [
+    -9048367.432718456,
+    3900650.630560787,
+    -9046617.432718456,
+    3902400.630560787
+  ],
+  "tile_size_px": 900,
+  "source_pdf_page_points_to_tile_H": [
+    [
+      0.8091692583931696,
+      -0.02465138970173844,
+      256.15005856867083
+    ],
+    [
+      -0.00846170565630857,
+      0.7725397874459334,
+      498.77632745114676
+    ],
+    [
+      -7.3535731259558225e-06,
+      -4.51054644368676e-05,
+      1.0
+    ]
+  ]
+}

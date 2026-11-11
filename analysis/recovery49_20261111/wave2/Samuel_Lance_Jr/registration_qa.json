@@ -1,0 +1,64 @@
+{
+  "name": "Samuel Lance Jr",
+  "source_pdf": "Samuel Lance JR.pdf",
+  "source_page": 1,
+  "enrolled_farm_tract_field": "3740/10333/2161",
+  "excel_farm_address": "134 Oxford Lane, Allendale, SC 29810",
+  "geocoded_address_anchors": [
+    {
+      "provider": "US_CENSUS_ADDRESS",
+      "lon": -81.274705823725,
+      "lat": 33.040972695752,
+      "matched_address": "134 OXFORD LN, ALLENDALE, SC, 29810"
+    }
+  ],
+  "tile_requests": 26,
+  "loaded_tiles": 23,
+  "status": "WEAK_IMAGE_MATCH_REJECTED",
+  "inliers": 80,
+  "rmse_px": 0.0,
+  "source_spread": [
+    516.5321655273438,
+    458.79083251953125
+  ],
+  "image_spread": [
+    0.0,
+    0.0
+  ],
+  "valid_geometric_match": false,
+  "address_anchor": {
+    "provider": "US_CENSUS_ADDRESS",
+    "lon": -81.274705823725,
+    "lat": 33.040972695752,
+    "matched_address": "134 OXFORD LN, ALLENDALE, SC, 29810"
+  },
+  "imagery_provider": "ESRI_World",
+  "tile_offset": [
+    1,
+    -1
+  ],
+  "tile_bbox_epsg3857": [
+    -9047573.866670173,
+    3899108.667122321,
+    -9045823.866670173,
+    3900858.667122321
+  ],
+  "tile_size_px": 900,
+  "source_pdf_page_points_to_tile_H": [
+    [
+      -0.1178152563727817,
+      -0.6962383038008553,
+      274.92929294162235
+    ],
+    [
+      -0.019939359770110705,
+      -0.11783317757498943,
+      46.529747097945666
+    ],
+    [
+      -0.0004285292960681286,
+      -0.0025324267790871324,
+      1.0
+    ]
+  ]
+}

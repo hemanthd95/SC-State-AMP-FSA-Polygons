@@ -1,0 +1,64 @@
+{
+  "name": "David Gates",
+  "source_pdf": "David Gates FSA_Map.pdf",
+  "source_page": 1,
+  "enrolled_farm_tract_field": "3107/16607/34",
+  "excel_farm_address": "220 Island Creek Road, Cowpens, SC 29330",
+  "geocoded_address_anchors": [
+    {
+      "provider": "US_CENSUS_ADDRESS",
+      "lon": -81.825259807884,
+      "lat": 35.121906481171,
+      "matched_address": "220 ISLAND CREEK RD, COWPENS, SC, 29330"
+    }
+  ],
+  "tile_requests": 26,
+  "loaded_tiles": 21,
+  "status": "WEAK_IMAGE_MATCH_REJECTED",
+  "inliers": 31,
+  "rmse_px": 0.389,
+  "source_spread": [
+    545.6480102539062,
+    705.0285034179688
+  ],
+  "image_spread": [
+    160.48928833007812,
+    205.4568634033203
+  ],
+  "valid_geometric_match": false,
+  "address_anchor": {
+    "provider": "US_CENSUS_ADDRESS",
+    "lon": -81.825259807884,
+    "lat": 35.121906481171,
+    "matched_address": "220 ISLAND CREEK RD, COWPENS, SC, 29330"
+  },
+  "imagery_provider": "USGS_NAIP",
+  "tile_offset": [
+    0,
+    0
+  ],
+  "tile_bbox_epsg3857": [
+    -9109621.25584096,
+    4179585.113252431,
+    -9107871.25584096,
+    4181335.113252431
+  ],
+  "tile_size_px": 900,
+  "source_pdf_page_points_to_tile_H": [
+    [
+      0.42563035310429204,
+      -0.0009201152064943946,
+      358.8530305929571
+    ],
+    [
+      0.00028423198333607015,
+      0.42156729980028057,
+      194.2481583547137
+    ],
+    [
+      6.923154913555836e-07,
+      -1.4294144097378283e-06,
+      1.0
+    ]
+  ]
+}

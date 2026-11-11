@@ -1,0 +1,18 @@
+{
+  "name": "LaTonya Flood",
+  "source_pdf": "Latonya Flood_FSAmap.pdf",
+  "source_page": 1,
+  "enrolled_farm_tract_field": "13739/45688/2",
+  "excel_farm_address": "327 Underwood Ln, Summerville, SC 29486",
+  "geocoded_address_anchors": [
+    {
+      "provider": "US_CENSUS_ADDRESS",
+      "lon": -80.092962401652,
+      "lat": 33.056456224549,
+      "matched_address": "327 UNDERWOOD LN, SUMMERVILLE, SC, 29486"
+    }
+  ],
+  "tile_requests": 26,
+  "loaded_tiles": 19,
+  "status": "NO_MATCH_IN_LOCAL_ADDRESS_WINDOW"
+}
