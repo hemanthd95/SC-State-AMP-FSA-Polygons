@@ -1,0 +1,32 @@
+name: Batch2 final QA with Calvin broad-search and shared-source check
+on:
+  push:
+    paths:
+      - 'scripts/recovery49_batch2_final_qa_after_calvin.py'
+      - '.github/workflows/recovery49_batch2_final_qa_after_calvin.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python scripts/recovery49_batch2_final_qa_after_calvin.py
+      - name: Persist final five-farmer ZIP and status register
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin main
+          git reset --mixed origin/main
+          git add deliverables/AMP_Recovery49_Batch2_Five_Farmer_20261111.zip
+          git add deliverables/recovery49_batch2_five_20261111/BUILD_SUMMARY.json
+          git add deliverables/recovery49_batch2_five_20261111/Batch2_Five_Farmer_QA.csv
+          if ! git diff --cached --quiet; then
+            git commit -m "Finalize Batch2: Calvin 369-tile QA, exact shared source Tyrease, three source GIS folders"
+            git push origin HEAD:main
+          fi
