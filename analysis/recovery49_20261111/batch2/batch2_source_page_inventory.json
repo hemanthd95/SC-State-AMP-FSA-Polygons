@@ -25,6 +25,25 @@
     "count": 1
   },
   {
+    "name": "Joe Hilliard (alternate PDF)",
+    "source": "Joe_Hillard_FSA_Map.pdf",
+    "enrolled_target": "13859/45814/20 (identity not confirmed)",
+    "pages": [
+      {
+        "index": 1,
+        "pts_wh": [
+          612,
+          792
+        ],
+        "image_count": 2,
+        "text_len": 0,
+        "farm_tract_label_tokens": []
+      }
+    ],
+    "status": "FOUND_SOURCE",
+    "count": 1
+  },
+  {
     "name": "Calvin Blair",
     "source": "Calvin_Blair_FSA_Map.pdf",
     "enrolled_target": "3603/848/3",
@@ -44,6 +63,25 @@
           "Tract 848",
           "Acres"
         ]
+      }
+    ],
+    "status": "FOUND_SOURCE",
+    "count": 1
+  },
+  {
+    "name": "Tywone Hilliard (alternate FSA)",
+    "source": "Timothy J Hilliard_FSA_Map.pdf",
+    "enrolled_target": "1064/?/?;3826/?/? (identity not confirmed)",
+    "pages": [
+      {
+        "index": 1,
+        "pts_wh": [
+          602,
+          801
+        ],
+        "image_count": 1,
+        "text_len": 0,
+        "farm_tract_label_tokens": []
       }
     ],
     "status": "FOUND_SOURCE",
