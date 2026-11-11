@@ -1,0 +1,37 @@
+name: Batch1 second-tract aerial verification for Charles and Jasper
+on:
+  push:
+    paths:
+      - 'scripts/recovery49_batch1_extra_tracts.py'
+      - '.github/workflows/recovery49_batch1_extra_tracts.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  register:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install 'numpy<2.5' opencv-python-headless pymupdf requests
+      - name: Register Farm2715 second tract and Farm13709 remaining tract to NAIP
+        run: |
+          set -o pipefail
+          OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python scripts/recovery49_batch1_extra_tracts.py | tee /tmp/batch1_extra_tracts.log
+      - name: Publish source image registration candidates and QA only
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin main
+          git reset --mixed origin/main
+          git add analysis/recovery49_20261111/batch1_extra_tracts
+          if ! git diff --cached --quiet; then
+            git commit -m "Record NAIP registration QA for Charles Bright and Jasper Summers additional FSA tracts"
+            git push origin HEAD:main
+          fi
