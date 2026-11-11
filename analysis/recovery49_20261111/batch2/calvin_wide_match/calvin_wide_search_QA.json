@@ -1,0 +1,56 @@
+{
+  "producer": "Calvin Blair",
+  "target": "Farm3603/Tract848/Field3",
+  "source_fsa_acres": 12.5,
+  "search_anchor_lonlat": [
+    -80.436293255423,
+    33.594059411505
+  ],
+  "search_radius_max_km": 11,
+  "imagery_tiles_loaded": 369,
+  "providers": [
+    "USGS_NAIP",
+    "ESRI_World"
+  ],
+  "rule": "Do not accept one plausible field solely from address or acreage",
+  "status": "WEAK_OR_DEGENERATE_NOT_ACCEPTED",
+  "image_inliers": 86,
+  "rmse_px": 0.0,
+  "source_spread": [
+    790.68212890625,
+    825.4669189453125
+  ],
+  "target_spread": [
+    0.0,
+    0.0
+  ],
+  "homography_source_pdf_pts_to_tile": [
+    [
+      18.006758540700453,
+      -29.257239047974505,
+      700.74049382228
+    ],
+    [
+      14.072374701607739,
+      -22.864683262478007,
+      547.6323112360725
+    ],
+    [
+      0.025696757501349372,
+      -0.04175188861864428,
+      1.0
+    ]
+  ],
+  "bbox_epsg3857": [
+    -8961127.206492113,
+    3970423.500040753,
+    -8959127.206492113,
+    3972423.500040753
+  ],
+  "tile_size_px": 930,
+  "provider": "USGS_NAIP",
+  "grid_offset": [
+    -4,
+    -2
+  ]
+}
