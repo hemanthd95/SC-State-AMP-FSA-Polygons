@@ -1,0 +1,51 @@
+name: Batch2 add Tywone original FSA source fields without closing Year2
+on:
+  push:
+    paths:
+      - 'scripts/recovery49_batch2_tywone_source_fields.py'
+      - '.github/workflows/recovery49_batch2_tywone_source_fields.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  gis:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install 'numpy<2.5' opencv-python-headless shapely pyproj pyshp pillow reportlab pymupdf requests
+      - name: Register three 2024 FSA source fields to NAIP with relaxed acreage tolerance
+        run: |
+          set -o pipefail
+          AMP_FARM_WORKERS=2 python scripts/recovery49_batch2_tywone_source_fields.py | tee /tmp/batch2_tywone_gis.log
+      - name: Confirm one combined ZIP with exactly two mapped source producers
+        run: |
+          python - <<'PY'
+          import zipfile,json
+          p="deliverables/AMP_Recovery49_Batch2_Five_Farmer_20261111.zip"
+          with zipfile.ZipFile(p) as z:
+           n=z.namelist()
+           assert sum(x.endswith('.shp') for x in n)==2
+           assert sum(x.endswith('-FieldMap.pdf') for x in n)==2
+           assert sum(x.endswith('-CountyMap.pdf') for x in n)==2
+          d=json.load(open('deliverables/recovery49_batch2_five_20261111/BUILD_SUMMARY.json'))
+          assert d['year2_farmers_geographically_mapped']==1 and d['geographically_mapped_source_producers']==2,d
+          print("BATCH2_TWO_MAPPED_SOURCE_FARMERS",len(n),flush=True)
+          PY
+      - name: Commit only verified source geometries and consolidated ZIP
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin main
+          git reset --mixed origin/main
+          git add geojson/counties/recovery49_batch2_tywone_source_fields_20261111.geojson
+          git add deliverables/AMP_Recovery49_Batch2_Five_Farmer_20261111.zip
+          git add deliverables/recovery49_batch2_five_20261111/BUILD_SUMMARY.json
+          git add deliverables/recovery49_batch2_five_20261111/Batch2_Five_Farmer_QA.csv
+          if ! git diff --cached --quiet; then
+            git commit -m "Register 3 Tywone 2024 source fields with NAIP; preserve Year2 Farm-ID mismatch"
+            git push origin HEAD:main
+          fi
