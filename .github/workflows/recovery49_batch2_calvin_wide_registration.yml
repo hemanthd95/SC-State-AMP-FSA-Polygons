@@ -1,0 +1,37 @@
+name: Batch2 Calvin Blair Farm3603 wide NAIP search
+on:
+  push:
+    paths:
+      - 'scripts/recovery49_batch2_calvin_wide_registration.py'
+      - '.github/workflows/recovery49_batch2_calvin_wide_registration.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  search:
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install 'numpy<2.5' opencv-python-headless pymupdf requests
+      - name: Wider address-first SIFT source registration across NAIP and Esri aerial images
+        run: |
+          set -o pipefail
+          OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python scripts/recovery49_batch2_calvin_wide_registration.py | tee /tmp/calvin_wide_naip.log
+      - name: Persist registration evidence and QA, never guessed boundaries
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin main
+          git reset --mixed origin/main
+          git add analysis/recovery49_20261111/batch2/calvin_wide_match/
+          if ! git diff --cached --quiet; then
+            git commit -m "Record broader Calvin Blair Farm3603 NAIP source registration results"
+            git push origin HEAD:main
+          fi
