@@ -1,0 +1,34 @@
+name: Batch2 privacy-filtered FSA source aerial page previews
+on:
+  push:
+    paths:
+      - 'scripts/recovery49_batch2_render_fsa_aerial.py'
+      - '.github/workflows/recovery49_batch2_render_fsa_aerial.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install pymupdf pillow 'numpy<2.5'
+      - name: Render FSA aerial source maps only; exclude all non-map producer paperwork
+        run: python scripts/recovery49_batch2_render_fsa_aerial.py
+      - name: Save cropped FSA aerial pages to private GIS repository for identification
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin main
+          git reset --mixed origin/main
+          git add analysis/recovery49_20261111/batch2/source_page_previews
+          if ! git diff --cached --quiet; then
+            git commit -m "Review Batch2 farm source aerial pages while excluding tax and non-map documents"
+            git push origin HEAD:main
+          fi
