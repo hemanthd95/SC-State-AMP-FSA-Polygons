@@ -1,0 +1,122 @@
+[
+  {
+    "farmer": "L-Bright Jr., Charles",
+    "kind": "field",
+    "page": 1,
+    "render": "analysis/recovery49_20261111/batch1_visual_qa/L-Bright_Jr._Charles_field_p1.jpg",
+    "dimensions": [
+      735,
+      951
+    ]
+  },
+  {
+    "farmer": "L-Bright Jr., Charles",
+    "kind": "county",
+    "page": 1,
+    "render": "analysis/recovery49_20261111/batch1_visual_qa/L-Bright_Jr._Charles_county_p1.jpg",
+    "dimensions": [
+      735,
+      951
+    ]
+  },
+  {
+    "farmer": "L-Gadson, Joseph",
+    "kind": "field",
+    "page": 1,
+    "render": "analysis/recovery49_20261111/batch1_visual_qa/L-Gadson_Joseph_field_p1.jpg",
+    "dimensions": [
+      735,
+      951
+    ]
+  },
+  {
+    "farmer": "L-Gadson, Joseph",
+    "kind": "county",
+    "page": 1,
+    "render": "analysis/recovery49_20261111/batch1_visual_qa/L-Gadson_Joseph_county_p1.jpg",
+    "dimensions": [
+      735,
+      951
+    ]
+  },
+  {
+    "farmer": "L-Cobbs, Arthur",
+    "kind": "field",
+    "page": 1,
+    "render": "analysis/recovery49_20261111/batch1_visual_qa/L-Cobbs_Arthur_field_p1.jpg",
+    "dimensions": [
+      735,
+      951
+    ]
+  },
+  {
+    "farmer": "L-Cobbs, Arthur",
+    "kind": "county",
+    "page": 1,
+    "render": "analysis/recovery49_20261111/batch1_visual_qa/L-Cobbs_Arthur_county_p1.jpg",
+    "dimensions": [
+      735,
+      951
+    ]
+  },
+  {
+    "farmer": "L-Summers, Jasper",
+    "kind": "field",
+    "page": 1,
+    "render": "analysis/recovery49_20261111/batch1_visual_qa/L-Summers_Jasper_field_p1.jpg",
+    "dimensions": [
+      735,
+      951
+    ]
+  },
+  {
+    "farmer": "L-Summers, Jasper",
+    "kind": "field",
+    "page": 2,
+    "render": "analysis/recovery49_20261111/batch1_visual_qa/L-Summers_Jasper_field_p2.jpg",
+    "dimensions": [
+      735,
+      951
+    ]
+  },
+  {
+    "farmer": "L-Summers, Jasper",
+    "kind": "county",
+    "page": 1,
+    "render": "analysis/recovery49_20261111/batch1_visual_qa/L-Summers_Jasper_county_p1.jpg",
+    "dimensions": [
+      735,
+      951
+    ]
+  },
+  {
+    "farmer": "L-Berry, Margaret",
+    "kind": "field",
+    "page": 1,
+    "render": "analysis/recovery49_20261111/batch1_visual_qa/L-Berry_Margaret_field_p1.jpg",
+    "dimensions": [
+      735,
+      951
+    ]
+  },
+  {
+    "farmer": "L-Berry, Margaret",
+    "kind": "field",
+    "page": 2,
+    "render": "analysis/recovery49_20261111/batch1_visual_qa/L-Berry_Margaret_field_p2.jpg",
+    "dimensions": [
+      735,
+      951
+    ]
+  },
+  {
+    "farmer": "L-Berry, Margaret",
+    "kind": "county",
+    "page": 1,
+    "render": "analysis/recovery49_20261111/batch1_visual_qa/L-Berry_Margaret_county_p1.jpg",
+    "dimensions": [
+      735,
+      951
+    ]
+  }
+]
