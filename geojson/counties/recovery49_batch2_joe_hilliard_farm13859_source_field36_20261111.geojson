@@ -1,0 +1,58 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "producer": "Joe Hilliard",
+        "county": "Orangeburg",
+        "roster_county": "Orangeburg",
+        "farm_id": "13859",
+        "tract_id": "45814",
+        "field_id": "36",
+        "fsa_printed_acres": 25.32,
+        "geodesic_acres": 24.3122,
+        "area_difference_pct": -3.98,
+        "source_pdf": "Joe_Hillard_FSA_Map.pdf",
+        "source_page": 1,
+        "source_map_year": 2024,
+        "source_workbook_field_match": false,
+        "registered_provider": "USGS_NAIP",
+        "image_registration_inliers": 83,
+        "registration_rmse_px": 1.179,
+        "registration_method": "83-feature SIFT FSA photographed page to independent NAIP orthophoto",
+        "physical_county_basis": "2025 U.S. Census county polygon; FSA administrative county ignored",
+        "status": "FARM_TRACT_MATCH_SOURCE_FIELD36_BUT_YEAR2_FIELD20_ABSENT",
+        "geometry_quality": "FSA_PHOTO_APPROXIMATE_NOT_SURVEY",
+        "note": "Original source photo shows Field35 33.90ac, Field36 25.32ac, Field37 approx 0.9ac. Year2 target Field20 missing, DO NOT mark farmer completed."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.56816757048672,
+              33.456158830453035
+            ],
+            [
+              -80.56504197973926,
+              33.457427891514044
+            ],
+            [
+              -80.5636064044123,
+              33.454985046295846
+            ],
+            [
+              -80.56584843979232,
+              33.45345161596969
+            ],
+            [
+              -80.56816757048672,
+              33.456158830453035
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

@@ -3,7 +3,7 @@
   "date": "2026-11-11",
   "people": 5,
   "year2_farmers_geographically_mapped": 1,
-  "source_review_only": 3,
+  "source_review_only": 2,
   "admin_closed": 1,
   "note": "Count means geographically mapped enrolled target, not verified legal acreage. Additional enrollment source-ID review is separately tracked.",
   "mapped_farmer": "Christine Berry Zeigler",
@@ -32,14 +32,14 @@
     },
     {
       "farmer": "Joe Hilliard",
-      "status": "IMAGE_REGISTERED_SOURCE_FARM_MISMATCH",
-      "accepted_polygon_count": "0",
-      "physical_county": "",
-      "target": "",
-      "area_ac": "",
-      "source_registration": "SEE QA",
+      "status": "SOURCE_FARM13859_GEOREGISTERED_BUT_YEAR2_FIELD20_ABSENT",
+      "accepted_polygon_count": "1",
+      "physical_county": "Orangeburg",
+      "target": "SOURCE 13859/45814/36 (Year2 13859/45814/20 remains missing)",
+      "area_ac": "24.3122",
+      "source_registration": "83 NAIP matches, 1.18px",
       "administratively_closed": "False",
-      "blocker": "612 NAIP features registered source Farm6528/Tract41114; Year2 target Farm13859/Tract45814/Field20; do NOT substitute source field."
+      "blocker": "Source Field36 mapped; Year2 Field20 is absent and remains unverified"
     },
     {
       "farmer": "Calvin Blair",
@@ -65,11 +65,12 @@
     }
   ],
   "acreage_tolerance_pct": 25,
-  "geographically_mapped_source_producers": 2,
+  "geographically_mapped_source_producers": 3,
   "additional_source_only_fields": [
     "Tywone 3873/3895/4",
     "Tywone 4261/5953/2",
-    "Tywone 960/3812/1"
+    "Tywone 960/3812/1",
+    "Joe Hilliard 13859/45814/36"
   ],
   "ty_hilliard_note": "Three source FSA farms 2024 geographically registered, but none matches Year2 Farm1064 or3826. Farmer NOT CLOSED.",
   "closed_year2_farmers": [
@@ -77,5 +78,6 @@
   ],
   "remaining_followup_farmers_from_44": 43,
   "baseline_outstanding_year2": 44,
-  "year2_completion_rule": "Registered source Farm1271 Tract469 Field1 matched to enrolled target; printed FSA source footer visually confirmed. Mapped acreage may differ up to 25% and is not survey accuracy."
+  "year2_completion_rule": "Registered source Farm1271 Tract469 Field1 matched to enrolled target; printed FSA source footer visually confirmed. Mapped acreage may differ up to 25% and is not survey accuracy.",
+  "joe_hilliard_note": "Correct enrolled Farm13859/Tract45814 source now registered, but only source Fields35/36/37 shown. Field20 remains missing; farmer NOT CLOSED."
 }
