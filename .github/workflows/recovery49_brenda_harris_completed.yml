@@ -1,0 +1,35 @@
+name: Complete Brenda Harris Farm4943 Field3 GIS
+on:
+  push:
+    paths:
+      - 'scripts/recovery49_brenda_harris_completed.py'
+      - '.github/workflows/recovery49_brenda_harris_completed.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install 'numpy<2.5' opencv-python-headless pyshp shapely pyproj pillow reportlab pymupdf requests
+      - name: Validate FSA source field, acreage, Census county and create map package
+        run: python scripts/recovery49_brenda_harris_completed.py
+      - name: Publish per-farmer GIS ZIP in private repository
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin main
+          git reset --mixed origin/main
+          git add geojson/counties/brenda_harris_farm4943_field3_verified_20261111.geojson
+          git add deliverables/Brenda_M_Harris_Completed_AMP_Farmer_GIS_20261111.zip
+          if ! git diff --cached --quiet; then
+            git commit -m "Complete Brenda Harris Year2 Farm4943 Tract4414 Field3 GIS package"
+            git push origin HEAD:main
+          fi
