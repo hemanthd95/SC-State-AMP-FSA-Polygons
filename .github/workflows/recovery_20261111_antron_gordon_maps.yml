@@ -1,0 +1,40 @@
+name: Antron Gordon provisional field GIS and Weekley maps
+on:
+  push:
+    paths:
+      - 'scripts/recovery_20261111_antron_gordon_maps.py'
+      - '.github/workflows/recovery_20261111_antron_gordon_maps.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install 'numpy<2.5' opencv-python-headless pillow pyshp shapely pyproj pymupdf reportlab requests
+      - name: Register FSA Gordon polygons to NAIP, geodetic-acreage QA, render maps
+        run: |
+          set -o pipefail
+          AMP_FARM_WORKERS=3 python scripts/recovery_20261111_antron_gordon_maps.py | tee /tmp/gordon_map_generation.log
+      - name: Publish source ID flags, provisional GIS and downloadable farmer ZIP
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin main
+          git reset --mixed origin/main
+          git add geojson/counties/antron_williams_gordon_manual_road_registration_20261111.geojson || true
+          git add deliverables/Antron_Williams_Gordon_Drive_Provisional_GIS_20261111.zip || true
+          git add deliverables/antron_williams_gordon_20261111/QA_Provisional_Gordon_Registration.json || true
+          git add deliverables/antron_williams_gordon_20261111/README_START_HERE.txt || true
+          if ! git diff --cached --quiet; then
+            git commit -m "Georeference Gordon Dr FSA fields with provisional road controls and publish Weekley farmer maps"
+            git push origin HEAD:main
+          fi
