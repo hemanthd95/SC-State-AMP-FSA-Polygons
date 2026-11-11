@@ -1,0 +1,30 @@
+name: Identify exact Reverend J W Carter Road intersections for Jaivean source FSA
+on:
+  push:
+    paths:
+      - 'scripts/recovery49_jaivean_road_intersections.py'
+      - '.github/workflows/recovery49_jaivean_road_intersections.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  gis:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install shapely pyproj requests
+      - name: Match exact Clarendon TIGER road geometry and intersection bearings
+        run: python scripts/recovery49_jaivean_road_intersections.py
+      - name: Preserve road-feature and junction QA JSON
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin main
+          git reset --mixed origin/main
+          git add analysis/recovery49_20261111/Jaivean_Spann/Road_Intersection_Candidates/
+          git commit -m "Audit exact Reverend J W Carter Road corridor candidate intersections"
+          git push origin HEAD:main
