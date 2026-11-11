@@ -10,7 +10,9 @@ out=root/"analysis/recovery49_20261111/batch2"
 out.mkdir(parents=True,exist_ok=True)
 cases=[
  ("Joe Hilliard","Joe Hillard_FSA_Map.pdf","13859/45814/20"),
+ ("Joe Hilliard (alternate PDF)","Joe_Hillard_FSA_Map.pdf","13859/45814/20 (identity not confirmed)"),
  ("Calvin Blair","Calvin_Blair_FSA_Map.pdf","3603/848/3"),
+ ("Tywone Hilliard (alternate FSA)","Timothy J Hilliard_FSA_Map.pdf","1064/?/?;3826/?/? (identity not confirmed)"),
  ("Tywone Hilliard","Tywone Hillard_FSA_Map.pdf","1064/?/?;3826/?/?"),
  ("Christine Berry Zeigler","Christine Berry Zeigler_FSA Map.pdf","1271/469/1")
 ]
