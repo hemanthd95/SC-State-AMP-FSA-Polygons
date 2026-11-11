@@ -1,0 +1,37 @@
+name: Consolidate Antron Williams Cinnabar and Gordon into one farmer GIS folder
+on:
+  push:
+    paths:
+      - 'scripts/recovery_20261111_antron_combined_weekley.py'
+      - '.github/workflows/recovery_20261111_antron_combined_weekley.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  render-and-publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 38
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install 'numpy<2.5' pyshp shapely pyproj pillow reportlab pymupdf requests
+      - name: Build 6-feature shapefile, 1 county topo PDF, 2 zoomed satellite PDF pages
+        run: |
+          set -o pipefail
+          AMP_FARM_WORKERS=2 python scripts/recovery_20261111_antron_combined_weekley.py | tee /tmp/antron_combined.log
+      - name: Publish one Antron farmer ZIP and QA with no tax paperwork
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin main
+          git reset --mixed origin/main
+          git add deliverables/Antron_Williams_Combined_Provisional_Weekley_Folder_20261111.zip || true
+          git add deliverables/antron_williams_combined_20261111/README_START_HERE.txt || true
+          git add "deliverables/antron_williams_combined_20261111/Orangeburg/L-Williams, Antron/FINAL_QA.json" || true
+          if ! git diff --cached --quiet; then
+            git commit -m "Publish six Antron source-field polygons in one Weekley farmer shapefile and two-page satellite atlas"
+            git push origin HEAD:main
+          fi
