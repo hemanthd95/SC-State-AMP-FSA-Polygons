@@ -42,7 +42,50 @@ if not anchors:
        dict(q=addresses[0],format="jsonv2",limit=2),25).json()
   for a in d:anchors.append(dict(source="OSM",lat=float(a["lat"]),lon=float(a["lon"]),matched=a.get("display_name")))
  except Exception as e:print("OSM_ERROR",str(e)[:160],flush=True)
-if not anchors:raise RuntimeError("NO_VERIFIED_FARM_ADDRESS_LOCATION — no origin for search")
+
+if not anchors:
+ # The residential 1353 address does not resolve on Census/ArcGIS/OSM.
+ # Search the NAMED ROAD using TIGER geometry instead; no coordinate fabrication.
+ road_query="https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Transportation_LargeScale/MapServer/2/query"
+ road_name_guesses=["Rev J W Carter Rd","Reverend J W Carter Rd","Rev JW Carter Rd"]
+ for name in road_name_guesses:
+  try:
+   d=req(road_query,dict(where="NAME LIKE '%Carter%'",outFields="NAME",
+     returnGeometry="true",outSR="4326",f="geojson",resultRecordCount=1000,
+     geometry="-81.6,33.1,-80.2,34.2",geometryType="esriGeometryEnvelope",
+     inSR=4326,spatialRel="esriSpatialRelIntersects"),38).json()
+   candidates=[]
+   for q in d.get("features",[]):
+    from shapely.geometry import shape
+    g=shape(q["geometry"])
+    nm=str(q["properties"].get("NAME") or "")
+    c=g.representative_point()
+    if -81.6<c.x<-80.2 and 33.1<c.y<34.2 and ("carter" in nm.lower()):
+     candidates.append((nm,c.x,c.y,g))
+   if candidates:
+    print("ROAD_CONTROL_CANDIDATES",[(a,round(b,6),round(c,6)) for a,b,c,_ in candidates],flush=True)
+    for nm,xp,yp,g in candidates:
+     anchors.append(dict(source="CENSUS_TIGER_ROAD_ONLY_NOT_ADDRESS",lon=xp,lat=yp,
+        matched=nm,quality="search_corridor_only",
+        road_geometry_type=g.geom_type))
+    break
+  except Exception as e:print("TIGER_FALLBACK_FAIL",str(e)[:160],flush=True)
+if not anchors:
+ try:
+  for textaddr in ["Rev J W Carter Rd, Manning, SC","Rev JW Carter Rd, Summerton, SC",
+                   "Moses Dingle Rd, Manning, SC","Silver Rd, Manning, SC"]:
+   d=req("https://geocode-api.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates",
+      dict(SingleLine=textaddr,f="json",maxLocations=3),25).json()
+   cand=[q for q in d.get("candidates",[])
+         if -81.6<q["location"]["x"]<-80.2 and 33.1<q["location"]["y"]<34.2]
+   if cand:
+    anchors.append(dict(source="ARCGIS_STREET_ONLY_NOT_FARM_ADDRESS",
+      lon=cand[0]["location"]["x"],lat=cand[0]["location"]["y"],
+      matched=cand[0]["address"],quality="search_corridor_only"))
+    break
+ except Exception as e:print("STREET_FALLBACK_FAIL",str(e)[:180],flush=True)
+if not anchors:raise RuntimeError("NO_IDENTIFIABLE_ADDRESS_OR_ROAD_GEOGRAPHY")
+
 anchor=anchors[0]
 assert 33.0<anchor["lat"]<34.4 and -81.6<anchor["lon"]<-79.9
 lon,lat=anchor["lon"],anchor["lat"]
