@@ -1,0 +1,41 @@
+{
+  "date": "2026-11-11",
+  "verification": "Independently rendered both scanned FSA PDF page 1 at 612x792 RGB, compared exact pixel bytes",
+  "source_files": [
+    "Calvin_Blair_FSA_Map.pdf",
+    "Tyreese Riley_FSA Map.pdf"
+  ],
+  "farm_id": "3603",
+  "tract_id": "848",
+  "same_source_page_pixels": true,
+  "render_dimensions_rgb_pixels": [
+    612,
+    792,
+    3
+  ],
+  "sha256_of_rendered_rgb_bytes": "bd9a3364a3775cd6b4309e3f0ab3159d444ad61bfe1c5291e29e05ad9f967aef",
+  "opencv_sift_good_matches": 2500,
+  "opencv_ransac_inliers": 2500,
+  "mean_registration_rmse_px": 0,
+  "source_fields": [
+    {
+      "field_id": "1",
+      "fsa_acres": 16.96,
+      "producer": "Tyrease Riley"
+    },
+    {
+      "field_id": "2",
+      "fsa_acres": 2.41,
+      "producer_assignment": "not independently verified"
+    },
+    {
+      "field_id": "3",
+      "fsa_acres": 12.5,
+      "producer": "Calvin Blair"
+    }
+  ],
+  "physical_location": "NOT YET CONFIRMED",
+  "next_step": "Once Field3/Farm3603 image registers to geographically referenced USGS NAIP, reuse the exact same page homography to map and package separate Field1/Field3 farmer shapefiles. Do not claim coordinates merely because two original PDFs match each other.",
+  "source_counting_rule": "Two distinct producers but only one unique aerial source/physical farm. Complete fields separately; avoid double counting search work.",
+  "farmer_closed": false
+}
