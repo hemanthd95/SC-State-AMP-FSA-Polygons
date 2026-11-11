@@ -1,0 +1,76 @@
+{
+  "status": "ROAD_ONLY_CANDIDATES_NOT_YET_REGISTERED_FIELDS",
+  "candidates": [
+    {
+      "name": "western_bend",
+      "anchor_WGS84": [
+        -80.75572,
+        33.366365
+      ],
+      "georeference_model": "source FSA scale bar and north-up with one road control (candidate only)",
+      "bbox_epsg3857": [
+        -8990410.629044179,
+        3943309.368414914,
+        -8988960.629044179,
+        3944759.368414914
+      ]
+    },
+    {
+      "name": "western_bend_plus60m",
+      "anchor_WGS84": [
+        -80.755119,
+        33.366167
+      ],
+      "georeference_model": "source FSA scale bar and north-up with one road control (candidate only)",
+      "bbox_epsg3857": [
+        -8990343.72603021,
+        3943282.977128086,
+        -8988893.72603021,
+        3944732.977128086
+      ]
+    },
+    {
+      "name": "mid_straight",
+      "anchor_WGS84": [
+        -80.745626,
+        33.362795
+      ],
+      "georeference_model": "source FSA scale bar and north-up with one road control (candidate only)",
+      "bbox_epsg3857": [
+        -8989286.970104111,
+        3942833.5347364997,
+        -8987836.970104111,
+        3944283.5347364997
+      ]
+    },
+    {
+      "name": "mid_straight_plus80m",
+      "anchor_WGS84": [
+        -80.744488,
+        33.362288
+      ],
+      "georeference_model": "source FSA scale bar and north-up with one road control (candidate only)",
+      "bbox_epsg3857": [
+        -8989160.288523588,
+        3942765.9599400912,
+        -8987710.288523588,
+        3944215.9599400912
+      ]
+    },
+    {
+      "name": "east_bend",
+      "anchor_WGS84": [
+        -80.723688,
+        33.348135
+      ],
+      "georeference_model": "source FSA scale bar and north-up with one road control (candidate only)",
+      "bbox_epsg3857": [
+        -8986844.843115088,
+        3940879.7556984904,
+        -8985394.843115088,
+        3942329.7556984904
+      ]
+    }
+  ],
+  "warning": "Do not publish any candidate geometry as accepted from this QA without matching aerial field boundaries."
+}
