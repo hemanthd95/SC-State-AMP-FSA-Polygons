@@ -1,0 +1,259 @@
+{
+  "source_fsa_images": [
+    "Javeiann_Spann_Field_1.jpeg",
+    "Javeiann_Spann_Field_2.jpeg"
+  ],
+  "source_fsa_field_1": {
+    "farm": "3988",
+    "tract": "4673",
+    "field": "1",
+    "acres": 9.35,
+    "adjacent_field_4_acres": 0.29
+  },
+  "source_fsa_field_2": {
+    "farm": "9447",
+    "tract": "8142",
+    "unlabeled_fields": true
+  },
+  "enrolled_year2": {
+    "farm": "3988",
+    "tract": "4673",
+    "field": "1",
+    "acres": 9.35
+  },
+  "physical_field_search_address": "1353 Rev J W Carter Rd, Manning, SC 29102",
+  "other_enrollment_address": "415 Drayton street Manning SC 29102 \u2014 NOT FIELD LOCATION",
+  "geocoded_addresses": [
+    {
+      "source": "CENSUS_TIGER_ROAD_ONLY_NOT_ADDRESS",
+      "lon": -80.96513999994515,
+      "lat": 34.010204999785785,
+      "matched": "Carter Hill Dr",
+      "quality": "search_corridor_only",
+      "road_geometry_type": "LineString"
+    },
+    {
+      "source": "CENSUS_TIGER_ROAD_ONLY_NOT_ADDRESS",
+      "lon": -80.99373399976778,
+      "lat": 34.03774099975678,
+      "matched": "Carter St",
+      "quality": "search_corridor_only",
+      "road_geometry_type": "LineString"
+    },
+    {
+      "source": "CENSUS_TIGER_ROAD_ONLY_NOT_ADDRESS",
+      "lon": -81.19836799995652,
+      "lat": 33.93979400021079,
+      "matched": "McCarter Trl",
+      "quality": "search_corridor_only",
+      "road_geometry_type": "LineString"
+    },
+    {
+      "source": "CENSUS_TIGER_ROAD_ONLY_NOT_ADDRESS",
+      "lon": -80.21927599977478,
+      "lat": 34.055351000087434,
+      "matched": "Carter Ln",
+      "quality": "search_corridor_only",
+      "road_geometry_type": "LineString"
+    },
+    {
+      "source": "CENSUS_TIGER_ROAD_ONLY_NOT_ADDRESS",
+      "lon": -80.87400999990915,
+      "lat": 33.89959000019973,
+      "matched": "Martin Carter Rd",
+      "quality": "search_corridor_only",
+      "road_geometry_type": "LineString"
+    },
+    {
+      "source": "CENSUS_TIGER_ROAD_ONLY_NOT_ADDRESS",
+      "lon": -81.05698499965851,
+      "lat": 33.90092900025705,
+      "matched": "Carterhill Dr",
+      "quality": "search_corridor_only",
+      "road_geometry_type": "LineString"
+    },
+    {
+      "source": "CENSUS_TIGER_ROAD_ONLY_NOT_ADDRESS",
+      "lon": -81.42528500002537,
+      "lat": 34.12885299999079,
+      "matched": "Carteret Ln",
+      "quality": "search_corridor_only",
+      "road_geometry_type": "LineString"
+    },
+    {
+      "source": "CENSUS_TIGER_ROAD_ONLY_NOT_ADDRESS",
+      "lon": -81.01940199986049,
+      "lat": 34.0505890001521,
+      "matched": "Carteret St",
+      "quality": "search_corridor_only",
+      "road_geometry_type": "LineString"
+    },
+    {
+      "source": "CENSUS_TIGER_ROAD_ONLY_NOT_ADDRESS",
+      "lon": -80.52449900032818,
+      "lat": 34.19372299993639,
+      "matched": "Carter Ln",
+      "quality": "search_corridor_only",
+      "road_geometry_type": "LineString"
+    },
+    {
+      "source": "CENSUS_TIGER_ROAD_ONLY_NOT_ADDRESS",
+      "lon": -81.45278500005398,
+      "lat": 33.25244800009245,
+      "matched": "Carter Dr",
+      "quality": "search_corridor_only",
+      "road_geometry_type": "LineString"
+    },
+    {
+      "source": "CENSUS_TIGER_ROAD_ONLY_NOT_ADDRESS",
+      "lon": -81.01815400008066,
+      "lat": 33.31055600023493,
+      "matched": "Berte Carter Dr",
+      "quality": "search_corridor_only",
+      "road_geometry_type": "LineString"
+    },
+    {
+      "source": "CENSUS_TIGER_ROAD_ONLY_NOT_ADDRESS",
+      "lon": -80.33375300024602,
+      "lat": 33.60687200010297,
+      "matched": "Carter Rd",
+      "quality": "search_corridor_only",
+      "road_geometry_type": "LineString"
+    },
+    {
+      "source": "CENSUS_TIGER_ROAD_ONLY_NOT_ADDRESS",
+      "lon": -80.41248900000258,
+      "lat": 33.95631200014713,
+      "matched": "Carter Rd",
+      "quality": "search_corridor_only",
+      "road_geometry_type": "LineString"
+    },
+    {
+      "source": "CENSUS_TIGER_ROAD_ONLY_NOT_ADDRESS",
+      "lon": -81.19776100023421,
+      "lat": 33.940166999833195,
+      "matched": "McCarter Trl",
+      "quality": "search_corridor_only",
+      "road_geometry_type": "LineString"
+    },
+    {
+      "source": "CENSUS_TIGER_ROAD_ONLY_NOT_ADDRESS",
+      "lon": -81.19472900019903,
+      "lat": 33.9257140002216,
+      "matched": "Carter Ln",
+      "quality": "search_corridor_only",
+      "road_geometry_type": "LineString"
+    },
+    {
+      "source": "CENSUS_TIGER_ROAD_ONLY_NOT_ADDRESS",
+      "lon": -81.45541700005606,
+      "lat": 33.25710200001177,
+      "matched": "Carter Cir",
+      "quality": "search_corridor_only",
+      "road_geometry_type": "LineString"
+    },
+    {
+      "source": "CENSUS_TIGER_ROAD_ONLY_NOT_ADDRESS",
+      "lon": -81.02306900010538,
+      "lat": 34.054282000365745,
+      "matched": "Carteret St",
+      "quality": "search_corridor_only",
+      "road_geometry_type": "LineString"
+    },
+    {
+      "source": "CENSUS_TIGER_ROAD_ONLY_NOT_ADDRESS",
+      "lon": -80.29018800039343,
+      "lat": 33.63791600034979,
+      "matched": "Reverend J W Carter Rd",
+      "quality": "search_corridor_only",
+      "road_geometry_type": "LineString"
+    },
+    {
+      "source": "CENSUS_TIGER_ROAD_ONLY_NOT_ADDRESS",
+      "lon": -80.47892099989139,
+      "lat": 34.18242000004364,
+      "matched": "Carter Dr",
+      "quality": "search_corridor_only",
+      "road_geometry_type": "LineString"
+    }
+  ],
+  "other_road_geocodes": {
+    "Moses Dingle Rd Manning SC": [],
+    "Silver Rd Manning SC": [],
+    "Rev JW Carter Rd Manning SC": [],
+    "Summerton Hwy Manning SC": []
+  },
+  "tiles": [
+    {
+      "file": "AddressGrid_+0_+0_USGS_NAIP.jpg",
+      "bbox_epsg3857": [
+        -9014148.1568,
+        4029022.390600001,
+        -9011848.1568,
+        4031322.390600001
+      ],
+      "grid": [
+        0,
+        0
+      ],
+      "provider": "USGS_NAIP"
+    },
+    {
+      "file": "AddressGrid_+1_+0_USGS_NAIP.jpg",
+      "bbox_epsg3857": [
+        -9012298.1568,
+        4029022.390600001,
+        -9009998.1568,
+        4031322.390600001
+      ],
+      "grid": [
+        1,
+        0
+      ],
+      "provider": "USGS_NAIP"
+    },
+    {
+      "file": "AddressGrid_+0_+1_USGS_NAIP.jpg",
+      "bbox_epsg3857": [
+        -9014148.1568,
+        4030872.390600001,
+        -9011848.1568,
+        4033172.390600001
+      ],
+      "grid": [
+        0,
+        1
+      ],
+      "provider": "USGS_NAIP"
+    },
+    {
+      "file": "AddressGrid_+1_+1_USGS_NAIP.jpg",
+      "bbox_epsg3857": [
+        -9012298.1568,
+        4030872.390600001,
+        -9009998.1568,
+        4033172.390600001
+      ],
+      "grid": [
+        1,
+        1
+      ],
+      "provider": "USGS_NAIP"
+    },
+    {
+      "file": "AddressGrid_+1_-1_USGS_NAIP.jpg",
+      "bbox_epsg3857": [
+        -9012298.1568,
+        4027172.390600001,
+        -9009998.1568,
+        4029472.390600001
+      ],
+      "grid": [
+        1,
+        -1
+      ],
+      "provider": "USGS_NAIP"
+    }
+  ],
+  "warning": "Geocoded ADDRESS is only search origin. None of these tiles yet establishes the field geometry."
+}
