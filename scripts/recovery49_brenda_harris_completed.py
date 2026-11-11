@@ -76,7 +76,7 @@ mapqa=pub.process(("Brenda M. Harris",county),[feature])
 assert mapqa["county_map_status"]=="CREATED" and mapqa["field_map_status"]=="CREATED" and mapqa["two_road_names_pass"]
 folder=OUT/county/pub.human_folder("Brenda M. Harris")
 # Require all 5 essential shapefile pieces
-shps=list(folder.rglob("*.shp"));assert len(shps)==1
+shps=[p for p in folder.rglob("*.shp") if p.is_file()];assert len(shps)==1, shps
 for ext in [".dbf",".shx",".prj",".cpg"]:assert shps[0].with_suffix(ext).exists()
 qa={"year2_target":"Farm4943/Tract4414/Field3","target_field_mapped":True,
     "farmer_closed_against_known_year2_record":True,
