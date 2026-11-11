@@ -43,14 +43,14 @@
     },
     {
       "farmer": "Calvin Blair",
-      "status": "SOURCE_FARM_MATCHES_BUT_IMAGE_LOCATION_UNRESOLVED",
+      "status": "SEARCHED_369_TILES_LOCATION_UNRESOLVED_SHARED_SOURCE_WITH_TYREASE_RILEY",
       "accepted_polygon_count": "0",
       "physical_county": "",
       "target": "",
       "area_ac": "",
-      "source_registration": "SEE QA",
+      "source_registration": "369 NAIP/Esri tiles, no nondegenerate match",
       "administratively_closed": "False",
-      "blocker": "Farm3603/Tract848 source page includes Field3 (12.50 acres). Existing local SIFT match was geometrically degenerate."
+      "blocker": "Location unknown; FSA source exact pixel match with Tyrease Riley Farm3603 Tract848. Fields3 and1 can share future image registration."
     },
     {
       "farmer": "Tywone Hilliard",
@@ -79,5 +79,8 @@
   "remaining_followup_farmers_from_44": 43,
   "baseline_outstanding_year2": 44,
   "year2_completion_rule": "Registered source Farm1271 Tract469 Field1 matched to enrolled target; printed FSA source footer visually confirmed. Mapped acreage may differ up to 25% and is not survey accuracy.",
-  "joe_hilliard_note": "Correct enrolled Farm13859/Tract45814 source now registered, but only source Fields35/36/37 shown. Field20 remains missing; farmer NOT CLOSED."
+  "joe_hilliard_note": "Correct enrolled Farm13859/Tract45814 source now registered, but only source Fields35/36/37 shown. Field20 remains missing; farmer NOT CLOSED.",
+  "calvin_wide_search_tiles_loaded": 369,
+  "calvin_wide_source_match": "WEAK_OR_DEGENERATE_NOT_ACCEPTED",
+  "shared_source_crosswalk": "Calvin Blair and Tyrease Riley exact same RGB FSA map pixels, Farm3603/Tract848"
 }
