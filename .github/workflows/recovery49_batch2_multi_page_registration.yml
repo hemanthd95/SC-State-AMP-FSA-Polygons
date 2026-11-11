@@ -1,0 +1,37 @@
+name: Batch2 register original FSA photos to public NAIP (four farmers)
+on:
+  push:
+    paths:
+      - 'scripts/recovery49_batch2_multi_page_registration.py'
+      - '.github/workflows/recovery49_batch2_multi_page_registration.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  photo-registration:
+    runs-on: ubuntu-latest
+    timeout-minutes: 80
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install 'numpy<2.5' opencv-python-headless pymupdf requests shapely
+      - name: Image registration of source pages around geocoded addresses and existing fields
+        run: |
+          set -o pipefail
+          OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python scripts/recovery49_batch2_multi_page_registration.py | tee /tmp/batch2_photo_registration.log
+      - name: Publish only map-specific image-registration evidence, not tax documents
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin main
+          git reset --mixed origin/main
+          git add analysis/recovery49_20261111/batch2/source_page_registration
+          if ! git diff --cached --quiet; then
+            git commit -m "Record Batch2 source-page NAIP registrations and exact enrollment exceptions"
+            git push origin HEAD:main
+          fi
