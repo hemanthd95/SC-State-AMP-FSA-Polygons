@@ -1,0 +1,45 @@
+name: Recover four partial farmers by NAIP image registration
+on:
+  push:
+    paths:
+      - 'scripts/recovery49_wave1_registration.py'
+      - '.github/workflows/recovery49_wave1_registration.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  register:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install 'numpy<2.5' opencv-python-headless pymupdf requests
+      - name: Match source FSA photos to real NAIP imagery for Brabham, Middleton, Lloyd, Berry
+        run: |
+          set -o pipefail
+          OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python scripts/recovery49_wave1_registration.py | tee /tmp/amp_recovery49_wave1.log
+      - name: Upload visual and homography diagnostics with honest QA status
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: recovery49-wave1-source-registrations
+          path: analysis/recovery49_20261111/wave1/
+          retention-days: 60
+          if-no-files-found: warn
+      - name: Publish bounded QA results in existing private repository
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin main
+          git reset --mixed origin/main
+          git add analysis/recovery49_20261111/wave1/
+          if ! git diff --cached --quiet; then
+            git commit -m "Record wave-one NAIP georegistration matches and exceptions for four partial producers"
+            git push origin HEAD:main
+          fi
