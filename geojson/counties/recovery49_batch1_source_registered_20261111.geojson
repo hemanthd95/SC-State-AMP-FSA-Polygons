@@ -1,0 +1,246 @@
+{
+  "type": "FeatureCollection",
+  "name": "SC_AMP_Batch1_Charles_Joseph_Arthur_NAIP_Accepted_Partial",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "producer": "Charles Bright Jr.",
+        "county": "Colleton",
+        "farm_id": "2715",
+        "tract_id": "3022",
+        "field_id": "2",
+        "source_pdf": "Bright, Charles, JR_ FSAmap.pdf",
+        "source_page": 1,
+        "source_fsa_acres": 5.23,
+        "geodesic_area_acres": 5.3672,
+        "acreage_difference_pct": 2.62,
+        "source_workbook_field_match": false,
+        "image_registration_inliers": 281,
+        "registration_rmse_pixels": 0.729,
+        "registration_provider": "USGS_NAIP",
+        "registration_method": "SIFT feature matching FSA raster page 1 to independently georeferenced USGS NAIP",
+        "geometry_quality": "SOURCE_FIELD_PHOTO_TRACE_APPROXIMATE_NOT_SURVEY",
+        "farminer_completion_status": "SOURCE_PARTIAL_NOT_YEAR2_COMPLETE",
+        "attribution_warning": "Source field boundary only; not a land survey or verified ownership"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.46745626357483,
+              32.77099270478331
+            ],
+            [
+              -80.4660869230901,
+              32.77107529788118
+            ],
+            [
+              -80.46556102947719,
+              32.769678758703634
+            ],
+            [
+              -80.46670769035006,
+              32.76929975674899
+            ],
+            [
+              -80.46745626357483,
+              32.77099270478331
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "producer": "Joseph Gadson",
+        "county": "Orangeburg",
+        "farm_id": "4547",
+        "tract_id": "4482",
+        "field_id": "3",
+        "source_pdf": "Joseph Gadson_FSAmap.pdf",
+        "source_page": 1,
+        "source_fsa_acres": 1.88,
+        "geodesic_area_acres": 1.9117,
+        "acreage_difference_pct": 1.69,
+        "source_workbook_field_match": false,
+        "image_registration_inliers": 251,
+        "registration_rmse_pixels": 0.442,
+        "registration_provider": "USGS_NAIP",
+        "registration_method": "SIFT feature matching FSA raster page 1 to independently georeferenced USGS NAIP",
+        "geometry_quality": "SOURCE_FIELD_PHOTO_TRACE_APPROXIMATE_NOT_SURVEY",
+        "farminer_completion_status": "SOURCE_PARTIAL_ENROLLMENT_IDS_MISSING",
+        "attribution_warning": "Source field boundary only; not a land survey or verified ownership"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.48743033704496,
+              33.44634019067101
+            ],
+            [
+              -80.48609960487865,
+              33.4459672796385
+            ],
+            [
+              -80.4863166937791,
+              33.44565572734866
+            ],
+            [
+              -80.48646956146159,
+              33.44555941105909
+            ],
+            [
+              -80.48703281123989,
+              33.44564185884856
+            ],
+            [
+              -80.48737215110866,
+              33.445738835111804
+            ],
+            [
+              -80.4875774034582,
+              33.44581334861196
+            ],
+            [
+              -80.48767433630796,
+              33.44601390394653
+            ],
+            [
+              -80.48764617166017,
+              33.44619201494177
+            ],
+            [
+              -80.48743033704496,
+              33.44634019067101
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "producer": "Joseph Gadson",
+        "county": "Orangeburg",
+        "farm_id": "4547",
+        "tract_id": "4482",
+        "field_id": "4",
+        "source_pdf": "Joseph Gadson_FSAmap.pdf",
+        "source_page": 1,
+        "source_fsa_acres": 0.6,
+        "geodesic_area_acres": 0.5734,
+        "acreage_difference_pct": -4.43,
+        "source_workbook_field_match": false,
+        "image_registration_inliers": 251,
+        "registration_rmse_pixels": 0.442,
+        "registration_provider": "USGS_NAIP",
+        "registration_method": "SIFT feature matching FSA raster page 1 to independently georeferenced USGS NAIP",
+        "geometry_quality": "SOURCE_FIELD_PHOTO_TRACE_APPROXIMATE_NOT_SURVEY",
+        "farminer_completion_status": "SOURCE_PARTIAL_ENROLLMENT_IDS_MISSING",
+        "attribution_warning": "Source field boundary only; not a land survey or verified ownership"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.48730961275452,
+              33.44451362269713
+            ],
+            [
+              -80.48706768921902,
+              33.44455038403616
+            ],
+            [
+              -80.48683535432922,
+              33.44449804244626
+            ],
+            [
+              -80.48674682247214,
+              33.4443642224409
+            ],
+            [
+              -80.48683736822201,
+              33.44422324813635
+            ],
+            [
+              -80.48704422400976,
+              33.44408988584727
+            ],
+            [
+              -80.48727660954006,
+              33.44413481738089
+            ],
+            [
+              -80.48746312916849,
+              33.44432820294119
+            ],
+            [
+              -80.48730961275452,
+              33.44451362269713
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "producer": "Arthur Cobbs",
+        "county": "Dorchester",
+        "farm_id": "548",
+        "tract_id": "295",
+        "field_id": "1",
+        "source_pdf": "Arthur Cobbs_FSA Map.pdf",
+        "source_page": 1,
+        "source_fsa_acres": 1.8,
+        "geodesic_area_acres": 1.8959,
+        "acreage_difference_pct": 5.33,
+        "source_workbook_field_match": true,
+        "image_registration_inliers": 48,
+        "registration_rmse_pixels": 0.552,
+        "registration_provider": "USGS_NAIP",
+        "registration_method": "SIFT feature matching FSA raster page 1 to independently georeferenced USGS NAIP",
+        "geometry_quality": "SOURCE_FIELD_PHOTO_TRACE_APPROXIMATE_NOT_SURVEY",
+        "farminer_completion_status": "YEAR2_FARM_AND_SINGLE_SOURCE_FIELD_MATCH",
+        "attribution_warning": "Source field boundary only; not a land survey or verified ownership"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.64893167943995,
+              33.24460037457686
+            ],
+            [
+              -80.64759940993463,
+              33.24456163757316
+            ],
+            [
+              -80.64772365400646,
+              33.243970948969164
+            ],
+            [
+              -80.64869474905791,
+              33.243994443664384
+            ],
+            [
+              -80.64897151485768,
+              33.244238149708615
+            ],
+            [
+              -80.64893167943995,
+              33.24460037457686
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}
