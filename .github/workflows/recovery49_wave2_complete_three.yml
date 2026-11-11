@@ -1,0 +1,39 @@
+name: Publish three fully matched Year 2 farmer GIS folders
+on:
+  push:
+    paths:
+      - 'scripts/recovery49_wave2_complete_three.py'
+      - '.github/workflows/recovery49_wave2_complete_three.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  complete:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install 'numpy<2.5' opencv-python-headless pyshp shapely pyproj pillow pymupdf reportlab requests
+      - name: Verify source Field IDs, NAIP image registration, acreage, county polygons and maps
+        run: |
+          set -o pipefail
+          AMP_FARM_WORKERS=3 python scripts/recovery49_wave2_complete_three.py
+      - name: Save three farmer GIS ZIPs, combined package and source WGS84 polygons
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin main
+          git reset --mixed origin/main
+          git add geojson/counties/recovery49_wave2_three_completed_20261111.geojson
+          git add deliverables/AMP_Recovery49_Three_Completed_Farmer_GIS_20261111.zip
+          git add deliverables/*_Completed_AMP_Farmer_GIS_20261111.zip
+          if ! git diff --cached --quiet; then
+            git commit -m "Complete georeferenced Year2 fields for Tiffany Loadholt, Jan Boneparte and Eartha Pinckney"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
