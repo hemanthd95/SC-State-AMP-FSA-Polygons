@@ -1,0 +1,65 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "producer": "Lewis Gin",
+        "county": "Hampton",
+        "amp_roster_county": "Hampton",
+        "farm_id": "4706",
+        "tract_id": "11322",
+        "field_id": "36",
+        "fsa_printed_acres": 5.94,
+        "geodesic_acres": 5.9422,
+        "area_difference_percent": 0.04,
+        "source_pdf": "Lewis Gin_FSA Map.pdf",
+        "source_page": 1,
+        "source_workbook_field_match": true,
+        "inlier_count": 119,
+        "registration_rmse_pixels": 0.693,
+        "aerial_reference": "USGS_NAIP",
+        "registration_method": "Source FSA aerial image SIFT to geographically registered NAIP",
+        "physical_county_basis": "Independent U.S. Census 2025 county spatial overlay; FSA printed county not used",
+        "shared_fsa_farm": "Farm4706/Tract11322 also used by Annette Weekley; her enrolled field not conflated",
+        "field_boundary_quality": "FSA source image research-traced, not a legal survey",
+        "status": "VALIDATED_SELECTED_FIELD_RESEARCH_GEOMETRY"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -81.13296857263873,
+              32.84778940379834
+            ],
+            [
+              -81.13216980264981,
+              32.8488194203943
+            ],
+            [
+              -81.13085137665843,
+              32.8504196780585
+            ],
+            [
+              -81.13006202850138,
+              32.85035955510428
+            ],
+            [
+              -81.1316486888339,
+              32.848444199118546
+            ],
+            [
+              -81.13265364199147,
+              32.84729387709271
+            ],
+            [
+              -81.13296857263873,
+              32.84778940379834
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}
