@@ -1,0 +1,37 @@
+name: Batch2 locate Christine FSA field from Arista and Baxley road junction
+on:
+  push:
+    paths:
+      - 'scripts/recovery49_batch2_christine_arista_baxley.py'
+      - '.github/workflows/recovery49_batch2_christine_arista_baxley.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  register:
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install 'numpy<2.5' opencv-python-headless pymupdf requests shapely pyproj
+      - name: Match source aerial FSA page to independent Arista and Baxley road intersection
+        run: |
+          set -o pipefail
+          OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python scripts/recovery49_batch2_christine_arista_baxley.py | tee /tmp/batch2_christine_road_registration.log
+      - name: Save road centerline controls and successful match overlay for field tracing
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin main
+          git reset --mixed origin/main
+          git add analysis/recovery49_20261111/batch2/christine_arista_baxley_registration/
+          if ! git diff --cached --quiet; then
+            git commit -m "Match Christine Berry Zeigler FSA photo near Arista/Baxley roads via real NAIP"
+            git push origin HEAD:main
+          fi
