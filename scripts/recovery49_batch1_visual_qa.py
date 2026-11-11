@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Render map PDFs from published Batch 1 ZIP to inspect geography, scale,
+"""Render UPDATED Batch1 (8 new source polygons) PDF maps to inspect geography, scale,
 road labels and source-field visibility. Does not modify GIS boundaries.
 """
 import io,zipfile,json
