@@ -16,8 +16,53 @@
       "pdf": "Calvin_Blair_FSA_Map.pdf",
       "source_page": 1,
       "tile_requests": 50,
-      "tiles_loaded": 42,
-      "status": "NO_IMAGE_MATCH"
+      "tiles_loaded": 46,
+      "status": "WEAK_MATCH_NOT_ACCEPTED",
+      "valid": false,
+      "inliers": 21,
+      "rmse_px": 1.0984,
+      "source_spread": [
+        720.9340209960938,
+        837.0941162109375
+      ],
+      "target_spread": [
+        2.31549072265625,
+        2.8112144470214844
+      ],
+      "source_page_pdf_pts_to_tile_H": [
+        [
+          -1.344576535161073,
+          -0.3568895824262821,
+          791.81743756453
+        ],
+        [
+          -0.015341433267638241,
+          -0.004352425268344782,
+          9.153419378890739
+        ],
+        [
+          -0.0016982120826957911,
+          -0.0004505346352380738,
+          1.0
+        ]
+      ],
+      "tile_bbox_epsg3857": [
+        -8955702.206492113,
+        3972848.500040753,
+        -8953952.206492113,
+        3974598.500040753
+      ],
+      "tile_size_px": 900,
+      "provider": "USGS_NAIP",
+      "geocode_anchor": {
+        "source": "VERIFIED_CENSUS_ADDRESS_SEARCH_ONLY",
+        "lon": -80.436293255423,
+        "lat": 33.594059411505
+      },
+      "tile_offset": [
+        -1,
+        -1
+      ]
     }
   ],
   "source_candidates": [
