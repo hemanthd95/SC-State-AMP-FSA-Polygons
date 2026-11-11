@@ -1,0 +1,32 @@
+name: Margaret Berry missing Farm10939 Field3 Weekley GIS recovery
+on:
+  push:
+    paths:
+      - 'scripts/recovery49_margaret_new_field3.py'
+      - '.github/workflows/recovery49_margaret_new_field3.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  map:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install 'numpy<2.5' opencv-python-headless shapely pyproj pyshp pillow reportlab pymupdf requests
+      - name: Convert validated Field3 FSA trace to WGS84 and Weekley farmer package
+        run: python scripts/recovery49_margaret_new_field3.py
+      - name: Save WGS84 field and two-farm producer ZIP in existing private repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin main
+          git reset --mixed origin/main
+          git add geojson/counties/margaret_berry_farm10939_field3_registered_20261111.geojson
+          git add deliverables/Margaret_Berry_Updated_Two_Farm_Weekley_GIS_20261111.zip
+          git add "deliverables/margaret_berry_20261111/Orangeburg/L-Berry, Margaret/QA_COMPLETION_STATUS.json"
+          git commit -m "Georeference Margaret Berry missing Farm10939 Field3 and publish per-producer GIS, preserving Farm11782 QA"
+          git push origin HEAD:main
