@@ -60,12 +60,12 @@ if not anchors:
     g=shape(q["geometry"])
     nm=str(q["properties"].get("NAME") or "")
     c=g.representative_point()
-    if -81.6<c.x<-80.2 and 33.1<c.y<34.2 and ("carter" in nm.lower()):
+    if -81.6<c.x<-80.2 and 33.1<c.y<34.2 and nm.lower().strip() in {"reverend j w carter rd","rev jw carter rd","rev j w carter rd"}:
      candidates.append((nm,c.x,c.y,g))
    if candidates:
     print("ROAD_CONTROL_CANDIDATES",[(a,round(b,6),round(c,6)) for a,b,c,_ in candidates],flush=True)
     for nm,xp,yp,g in candidates:
-     anchors.append(dict(source="CENSUS_TIGER_ROAD_ONLY_NOT_ADDRESS",lon=xp,lat=yp,
+     anchors.append(dict(source="EXACT_CENSUS_TIGER_REV_J_W_CARTER_ROAD_NOT_HOUSE",lon=xp,lat=yp,
         matched=nm,quality="search_corridor_only",
         road_geometry_type=g.geom_type))
     break
