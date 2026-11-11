@@ -1,0 +1,186 @@
+{
+  "farmer": "Christine Berry Zeigler",
+  "source_pdf": "Christine Berry Zeigler_FSA Map.pdf",
+  "target": "1271/469/1",
+  "printed_fsa_acres": 10.51,
+  "roads_found": {
+    "Arista": [
+      {
+        "actual": "Arista Rd",
+        "coordinates_count": 194,
+        "centroid": [
+          -80.64382762404334,
+          33.379272167149175
+        ]
+      }
+    ],
+    "Baxley": [
+      {
+        "actual": "Baxley Rd",
+        "coordinates_count": 98,
+        "centroid": [
+          -80.6388956019317,
+          33.366493119317944
+        ]
+      },
+      {
+        "actual": "Baxley St",
+        "coordinates_count": 2,
+        "centroid": [
+          -81.08322350002521,
+          32.85490900028535
+        ]
+      },
+      {
+        "actual": "Baxley St",
+        "coordinates_count": 2,
+        "centroid": [
+          -81.08478250014966,
+          32.85450900016791
+        ]
+      }
+    ],
+    "Richardson": [
+      {
+        "actual": "Richardson Rd",
+        "coordinates_count": 18,
+        "centroid": [
+          -80.41200151294892,
+          33.59263893443134
+        ]
+      },
+      {
+        "actual": "Richardson St",
+        "coordinates_count": 26,
+        "centroid": [
+          -81.35789639985325,
+          33.22736204783373
+        ]
+      },
+      {
+        "actual": "Richardson St",
+        "coordinates_count": 81,
+        "centroid": [
+          -80.24896561829681,
+          33.36725619932277
+        ]
+      },
+      {
+        "actual": "Governor Richardson Rd",
+        "coordinates_count": 215,
+        "centroid": [
+          -80.42282758390924,
+          33.63007730958651
+        ]
+      },
+      {
+        "actual": "Governor Richardson Rd",
+        "coordinates_count": 76,
+        "centroid": [
+          -80.49044879130466,
+          33.669441572386866
+        ]
+      },
+      {
+        "actual": "Gov Richardson Rd",
+        "coordinates_count": 4,
+        "centroid": [
+          -80.3622350795592,
+          33.60943970803075
+        ]
+      },
+      {
+        "actual": "Richardson Rd",
+        "coordinates_count": 6,
+        "centroid": [
+          -80.64554674386342,
+          33.377161950060845
+        ]
+      },
+      {
+        "actual": "Richardson St",
+        "coordinates_count": 2,
+        "centroid": [
+          -81.09718850012467,
+          32.856535999976394
+        ]
+      },
+      {
+        "actual": "Richardson Ln",
+        "coordinates_count": 14,
+        "centroid": [
+          -80.57577190793528,
+          33.20663965192251
+        ]
+      },
+      {
+        "actual": "Corley Heights Richardson Rd",
+        "coordinates_count": 20,
+        "centroid": [
+          -81.37728624055967,
+          33.24671840756715
+        ]
+      }
+    ]
+  },
+  "closest_Arista_Baxley_distance_m": 0.0,
+  "road_junction_candidates": [
+    {
+      "distance_m": 0.0,
+      "lon": -80.64531699998086,
+      "lat": 33.37399599969524
+    },
+    {
+      "distance_m": 81124.83003673439,
+      "lon": -80.87469150006206,
+      "lat": 33.10622571445934
+    },
+    {
+      "distance_m": 81255.68197111569,
+      "lon": -80.87545050012034,
+      "lat": 33.10606866149796
+    }
+  ],
+  "status": "ROAD_CONSTRAINED_NAIP_REGISTRATION_MATCH_FIELD_TRACE_NEEDED",
+  "tiles_loaded": 42,
+  "tiles_requested": 50,
+  "image_matches": 217,
+  "rmse_px": 1.2803,
+  "source_spread": [
+    590.0980224609375,
+    629.2130126953125
+  ],
+  "target_spread": [
+    553.2018432617188,
+    608.4974365234375
+  ],
+  "provider": "USGS_NAIP",
+  "offset": [
+    1,
+    1
+  ],
+  "tile_bbox_epsg3857": [
+    -8977570.6233,
+    3944876.545000001,
+    -8975770.6233,
+    3946676.545000001
+  ],
+  "tile_size_px": 950,
+  "source_pdf_pts_to_tile_homography": [
+    [
+      1.4515025372871837,
+      0.045123248089640196,
+      -175.4845873517072
+    ],
+    [
+      0.010848201193066155,
+      1.7145905355851376,
+      179.53045310653727
+    ],
+    [
+      -2.293984005571499e-05,
+      0.0002970822762124912,
+      1.0
+    ]
+  ]
+}
