@@ -1,0 +1,32 @@
+{
+  "producer": "Antron Williams",
+  "physical_county": "Orangeburg",
+  "folder": "Orangeburg/L-Williams, Antron",
+  "source_field_features": 6,
+  "farm_ids": "11990",
+  "field_map_pages": 2,
+  "county_map_status": "CREATED",
+  "field_map_status": "CREATED",
+  "named_roads_visible_count": 5,
+  "named_roads": "Gordon Dr, State Rd S-38-1443, Mahogany Ln, O C 4118, Cinnabar Rd",
+  "two_road_names_pass": true,
+  "road_data_provider": "U.S. Census TIGERweb (2026)",
+  "boundary_quality": "Approximate FSA-source / user-QGIS location; NOT surveyed. Special status preserved in source GeoJSON.",
+  "source_field_ids": [
+    "61",
+    "3",
+    "16",
+    "7",
+    "18",
+    "20"
+  ],
+  "farmer_enrollment_complete": false,
+  "unverified_enrollment_field": "6",
+  "excluded_source_field": "19",
+  "position_confidence": "PROVISIONAL_ALL_FIELDS",
+  "registration_limitations": [
+    "Cinnabar source road fit not independently SIFT validated",
+    "Gordon source manual controls require independent check",
+    "Field61 not matched to enrolled Field6"
+  ]
+}
