@@ -1,0 +1,22 @@
+{
+  "producer": "Margaret Berry",
+  "physical_county": "Orangeburg",
+  "folder": "Orangeburg/L-Berry, Margaret",
+  "source_field_features": 2,
+  "farm_ids": "10939;11782",
+  "field_map_pages": 2,
+  "county_map_status": "CREATED",
+  "field_map_status": "CREATED",
+  "named_roads_visible_count": 4,
+  "named_roads": "Oc 4221, Nassau Dr, Oc 4467, Kangaroo Ct, State Rd S-38-168",
+  "two_road_names_pass": true,
+  "road_data_provider": "U.S. Census TIGERweb (2026)",
+  "boundary_quality": "Approximate FSA-source / user-QGIS location; NOT surveyed. Special status preserved in source GeoJSON.",
+  "enrolled_farm_ids_geographically_located": [
+    "10939",
+    "11782"
+  ],
+  "new_field3_accepted_acres": 1.5662,
+  "farmer_completed": false,
+  "reason_not_closed": "Earlier Farm11782 Field13 polygon differs from FSA printed acreage by about 74%; source shape/boundary still requires independent review"
+}

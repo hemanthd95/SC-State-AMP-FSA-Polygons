@@ -1,0 +1,90 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "producer": "Margaret Berry",
+        "county": "Orangeburg",
+        "amp_roster_county": "Orangeburg",
+        "farm_id": "10939",
+        "tract_id": "43399",
+        "field_id": "3",
+        "fsa_printed_acres": 1.57,
+        "traced_geodesic_acres": 1.5662,
+        "source_pdf": "Margaret_Berry_FSA_Map.pdf",
+        "source_page": 3,
+        "registration_provider": "USGS_NAIP",
+        "image_registration_inliers": 163,
+        "registration_rmse_pixels": 0.872,
+        "source_method": "Manual FSA yellow boundary trace on NAIP-SIFT registered photo, 163 inliers",
+        "status": "SOURCE_FIELD_ID_AND_IMAGE_LOCATION_VALIDATED_APPROXIMATE_NOT_SURVEY",
+        "geometry_type": "RESEARCH_PLANNING_FIELD_FOOTPRINT_NOT_LEGAL_SURVEY",
+        "acreage_difference_percent": -0.243
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.64928392126812,
+              33.42776973711669
+            ],
+            [
+              -80.64918787702591,
+              33.427865335722295
+            ],
+            [
+              -80.64898538751551,
+              33.42785135440433
+            ],
+            [
+              -80.64885377679657,
+              33.42789277054661
+            ],
+            [
+              -80.64860234233521,
+              33.42780612686816
+            ],
+            [
+              -80.64843269175083,
+              33.42787331650417
+            ],
+            [
+              -80.64810396815679,
+              33.42779370119657
+            ],
+            [
+              -80.6479668332521,
+              33.427577786851
+            ],
+            [
+              -80.64825208831893,
+              33.4273706041133
+            ],
+            [
+              -80.64859717892305,
+              33.42712035156031
+            ],
+            [
+              -80.64893723149025,
+              33.42730090708696
+            ],
+            [
+              -80.64906271588124,
+              33.4275435530758
+            ],
+            [
+              -80.64922137779662,
+              33.4275870151054
+            ],
+            [
+              -80.64928392126812,
+              33.42776973711669
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}
