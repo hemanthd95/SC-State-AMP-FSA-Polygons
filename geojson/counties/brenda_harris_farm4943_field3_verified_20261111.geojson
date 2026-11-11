@@ -1,0 +1,140 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "producer": "Brenda M. Harris",
+        "county": "Dorchester",
+        "roster_county": "Dorchester",
+        "farm_id": "4943",
+        "tract_id": "4414",
+        "field_id": "3",
+        "fsa_printed_acres": 19.39,
+        "geodesic_acres": 19.4239,
+        "area_difference_percent": 0.18,
+        "source_pdf": "Brenda Harris_FSAmap.pdf",
+        "source_page": 1,
+        "source_workbook_field_match": true,
+        "registered_provider": "USGS_NAIP",
+        "image_registration_inliers": 142,
+        "image_registration_rmse_px": 0.517,
+        "registration_method": "Image feature matching FSA raster to georeferenced NAIP; manual Field3 outline digitization",
+        "physical_county_basis": "Official Census 2025 county polygon, ignoring printed FSA map header",
+        "geometry_quality": "SOURCE_FIELD_TRACED_APPROXIMATE_NOT_SURVEY",
+        "status": "ENROLLED_FIELD_REGISTERED_AND_AREA_QA_PASSED"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.58659311992915,
+              33.13602187729811
+            ],
+            [
+              -80.5851139891046,
+              33.13673665700137
+            ],
+            [
+              -80.58490807123225,
+              33.13678322578005
+            ],
+            [
+              -80.58475516970057,
+              33.13675439881455
+            ],
+            [
+              -80.58453780334345,
+              33.13656855880951
+            ],
+            [
+              -80.58441386258157,
+              33.135842497065354
+            ],
+            [
+              -80.58453581796927,
+              33.13547480939429
+            ],
+            [
+              -80.58463402509396,
+              33.13542926133324
+            ],
+            [
+              -80.58459460732712,
+              33.13507792002811
+            ],
+            [
+              -80.5844330518668,
+              33.13506397502931
+            ],
+            [
+              -80.58420538603124,
+              33.13471391942944
+            ],
+            [
+              -80.58406408863723,
+              33.13401238458197
+            ],
+            [
+              -80.58458300958614,
+              33.13392748412572
+            ],
+            [
+              -80.58498304582746,
+              33.13364937636249
+            ],
+            [
+              -80.58561297635292,
+              33.13318426263015
+            ],
+            [
+              -80.58567189684302,
+              33.13285643376542
+            ],
+            [
+              -80.58625836635737,
+              33.13261583919585
+            ],
+            [
+              -80.5866139699563,
+              33.132517702341104
+            ],
+            [
+              -80.58689128187387,
+              33.132598282131475
+            ],
+            [
+              -80.58717367529927,
+              33.13309508791229
+            ],
+            [
+              -80.58661373354512,
+              33.13324650783185
+            ],
+            [
+              -80.58667847982512,
+              33.13418459095101
+            ],
+            [
+              -80.58681661738511,
+              33.13453422662634
+            ],
+            [
+              -80.58651445790584,
+              33.13466281792583
+            ],
+            [
+              -80.58657425474314,
+              33.13518497214986
+            ],
+            [
+              -80.58659311992915,
+              33.13602187729811
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}
