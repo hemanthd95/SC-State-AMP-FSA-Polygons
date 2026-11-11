@@ -1,0 +1,115 @@
+[
+  {
+    "farmer": "Charles Bright Jr.",
+    "source_pdf": "Bright, Charles, JR_ FSAmap.pdf",
+    "source_page": 2,
+    "farm_id": "2715",
+    "tract_id": "3021",
+    "fields_to_reconcile": [
+      "4",
+      "6",
+      "7"
+    ],
+    "source_control": "analysis/recovery49_20261111/wave4/Charles_Bright_Jr_/registration_qa.json",
+    "tiles_requested": 98,
+    "tiles_loaded": 84,
+    "status": "REGISTERED_CANDIDATE_REQUIRES_SOURCE_TRACE_AND_AREA_QA",
+    "inliers": 148,
+    "rmse_px": 0.6392290592193604,
+    "inlier_spread_src": [
+      771.7993774414062,
+      768.0272827148438
+    ],
+    "inlier_spread_target": [
+      438.61968994140625,
+      433.95831298828125
+    ],
+    "valid_nondegenerate": true,
+    "source_view": "map",
+    "source_pdf_points_to_tile_H": [
+      [
+        0.8251966280653305,
+        0.003725860170443651,
+        315.5374429877701
+      ],
+      [
+        -0.004738189438079939,
+        0.8223467322813803,
+        48.628929276936525
+      ],
+      [
+        8.058108084965685e-06,
+        -5.648296419388532e-06,
+        1.0
+      ]
+    ],
+    "tile_bbox_epsg3857": [
+      -8958989.287620727,
+      3863661.8981027496,
+      -8957239.287620727,
+      3865411.8981027496
+    ],
+    "tile_size_px": 900,
+    "provider": "USGS_NAIP",
+    "offset_tiles": [
+      -1,
+      0
+    ]
+  },
+  {
+    "farmer": "Jasper Summers",
+    "source_pdf": "Jasper Summers FSA Map.pdf",
+    "source_page": 3,
+    "farm_id": "13709",
+    "tract_id": "45512",
+    "fields_to_reconcile": [
+      "16",
+      "27"
+    ],
+    "source_control": "analysis/recovery49_20261111/wave4/Jasper_Summers/registration_qa.json",
+    "tiles_requested": 98,
+    "tiles_loaded": 83,
+    "status": "REGISTERED_CANDIDATE_REQUIRES_SOURCE_TRACE_AND_AREA_QA",
+    "inliers": 130,
+    "rmse_px": 0.3657548427581787,
+    "inlier_spread_src": [
+      605.9600830078125,
+      598.1103515625
+    ],
+    "inlier_spread_target": [
+      223.20355224609375,
+      221.13319396972656
+    ],
+    "valid_nondegenerate": true,
+    "source_view": "inner",
+    "source_pdf_points_to_tile_H": [
+      [
+        0.5342199751306399,
+        0.001371943345838857,
+        437.10099285485387
+      ],
+      [
+        -9.17487046512719e-05,
+        0.5360855096105216,
+        169.07559346799493
+      ],
+      [
+        -2.6123566091982517e-07,
+        2.099692654255047e-06,
+        1.0
+      ]
+    ],
+    "tile_bbox_epsg3857": [
+      -8999074.099263707,
+      3935467.934473437,
+      -8997324.099263707,
+      3937217.934473437
+    ],
+    "tile_size_px": 900,
+    "provider": "USGS_NAIP",
+    "offset_tiles": [
+      0,
+      -1
+    ]
+  }
+]

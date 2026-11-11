@@ -1,0 +1,57 @@
+{
+  "farmer": "Charles Bright Jr.",
+  "source_pdf": "Bright, Charles, JR_ FSAmap.pdf",
+  "source_page": 2,
+  "farm_id": "2715",
+  "tract_id": "3021",
+  "fields_to_reconcile": [
+    "4",
+    "6",
+    "7"
+  ],
+  "source_control": "analysis/recovery49_20261111/wave4/Charles_Bright_Jr_/registration_qa.json",
+  "tiles_requested": 98,
+  "tiles_loaded": 84,
+  "status": "REGISTERED_CANDIDATE_REQUIRES_SOURCE_TRACE_AND_AREA_QA",
+  "inliers": 148,
+  "rmse_px": 0.6392290592193604,
+  "inlier_spread_src": [
+    771.7993774414062,
+    768.0272827148438
+  ],
+  "inlier_spread_target": [
+    438.61968994140625,
+    433.95831298828125
+  ],
+  "valid_nondegenerate": true,
+  "source_view": "map",
+  "source_pdf_points_to_tile_H": [
+    [
+      0.8251966280653305,
+      0.003725860170443651,
+      315.5374429877701
+    ],
+    [
+      -0.004738189438079939,
+      0.8223467322813803,
+      48.628929276936525
+    ],
+    [
+      8.058108084965685e-06,
+      -5.648296419388532e-06,
+      1.0
+    ]
+  ],
+  "tile_bbox_epsg3857": [
+    -8958989.287620727,
+    3863661.8981027496,
+    -8957239.287620727,
+    3865411.8981027496
+  ],
+  "tile_size_px": 900,
+  "provider": "USGS_NAIP",
+  "offset_tiles": [
+    -1,
+    0
+  ]
+}
