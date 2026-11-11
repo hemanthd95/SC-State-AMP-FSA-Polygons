@@ -1,0 +1,164 @@
+{
+  "record_date": "2026-11-11",
+  "farmer": "Jaivean Tylik Spann",
+  "name_aliases": [
+    "Jaivean Spann",
+    "Jaivien Tylik Spann",
+    "Javeiann Spann"
+  ],
+  "year2_amp_id": "AMPSC029",
+  "roster_county": "Clarendon",
+  "year2_enrollment": {
+    "farm_id": "3988",
+    "tract_id": "4673",
+    "field_id": "1",
+    "fsa_acres": 9.35
+  },
+  "source_photos_uploaded_to_chat": [
+    "Javeiann_Spann_Field_1.jpeg",
+    "Javeiann_Spann_Field_2.jpeg"
+  ],
+  "source_photos_not_yet_committed_to_GitHub": true,
+  "source1": {
+    "farm_id": "3988",
+    "tract_id": "4673",
+    "pixel_resolution": [
+      1320,
+      1755
+    ],
+    "year2_selected_field_1": {
+      "reported_acres": 9.35,
+      "outer_vertices_px": [
+        [
+          199,
+          979
+        ],
+        [
+          637,
+          407
+        ],
+        [
+          927,
+          545
+        ],
+        [
+          959,
+          548
+        ],
+        [
+          1109,
+          678
+        ],
+        [
+          1084,
+          1090
+        ],
+        [
+          209,
+          1022
+        ]
+      ],
+      "excluded_neighboring_field_4_px": [
+        [
+          199,
+          979
+        ],
+        [
+          439,
+          707
+        ],
+        [
+          453,
+          764
+        ],
+        [
+          455,
+          784
+        ],
+        [
+          405,
+          838
+        ],
+        [
+          355,
+          864
+        ],
+        [
+          278,
+          894
+        ]
+      ]
+    },
+    "adjacent_field_4": {
+      "reported_acres": 0.29
+    },
+    "status": "SOURCE_PIXEL_TRACE_ONLY_NO_GEODETIC_COORDINATES"
+  },
+  "source2": {
+    "farm_id": "9447",
+    "tract_id": "8142",
+    "pixel_resolution": [
+      1320,
+      1621
+    ],
+    "outlines_unlabeled": [
+      {
+        "source_label": "A",
+        "points_px": [
+          [
+            306,
+            707
+          ],
+          [
+            462,
+            648
+          ],
+          [
+            697,
+            789
+          ],
+          [
+            392,
+            904
+          ]
+        ]
+      },
+      {
+        "source_label": "B",
+        "points_px": [
+          [
+            462,
+            648
+          ],
+          [
+            878,
+            462
+          ],
+          [
+            1004,
+            645
+          ],
+          [
+            697,
+            789
+          ]
+        ]
+      }
+    ],
+    "status": "ADDITIONAL_HISTORICAL_FARM_SOURCE_NOT_YEAR2_SELECTED_FARM_ID"
+  },
+  "excel_address_history": {
+    "year1_farm_address": "1353 Rev. J. W. Carter Rd., Manning SC 29102",
+    "year2_record_address": "415 Drayton Street, Manning SC 29102",
+    "excel_coordinates_35_1037_minus81_7804": "REJECTED_INCONSISTENT_WITH_FARM_ADDRESS"
+  },
+  "mapping_status": "NOT_YET_GEOREFERENCED_DO_NOT_COUNT_COMPLETE",
+  "source_geometry_crs": "IMAGE_PIXELS_UNDEFINED_GEOSPATIAL_CRS",
+  "next_validation": [
+    "Search exact Reverend J W Carter Rd road geometry, not Carter namesakes",
+    "Locate 3988 9.35 acre polygon via NAIP and intersection geometry",
+    "Independently validate farm position and FSA area",
+    "Generate real EPSG4326 shapefile, county-context PDF and road-labeled satellite PDF",
+    "Keep Farm 9447 separate until exact enrollment linkage verified"
+  ]
+}
