@@ -1,0 +1,103 @@
+[
+  {
+    "pdf": "Joe Hillard_FSA_Map.pdf",
+    "source_alias": "Joe_Hilliard_primary",
+    "page": 1,
+    "pages_total": 1,
+    "green_fraction": 0.3692,
+    "color_fraction": 0.7722,
+    "parsed_ids": [
+      [
+        "Farm",
+        "6528"
+      ],
+      [
+        "Tract",
+        "41114"
+      ]
+    ],
+    "rendered_as_map": true,
+    "image_file": "Joe_Hilliard_primary_p1_FSA_aerial_crop.jpg"
+  },
+  {
+    "pdf": "Joe_Hillard_FSA_Map.pdf",
+    "source_alias": "Joe_Hilliard_alternate",
+    "page": 1,
+    "pages_total": 1,
+    "green_fraction": 0.0004,
+    "color_fraction": 0.649,
+    "parsed_ids": [],
+    "rendered_as_map": false
+  },
+  {
+    "pdf": "Calvin_Blair_FSA_Map.pdf",
+    "source_alias": "Calvin_Blair",
+    "page": 1,
+    "pages_total": 1,
+    "green_fraction": 0.5358,
+    "color_fraction": 0.6552,
+    "parsed_ids": [
+      [
+        "Farm",
+        "3603"
+      ],
+      [
+        "Tract",
+        "848"
+      ]
+    ],
+    "rendered_as_map": true,
+    "image_file": "Calvin_Blair_p1_FSA_aerial_crop.jpg"
+  },
+  {
+    "pdf": "Tywone Hillard_FSA_Map.pdf",
+    "source_alias": "Tywone_Hilliard",
+    "page": 1,
+    "pages_total": 3,
+    "green_fraction": 0.0001,
+    "color_fraction": 0.48,
+    "parsed_ids": [],
+    "rendered_as_map": false
+  },
+  {
+    "pdf": "Tywone Hillard_FSA_Map.pdf",
+    "source_alias": "Tywone_Hilliard",
+    "page": 2,
+    "pages_total": 3,
+    "green_fraction": 0.0001,
+    "color_fraction": 0.3971,
+    "parsed_ids": [],
+    "rendered_as_map": false
+  },
+  {
+    "pdf": "Tywone Hillard_FSA_Map.pdf",
+    "source_alias": "Tywone_Hilliard",
+    "page": 3,
+    "pages_total": 3,
+    "green_fraction": 0.0001,
+    "color_fraction": 0.5304,
+    "parsed_ids": [],
+    "rendered_as_map": false
+  },
+  {
+    "pdf": "Timothy J Hilliard_FSA_Map.pdf",
+    "source_alias": "Timothy_Hilliard_alternate",
+    "page": 1,
+    "pages_total": 1,
+    "green_fraction": 0.0008,
+    "color_fraction": 0.0162,
+    "parsed_ids": [],
+    "rendered_as_map": false
+  },
+  {
+    "pdf": "Christine Berry Zeigler_FSA Map.pdf",
+    "source_alias": "Christine_Berry_Zeigler",
+    "page": 1,
+    "pages_total": 1,
+    "green_fraction": 0.4409,
+    "color_fraction": 0.4651,
+    "parsed_ids": [],
+    "rendered_as_map": true,
+    "image_file": "Christine_Berry_Zeigler_p1_FSA_aerial_crop.jpg"
+  }
+]
