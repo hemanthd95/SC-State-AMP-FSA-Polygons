@@ -45,7 +45,7 @@ SPECS=[
  dict(name="Arthur Cobbs",src="wave3/Arthur_Cobbs",
       pdf="Arthur Cobbs_FSA Map.pdf",farm="548",tract="295",
       expected="Year2 Farm548, source Farm548/Tract295 Field1; only labeled cropped field on source map",
-      qa_mode="YEAR2_FARM_AND_SINGLE_SOURCE_FIELD_MATCH",
+      qa_mode="SOURCE_FIELD_MAPPED_YEAR2_ENROLLED_FIELD_UNSPECIFIED",
       shapes=[dict(field="1",acres=1.80,pts=[(433,258),(566,263),(555,330),(457,327),(429,299)])]),
 ]
 # Full 46-county official Census index; original SC repository county layer is incomplete.
@@ -114,7 +114,7 @@ for spec in SPECS:
     fsa_acres=entry["acres"],mapped_acres=round(area,4),
     area_delta_pct=round(difference,2),image_matches=q["inliers"],
     image_rmse_px=q["rmse_px"],status="REGISTERED_SOURCE_FIELD_APPROXIMATE",
-    farmer_closed=(spec["name"]=="Arthur Cobbs"),notes=spec["expected"]))
+    farmer_closed=False,notes=spec["expected"]))
  assert len(set(f["properties"]["county"] for f in current))==1
  county=current[0]["properties"]["county"]
  print("FARMER_IMAGE_TRACE",spec["name"],county,[(f["properties"]["field_id"],
@@ -200,9 +200,10 @@ summary={
  "date":"2026-11-11",
  "participants":["Charles Bright Jr.","Joseph Gadson","Arthur Cobbs","Jasper Summers","Margaret Berry"],
  "newly_accepted_source_geometries":len(new_features),
- "newly_closed_year2_farmers":["Arthur Cobbs"],
- "not_closed":["Charles Bright Jr.","Joseph Gadson","Jasper Summers","Margaret Berry"],
- "counting_rule":"Only Arthur Cobbs meets the enrolled farm+single mapped source field test; all others are partial or enrollment identifiers missing.",
+ "newly_closed_year2_farmers":[],
+ "one_source_field_mapped_farmer":["Arthur Cobbs"],
+ "not_closed":["Charles Bright Jr.","Joseph Gadson","Arthur Cobbs","Jasper Summers","Margaret Berry"],
+ "counting_rule":"Arthur Cobbs has a registered source Field1, but Year2 selected Field ID is blank. All five remain administratively open until exact enrolled-field selection is reconciled.",
  "provenance":"Independently NAIP-registered images, visual FSA outline and acreage gate for new source polygons; Jasper and Margaret copied from existing GIS ZIPs.",
  "survey_disclaimer":"All FSA photo-based outlines are approximate research planning boundaries, not cadastral surveys."
 }
@@ -211,7 +212,7 @@ summary={
  "SC STATE AMP - BATCH 1 OF 5 FARMERS\n"
  "New georeferenced source-field GIS for Arthur Cobbs, Charles Bright Jr., Joseph Gadson.\n"
  "Existing separate per-farmer mapped GIS for Jasper Summers and Margaret Berry carried forward unchanged.\n"
- "Year2 status: Arthur Cobbs complete against known Farm548/Tract295/Field1; four remain QA open.\n"
+ "Year2 status: Arthur Cobbs source Field1 mapped, Year2 selected Field ID blank; all five remain enrollment-QA open.\n"
  "Some FSA source fields are NOT INCLUDED because not yet digitized/area verified.\n"
  "Use Batch1_Farmer_QA.csv and each farmer's status README. Photo-source boundaries are not surveys.\n")
 BUNDLE.parent.mkdir(parents=True,exist_ok=True)
