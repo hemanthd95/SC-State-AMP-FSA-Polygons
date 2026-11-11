@@ -8,7 +8,7 @@
     "Jasper Summers",
     "Margaret Berry"
   ],
-  "newly_accepted_source_geometries": 4,
+  "newly_accepted_source_geometries": 8,
   "newly_closed_year2_farmers": [],
   "one_source_field_mapped_farmer": [
     "Arthur Cobbs"
@@ -22,5 +22,12 @@
   ],
   "counting_rule": "Arthur Cobbs has a registered source Field1, but Year2 selected Field ID is blank. All five remain administratively open until exact enrolled-field selection is reconciled.",
   "provenance": "Independently NAIP-registered images, visual FSA outline and acreage gate for new source polygons; Jasper and Margaret copied from existing GIS ZIPs.",
-  "survey_disclaimer": "All FSA photo-based outlines are approximate research planning boundaries, not cadastral surveys."
+  "survey_disclaimer": "All FSA photo-based outlines are approximate research planning boundaries, not cadastral surveys.",
+  "additional_registered_source_fields": [
+    "Charles Bright Jr. 2715/3021/4",
+    "Charles Bright Jr. 2715/3021/7",
+    "Jasper Summers 13709/45512/16",
+    "Jasper Summers 13709/45512/27"
+  ],
+  "critical_note": "All five participants remain YEAR2 enrollment selection or acreage QA open; 4 extra FSA source polygons registered but NO additional farmer closed."
 }

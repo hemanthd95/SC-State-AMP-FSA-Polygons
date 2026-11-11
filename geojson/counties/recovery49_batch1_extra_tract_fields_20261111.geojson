@@ -1,0 +1,474 @@
+{
+  "type": "FeatureCollection",
+  "name": "SC_AMP_Batch1_Additional_Tract_Validated_Source_Fields",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "producer": "Charles Bright Jr.",
+        "county": "Colleton",
+        "farm_id": "2715",
+        "tract_id": "3021",
+        "field_id": "4",
+        "source_pdf": "Bright, Charles, JR_ FSAmap.pdf",
+        "source_page": 2,
+        "fsa_reported_acres": 3.48,
+        "geodesic_acres": 3.1531,
+        "acreage_difference_pct": -9.39,
+        "source_workbook_field_match": false,
+        "registration_provider": "USGS_NAIP",
+        "registration_inliers": 148,
+        "registration_rmse_px": 0.6392,
+        "registration_method": "SIFT source photo to geographically referenced USGS NAIP; manual FSA field outline",
+        "status": "REGISTERED_SOURCE_FIELD_YEAR2_ENROLLMENT_SELECTION_OPEN",
+        "geometry_quality": "FSA_PHOTO_TRACE_APPROXIMATE_NOT_SURVEY",
+        "note": "Field6 trace (1.13 vs 0.96 acres) requires boundary review; Tract3022 Fields9/10/3 remain source-only; Year2 field selection blank."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.47198788345801,
+              32.77115159369177
+            ],
+            [
+              -80.47189126511243,
+              32.77136375872953
+            ],
+            [
+              -80.47171128343928,
+              32.771274315151416
+            ],
+            [
+              -80.4715842839911,
+              32.77110143606473
+            ],
+            [
+              -80.4714049665081,
+              32.77107998936208
+            ],
+            [
+              -80.47120827666778,
+              32.77111153191142
+            ],
+            [
+              -80.47110200517649,
+              32.771233072378216
+            ],
+            [
+              -80.47105890957658,
+              32.77140701415043
+            ],
+            [
+              -80.47109765649003,
+              32.77171624950292
+            ],
+            [
+              -80.47084749294535,
+              32.771755586923014
+            ],
+            [
+              -80.47063303521873,
+              32.77177959477523
+            ],
+            [
+              -80.47060186092597,
+              32.771334549901475
+            ],
+            [
+              -80.47048283975553,
+              32.77105604093394
+            ],
+            [
+              -80.47036305844455,
+              32.77070198595337
+            ],
+            [
+              -80.47024415241462,
+              32.77043849327785
+            ],
+            [
+              -80.47007997804077,
+              32.770122417216506
+            ],
+            [
+              -80.47026762188834,
+              32.77009837686945
+            ],
+            [
+              -80.47042033231875,
+              32.77015770566423
+            ],
+            [
+              -80.47052024975974,
+              32.77030809086015
+            ],
+            [
+              -80.47057505024527,
+              32.77042102077954
+            ],
+            [
+              -80.47072051535254,
+              32.770654165980794
+            ],
+            [
+              -80.47095424312266,
+              32.77075828304758
+            ],
+            [
+              -80.47123199081508,
+              32.770779014696096
+            ],
+            [
+              -80.47139289327949,
+              32.77074767462346
+            ],
+            [
+              -80.47152583099277,
+              32.77059561293549
+            ],
+            [
+              -80.47182002672011,
+              32.770434797258915
+            ],
+            [
+              -80.47198788345801,
+              32.77115159369177
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "producer": "Charles Bright Jr.",
+        "county": "Colleton",
+        "farm_id": "2715",
+        "tract_id": "3021",
+        "field_id": "7",
+        "source_pdf": "Bright, Charles, JR_ FSAmap.pdf",
+        "source_page": 2,
+        "fsa_reported_acres": 30.82,
+        "geodesic_acres": 30.7907,
+        "acreage_difference_pct": -0.1,
+        "source_workbook_field_match": false,
+        "registration_provider": "USGS_NAIP",
+        "registration_inliers": 148,
+        "registration_rmse_px": 0.6392,
+        "registration_method": "SIFT source photo to geographically referenced USGS NAIP; manual FSA field outline",
+        "status": "REGISTERED_SOURCE_FIELD_YEAR2_ENROLLMENT_SELECTION_OPEN",
+        "geometry_quality": "FSA_PHOTO_TRACE_APPROXIMATE_NOT_SURVEY",
+        "note": "Field6 trace (1.13 vs 0.96 acres) requires boundary review; Tract3022 Fields9/10/3 remain source-only; Year2 field selection blank."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.47033369654868,
+              32.77225665601501
+            ],
+            [
+              -80.46963745148683,
+              32.77057872673834
+            ],
+            [
+              -80.46839817926468,
+              32.77080624437691
+            ],
+            [
+              -80.46750691709825,
+              32.76849542215848
+            ],
+            [
+              -80.47077860800371,
+              32.767400587354224
+            ],
+            [
+              -80.47263875836187,
+              32.77177433746246
+            ],
+            [
+              -80.47033369654868,
+              32.77225665601501
+            ]
+          ],
+          [
+            [
+              -80.46901203276353,
+              32.770590692837445
+            ],
+            [
+              -80.46894521821882,
+              32.7701835724954
+            ],
+            [
+              -80.46879056106091,
+              32.76992045792938
+            ],
+            [
+              -80.4686123192888,
+              32.76995953348506
+            ],
+            [
+              -80.4683095285357,
+              32.77003726097552
+            ],
+            [
+              -80.46839809823989,
+              32.770798702216474
+            ],
+            [
+              -80.46901203276353,
+              32.770590692837445
+            ]
+          ],
+          [
+            [
+              -80.47198788345801,
+              32.77115159369177
+            ],
+            [
+              -80.47182002672011,
+              32.770434797258915
+            ],
+            [
+              -80.47152583099277,
+              32.77059561293549
+            ],
+            [
+              -80.47139289327949,
+              32.77074767462346
+            ],
+            [
+              -80.47123199081508,
+              32.770779014696096
+            ],
+            [
+              -80.47095424312266,
+              32.77075828304758
+            ],
+            [
+              -80.47072051535254,
+              32.770654165980794
+            ],
+            [
+              -80.47057505024527,
+              32.77042102077954
+            ],
+            [
+              -80.47052024975974,
+              32.77030809086015
+            ],
+            [
+              -80.47042033231875,
+              32.77015770566423
+            ],
+            [
+              -80.47026762188834,
+              32.77009837686945
+            ],
+            [
+              -80.47007997804077,
+              32.770122417216506
+            ],
+            [
+              -80.47024415241462,
+              32.77043849327785
+            ],
+            [
+              -80.47036305844455,
+              32.77070198595337
+            ],
+            [
+              -80.47048283975553,
+              32.77105604093394
+            ],
+            [
+              -80.47060186092597,
+              32.771334549901475
+            ],
+            [
+              -80.47063303521873,
+              32.77177959477523
+            ],
+            [
+              -80.47084749294535,
+              32.771755586923014
+            ],
+            [
+              -80.47109765649003,
+              32.77171624950292
+            ],
+            [
+              -80.47105890957658,
+              32.77140701415043
+            ],
+            [
+              -80.47110200517649,
+              32.771233072378216
+            ],
+            [
+              -80.47120827666778,
+              32.77111153191142
+            ],
+            [
+              -80.4714049665081,
+              32.77107998936208
+            ],
+            [
+              -80.4715842839911,
+              32.77110143606473
+            ],
+            [
+              -80.47171128343928,
+              32.771274315151416
+            ],
+            [
+              -80.47189126511243,
+              32.77136375872953
+            ],
+            [
+              -80.47198788345801,
+              32.77115159369177
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "producer": "Jasper Summers",
+        "county": "Orangeburg",
+        "farm_id": "13709",
+        "tract_id": "45512",
+        "field_id": "16",
+        "source_pdf": "Jasper Summers FSA Map.pdf",
+        "source_page": 3,
+        "fsa_reported_acres": 2.34,
+        "geodesic_acres": 2.3487,
+        "acreage_difference_pct": 0.37,
+        "source_workbook_field_match": false,
+        "registration_provider": "USGS_NAIP",
+        "registration_inliers": 130,
+        "registration_rmse_px": 0.3658,
+        "registration_method": "SIFT source photo to geographically referenced USGS NAIP; manual FSA field outline",
+        "status": "REGISTERED_SOURCE_FIELD_YEAR2_ENROLLMENT_SELECTION_OPEN",
+        "geometry_quality": "FSA_PHOTO_TRACE_APPROXIMATE_NOT_SURVEY",
+        "note": "Year2 master selects Farm13709 but field number blank; source page1 Tract45514 Fields8 and17 already mapped."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.83010826835248,
+              33.31083308823991
+            ],
+            [
+              -80.82999174082696,
+              33.310833090912794
+            ],
+            [
+              -80.8298693752512,
+              33.31079893429648
+            ],
+            [
+              -80.82966544648444,
+              33.310779418769606
+            ],
+            [
+              -80.82954888804157,
+              33.310657428808504
+            ],
+            [
+              -80.82951387253351,
+              33.310408589072516
+            ],
+            [
+              -80.82947886022379,
+              33.3101549031204
+            ],
+            [
+              -80.82947880585185,
+              33.309911005921755
+            ],
+            [
+              -80.8295777616564,
+              33.30962812592482
+            ],
+            [
+              -80.82964177444873,
+              33.309413556249964
+            ],
+            [
+              -80.82974070253424,
+              33.30912587718865
+            ],
+            [
+              -80.83011925787436,
+              33.30916001619541
+            ],
+            [
+              -80.83010826835248,
+              33.31083308823991
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "producer": "Jasper Summers",
+        "county": "Orangeburg",
+        "farm_id": "13709",
+        "tract_id": "45512",
+        "field_id": "27",
+        "source_pdf": "Jasper Summers FSA Map.pdf",
+        "source_page": 3,
+        "fsa_reported_acres": 0.2,
+        "geodesic_acres": 0.1857,
+        "acreage_difference_pct": -7.13,
+        "source_workbook_field_match": false,
+        "registration_provider": "USGS_NAIP",
+        "registration_inliers": 130,
+        "registration_rmse_px": 0.3658,
+        "registration_method": "SIFT source photo to geographically referenced USGS NAIP; manual FSA field outline",
+        "status": "REGISTERED_SOURCE_FIELD_YEAR2_ENROLLMENT_SELECTION_OPEN",
+        "geometry_quality": "FSA_PHOTO_TRACE_APPROXIMATE_NOT_SURVEY",
+        "note": "Year2 master selects Farm13709 but field number blank; source page1 Tract45514 Fields8 and17 already mapped."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.82877980274839,
+              33.310569609651594
+            ],
+            [
+              -80.82881473616554,
+              33.31001831605109
+            ],
+            [
+              -80.82887881505707,
+              33.310008559982776
+            ],
+            [
+              -80.82900701335248,
+              33.310398835720754
+            ],
+            [
+              -80.82877980274839,
+              33.310569609651594
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

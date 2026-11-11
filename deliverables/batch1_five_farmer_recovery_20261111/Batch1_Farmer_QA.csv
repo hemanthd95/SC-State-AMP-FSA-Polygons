@@ -5,3 +5,7 @@ Joseph Gadson,Orangeburg,4547,4482,4,0.6,0.5734,-4.43,251,0.442,REGISTERED_SOURC
 Arthur Cobbs,Dorchester,548,295,1,1.8,1.8959,5.33,48,0.552,REGISTERED_SOURCE_FIELD_APPROXIMATE,False,"Year2 Farm548, source Farm548/Tract295 Field1; only labeled cropped field on source map"
 Jasper Summers,Orangeburg,13709;13653,,,,,,,,PARTIAL_NOT_CLOSED,False,Farm13709 Fields8/17 mapped; enrollment field blank and Tract45512 Fields16/27 remain unregistered
 Margaret Berry,Orangeburg,10939;11782,,,,,,,,PARTIAL_NOT_CLOSED,False,Farm10939 Field3 mapped; older Farm11782 Field13 area differs substantially from 7.53 FSA acres
+Charles Bright Jr.,Colleton,2715,3021,4,3.48,3.1531,-9.39,148,0.639,REGISTERED_SOURCE_FIELD_APPROXIMATE,False,Field6 trace (1.13 vs 0.96 acres) requires boundary review; Tract3022 Fields9/10/3 remain source-only; Year2 field selection blank.
+Charles Bright Jr.,Colleton,2715,3021,7,30.82,30.7907,-0.1,148,0.639,REGISTERED_SOURCE_FIELD_APPROXIMATE,False,Field6 trace (1.13 vs 0.96 acres) requires boundary review; Tract3022 Fields9/10/3 remain source-only; Year2 field selection blank.
+Jasper Summers,Orangeburg,13709,45512,16,2.34,2.3487,0.37,130,0.366,REGISTERED_SOURCE_FIELD_APPROXIMATE,False,Year2 master selects Farm13709 but field number blank; source page1 Tract45514 Fields8 and17 already mapped.
+Jasper Summers,Orangeburg,13709,45512,27,0.2,0.1857,-7.13,130,0.366,REGISTERED_SOURCE_FIELD_APPROXIMATE,False,Year2 master selects Farm13709 but field number blank; source page1 Tract45514 Fields8 and17 already mapped.
