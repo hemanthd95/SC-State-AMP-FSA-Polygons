@@ -1,0 +1,31 @@
+{
+  "farmer": "Christine Berry Zeigler",
+  "excel_address": "568 Nassau Drive Bowman SC 29018",
+  "fsa_enrolled_identifiers": [
+    "1271/469/1"
+  ],
+  "anchors": [
+    {
+      "source": "PREVIOUSLY_GEOREGISTERED_NEARBY_FIELD_AS_SEARCH_ONLY",
+      "lon": -80.64357258331364,
+      "lat": 33.4251468649058
+    },
+    {
+      "source": "PREVIOUSLY_GEOREGISTERED_NEARBY_FIELD_AS_SEARCH_ONLY",
+      "lon": -80.64857551169925,
+      "lat": 33.42745707859455
+    }
+  ],
+  "results": [
+    {
+      "pdf": "Christine Berry Zeigler_FSA Map.pdf",
+      "source_page": 1,
+      "tile_requests": 100,
+      "tiles_loaded": 79,
+      "status": "NO_IMAGE_MATCH"
+    }
+  ],
+  "source_candidates": [
+    "Christine Berry Zeigler_FSA Map.pdf"
+  ]
+}

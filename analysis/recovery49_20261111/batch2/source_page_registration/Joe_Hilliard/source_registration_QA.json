@@ -1,0 +1,124 @@
+{
+  "farmer": "Joe Hilliard",
+  "excel_address": "157 Hollis Rd Santee SC 29142",
+  "fsa_enrolled_identifiers": [
+    "13859/45814/20"
+  ],
+  "anchors": [
+    {
+      "source": "VERIFIED_CENSUS_ADDRESS_SEARCH_ONLY",
+      "lon": -80.50430450531,
+      "lat": 33.464418972005
+    }
+  ],
+  "results": [
+    {
+      "pdf": "Joe Hillard_FSA_Map.pdf",
+      "source_page": 1,
+      "tile_requests": 50,
+      "tiles_loaded": 41,
+      "status": "REGISTERED_SOURCE_PHOTO_NEEDS_FIELD_ID_AND_TRACE",
+      "valid": true,
+      "inliers": 447,
+      "rmse_px": 0.8165,
+      "source_spread": [
+        545.2534790039062,
+        786.370849609375
+      ],
+      "target_spread": [
+        616.4586181640625,
+        888.62158203125
+      ],
+      "source_page_pdf_pts_to_tile_H": [
+        [
+          1.641104593585617,
+          -0.0008694096263891483,
+          -319.6125977324061
+        ],
+        [
+          0.0007989219641580039,
+          1.637176220805684,
+          -101.09539138126387
+        ],
+        [
+          2.7250279395339823e-06,
+          -2.8193788756684244e-06,
+          1.0
+        ]
+      ],
+      "tile_bbox_epsg3857": [
+        -8962573.184197748,
+        3954836.3078653384,
+        -8960823.184197748,
+        3956586.3078653384
+      ],
+      "tile_size_px": 900,
+      "provider": "USGS_NAIP",
+      "geocode_anchor": {
+        "source": "VERIFIED_CENSUS_ADDRESS_SEARCH_ONLY",
+        "lon": -80.50430450531,
+        "lat": 33.464418972005
+      },
+      "tile_offset": [
+        0,
+        -2
+      ]
+    },
+    {
+      "pdf": "Joe_Hillard_FSA_Map.pdf",
+      "source_page": 1,
+      "tile_requests": 50,
+      "tiles_loaded": 47,
+      "status": "WEAK_MATCH_NOT_ACCEPTED",
+      "valid": false,
+      "inliers": 29,
+      "rmse_px": 0.4238,
+      "source_spread": [
+        473.18316650390625,
+        544.6329345703125
+      ],
+      "target_spread": [
+        426.17340087890625,
+        686.5245971679688
+      ],
+      "source_page_pdf_pts_to_tile_H": [
+        [
+          13.053962230737953,
+          -11.667766823699006,
+          373.704183933526
+        ],
+        [
+          6.1973281592879506,
+          -5.541599938957384,
+          178.75183129288013
+        ],
+        [
+          0.03459178383582222,
+          -0.030942322324989228,
+          1.0
+        ]
+      ],
+      "tile_bbox_epsg3857": [
+        -8961173.184197748,
+        3955536.3078653384,
+        -8959423.184197748,
+        3957286.3078653384
+      ],
+      "tile_size_px": 900,
+      "provider": "ESRI_World",
+      "geocode_anchor": {
+        "source": "VERIFIED_CENSUS_ADDRESS_SEARCH_ONLY",
+        "lon": -80.50430450531,
+        "lat": 33.464418972005
+      },
+      "tile_offset": [
+        2,
+        -1
+      ]
+    }
+  ],
+  "source_candidates": [
+    "Joe Hillard_FSA_Map.pdf",
+    "Joe_Hillard_FSA_Map.pdf"
+  ]
+}

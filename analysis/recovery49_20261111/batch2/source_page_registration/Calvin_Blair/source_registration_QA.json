@@ -1,0 +1,26 @@
+{
+  "farmer": "Calvin Blair",
+  "excel_address": "1033 Armour Hill Dr Pinewood SC 29125",
+  "fsa_enrolled_identifiers": [
+    "3603/848/3"
+  ],
+  "anchors": [
+    {
+      "source": "VERIFIED_CENSUS_ADDRESS_SEARCH_ONLY",
+      "lon": -80.436293255423,
+      "lat": 33.594059411505
+    }
+  ],
+  "results": [
+    {
+      "pdf": "Calvin_Blair_FSA_Map.pdf",
+      "source_page": 1,
+      "tile_requests": 50,
+      "tiles_loaded": 42,
+      "status": "NO_IMAGE_MATCH"
+    }
+  ],
+  "source_candidates": [
+    "Calvin_Blair_FSA_Map.pdf"
+  ]
+}

@@ -1,0 +1,229 @@
+{
+  "farmer": "Tywone Hilliard",
+  "excel_address": "157 Hollis Rd Santee SC 29142",
+  "fsa_enrolled_identifiers": [
+    "1064/3623",
+    "3826/3624"
+  ],
+  "anchors": [
+    {
+      "source": "VERIFIED_CENSUS_ADDRESS_SEARCH_ONLY",
+      "lon": -80.50430450531,
+      "lat": 33.464418972005
+    }
+  ],
+  "results": [
+    {
+      "pdf": "Tywone Hillard_FSA_Map.pdf",
+      "source_page": 1,
+      "tile_requests": 50,
+      "tiles_loaded": 46,
+      "status": "REGISTERED_SOURCE_PHOTO_NEEDS_FIELD_ID_AND_TRACE",
+      "valid": true,
+      "inliers": 129,
+      "rmse_px": 0.7106,
+      "source_spread": [
+        269.5572814941406,
+        530.5859985351562
+      ],
+      "target_spread": [
+        203.3975830078125,
+        399.3665771484375
+      ],
+      "source_page_pdf_pts_to_tile_H": [
+        [
+          1.1253893880212054,
+          0.0799645307464991,
+          532.1406859865689
+        ],
+        [
+          -0.001321708846405455,
+          1.1772706118810257,
+          147.5504631876112
+        ],
+        [
+          2.1629046556902346e-06,
+          8.726910277002997e-05,
+          1.0
+        ]
+      ],
+      "tile_bbox_epsg3857": [
+        -8961173.184197748,
+        3956236.3078653384,
+        -8959423.184197748,
+        3957986.3078653384
+      ],
+      "tile_size_px": 900,
+      "provider": "USGS_NAIP",
+      "geocode_anchor": {
+        "source": "VERIFIED_CENSUS_ADDRESS_SEARCH_ONLY",
+        "lon": -80.50430450531,
+        "lat": 33.464418972005
+      },
+      "tile_offset": [
+        2,
+        0
+      ]
+    },
+    {
+      "pdf": "Tywone Hillard_FSA_Map.pdf",
+      "source_page": 2,
+      "tile_requests": 50,
+      "tiles_loaded": 49,
+      "status": "REGISTERED_SOURCE_PHOTO_NEEDS_FIELD_ID_AND_TRACE",
+      "valid": true,
+      "inliers": 187,
+      "rmse_px": 1.2059,
+      "source_spread": [
+        584.39013671875,
+        534.5741577148438
+      ],
+      "target_spread": [
+        429.80328369140625,
+        406.72833251953125
+      ],
+      "source_page_pdf_pts_to_tile_H": [
+        [
+          1.1600043561245055,
+          0.11193597626243537,
+          322.494847012184
+        ],
+        [
+          0.009141186177206873,
+          1.241058720466268,
+          97.4057201317322
+        ],
+        [
+          8.032332708025291e-06,
+          0.000170414430936974,
+          1.0
+        ]
+      ],
+      "tile_bbox_epsg3857": [
+        -8961873.184197748,
+        3957636.3078653384,
+        -8960123.184197748,
+        3959386.3078653384
+      ],
+      "tile_size_px": 900,
+      "provider": "USGS_NAIP",
+      "geocode_anchor": {
+        "source": "VERIFIED_CENSUS_ADDRESS_SEARCH_ONLY",
+        "lon": -80.50430450531,
+        "lat": 33.464418972005
+      },
+      "tile_offset": [
+        1,
+        2
+      ]
+    },
+    {
+      "pdf": "Tywone Hillard_FSA_Map.pdf",
+      "source_page": 3,
+      "tile_requests": 50,
+      "tiles_loaded": 49,
+      "status": "REGISTERED_SOURCE_PHOTO_NEEDS_FIELD_ID_AND_TRACE",
+      "valid": true,
+      "inliers": 108,
+      "rmse_px": 0.8362,
+      "source_spread": [
+        280.994140625,
+        499.8135681152344
+      ],
+      "target_spread": [
+        213.45904541015625,
+        378.08056640625
+      ],
+      "source_page_pdf_pts_to_tile_H": [
+        [
+          1.1138997698066604,
+          0.09723209004821888,
+          497.1053337393423
+        ],
+        [
+          -0.013118499097426933,
+          1.1802880109782339,
+          81.16564969215528
+        ],
+        [
+          -7.590792027338849e-06,
+          0.00010120944707042618,
+          1.0
+        ]
+      ],
+      "tile_bbox_epsg3857": [
+        -8961173.184197748,
+        3956236.3078653384,
+        -8959423.184197748,
+        3957986.3078653384
+      ],
+      "tile_size_px": 900,
+      "provider": "USGS_NAIP",
+      "geocode_anchor": {
+        "source": "VERIFIED_CENSUS_ADDRESS_SEARCH_ONLY",
+        "lon": -80.50430450531,
+        "lat": 33.464418972005
+      },
+      "tile_offset": [
+        2,
+        0
+      ]
+    },
+    {
+      "pdf": "Timothy J Hilliard_FSA_Map.pdf",
+      "source_page": 1,
+      "tile_requests": 50,
+      "tiles_loaded": 50,
+      "status": "WEAK_MATCH_NOT_ACCEPTED",
+      "valid": false,
+      "inliers": 32,
+      "rmse_px": 0.0,
+      "source_spread": [
+        506.513671875,
+        571.4524536132812
+      ],
+      "target_spread": [
+        0.0,
+        0.0
+      ],
+      "source_page_pdf_pts_to_tile_H": [
+        [
+          434.3095251761869,
+          -539.9447915830709,
+          862.2599620064124
+        ],
+        [
+          80.79878287272473,
+          -100.45112862924977,
+          160.41452331242408
+        ],
+        [
+          0.5036874542629695,
+          -0.6261972205299882,
+          1.0
+        ]
+      ],
+      "tile_bbox_epsg3857": [
+        -8963973.184197748,
+        3955536.3078653384,
+        -8962223.184197748,
+        3957286.3078653384
+      ],
+      "tile_size_px": 900,
+      "provider": "USGS_NAIP",
+      "geocode_anchor": {
+        "source": "VERIFIED_CENSUS_ADDRESS_SEARCH_ONLY",
+        "lon": -80.50430450531,
+        "lat": 33.464418972005
+      },
+      "tile_offset": [
+        -2,
+        -1
+      ]
+    }
+  ],
+  "source_candidates": [
+    "Tywone Hillard_FSA_Map.pdf",
+    "Timothy J Hilliard_FSA_Map.pdf"
+  ]
+}
