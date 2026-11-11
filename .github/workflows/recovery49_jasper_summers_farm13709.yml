@@ -1,0 +1,33 @@
+name: Expand Jasper Summers source-matched Year2 Farm13709 GIS
+on:
+  push:
+    paths:
+      - 'scripts/recovery49_jasper_summers_farm13709.py'
+      - '.github/workflows/recovery49_jasper_summers_farm13709.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  GIS:
+    runs-on: ubuntu-latest
+    timeout-minutes: 38
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install 'numpy<2.5' opencv-python-headless shapely pyproj pyshp pillow reportlab pymupdf requests
+      - name: Validate 2 new Farm13709 source fields + retain older Farm13653 in farmer atlas
+        run: python scripts/recovery49_jasper_summers_farm13709.py
+      - name: Commit additional source farm GeoJSON and one-farmer ZIP
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin main
+          git reset --mixed origin/main
+          git add geojson/counties/jasper_summers_farm13709_tract45514_fields8_17_registered_20261111.geojson
+          git add deliverables/Jasper_Summers_Expanded_Three_Field_GIS_20261111.zip
+          git commit -m "Georeference Jasper Summers missing Farm13709 fields8/17 preserving Farm13653 and unresolved Year2 field selection"
+          git push origin HEAD:main
