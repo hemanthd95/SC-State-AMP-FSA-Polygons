@@ -1,0 +1,41 @@
+name: Register Antron Cinnabar road fields with multipoint road QA
+on:
+  push:
+    paths:
+      - 'scripts/recovery_20261111_antron_cinnabar_fit.py'
+      - '.github/workflows/recovery_20261111_antron_cinnabar_fit.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  register:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install quantitative GIS dependencies
+        run: python -m pip install 'numpy<2.5' scipy shapely pyproj pyshp pillow reportlab pymupdf requests
+      - name: Fit source road to TIGER, reject acreage failures, create shapefile and maps
+        run: |
+          set -o pipefail
+          AMP_FARM_WORKERS=2 python scripts/recovery_20261111_antron_cinnabar_fit.py | tee /tmp/antron_cinnabar_fit.log
+      - name: Publish provisional field GIS and QA to existing private repository
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin main
+          git reset --mixed origin/main
+          git add geojson/counties/antron_williams_cinnabar_provisional_road_control_20261111.geojson || true
+          git add deliverables/Antron_Williams_Cinnabar_Road_Provisional_GIS_20261111.zip || true
+          git add deliverables/antron_williams_cinnabar_20261111/Cinnabar_Georegistration_QA.json || true
+          git add deliverables/antron_williams_cinnabar_20261111/README_START_HERE.txt || true
+          if ! git diff --cached --quiet; then
+            git commit -m "Add Antron Cinnabar field 7,18,20 road-registered provisional GIS; reject Field19"
+            git push origin HEAD:main
+          fi
