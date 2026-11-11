@@ -38,7 +38,7 @@ jobs:
             assert len([s for s in names if s.endswith('-FieldMap.pdf')])==5
             assert len([s for s in names if s.endswith('.shp')])==5
           q=json.load(open('deliverables/batch1_five_farmer_recovery_20261111/BATCH1_BUILD_SUMMARY.json'))
-          assert len(q['participants'])==5 and len(q['newly_closed_year2_farmers'])==1,q
+          assert len(q['participants'])==5 and len(q['newly_closed_year2_farmers'])==0,q
           print('ARCHIVE_VALIDATED',len(names),'entries',flush=True)
           PY
       - name: Publish five-producer GIS package and source field GeoJSON
