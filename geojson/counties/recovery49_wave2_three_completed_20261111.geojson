@@ -1,0 +1,214 @@
+{
+  "type": "FeatureCollection",
+  "name": "AMP_Recovery49_Three_Validated_20261111",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "producer": "Tiffany Loadholt",
+        "county": "Allendale",
+        "amp_roster_county": "Allendale",
+        "farm_id": "3779",
+        "tract_id": "10394",
+        "field_id": "54",
+        "fsa_printed_acres": 15.18,
+        "geodesic_area_acres": 14.1004,
+        "acreage_difference_percent": -7.11,
+        "source_pdf": "Tifanny Loadholt_FSA_Map.pdf",
+        "source_page": 1,
+        "source_workbook_field_match": true,
+        "image_registration_inliers": 85,
+        "image_registration_rmse_pixels": 0.772,
+        "georeferenced_provider": "USGS_NAIP",
+        "registration_method": "FSA aerial SIFT homography to independently georeferenced USGS NAIP",
+        "physical_county_basis": "Census county spatial polygon intersects georeferenced field, not printed FSA county",
+        "geometry_quality": "FSA_PHOTO_TRACED_APPROXIMATE_NOT_SURVEY",
+        "status": "FIELD_ID_MATCHED_REGISTERED_AREA_QA_PASSED",
+        "note": "Research/AMP FSA imagery boundary, not legal ownership or a land survey"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -81.27588481236495,
+              33.0436156474214
+            ],
+            [
+              -81.27320312221597,
+              33.04444801846591
+            ],
+            [
+              -81.27265125162492,
+              33.04229692138458
+            ],
+            [
+              -81.27359953606224,
+              33.04208370073571
+            ],
+            [
+              -81.27396008737144,
+              33.04235311129913
+            ],
+            [
+              -81.27481915657145,
+              33.04189219189781
+            ],
+            [
+              -81.27499915103797,
+              33.0419744645438
+            ],
+            [
+              -81.27533436930298,
+              33.041785382747484
+            ],
+            [
+              -81.27588481236495,
+              33.0436156474214
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "producer": "Jan Davis Boneparte",
+        "county": "Orangeburg",
+        "amp_roster_county": "Calhoun",
+        "farm_id": "3549",
+        "tract_id": "8353",
+        "field_id": "2",
+        "fsa_printed_acres": 7.72,
+        "geodesic_area_acres": 7.5561,
+        "acreage_difference_percent": -2.12,
+        "source_pdf": "Jan Davis-Boneparte_FSA_Map.pdf",
+        "source_page": 1,
+        "source_workbook_field_match": true,
+        "image_registration_inliers": 201,
+        "image_registration_rmse_pixels": 0.58,
+        "georeferenced_provider": "USGS_NAIP",
+        "registration_method": "FSA aerial SIFT homography to independently georeferenced USGS NAIP",
+        "physical_county_basis": "Census county spatial polygon intersects georeferenced field, not printed FSA county",
+        "geometry_quality": "FSA_PHOTO_TRACED_APPROXIMATE_NOT_SURVEY",
+        "status": "FIELD_ID_MATCHED_REGISTERED_AREA_QA_PASSED",
+        "note": "Research/AMP FSA imagery boundary, not legal ownership or a land survey"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.7510148296841,
+              33.553697920944096
+            ],
+            [
+              -80.7505337864977,
+              33.553562842758154
+            ],
+            [
+              -80.75039195791149,
+              33.553384197345935
+            ],
+            [
+              -80.74999952814004,
+              33.553375637379126
+            ],
+            [
+              -80.74978587852921,
+              33.553293335225035
+            ],
+            [
+              -80.7495285416242,
+              33.5530401343444
+            ],
+            [
+              -80.74909227743461,
+              33.55289781005899
+            ],
+            [
+              -80.74954350775813,
+              33.55188970508797
+            ],
+            [
+              -80.75214380795992,
+              33.55260225515894
+            ],
+            [
+              -80.7519897222401,
+              33.55314376763915
+            ],
+            [
+              -80.7513216652806,
+              33.55295621840079
+            ],
+            [
+              -80.7510148296841,
+              33.553697920944096
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "producer": "Eartha Pinckney",
+        "county": "Colleton",
+        "amp_roster_county": "Dorchester",
+        "farm_id": "6579",
+        "tract_id": "22687",
+        "field_id": "11",
+        "fsa_printed_acres": 5.81,
+        "geodesic_area_acres": 5.9731,
+        "acreage_difference_percent": 2.81,
+        "source_pdf": "Eartha_Pinckney_FSA_Map.pdf",
+        "source_page": 1,
+        "source_workbook_field_match": true,
+        "image_registration_inliers": 138,
+        "image_registration_rmse_pixels": 0.714,
+        "georeferenced_provider": "USGS_NAIP",
+        "registration_method": "FSA aerial SIFT homography to independently georeferenced USGS NAIP",
+        "physical_county_basis": "Census county spatial polygon intersects georeferenced field, not printed FSA county",
+        "geometry_quality": "FSA_PHOTO_TRACED_APPROXIMATE_NOT_SURVEY",
+        "status": "FIELD_ID_MATCHED_REGISTERED_AREA_QA_PASSED",
+        "note": "Research/AMP FSA imagery boundary, not legal ownership or a land survey"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.41072258867682,
+              32.94028983962614
+            ],
+            [
+              -80.40870025065165,
+              32.940811387368875
+            ],
+            [
+              -80.40835612658812,
+              32.93955678246572
+            ],
+            [
+              -80.40942970202303,
+              32.93939995727892
+            ],
+            [
+              -80.41012904628357,
+              32.93961986552359
+            ],
+            [
+              -80.41070223919105,
+              32.939511238805245
+            ],
+            [
+              -80.41072258867682,
+              32.94028983962614
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}
