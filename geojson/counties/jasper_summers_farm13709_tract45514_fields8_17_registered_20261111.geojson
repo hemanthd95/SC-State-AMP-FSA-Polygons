@@ -1,0 +1,139 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "producer": "Jasper Summers",
+        "county": "Orangeburg",
+        "amp_roster_county": "Orangeburg",
+        "farm_id": "13709",
+        "tract_id": "45514",
+        "field_id": "8",
+        "fsa_printed_acres": 4.7,
+        "geodesic_acres": 4.6814,
+        "percent_area_difference": -0.4,
+        "source_pdf": "Jasper Summers FSA Map.pdf",
+        "source_page": 1,
+        "source_workbook_field_match": "UNDETERMINED_MASTER_HAS_NO_SELECTED_FIELD_ID",
+        "image_registration_inliers": 97,
+        "image_registration_rmse_px": 0.374,
+        "registration_method": "SIFT NAIP independent aerial match + manual FSA boundary",
+        "status": "SOURCE_FIELD_GEOREGISTERED_YEAR2_SELECTION_NOT_RECONCILED",
+        "geometry_quality": "FSA_SOURCE_TRACE_APPROXIMATE_NOT_SURVEY"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8338227112954,
+              33.309472981531655
+            ],
+            [
+              -80.83303244761139,
+              33.31114933741686
+            ],
+            [
+              -80.83282378369121,
+              33.31096896368685
+            ],
+            [
+              -80.83255042732986,
+              33.31079459730804
+            ],
+            [
+              -80.83203985540048,
+              33.310656231551114
+            ],
+            [
+              -80.83185290292903,
+              33.31057806772025
+            ],
+            [
+              -80.83203972160295,
+              33.31030175939757
+            ],
+            [
+              -80.83215469366549,
+              33.31015159560853
+            ],
+            [
+              -80.83220493597278,
+              33.30994134395166
+            ],
+            [
+              -80.83234863719144,
+              33.30972510715532
+            ],
+            [
+              -80.83259303198342,
+              33.309592984506175
+            ],
+            [
+              -80.83321853866126,
+              33.309418844355235
+            ],
+            [
+              -80.8338227112954,
+              33.309472981531655
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "producer": "Jasper Summers",
+        "county": "Orangeburg",
+        "amp_roster_county": "Orangeburg",
+        "farm_id": "13709",
+        "tract_id": "45514",
+        "field_id": "17",
+        "fsa_printed_acres": 2.92,
+        "geodesic_acres": 2.9453,
+        "percent_area_difference": 0.87,
+        "source_pdf": "Jasper Summers FSA Map.pdf",
+        "source_page": 1,
+        "source_workbook_field_match": "UNDETERMINED_MASTER_HAS_NO_SELECTED_FIELD_ID",
+        "image_registration_inliers": 97,
+        "image_registration_rmse_px": 0.374,
+        "registration_method": "SIFT NAIP independent aerial match + manual FSA boundary",
+        "status": "SOURCE_FIELD_GEOREGISTERED_YEAR2_SELECTION_NOT_RECONCILED",
+        "geometry_quality": "FSA_SOURCE_TRACE_APPROXIMATE_NOT_SURVEY"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.83010650073244,
+              33.310841818024805
+            ],
+            [
+              -80.8300991061531,
+              33.30917234256337
+            ],
+            [
+              -80.83075288355725,
+              33.30920240757601
+            ],
+            [
+              -80.83106210938547,
+              33.3101933898162
+            ],
+            [
+              -80.83098308568235,
+              33.31031950914465
+            ],
+            [
+              -80.83010650073244,
+              33.310841818024805
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}
