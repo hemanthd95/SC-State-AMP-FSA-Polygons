@@ -1,0 +1,37 @@
+name: Antron Williams Cinnabar Gordon FSA registration context
+on:
+  push:
+    paths:
+      - 'scripts/recovery_20261111_antron_road_context.py'
+      - '.github/workflows/recovery_20261111_antron_road_context.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  context:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install requests pillow shapely pyproj
+      - name: Fetch TIGER road geometry and independently georeferenced aerial tiles
+        run: |
+          set -o pipefail
+          python scripts/recovery_20261111_antron_road_context.py | tee /tmp/antron_road_job.log
+      - name: Commit only field-reference road and aerial context (no tax paperwork)
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin main
+          git reset --mixed origin/main
+          git add analysis/recovery_20261111/Antron_Williams
+          if ! git diff --cached --quiet; then
+            git commit -m "Add Antron Williams Cinnabar/Gordon NAIP imagery and road location controls"
+            git push origin HEAD:main
+          fi
