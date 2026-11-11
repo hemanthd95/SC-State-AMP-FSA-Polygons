@@ -1,0 +1,44 @@
+name: Enrich Batch1 Charles and Jasper fields after second-tract NAIP QA
+on:
+  push:
+    paths:
+      - 'scripts/recovery49_batch1_enrich_extra_tracts.py'
+      - '.github/workflows/recovery49_batch1_enrich_extra_tracts.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: amp-batch1-final-archive
+  cancel-in-progress: false
+jobs:
+  extend:
+    runs-on: ubuntu-latest
+    timeout-minutes: 70
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install 'numpy<2.5' opencv-python-headless shapely pyproj pyshp pillow reportlab pymupdf requests
+      - name: Apply registered extra-field traces, check acreages, rebuild farmer maps
+        run: |
+          set -o pipefail
+          AMP_FARM_WORKERS=3 python scripts/recovery49_batch1_enrich_extra_tracts.py | tee /tmp/batch1_extra_fields.log
+      - name: Persist final ZIP and separate provenance GeoJSON
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin main
+          git reset --mixed origin/main
+          git add geojson/counties/recovery49_batch1_extra_tract_fields_20261111.geojson
+          git add deliverables/AMP_Batch1_Five_Farmer_GIS_20261111.zip
+          git add deliverables/Charles_Bright_Jr_Batch1_GIS_20261111.zip
+          git add deliverables/Jasper_Summers_Batch1_GIS_20261111.zip
+          git add deliverables/batch1_five_farmer_recovery_20261111/BATCH1_BUILD_SUMMARY.json
+          git add deliverables/batch1_five_farmer_recovery_20261111/Batch1_Farmer_QA.csv
+          if ! git diff --cached --quiet; then
+            git commit -m "Extend Batch1: georeference Charles Tract3021 and Jasper Tract45512 source fields"
+            git push origin HEAD:main
+          fi
