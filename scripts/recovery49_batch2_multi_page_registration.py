@@ -35,7 +35,7 @@ def old_anchor(name):
   if not f.exists():continue
   for rec in json.loads(f.read_text())["features"]:
    prod=str(rec.get("properties",{}).get("producer",""))
-   allow=((name=="Tywone Hilliard" and prod=="Tywone Hilliard") or
+   allow=((name=="Tywone Hilliard" and prod in ("Tywone Hilliard","Tywone Hillard")) or
           (name=="Christine Berry Zeigler" and prod in ("Margaret Berry","Mageret Berry")))
    if not allow:continue
    p=shape(rec["geometry"]).representative_point()
@@ -76,7 +76,6 @@ def run(case):
  chosen=[]
  for a in anchors:
   if not any(math.hypot((a["lat"]-b["lat"])*111000,
-     (a["lon"]-b["lon"])*93000)>0 and math.hypot((a["lat"]-b["lat"])*111000,
      (a["lon"]-b["lon"])*93000)<400 for b in chosen):chosen.append(a)
  result=dict(farmer=case["name"],excel_address=case["address"],
   fsa_enrolled_identifiers=case["enrolled"],
