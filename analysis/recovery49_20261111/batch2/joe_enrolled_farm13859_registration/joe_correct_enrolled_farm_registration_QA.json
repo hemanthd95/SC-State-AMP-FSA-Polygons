@@ -1,0 +1,60 @@
+{
+  "producer": "Joe Hilliard",
+  "source_pdf": "Joe_Hillard_FSA_Map.pdf",
+  "source_farm": "13859",
+  "source_tract": "45814",
+  "source_fields": [
+    "35",
+    "36",
+    "37"
+  ],
+  "enrolled_target": "13859/45814/20",
+  "anchor": [
+    -80.50430450531,
+    33.464418972005
+  ],
+  "tiles_loaded": 65,
+  "search_radius_km": 13.2,
+  "caveat": "Field20 is not present on provided Farm13859 source map; cannot claim farmer complete by mapping Fields35/36/37.",
+  "status": "SOURCE_FARM13859_GEOREGISTERED_FIELD20_ABSENT",
+  "inliers": 83,
+  "rmse_px": 1.1793800592422485,
+  "registered_source_farm": true,
+  "provider": "USGS_NAIP",
+  "tile_offset": [
+    -4,
+    -1
+  ],
+  "bbox_epsg3857": [
+    -8969498.184197748,
+    3954261.3078653384,
+    -8967098.184197748,
+    3956661.3078653384
+  ],
+  "tile_size_px": 950,
+  "source_pdf_pts_to_tile_H": [
+    [
+      1.3747405737804506,
+      0.0441200919023722,
+      -114.02542124999898
+    ],
+    [
+      -0.0018902185950257107,
+      1.4107226146943421,
+      -195.5046341739679
+    ],
+    [
+      1.814229341471572e-05,
+      0.00011783008101825759,
+      1.0
+    ]
+  ],
+  "source_spread": [
+    669.7035522460938,
+    585.7854614257812
+  ],
+  "target_spread": [
+    602.141845703125,
+    528.07861328125
+  ]
+}
