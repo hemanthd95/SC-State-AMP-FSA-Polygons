@@ -1,0 +1,54 @@
+name: Batch2 Christine verified Field1 + five-farmer status GIS ZIP
+on:
+  push:
+    paths:
+      - 'scripts/recovery49_batch2_christine_and_five_status.py'
+      - '.github/workflows/recovery49_batch2_christine_and_five_status.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  gis:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install 'numpy<2.5' opencv-python-headless shapely pyproj pyshp pillow reportlab pymupdf requests
+      - name: Transform Christine source Field1 from registered FSA photo to WGS84
+        run: |
+          set -o pipefail
+          AMP_FARM_WORKERS=2 python scripts/recovery49_batch2_christine_and_five_status.py | tee /tmp/batch2_five_gis.log
+      - name: Verify archive has one mapped farmer and four clearly unmatched sources
+        run: |
+          python - <<'PY'
+          import json,zipfile
+          p='deliverables/AMP_Recovery49_Batch2_Five_Farmer_20261111.zip'
+          with zipfile.ZipFile(p) as z:
+           n=z.namelist()
+           assert len([x for x in n if x.endswith('.shp')])==1
+           assert len([x for x in n if x.endswith('-FieldMap.pdf')])==1
+           assert len([x for x in n if x.endswith('-CountyMap.pdf')])==1
+           assert len([x for x in n if x.endswith('README_NOT_GEOREFERENCED.txt')])==4
+          s=json.load(open('deliverables/recovery49_batch2_five_20261111/BUILD_SUMMARY.json'))
+          assert s['people']==5 and s['year2_farmers_geographically_mapped']==1
+          print('BATCH2_VERIFIED',len(n),'ZIP items')
+          PY
+      - name: Commit deliverables and source QA to existing private repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin main
+          git reset --mixed origin/main
+          git add geojson/counties/recovery49_batch2_christine_berry_zeigler_field1_20261111.geojson
+          git add deliverables/AMP_Recovery49_Batch2_Five_Farmer_20261111.zip
+          git add deliverables/recovery49_batch2_five_20261111/BUILD_SUMMARY.json
+          git add deliverables/recovery49_batch2_five_20261111/Batch2_Five_Farmer_QA.csv
+          if ! git diff --cached --quiet; then
+            git commit -m "Map Christine Field1 with NAIP registration and package Batch2 five-case QA"
+            git push origin HEAD:main
+          fi
