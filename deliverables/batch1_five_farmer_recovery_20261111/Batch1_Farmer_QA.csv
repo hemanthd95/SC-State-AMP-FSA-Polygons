@@ -2,6 +2,6 @@ farmer,physical_county,farm_id,tract_id,field_id,fsa_acres,mapped_acres,area_del
 Charles Bright Jr.,Colleton,2715,3022,2,5.23,5.3672,2.62,281,0.729,REGISTERED_SOURCE_FIELD_APPROXIMATE,False,"No selected Field ID in Year2 master; source page1 also Fields 9,10,3; page2 is Tract3021"
 Joseph Gadson,Orangeburg,4547,4482,3,1.88,1.9117,1.69,251,0.442,REGISTERED_SOURCE_FIELD_APPROXIMATE,False,"Year2 enrollment Farm/Tract/Field missing; source fields 12,3,10,9,4 visible"
 Joseph Gadson,Orangeburg,4547,4482,4,0.6,0.5734,-4.43,251,0.442,REGISTERED_SOURCE_FIELD_APPROXIMATE,False,"Year2 enrollment Farm/Tract/Field missing; source fields 12,3,10,9,4 visible"
-Arthur Cobbs,Dorchester,548,295,1,1.8,1.8959,5.33,48,0.552,REGISTERED_SOURCE_FIELD_APPROXIMATE,True,"Year2 Farm548, source Farm548/Tract295 Field1; only labeled cropped field on source map"
+Arthur Cobbs,Dorchester,548,295,1,1.8,1.8959,5.33,48,0.552,REGISTERED_SOURCE_FIELD_APPROXIMATE,False,"Year2 Farm548, source Farm548/Tract295 Field1; only labeled cropped field on source map"
 Jasper Summers,Orangeburg,13709;13653,,,,,,,,PARTIAL_NOT_CLOSED,False,Farm13709 Fields8/17 mapped; enrollment field blank and Tract45512 Fields16/27 remain unregistered
 Margaret Berry,Orangeburg,10939;11782,,,,,,,,PARTIAL_NOT_CLOSED,False,Farm10939 Field3 mapped; older Farm11782 Field13 area differs substantially from 7.53 FSA acres

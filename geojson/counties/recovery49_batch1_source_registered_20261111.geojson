@@ -207,7 +207,7 @@
         "registration_provider": "USGS_NAIP",
         "registration_method": "SIFT feature matching FSA raster page 1 to independently georeferenced USGS NAIP",
         "geometry_quality": "SOURCE_FIELD_PHOTO_TRACE_APPROXIMATE_NOT_SURVEY",
-        "farminer_completion_status": "YEAR2_FARM_AND_SINGLE_SOURCE_FIELD_MATCH",
+        "farminer_completion_status": "SOURCE_FIELD_MAPPED_YEAR2_ENROLLED_FIELD_UNSPECIFIED",
         "attribution_warning": "Source field boundary only; not a land survey or verified ownership"
       },
       "geometry": {
