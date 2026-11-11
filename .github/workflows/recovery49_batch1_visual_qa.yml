@@ -1,0 +1,32 @@
+name: Render Batch1 five-farmer PDF maps for visual QA
+on:
+  push:
+    paths:
+      - 'scripts/recovery49_batch1_visual_qa.py'
+      - '.github/workflows/recovery49_batch1_visual_qa.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install pymupdf pillow
+      - name: Render every Batch1 field PDF page, verify county PDF and shapefiles
+        run: python scripts/recovery49_batch1_visual_qa.py
+      - name: Save contact sheet and PDF page previews to repository
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin main
+          git reset --mixed origin/main
+          git add analysis/recovery49_20261111/batch1_visual_qa
+          if ! git diff --cached --quiet; then
+            git commit -m "Render Batch1 five-farmer map page previews for visual QA"
+            git push origin HEAD:main
+          fi
