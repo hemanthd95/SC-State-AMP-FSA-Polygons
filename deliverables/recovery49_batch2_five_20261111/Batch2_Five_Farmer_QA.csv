@@ -3,4 +3,4 @@ Christine Berry Zeigler,MAPPED_GEOGRAPHICALLY,1,Orangeburg,1271/469/1,11.1279,"2
 Javeiann Spann,SOURCE_DIGITIZED_LOCATION_UNRESOLVED,0,,,,SEE QA,False,Year2 3988/4673/1; user supplied two photographs including unrelated 9447/8142; no unique independent NAIP match.
 Joe Hilliard,IMAGE_REGISTERED_SOURCE_FARM_MISMATCH,0,,,,SEE QA,False,612 NAIP features registered source Farm6528/Tract41114; Year2 target Farm13859/Tract45814/Field20; do NOT substitute source field.
 Calvin Blair,SOURCE_FARM_MATCHES_BUT_IMAGE_LOCATION_UNRESOLVED,0,,,,SEE QA,False,Farm3603/Tract848 source page includes Field3 (12.50 acres). Existing local SIFT match was geometrically degenerate.
-Tywone Hilliard,THREE_IMAGE_REGISTRATIONS_SOURCE_IDS_UNRECONCILED,0,,,,SEE QA,False,Three 2024 photographed field-map pages registered geographically; enrolled Farms1064 and3826 not confirmed from these maps.
+Tywone Hilliard,THREE_SOURCE_FIELDS_GEOREFERENCED_ENROLLMENT_FARMS_NOT_MATCHED,3,Orangeburg,"SOURCE 3873/3895/4,4261/5953/2,960/3812/1",8.101,188-232 NAIP matches on 2024 pages,False,Year2 Farms1064 and3826 still missing exact georeferenced enrolled field; different FSA farm IDs

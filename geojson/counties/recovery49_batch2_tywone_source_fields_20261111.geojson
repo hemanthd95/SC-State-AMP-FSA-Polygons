@@ -1,0 +1,213 @@
+{
+  "type": "FeatureCollection",
+  "name": "Tywone_Hilliard_2024_FSA_Source_Only",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "producer": "Tywone Hilliard",
+        "county": "Orangeburg",
+        "roster_county": "Orangeburg",
+        "farm_id": "3873",
+        "tract_id": "3895",
+        "field_id": "4",
+        "source_fsa_acres": 1.93,
+        "geodesic_acres": 2.0297,
+        "acreage_difference_pct": 5.17,
+        "source_pdf": "Tywone Hillard_FSA_Map.pdf",
+        "source_page": 1,
+        "source_map_year": 2024,
+        "source_workbook_field_match": false,
+        "registered_provider": "USGS_NAIP",
+        "image_registration_inliers": 232,
+        "registration_rmse_px": 1.086,
+        "status": "REGISTERED_SOURCE_FIELD_YEAR2_FARM_ID_MISMATCH",
+        "registration_method": "SIFT georectification from scanned FSA photo to USGS NAIP",
+        "physical_county_basis": "Official 2025 US Census county spatial boundary; printed FSA office county ignored",
+        "geometry_quality": "PHOTO_DIGITIZED_APPROXIMATE_NOT_SURVEY",
+        "note": "Year2 records include Farm1064 and Farm3826; source Farm IDs differ. Not a completed enrolled farm."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.4829015418705,
+              33.464012131286395
+            ],
+            [
+              -80.48248188829848,
+              33.46430220568114
+            ],
+            [
+              -80.4819900874704,
+              33.46431513111693
+            ],
+            [
+              -80.48175670405568,
+              33.46398811023945
+            ],
+            [
+              -80.4817914999439,
+              33.463637293778994
+            ],
+            [
+              -80.4821489568519,
+              33.46349938274594
+            ],
+            [
+              -80.48283152418081,
+              33.463435913375434
+            ],
+            [
+              -80.4829015418705,
+              33.464012131286395
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "producer": "Tywone Hilliard",
+        "county": "Orangeburg",
+        "roster_county": "Orangeburg",
+        "farm_id": "4261",
+        "tract_id": "5953",
+        "field_id": "2",
+        "source_fsa_acres": 2.1,
+        "geodesic_acres": 2.2543,
+        "acreage_difference_pct": 7.35,
+        "source_pdf": "Tywone Hillard_FSA_Map.pdf",
+        "source_page": 2,
+        "source_map_year": 2024,
+        "source_workbook_field_match": false,
+        "registered_provider": "USGS_NAIP",
+        "image_registration_inliers": 188,
+        "registration_rmse_px": 1.2152,
+        "status": "REGISTERED_SOURCE_FIELD_YEAR2_FARM_ID_MISMATCH",
+        "registration_method": "SIFT georectification from scanned FSA photo to USGS NAIP",
+        "physical_county_basis": "Official 2025 US Census county spatial boundary; printed FSA office county ignored",
+        "geometry_quality": "PHOTO_DIGITIZED_APPROXIMATE_NOT_SURVEY",
+        "note": "Year2 records include Farm1064 and Farm3826; source Farm IDs differ. Not a completed enrolled farm."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.49435320537988,
+              33.47540201870081
+            ],
+            [
+              -80.49400685206818,
+              33.47551499566865
+            ],
+            [
+              -80.49348145419911,
+              33.475360140676855
+            ],
+            [
+              -80.49300535779015,
+              33.47501650979474
+            ],
+            [
+              -80.49274220415722,
+              33.474626005425264
+            ],
+            [
+              -80.49308815234492,
+              33.47440261638018
+            ],
+            [
+              -80.49350231275518,
+              33.47470425797304
+            ],
+            [
+              -80.49405418334622,
+              33.47490751569101
+            ],
+            [
+              -80.49436837834027,
+              33.4751611961098
+            ],
+            [
+              -80.49435320537988,
+              33.47540201870081
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "producer": "Tywone Hilliard",
+        "county": "Orangeburg",
+        "roster_county": "Orangeburg",
+        "farm_id": "960",
+        "tract_id": "3812",
+        "field_id": "1",
+        "source_fsa_acres": 3.41,
+        "geodesic_acres": 3.8167,
+        "acreage_difference_pct": 11.93,
+        "source_pdf": "Tywone Hillard_FSA_Map.pdf",
+        "source_page": 3,
+        "source_map_year": 2024,
+        "source_workbook_field_match": false,
+        "registered_provider": "USGS_NAIP",
+        "image_registration_inliers": 199,
+        "registration_rmse_px": 1.2025,
+        "status": "REGISTERED_SOURCE_FIELD_YEAR2_FARM_ID_MISMATCH",
+        "registration_method": "SIFT georectification from scanned FSA photo to USGS NAIP",
+        "physical_county_basis": "Official 2025 US Census county spatial boundary; printed FSA office county ignored",
+        "geometry_quality": "PHOTO_DIGITIZED_APPROXIMATE_NOT_SURVEY",
+        "note": "Year2 records include Farm1064 and Farm3826; source Farm IDs differ. Not a completed enrolled farm."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.48463707981381,
+              33.464590090779886
+            ],
+            [
+              -80.48256581560132,
+              33.464839951721146
+            ],
+            [
+              -80.48252336180315,
+              33.46468975490984
+            ],
+            [
+              -80.48199705773563,
+              33.46441806227095
+            ],
+            [
+              -80.48192549471104,
+              33.46430649918862
+            ],
+            [
+              -80.48361829793465,
+              33.46408508377487
+            ],
+            [
+              -80.48464843821178,
+              33.46397945960141
+            ],
+            [
+              -80.48473814919294,
+              33.464190024326115
+            ],
+            [
+              -80.48463707981381,
+              33.464590090779886
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}
