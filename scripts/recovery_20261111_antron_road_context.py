@@ -33,7 +33,7 @@ def roads_from_tiger():
   for n in ROADS:
    for where in [f"NAME = '{n}'",f"NAME LIKE '%{n.split()[0]}%'"]:
     try:
-     d=fetch_json(url,dict(where=where,outFields="*",returnGeometry="true",outSR="4326",f="geojson",resultRecordCount=1000),45)
+     d=fetch_json(url,dict(where=where,outFields="*",returnGeometry="true",outSR="4326",f="geojson",resultRecordCount=1000,geometry="-81.4,33.0,-80.3,33.9",geometryType="esriGeometryEnvelope",inSR=4326,spatialRel="esriSpatialRelIntersects"),45)
      for f in d.get("features",[]):
       props=f.get("properties",{})
       name=props.get("NAME") or props.get("ROAD_NAME") or props.get("FULLNAME") or props.get("STREETNAME") or props.get("StreetName") or ""
@@ -41,6 +41,8 @@ def roads_from_tiger():
       try:
        geo=shape(f["geometry"])
        if geo.geom_type not in ("LineString","MultiLineString") or geo.is_empty:continue
+       center=geo.representative_point()
+       if not (-81.4<center.x<-80.3 and 33.0<center.y<33.9):continue
       except:continue
       found.append({"type":"Feature","properties":dict(name=n,source_url=url,raw_name=str(name)),
                     "geometry":f["geometry"]})
